@@ -21,7 +21,19 @@ import { NewsArticleComponent } from './news-article/news-article.component';
 import { MomentPipe } from './moment.pipe';
 
 @NgModule({
-  declarations: [AppComponent, BookListComponent, CampusTabComponent, ContentDrawerComponent, EventViewComponent, FooterDisclaimerComponent, GradesTableComponent, HintBoxComponent, LectureListComponent, MensaMealComponent, NewsArticleComponent, MomentPipe],
+  declarations: [
+    AppComponent,
+    BookListComponent,
+    CampusTabComponent,
+    ContentDrawerComponent,
+    EventViewComponent,
+    FooterDisclaimerComponent,
+    GradesTableComponent,
+    HintBoxComponent,
+    LectureListComponent,
+    MensaMealComponent,
+    NewsArticleComponent,
+    MomentPipe],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
