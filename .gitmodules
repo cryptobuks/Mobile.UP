@@ -1,4 +1,0 @@
-[submodule "src/providers/login-provider"]
-	path = src/providers/login-provider
-	url = https://github.com/University-of-Potsdam-MM/login-provider.git
-	branch = master
