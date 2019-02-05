@@ -57,6 +57,15 @@ ion-app.md [padding] .scroll-content {
   padding: 0px;
 }
 
+ion-menu-button {
+  color: black;
+}
+
+ion-back-button {
+  --color: black!important;
+  --ion-text-color: black!important;
+}
+
 .card-background-page {
 
   ion-card {

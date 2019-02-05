@@ -45,7 +45,7 @@
 
         <!-- not logged in -->
         <ng-template #notLoggedInTemplate>
-          <ion-item-divider color="light">{{ "popover.notLoggedInText" | translate}}</ion-item-divider>
+          <ion-item-divider color="light"><ion-label>{{ "popover.notLoggedInText" | translate}}</ion-label></ion-item-divider>
           <ion-item (click)="toLogin()">
               <i class="fa fa-sign-in" aria-hidden="true"></i>
               {{ "button.login" | translate }}
