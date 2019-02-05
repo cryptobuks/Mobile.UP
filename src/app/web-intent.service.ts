@@ -162,10 +162,12 @@ export class WebIntentService implements OnInit {
    */
   async openWithInAppBrowser(url: string) {
     this.config = await this.storage.get('config');
-    if (url !== this.config.modules.mail.url) {
+    if (url === this.config.modules.mail.url && this.platform.is('cordova')) {
+      this.mailLogin(url);
+    } else {
       const target = '_blank';
       this.inAppBrowser.create(url, target, this.options);
-    } else { this.mailLogin(url); }
+    }
   }
 
   /**

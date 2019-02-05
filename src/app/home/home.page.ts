@@ -3,6 +3,7 @@ import { IModule } from '../interfaces';
 import { NavController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
+import { WebIntentService } from '../web-intent.service';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomePage implements OnInit {
   constructor(
     private navCtrl: NavController,
     private translate: TranslateService,
+    private webIntent: WebIntentService,
     private storage: Storage,
   ) { }
 
@@ -91,6 +93,10 @@ export class HomePage implements OnInit {
    */
   openPage(modules: IModule) {
     console.log(modules);
-    this.navCtrl.navigateForward('/' + modules.componentName);
+    if (modules.url) {
+      this.webIntent.handleWebIntentForModule(modules.componentName);
+    } else {
+      this.navCtrl.navigateForward('/' + modules.componentName);
+    }
   }
 }
