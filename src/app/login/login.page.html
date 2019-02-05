@@ -7,5 +7,68 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-grid>
+    <ion-row class="logo-row">
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+      <ion-col width-67>
+        <img src="assets/imgs/logo/logo_uni_potsdam.svg"/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  <div *ngIf="!alreadyLoggedIn">
+    <form (ngSubmit)="login()" #registerForm="ngForm">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+
+              <ion-item>
+                <ion-input
+                  autocapitalize="none"
+                  type="text"
+                  [placeholder]="'page.login.placeHolder.username' | translate"
+                  name="id"
+                  [(ngModel)]="loginCredentials.username"
+                  required
+                ></ion-input>
+              </ion-item>
+
+            <ion-item>
+              <ion-input
+                clearOnEdit="false"
+                type="password"
+                [placeholder]="'page.login.placeHolder.password' |translate"
+                name="password"
+                [(ngModel)]="loginCredentials.password"
+                required
+              ></ion-input>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" type="button" (click)="abort()">
+            {{ "button.cancel" | translate }}
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" class="submit-btn" type="submit">
+            {{ "button.login" | translate }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+
+  <app-hint-box hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.login-hint"></app-hint-box>
+
+  <div align="center" *ngIf="alreadyLoggedIn" padding>
+    {{ "page.login.alreadyLoggedIn" | translate }}
+  </div>
 </ion-content>

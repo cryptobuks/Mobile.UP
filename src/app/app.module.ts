@@ -6,16 +6,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BookListComponent } from './book-list/book-list.component';
-import { CampusTabComponent } from './campus-tab/campus-tab.component';
-import { ContentDrawerComponent } from './content-drawer/content-drawer.component';
-import { EventViewComponent } from './event-view/event-view.component';
-import { FooterDisclaimerComponent } from './footer-disclaimer/footer-disclaimer.component';
-import { GradesTableComponent } from './grades-table/grades-table.component';
-import { HintBoxComponent } from './hint-box/hint-box.component';
-import { LectureListComponent } from './lecture-list/lecture-list.component';
-import { MensaMealComponent } from './mensa-meal/mensa-meal.component';
-import { NewsArticleComponent } from './news-article/news-article.component';
 import { MomentPipe } from './moment.pipe';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -30,16 +20,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    BookListComponent,
-    CampusTabComponent,
-    ContentDrawerComponent,
-    EventViewComponent,
-    FooterDisclaimerComponent,
-    GradesTableComponent,
-    HintBoxComponent,
-    LectureListComponent,
-    MensaMealComponent,
-    NewsArticleComponent,
     MomentPipe
   ],
   entryComponents: [],

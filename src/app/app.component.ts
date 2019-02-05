@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform, Events, MenuController, NavController } from '@ionic/angular';
+import { Platform, Events, MenuController, NavController, AlertController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IConfig, IModule, IOIDCRefreshResponseObject, ISession, IOIDCUserInformationResponse } from './interfaces';
@@ -32,6 +32,7 @@ export class AppComponent {
     private menuCtrl: MenuController,
     private cache: CacheService,
     private navCtrl: NavController,
+    private alertCtrl: AlertController,
     private userSession: UserSessionService,
     private setting: SettingsService,
     private connection: ConnectionService,
@@ -208,15 +209,28 @@ export class AppComponent {
     this.navCtrl.navigateRoot('/home');
   }
 
-  doLogout() {
+  async doLogout() {
     this.close();
-    // TODO: logout popover
-    this.userSession.removeSession();
-    this.userSession.removeUserInfo();
-    for (let i = 0; i < 10; i++) { this.storage.remove('studentGrades[' + i + ']'); }
-    this.cache.clearAll();
-    this.updateLoginStatus();
-    this.navCtrl.navigateRoot('/home');
+    const alert = await this.alertCtrl.create({
+      message: this.translate.instant('page.logout.affirmativeQuestion'),
+      buttons: [
+        {
+          text: this.translate.instant('button.cancel'),
+        },
+        {
+          text: this.translate.instant('button.ok'),
+          handler: () => {
+            this.userSession.removeSession();
+            this.userSession.removeUserInfo();
+            for (let i = 0; i < 10; i++) { this.storage.remove('studentGrades[' + i + ']'); }
+            this.cache.clearAll();
+            this.updateLoginStatus();
+            this.navCtrl.navigateRoot('/home');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   toLogin() {

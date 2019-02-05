@@ -38,7 +38,7 @@
         <ng-template #loggedInTemplate>
           <ion-item-divider color="light" *ngIf="username"><ion-label>{{ "popover.loggedInText" | translate}}: {{ username }}</ion-label></ion-item-divider>
           <ion-item (click)="doLogout()">
-              <i class="fa fa-sign-out" aria-hidden="true" slot="start"></i>
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
               {{ "button.logout" | translate }}
           </ion-item>
         </ng-template>
