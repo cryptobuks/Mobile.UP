@@ -239,5 +239,4 @@ export class AppComponent {
     this.navCtrl.navigateForward('/impressum');
   }
 
-
 }

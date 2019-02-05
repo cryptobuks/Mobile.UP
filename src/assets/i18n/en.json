@@ -5,7 +5,7 @@
       "title": "Homepage",
       "favorites": "Favorites"
     },
-    "imprint":{
+    "impressum":{
       "title": "Legal Aspects",
       "listHeader": "Overview"
     },
@@ -46,7 +46,7 @@
         "search": "Search..."
       }
     },
-    "persons": {
+    "person-search": {
       "title": "People search",
       "placeholder": {
         "search": "Search..."
@@ -89,7 +89,7 @@
       "lp": "LP",
       "studienleistung": "Study achievements"
     },
-    "library": {
+    "library-search": {
       "title": "Library search",
       "titleDetail": "Detail view",
       "copyright": "Copies and downloads of certain chapters or sites are only allowed for personal use. No distribution to third parties. No automated downloading.",
@@ -174,9 +174,6 @@
       "title": "News",
       "articlePublished": "Published"
     },
-    "maps": {
-      "title": "Maps"
-    },
     "tipps": {
       "title": "Tips & tricks"
     },
@@ -245,7 +242,7 @@
     "athletics":{
       "title":"College sports"
     },
-    "rooms": {
+    "free-rooms": {
       "title": "Available rooms",
       "time": "Time of day",
       "no_rooms_hintText": "No free rooms found."
@@ -257,7 +254,7 @@
       "date": "Date",
       "no_rooms_hintText": "No free rooms found."
     },
-    "openingHours":{
+    "opening-hours":{
       "title":"Opening hours",
       "time": "",
       "open": "open",
@@ -282,7 +279,7 @@
     "unishop": {
       "title": "UNIshop"
     },
-    "appInfo": {
+    "app-info": {
       "title": "About",
       "platform": "Platform",
       "uuid": "User ID",

@@ -15,41 +15,41 @@
 
         <ion-item-group>
           <ion-item-divider color="light">{{ "popover.general" | translate}}</ion-item-divider>
-          <ion-button expand="full" (click)="toHome()">
-              <ion-icon name="home" padding-right></ion-icon>
+          <ion-item (click)="toHome()">
+              <ion-icon color="primary" name="home" slot="start"></ion-icon>
               {{ "page.home.title" | translate }}
-          </ion-button>
-          <ion-button expand="full" (click)="toSettings()">
-              <ion-icon name="options" padding-right></ion-icon>
+          </ion-item>
+          <ion-item (click)="toSettings()">
+              <ion-icon color="primary" name="options" slot="start"></ion-icon>
               {{ "page.settings.title" | translate }}
-          </ion-button>
-          <ion-button expand="full" (click)="toAppInfo()">
-              <ion-icon name="information-circle" padding-right></ion-icon>
-              {{ "page.appInfo.title" | translate }}
-          </ion-button>
-          <ion-button expand="full" (click)="toImprint()">
-              <ion-icon name="list-box" class="fa fa-balance-scale" aria-hidden="true" padding-right></ion-icon>
-              {{ "page.imprint.title" | translate }}
-          </ion-button>
+          </ion-item>
+          <ion-item (click)="toAppInfo()">
+              <ion-icon color="primary" name="information-circle" slot="start"></ion-icon>
+              {{ "page.app-info.title" | translate }}
+          </ion-item>
+          <ion-item (click)="toImprint()">
+              <ion-icon color="primary" name="list-box" class="fa fa-balance-scale" aria-hidden="true" slot="start"></ion-icon>
+              {{ "page.impressum.title" | translate }}
+          </ion-item>
           <ng-container *ngIf="loggedIn; then loggedInTemplate; else notLoggedInTemplate "></ng-container>
         </ion-item-group>
 
         <!-- logged in -->
         <ng-template #loggedInTemplate>
           <ion-item-divider color="light" *ngIf="username">{{ "popover.loggedInText" | translate}}: {{ username }}</ion-item-divider>
-          <ion-button expand="full" (click)="doLogout()">
-              <i class="fa fa-sign-out" aria-hidden="true" padding-right></i>
+          <ion-item (click)="doLogout()">
+              <i class="fa fa-sign-out" aria-hidden="true" slot="start"></i>
               {{ "button.logout" | translate }}
-          </ion-button>
+          </ion-item>
         </ng-template>
 
         <!-- not logged in -->
         <ng-template #notLoggedInTemplate>
           <ion-item-divider color="light">{{ "popover.notLoggedInText" | translate}}</ion-item-divider>
-          <ion-button expand="full" (click)="toLogin()">
-              <i class="fa fa-sign-in" aria-hidden="true" padding-right></i>
+          <ion-item (click)="toLogin()">
+              <i class="fa fa-sign-in" aria-hidden="true"></i>
               {{ "button.login" | translate }}
-          </ion-button>
+          </ion-item>
         </ng-template>
 
     </ion-content>
