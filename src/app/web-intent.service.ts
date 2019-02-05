@@ -3,7 +3,6 @@ import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/
 import { IConfig, IModule, ISession } from './interfaces';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
-import { HttpClient } from '@angular/common/http';
 import { Platform, AlertController } from '@ionic/angular';
 import { AppAvailability } from '@ionic-native/app-availability/ngx';
 import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
@@ -39,7 +38,6 @@ export class WebIntentService implements OnInit {
     private inAppBrowser: InAppBrowser,
     private translate: TranslateService,
     private storage: Storage,
-    private http: HttpClient,
     private platform: Platform,
     private alertCtrl: AlertController,
     private userSession: UserSessionService,
@@ -63,7 +61,6 @@ export class WebIntentService implements OnInit {
   async permissionPromptWebsite(url: string) {
     // ask for permission to open Module externaly
     const alert = await this.alertCtrl.create({
-      header: this.translate.instant('alert.title.redirect'),
       message: this.translate.instant('alert.redirect-website'),
       buttons: [
         {
@@ -98,7 +95,6 @@ export class WebIntentService implements OnInit {
           if (moduleConfig.appId) {
             // ask for permission to open Module externaly with three options
             const alert = await this.alertCtrl.create({
-              header: this.translate.instant('alert.title.redirect'),
               message: this.translate.instant('alert.redirect-website-app'),
               buttons: [
                 {
@@ -175,7 +171,7 @@ export class WebIntentService implements OnInit {
    * @description opens mail in browser and injects credentials
    */
   async mailLogin(url: string) {
-    const session: ISession = JSON.parse(await this.userSession.getSession());
+    const session: ISession = await this.userSession.getSession();
     const browser = this.inAppBrowser.create(url, '_blank', this.options);
 
     if (session && session.credentials && session.credentials.username && session.credentials.password) {
@@ -186,7 +182,7 @@ export class WebIntentService implements OnInit {
         $('input.pewe').val(\'${session.credentials.password}\');
         $('button.loginbutton').click();`;
 
-      browser.on('loadstop').subscribe((event) => {
+      browser.on('loadstop').subscribe(() => {
         browser.executeScript({ code: enterCredentials }).then(() => {
           console.log('successfully entered login data...');
         }, error => {
