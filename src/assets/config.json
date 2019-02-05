@@ -83,7 +83,7 @@
     },
     "reflectUP": {
       "componentName": "reflectUP",
-      "icon": "custom-reflect",
+      "customIcon": "./assets/icon/reflect.svg",
       "selected": false,
       "url": "https://musang.soft.cs.uni-potsdam.de/reflectup/platforms/browser/www/",
       "appId": "reflectup://",
@@ -93,7 +93,7 @@
     },
     "moodle": {
       "componentName": "moodle",
-      "icon": "custom-moodle",
+      "customIcon": "./assets/icon/moodle.svg",
       "selected": false,
       "url": "https://moodle2.uni-potsdam.de/",
       "appId": "moodlemobile://",

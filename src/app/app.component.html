@@ -14,7 +14,7 @@
         </ion-card>
 
         <ion-item-group>
-          <ion-item-divider color="light">{{ "popover.general" | translate}}</ion-item-divider>
+          <ion-item-divider color="light"><ion-label>{{ "popover.general" | translate}}</ion-label></ion-item-divider>
           <ion-item (click)="toHome()">
               <ion-icon color="primary" name="home" slot="start"></ion-icon>
               {{ "page.home.title" | translate }}
@@ -36,7 +36,7 @@
 
         <!-- logged in -->
         <ng-template #loggedInTemplate>
-          <ion-item-divider color="light" *ngIf="username">{{ "popover.loggedInText" | translate}}: {{ username }}</ion-item-divider>
+          <ion-item-divider color="light" *ngIf="username"><ion-label>{{ "popover.loggedInText" | translate}}: {{ username }}</ion-label></ion-item-divider>
           <ion-item (click)="doLogout()">
               <i class="fa fa-sign-out" aria-hidden="true" slot="start"></i>
               {{ "button.logout" | translate }}

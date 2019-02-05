@@ -17,18 +17,22 @@
     (click)="openPage(module)" [id]="module.selected ? icon_selected : icon_not_selected">
 
       <div *ngIf="module.selected" >
-        <ion-icon [name]="module.icon"></ion-icon>
-        <div class="hyphen">{{ module.i18nKey | translate }}</div>
+        <ion-label class="hyphen" position="stacked" padding-top>
+          <ion-icon *ngIf="module.icon" [name]="module.icon"></ion-icon>
+          <ion-icon *ngIf="module.customIcon" [src]="module.customIcon"></ion-icon>
+          {{ module.i18nKey | translate }}
+        </ion-label>
       </div>
     </ion-item>
   </ion-list>
 
   <!-- menu with all available modules -->
   <ion-card scrollY="true" id="drawer" style="width:100%">
-    <ion-list no-lines>
+    <ion-list lines="none">
       <ion-item *ngFor="let module of sortedModules" (click)="openPage(module)">
 
-        <ion-icon slot="start" [name]="module.icon"></ion-icon>
+        <ion-icon *ngIf="module.icon" slot="start" [name]="module.icon"></ion-icon>
+        <ion-icon *ngIf="module.customIcon" slot="start" [src]="module.customIcon"></ion-icon>
         <!-- title with icon -->
         {{ module.i18nKey | translate }}
 

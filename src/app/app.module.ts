@@ -45,7 +45,11 @@ export function HttpLoaderFactory(http: HttpClient) {
   entryComponents: [],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      backButtonIcon: 'ios-arrow-back',
+      backButtonText: '',
+      mode: 'md'
+    }),
     AppRoutingModule,
     HttpClientModule,
     CacheModule.forRoot({ keyPrefix: 'cache-' }),

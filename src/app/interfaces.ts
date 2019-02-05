@@ -11,7 +11,8 @@ export interface IConfig {
 export interface IModule {
     componentName: string;
     i18nKey?: string;
-    icon: string;
+    icon?: string;
+    customIcon?: string;
     selected?: boolean;
     hide?: boolean;
     url?: string;
