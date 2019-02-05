@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { EmergencyPage } from './emergency.page';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpLoaderFactory } from '../app.module';
+import { HttpClient } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -19,6 +22,13 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (HttpLoaderFactory),
+        deps: [HttpClient]
+      }
+    }),
     RouterModule.forChild(routes)
   ],
   declarations: [EmergencyPage]
