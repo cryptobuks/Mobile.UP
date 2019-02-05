@@ -13,7 +13,7 @@
   <ion-list class="row shortcutlist" lines="none">
     <!-- list of shortcuts -->
 
-    <ion-item *ngFor="let module of sortedModules"
+    <ion-item *ngFor="let module of sortedModules | orderBy: 'translation'"
     (click)="openPage(module)" [id]="module.selected ? icon_selected : icon_not_selected">
 
       <div *ngIf="module.selected" >
@@ -29,7 +29,7 @@
   <!-- menu with all available modules -->
   <ion-card scrollY="true" id="drawer" style="width:100%">
     <ion-list lines="none">
-      <ion-item *ngFor="let module of sortedModules" (click)="openPage(module)">
+      <ion-item *ngFor="let module of sortedModules | orderBy: 'translation'" (click)="openPage(module)">
 
         <ion-icon *ngIf="module.icon" slot="start" [name]="module.icon"></ion-icon>
         <ion-icon *ngIf="module.customIcon" slot="start" [src]="module.customIcon"></ion-icon>

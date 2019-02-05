@@ -92,7 +92,6 @@ export class HomePage implements OnInit {
    * @param {string} pageTitle
    */
   openPage(modules: IModule) {
-    console.log(modules);
     if (modules.url) {
       this.webIntent.handleWebIntentForModule(modules.componentName);
     } else {
