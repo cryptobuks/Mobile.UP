@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ILoginConfigOIDC, IOIDCRefreshResponseObject, IOIDCUserInformationResponse, IOIDCLoginResponse } from './interfaces';
+import { ILoginConfigOIDC, IOIDCRefreshResponseObject, IOIDCUserInformationResponse, IOIDCLoginResponse, ICredentials } from './interfaces';
 import { ELoginErrors, ISession } from './interfaces';
 import { Observable, ReplaySubject } from 'rxjs';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams, HttpParameterCodec } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,52 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 export class LoginService {
 
   constructor(private http: HttpClient) { }
+
+  /**
+   * executes OIDC login
+   * @param {ILoginRequest} loginRequest
+   * @param {Observer<ISession>} observer
+   */
+  public oidcLogin(credentials: ICredentials, loginConfig: ILoginConfigOIDC): Observable<ISession> {
+    console.log('[oidcLogin] Doing oidcLogin');
+
+    const tokenUrl: string = loginConfig.tokenUrl;
+
+    const headers: HttpHeaders = new HttpHeaders()
+      .append('Authorization',    loginConfig.accessToken)
+      .append('Content-Type',     loginConfig.contentType);
+
+    const params: HttpParams = new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
+      .append('grant_type',       loginConfig.grantType_password)
+      .append('username',         credentials.username)
+      .append('password',         credentials.password)
+      .append('scope',            loginConfig.scope);
+
+
+    const rs = new ReplaySubject<ISession>();
+
+    this.http.post(tokenUrl, params, {headers: headers}).subscribe(
+      (response: IOIDCLoginResponse) => {
+        // create session object with access_token as token, but also attach
+        // the whole response in case it's needed
+        rs.next({
+          credentials:      credentials,
+          token:            response.access_token,
+          oidcTokenObject:  response,
+          timestamp:        new Date()
+        });
+        rs.complete();
+      }, (error) => {
+        // Authentication error
+        // TODO: Add typing for errors?
+        if (error.status = 401) {
+          rs.error({reason: ELoginErrors.AUTHENTICATION});
+        }
+      });
+
+    return rs;
+  }
+
 
   /**
    * refreshes OIDC token with refreshToken and the loginConfig. Returns an object
@@ -51,14 +97,6 @@ export class LoginService {
   oidcGetUserInformation(session: ISession, loginConfig: ILoginConfigOIDC): Observable<IOIDCUserInformationResponse> {
     const userInfoURL: string = loginConfig.userInformationUrl;
 
-    // const headers = {
-    //   'Authorization': `${session.oidcTokenObject.token_type} ${session.oidcTokenObject.access_token}`
-    // };
-
-    // const params = {
-    //   'schema': loginConfig.userInfoParams.schema
-    // };
-
     const headers: HttpHeaders = new HttpHeaders()
       .append('Authorization', `${session.oidcTokenObject.token_type} ${session.oidcTokenObject.access_token}`);
 
@@ -79,4 +117,17 @@ export class LoginService {
 
     return rs;
   }
+}
+
+/**
+ * A `HttpParameterCodec` that uses `encodeURIComponent` and `decodeURIComponent` to
+ * serialize and parse URL parameter keys and values.
+ *
+ * see https://github.com/angular/angular/issues/11058
+ */
+export class WebHttpUrlEncodingCodec implements HttpParameterCodec {
+  encodeKey(k: string): string { return encodeURIComponent(k); }
+  encodeValue(v: string): string { return encodeURIComponent(v); }
+  decodeKey(k: string): string { return decodeURIComponent(k); }
+  decodeValue(v: string) { return decodeURIComponent(v); }
 }
