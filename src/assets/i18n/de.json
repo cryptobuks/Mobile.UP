@@ -310,6 +310,9 @@
         "terminals": "Service-Stationen",
         "sport": "Sport"
       }
+    },
+    "feedback": {
+      "title": "Feedback"
     }
   },
   "button": {

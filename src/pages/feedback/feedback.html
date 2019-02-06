@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle right>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ "page.feedback.title" | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form" (ngSubmit)="logForm()" id="smileys">
+      <ion-item-divider>
+        <ion-label text-wrap>
+            What do you think of our App?
+        </ion-label>
+      </ion-item-divider>
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col center><input type="radio" name="rating" value="-2" class="angry" formControlName="rating"></ion-col>
+            <ion-col><input type="radio" name="rating" value="-1" class="frown" formControlName="rating"></ion-col>
+            <ion-col><input type="radio" name="rating" value="0" class="meh"  formControlName="rating" checked="checked"></ion-col>
+            <ion-col><input type="radio" name="rating" value="1" class="smile" formControlName="rating"></ion-col>
+            <ion-col><input type="radio" name="rating" value="2" class="heart" formControlName="rating"></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+      <ion-item-divider>
+        <ion-label text-wrap>
+            What would you like to share with us?
+        </ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-textarea formControlName="description" rows="6" cols="20" placeholder="Your thoughts..."></ion-textarea>
+      </ion-item>
+
+      <ion-item-divider>
+        <ion-label text-wrap>
+            How likely would you recommend Mobile.UP to your friends and colleagues?
+        </ion-label>
+      </ion-item-divider>
+
+    <ion-item>
+      <ion-range min="0" max="10" step="1" pin="true" snaps="true" formControlName="recommend">
+        <ion-label range-left class="small-text">1</ion-label>
+        <ion-label range-right>10</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <div text-center>
+      <button ion-button type="submit" [disabled]="!form.valid">Submit</button>
+    </div>
+  </form>
+</ion-content>
+
+<style>
+    ion-list + ion-list {
+      margin-top: 0;
+    }
+    .small-text {
+      font-size: 10px;
+    }
+  </style>

@@ -296,6 +296,9 @@
       "contact": "Contact",
       "participate": "Participate",
       "libraries": "Libraries & Licences"
+    },
+    "feedback": {
+      "title": "Feedback"
     }
   },
   "button": {

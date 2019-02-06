@@ -30,6 +30,7 @@ registerLocaleData(localeDe);
 registerLocaleData(localeEn);
 import { SecureStorage } from '@ionic-native/secure-storage';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 /* Pages */
 import { HomePage } from '../pages/home/home';
@@ -71,6 +72,7 @@ import { ErrorLoggingProvider } from '../providers/error-logging/error-logging';
 import { MomentPipe } from '../pipes/moment/moment';
 import { WebServiceProvider } from '../providers/web-service/web-service';
 import { CampusMapPage } from "../pages/campus-map/campus-map";
+import { FeedbackPage } from "../pages/feedback/feedback";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -104,7 +106,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     { component: OpeningHoursPage, name: 'OpeningHoursPage', segment: 'opening-hours' },
     { component: AppInfoPage, name: 'AppInfoPage', segment: 'about'},
     { component: TransportPage, name: 'TransportPage', segment: 'transport'},
-    { component: CampusMapPage, name: 'CampusMapPage', segment: 'campusmap'}
+    { component: CampusMapPage, name: 'CampusMapPage', segment: 'campusmap'},
+    { component: FeedbackPage, name: 'FeedbackPage', segment: 'feedback'}
   ]
 };
 
@@ -140,7 +143,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     AppInfoPage,
     TransportPage,
     MomentPipe,
-    CampusMapPage
+    CampusMapPage,
+    FeedbackPage
   ],
   imports: [
     HttpClientModule,
@@ -198,7 +202,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     PopoverComponent,
     AppInfoPage,
     TransportPage,
-    CampusMapPage
+    CampusMapPage,
+    FeedbackPage
   ],
   providers: [
     StatusBar,
@@ -231,7 +236,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     MapsProvider,
     AlertProvider,
     ErrorLoggingProvider,
-    WebServiceProvider
+    WebServiceProvider,
+    EmailComposer
   ]
 })
 export class AppModule {
