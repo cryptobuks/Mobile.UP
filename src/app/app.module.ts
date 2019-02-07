@@ -67,6 +67,8 @@ import { MapsProvider } from '../providers/maps/maps';
 import { AlertProvider } from '../providers/alert/alert';
 import { MobileUPErrorHandler } from "../library/errorHandler";
 import { ErrorLoggingProvider } from '../providers/error-logging/error-logging';
+import { LectureSchedulePage } from "../pages/lecture-schedule/lecture-schedule";
+
 
 import { MomentPipe } from '../pipes/moment/moment';
 import { WebServiceProvider } from '../providers/web-service/web-service';
@@ -104,7 +106,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     { component: OpeningHoursPage, name: 'OpeningHoursPage', segment: 'opening-hours' },
     { component: AppInfoPage, name: 'AppInfoPage', segment: 'about'},
     { component: TransportPage, name: 'TransportPage', segment: 'transport'},
-    { component: CampusMapPage, name: 'CampusMapPage', segment: 'campusmap'}
+    { component: CampusMapPage, name: 'CampusMapPage', segment: 'campusmap'},
+    { component: LectureSchedulePage, name: 'LectureSchedulePage', segment: 'lectureSchedule'}
   ]
 };
 
@@ -140,7 +143,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     AppInfoPage,
     TransportPage,
     MomentPipe,
-    CampusMapPage
+    CampusMapPage,
+    LectureSchedulePage
   ],
   imports: [
     HttpClientModule,
@@ -198,7 +202,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     PopoverComponent,
     AppInfoPage,
     TransportPage,
-    CampusMapPage
+    CampusMapPage,
+    LectureSchedulePage
   ],
   providers: [
     StatusBar,

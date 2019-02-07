@@ -144,6 +144,11 @@
       "componentName": "campusMap",
       "icon": "map",
       "selected": false
+    },
+    "lectureSchedule": {
+      "componentName": "lectureSchedule",
+      "icon": "map",
+      "selected": true
     }
   },
   "authorization": {

@@ -1,4 +1,4 @@
-import {ICredentials} from "../providers/login-provider/interfaces";
+import { ICredentials } from "../providers/login-provider/interfaces";
 
 export interface IModul {
   moduleTitle: string;
@@ -97,7 +97,21 @@ export interface IPulsApiRequest_getStudentCourses {
   'user-auth':ICredentials
 }
 
+export interface IPulsAPIResponse_getLectureScheduleAll {
+  studentCourses: IStudentCourses;
+  message?:string;
+}
+
+export interface IPulsApiRequest_getLectureScheduleAll {
+  condition:IPulsApiRequest_getLectureScheduleAll_condition;
+}
+
+
 export interface IPulsApiRequest_getStudentCourses_condition {
   semester:number;
   allLectures:number;
+}
+
+export interface IPulsApiRequest_getLectureScheduleAll_condition {
+  semester:number;
 }
