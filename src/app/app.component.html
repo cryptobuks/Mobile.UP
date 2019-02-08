@@ -27,7 +27,7 @@
               <ion-icon color="primary" name="information-circle" slot="start"></ion-icon>
               {{ "page.app-info.title" | translate }}
           </ion-item>
-          <ion-item (click)="toImprint()">
+          <ion-item lines="none" (click)="toImprint()">
               <ion-icon color="primary" name="list-box" class="fa fa-balance-scale" aria-hidden="true" slot="start"></ion-icon>
               {{ "page.impressum.title" | translate }}
           </ion-item>
@@ -38,6 +38,7 @@
         <ng-template #loggedInTemplate>
           <ion-item-divider color="light" *ngIf="username"><ion-label>{{ "popover.loggedInText" | translate}}: {{ username }}</ion-label></ion-item-divider>
           <ion-item (click)="doLogout()">
+              <ion-icon color="primary" name="log-out" slot="start"></ion-icon>
               <i class="fa fa-sign-out" aria-hidden="true"></i>
               {{ "button.logout" | translate }}
           </ion-item>
@@ -47,6 +48,7 @@
         <ng-template #notLoggedInTemplate>
           <ion-item-divider color="light"><ion-label>{{ "popover.notLoggedInText" | translate}}</ion-label></ion-item-divider>
           <ion-item (click)="toLogin()">
+              <ion-icon color="primary" name="log-in" slot="start"></ion-icon>
               <i class="fa fa-sign-in" aria-hidden="true"></i>
               {{ "button.login" | translate }}
           </ion-item>

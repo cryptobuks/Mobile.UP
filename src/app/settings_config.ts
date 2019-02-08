@@ -13,14 +13,14 @@ export const SETTINGS = [
         value: 'Deutsch',
         options: [{key: 'Deutsch'}, {key: 'Englisch'}],
         type: ESettingType.string_radio,
-        icon: 'ios-globe-outline'
+        icon: 'globe'
     },
     {
         key: 'campus',
         value: 'Griebnitzsee',
         options: [{key: 'Neues Palais'}, {key: 'Griebnitzsee'}, {key: 'Golm'}],
         type: ESettingType.string_radio,
-        icon: 'ios-locate-outline'
+        icon: 'locate'
     },
     {
         key: 'inpractice',
@@ -37,7 +37,7 @@ export const SETTINGS = [
             {key: 'Praktika'}
         ],
         type: ESettingType.checkbox,
-        icon: 'ios-filing-outline'
+        icon: 'filing'
     },
     {
         key: 'studyarea',
@@ -53,20 +53,20 @@ export const SETTINGS = [
             {key: 'fächerübergreifend'},
         ],
         type: ESettingType.checkbox,
-        icon: 'ios-filing-outline'
+        icon: 'filing'
     },
     {
         key: 'domestic',
         value: true,
         type: ESettingType.boolean,
-        icon: 'ios-plane-outline',
+        icon: 'home',
         options: []
     },
     {
         key: 'foreign',
         value: true,
         type: ESettingType.boolean,
-        icon: 'ios-plane-outline',
+        icon: 'airplane',
         options: []
     }
 ];
