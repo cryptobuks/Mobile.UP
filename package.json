@@ -26,6 +26,7 @@
     "@angular/router": "^7.2.2",
     "@ionic-native/app-availability": "^5.0.0",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/device": "^5.0.0",
     "@ionic-native/in-app-browser": "^5.0.0",
     "@ionic-native/launch-navigator": "^5.0.0",
     "@ionic-native/network": "^5.0.0",

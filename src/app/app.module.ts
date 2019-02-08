@@ -16,6 +16,8 @@ import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { AppAvailability } from '@ionic-native/app-availability/ngx';
 import { IonicStorageModule } from '@ionic/storage';
+import { Device } from '@ionic-native/device/ngx';
+import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,8 +52,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     StatusBar,
     SplashScreen,
     Network,
+    Device,
     SafariViewController,
     InAppBrowser,
+    LaunchNavigator,
     AppAvailability,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

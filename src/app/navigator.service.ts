@@ -1,8 +1,8 @@
 import { Injectable, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LaunchNavigatorOptions, AppSelectionOptions, RememberChoiceOptions, PromptsOptions } from '@ionic-native/launch-navigator';
-// tslint:disable-next-line:max-line-length
-import { LaunchNavigator } from 'plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/uk.co.workingedge.phonegap.plugin.launchnavigator';
+import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
+import { WebIntentService } from './web-intent.service';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +30,11 @@ export class NavigatorService implements OnInit {
     'appSelection': this.appSelectionOptions
   };
 
-  constructor(private translate: TranslateService, private launchNavigator: LaunchNavigator) { }
+  constructor(
+    private translate: TranslateService,
+    private launchNavigator: LaunchNavigator,
+    private webIntent: WebIntentService
+  ) { }
 
   ngOnInit() {
     this.promptsOptions = {
@@ -47,10 +51,20 @@ export class NavigatorService implements OnInit {
   }
 
   public navigateToAdress(location: string) {
-    this.launchNavigator.navigate(location, this.options);
+    this.launchNavigator.navigate(location, this.options).then(success => {
+      console.log('Launched navigator');
+    }, error => {
+      console.log('Error launching navigator: ', error);
+      this.webIntent.permissionPromptWebsite('https://maps.google.com/?q=' + location);
+    });
   }
 
   public navigateToLatLong(latLong: number[]) {
-    this.launchNavigator.navigate(latLong, this.options);
+    this.launchNavigator.navigate(latLong, this.options).then(success => {
+      console.log('Launched navigator');
+    }, error => {
+      console.log('Error launching navigator: ', error);
+      this.webIntent.permissionPromptWebsite('https://maps.google.com/?q=' + String(latLong[0]) +','+ String(latLong[1]));
+    });
   }
 }
