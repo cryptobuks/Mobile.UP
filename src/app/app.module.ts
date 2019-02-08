@@ -15,6 +15,7 @@ import { Network } from '@ionic-native/network/ngx';
 import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { AppAvailability } from '@ionic-native/app-availability/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -33,6 +34,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       backButtonText: '',
       mode: 'md'
     }),
+    IonicStorageModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     CacheModule.forRoot({ keyPrefix: 'cache-' }),

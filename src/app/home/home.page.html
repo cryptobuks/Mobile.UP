@@ -17,10 +17,10 @@
     (click)="openPage(module)" [id]="module.selected ? icon_selected : icon_not_selected">
 
       <div *ngIf="module.selected" >
-        <ion-label class="hyphen" position="stacked" padding-top>
+        <ion-label position="stacked">
           <ion-icon *ngIf="module.icon" [name]="module.icon"></ion-icon>
           <ion-icon *ngIf="module.customIcon" [src]="module.customIcon"></ion-icon>
-          {{ module.i18nKey | translate }}
+          <div class="hyphen">{{ module.i18nKey | translate }}</div>
         </ion-label>
       </div>
     </ion-item>
