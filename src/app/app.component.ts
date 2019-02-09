@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, App, Nav, MenuController, Events } from 'ionic-angular';
 import { HomePage } from '../pages/home/home';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { TranslateService } from "@ngx-translate/core";
 import { Storage } from "@ionic/storage";
 import { HttpClient } from "@angular/common/http";
@@ -95,7 +95,7 @@ export class MobileUPApp {
             console.log("clearing storage...");
             await this.sessionProvider.removeSession();
             await this.sessionProvider.removeUserInfo();
-            await this.storage.clear().then(done => {
+            await this.storage.remove('config').then(() => {
               this.storage.set("appVersion", currentAppVersion);
               this.initializeApp();
             }, error => {
@@ -131,7 +131,13 @@ export class MobileUPApp {
    */
   private checkSessionValidity() {
     this.platform.ready().then(async () => {
-      let session = JSON.parse(await this.sessionProvider.getSession());
+      let tmp = await this.sessionProvider.getSession();
+      var session = undefined;
+      if (tmp) {
+        if (typeof tmp !== 'object') {
+          session = JSON.parse(tmp);
+        } else { session = tmp; }
+      }
 
       if (session) {
         // helper function for determining whether session is still valid
@@ -268,7 +274,11 @@ export class MobileUPApp {
 
     this.sessionProvider.getSession().then(session => {
       if (session) {
-        let sessionParsed = JSON.parse(session);
+        var sessionParsed = undefined;
+        if (typeof session !== 'object') {
+          sessionParsed = JSON.parse(session);
+        } else { sessionParsed = session; }
+        
         if (sessionParsed) {
           this.loggedIn = true;
           this.username = sessionParsed.credentials.username;
@@ -278,7 +288,10 @@ export class MobileUPApp {
 
     this.sessionProvider.getUserInfo().then(userInf => {
       if (userInf) {
-        this.userInformation = JSON.parse(userInf);
+        this.userInformation = undefined;
+        if (typeof userInf !== 'object') {
+          this.userInformation = JSON.parse(userInf);
+        } else { this.userInformation = userInf; }
       }
     });
   }

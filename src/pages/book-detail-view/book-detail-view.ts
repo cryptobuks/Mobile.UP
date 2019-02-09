@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { IConfig } from '../../library/interfaces';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import * as moment from 'moment';
 import { CacheService } from 'ionic-cache';
 import { WebIntentProvider } from '../../providers/web-intent/web-intent';
+import { WebHttpUrlEncodingCodec, utils } from '../../library/util';
 
 @IonicPage()
 @Component({
@@ -38,14 +39,26 @@ export class BookDetailViewPage {
     "noDetails": true
   };
 
-  constructor(public navCtrl: NavController,
+  /**
+   * @constructor
+   * @param navCtrl
+   * @param navParams
+   * @param storage
+   * @param http
+   * @param cache
+   * @param webIntent
+   */
+
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
     private storage: Storage,
     private http: HttpClient,
     private cache: CacheService,
     public webIntent: WebIntentProvider) {
+
     this.book = this.navParams.data["book"];
-    console.log(this.book);
+    //console.log(this.book);
   }
 
   async ngOnInit() {
@@ -53,29 +66,12 @@ export class BookDetailViewPage {
     this.updateLocation();
     this.updateDetails();
   }
-
-  convertToArray(toConvert) { // convert everything to an array so you can handle it universally
-    if (Array.isArray(toConvert)) {
-      return toConvert;
-    } else {
-      var tmp = [];
-      tmp.push(toConvert);
-      return tmp;
-    }
-  }
-
-  isInArray(array, value) { // checks if value is in array
-    var i;
-    var found = false;
-    for (i = 0; i < array.length; i++) {
-      if (array[i] == value) {
-        found = true;
-      }
-    }
-    return found;
-  }
-
-  updateDetails() {
+  
+  /**
+   * @name updateDetails
+   * @description updates the details of the requested book
+   */
+  updateDetails(): void {
     this.getKeywords();
     this.getISBN();
     this.getSeries();
@@ -84,13 +80,25 @@ export class BookDetailViewPage {
     this.getAbstractAndTOC();
   }
 
-  updateLocation(refresher?) {
+  /**
+   * @name updateLocation
+   * @param refresher
+   */
+  updateLocation(refresher?): void {
     if (refresher) {
       this.cache.removeItem("bookLocation"+this.book.recordInfo.recordIdentifier._);
     }
 
-    let url = this.config.webservices.endpoint.libraryDAIA + this.book.recordInfo.recordIdentifier._ + "&format=json";
-    let request = this.http.get(url);
+    let url = this.config.webservices.endpoint.libraryDAIA;
+
+    let headers = new HttpHeaders()
+        .append("Authorization", this.config.webservices.apiToken);
+
+    let params = new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
+      .append("id", 'ppn:'+this.book.recordInfo.recordIdentifier._)
+      .append("format", "json");
+
+    let request = this.http.get(url, {headers:headers, params:params});
     this.cache.loadFromObservable("bookLocation"+this.book.recordInfo.recordIdentifier._, request).subscribe(data => {
       if (refresher) {
         refresher.complete();
@@ -104,6 +112,10 @@ export class BookDetailViewPage {
     });
   }
 
+  /**
+   * @name setLocationData
+   * @param data
+   */
   setLocationData(data) {
     // console.log(data);
     this.bookLocationList = [];
@@ -125,6 +137,10 @@ export class BookDetailViewPage {
     // console.log(this.bookLocationList);
   }
 
+  /**
+   * @name getDepartment
+   * @param item
+   */
   getDepartment(item) {
     var department = "";
     if (item.department && item.department.content) {
@@ -136,25 +152,37 @@ export class BookDetailViewPage {
     return department;
   }
 
+  /**
+   * @name getDepartmentURL
+   * @param item
+   */
   getDepartmentURL(item) {
     if (item.department && item.department.id) {
       return item.department.id;
     } else { return ""; }
   }
 
+  /**
+   * @name getLabel
+   * @param item
+   */
   getLabel(item) {
     if (item.label) {
       return item.label
     } else { return ""; }
   }
 
-  getBookUrl(item) {
+  /**
+   * @name getBookUrl
+   * @param item
+   */
+  getBookUrl(item):void {
     if (this.book.location) {
       var i;
-      let tmp = this.convertToArray(this.book.location);
+      let tmp = utils.convertToArray(this.book.location);
       for (i = 0; i < tmp.length; i++) {
         if (tmp[i].url) {
-          var tmpUrl = this.convertToArray(tmp[i].url);
+          var tmpUrl = utils.convertToArray(tmp[i].url);
           var j;
           for (j = 0; j < tmpUrl.length; j++) {
             if (tmpUrl[j].$ && (tmpUrl[j].$.usage == 'primary display')) {
@@ -178,13 +206,17 @@ export class BookDetailViewPage {
     return this.bookDetails.url;
   }
 
+  /**
+   * @name getItem
+   * @param item
+   */
   getItem(item) {
     var status = "", statusInfo = "";
 
     // check for available / unavailable items and process loan and presentation
     if (item.available) {
       var loanAvailable, presentationAvailable;
-      let availableArray = this.convertToArray(item.available);
+      let availableArray = utils.convertToArray(item.available);
       var i;
       for (i = 0; i < availableArray.length; i++) {
         if (availableArray[i] && availableArray[i].service == "loan") {
@@ -198,7 +230,7 @@ export class BookDetailViewPage {
 
     if (item.unavailable) {
       var loanUnavailable, presentationUnavailable;
-      let unavailableArray = this.convertToArray(item.available);
+      let unavailableArray = utils.convertToArray(item.available);
       var j;
       for (j = 0; j < unavailableArray.length; j++) {
         if (unavailableArray[j] && unavailableArray[j].service == "loan") {
@@ -262,23 +294,26 @@ export class BookDetailViewPage {
     return [status, statusInfo];
   }
 
-  getKeywords() {
+  /**
+   * @name getKeywords
+   */
+  getKeywords():void {
     if (this.book.subject) {
-      let tmp = this.convertToArray(this.book.subject);
+      let tmp = utils.convertToArray(this.book.subject);
       var i;
       for (i = 0; i < tmp.length; i++) {
         if (tmp[i] && tmp[i].topic) {
-          if (!this.isInArray(this.bookDetails.keywords, tmp[i].topic)) {
+          if (!utils.isInArray(this.bookDetails.keywords, tmp[i].topic)) {
             this.bookDetails.keywords.push(tmp[i].topic);
             this.bookDetails.noDetails = false;
           }
         } else if (tmp[i] && tmp[i].geographic) {
-          if (!this.isInArray(this.bookDetails.keywords, tmp[i].geographic)) {
+          if (!utils.isInArray(this.bookDetails.keywords, tmp[i].geographic)) {
             this.bookDetails.keywords.push(tmp[i].geographic);
             this.bookDetails.noDetails = false;
           }
         } else if (tmp[i] && tmp[i].$ && tmp[i].$.displayLabel) {
-          if (!this.isInArray(this.bookDetails.keywords, tmp[i].$.displayLabel)) {
+          if (!utils.isInArray(this.bookDetails.keywords, tmp[i].$.displayLabel)) {
             this.bookDetails.keywords.push(tmp[i].$.displayLabel);
             this.bookDetails.noDetails = false;
           }
@@ -287,13 +322,16 @@ export class BookDetailViewPage {
     }
   }
 
-  getISBN() {
+  /**
+   * @name getISBN
+   */
+  getISBN():void {
     if (this.book.identifier) {
-      let tmp = this.convertToArray(this.book.identifier);
+      let tmp = utils.convertToArray(this.book.identifier);
       var i;
       for (i = 0; i < tmp.length; i++) {
         if (tmp[i] && tmp[i].$ && tmp[i].$.type == "isbn" && tmp[i]._) {
-          if(!this.isInArray(this.bookDetails.isbn, tmp[i]._)) {
+          if(!utils.isInArray(this.bookDetails.isbn, tmp[i]._)) {
             this.bookDetails.isbn.push(tmp[i]._);
             this.bookDetails.noDetails = false;
           }
@@ -302,24 +340,27 @@ export class BookDetailViewPage {
     }
   }
 
-  getSeries() {
+  /**
+   * @name getSeries
+   */
+  getSeries():void {
     var i;
     if (this.book.titleInfo) {
-      let tmp = this.convertToArray(this.book.titleInfo);
+      let tmp = utils.convertToArray(this.book.titleInfo);
 
       for (i = 0; i < tmp.length; i++) {
-        if (tmp[i] && tmp[i].partNumber && !this.isInArray(this.bookDetails.series, tmp[i].partNumber)) {
+        if (tmp[i] && tmp[i].partNumber && !utils.isInArray(this.bookDetails.series, tmp[i].partNumber)) {
           this.bookDetails.series.push(tmp[i].partNumber);
           this.bookDetails.noDetails = false;
         }
       }
     }
     if (this.book.relatedItem) {
-      let tmp = this.convertToArray(this.book.relatedItem);
+      let tmp = utils.convertToArray(this.book.relatedItem);
 
       for (i = 0; i < tmp.length; i++) {
         if (tmp[i] && tmp[i].$ && tmp[i].$.type == "series") {
-          if (tmp[i].titleInfo && tmp[i].titleInfo.title && !this.isInArray(this.bookDetails.series, tmp[i].titleInfo.title)) {
+          if (tmp[i].titleInfo && tmp[i].titleInfo.title && !utils.isInArray(this.bookDetails.series, tmp[i].titleInfo.title)) {
             this.bookDetails.series.push(tmp[i].titleInfo.title);
             this.bookDetails.noDetails = false;
           }
@@ -328,13 +369,16 @@ export class BookDetailViewPage {
     }
   }
 
-  getExtent() {
+  /**
+   * @name getExtent
+   */
+  getExtent():void {
     var i;
     if (this.book.physicalDescription) {
-      let tmp = this.convertToArray(this.book.physicalDescription);
+      let tmp = utils.convertToArray(this.book.physicalDescription);
 
       for (i = 0; i < tmp.length; i++) {
-        if (tmp[i] && tmp[i].extent && !this.isInArray(this.bookDetails.extent, tmp[i].extent)) {
+        if (tmp[i] && tmp[i].extent && !utils.isInArray(this.bookDetails.extent, tmp[i].extent)) {
           this.bookDetails.extent.push(tmp[i].extent);
           this.bookDetails.noDetails = false;
         }
@@ -342,16 +386,19 @@ export class BookDetailViewPage {
     }
   }
 
-  getNotes() {
+  /**
+   * @name getNotes
+   */
+  getNotes():void {
     var i;
     if (this.book.note) {
-      let tmp = this.convertToArray(this.book.note);
+      let tmp = utils.convertToArray(this.book.note);
 
       for (i = 0; i < tmp.length; i++) {
-        if (tmp[i] && tmp[i]._ && !this.isInArray(this.bookDetails.notes, tmp[i]._)) {
+        if (tmp[i] && tmp[i]._ && !utils.isInArray(this.bookDetails.notes, tmp[i]._)) {
           this.bookDetails.notes.push(tmp[i]._);
           this.bookDetails.noDetails = false;
-        } else if (typeof tmp[i] === "string" && !this.isInArray(this.bookDetails.notes, tmp[i])) {
+        } else if (typeof tmp[i] === "string" && !utils.isInArray(this.bookDetails.notes, tmp[i])) {
           this.bookDetails.notes.push(tmp[i]);
           this.bookDetails.noDetails = false;
         }
@@ -359,12 +406,12 @@ export class BookDetailViewPage {
     }
 
     if (this.book.relatedItem && this.book.relatedItem.note) {
-      let tmp = this.convertToArray(this.book.relatedItem.note);
+      let tmp = utils.convertToArray(this.book.relatedItem.note);
       for (i = 0; i < tmp.length; i++) {
-        if (tmp[i] && tmp[i]._ && !this.isInArray(this.bookDetails.notes, tmp[i]._)) {
+        if (tmp[i] && tmp[i]._ && !utils.isInArray(this.bookDetails.notes, tmp[i]._)) {
           this.bookDetails.notes.push(tmp[i]._);
           this.bookDetails.noDetails = false;
-        } else if (typeof tmp[i] === "string" && !this.isInArray(this.bookDetails.notes, tmp[i])) {
+        } else if (typeof tmp[i] === "string" && !utils.isInArray(this.bookDetails.notes, tmp[i])) {
           this.bookDetails.notes.push(tmp[i]);
           this.bookDetails.noDetails = false;
         }
@@ -372,10 +419,13 @@ export class BookDetailViewPage {
     }
   }
 
-  getAbstractAndTOC() {
+  /**
+   * @name getAbstractAndTOC
+   */
+  getAbstractAndTOC():void {
     var i,j;
     if (this.book.abstract) {
-      let tmp = this.convertToArray(this.book.abstract);
+      let tmp = utils.convertToArray(this.book.abstract);
 
       for (i = 0; i < tmp.length; i++) {
         if (tmp[i] && tmp[i].indexOf("--") >= 0) {
@@ -399,7 +449,11 @@ export class BookDetailViewPage {
     }
   }
 
-  setMediaType(mediatype) {
+  /**
+   * @name setMediaType
+   * @param mediatype
+   */
+  setMediaType(mediatype):void {
     this.bookDetails.mediaType = mediatype;
   }
 }
