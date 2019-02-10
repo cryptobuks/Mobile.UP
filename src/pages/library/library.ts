@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import * as xml2js from 'xml2js';
 import { BookDetailViewPage } from '../book-detail-view/book-detail-view';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
-import { ConnectionProvider } from "../../providers/connection/connection";
+import { ConnectionProvider } from '../../providers/connection/connection';
 import { WebHttpUrlEncodingCodec } from '../../library/util';
 
 @IonicPage()
@@ -16,16 +16,26 @@ import { WebHttpUrlEncodingCodec } from '../../library/util';
 })
 export class LibraryPage {
 
-  query = "";
+  query = '';
   config:IConfig;
-  startRecord = "1"; // hochsetzen beim nachladen von ergebnissen
-  maximumRecords = "15"; // wie viele geladen werden
+  startRecord = '1'; // hochsetzen beim nachladen von ergebnissen
+  maximumRecords = '15'; // wie viele geladen werden
 
   isLoading = false;
   isLoaded = false;
   bookList = [];
-  numberOfRecords = "0";
+  numberOfRecords = '0';
 
+  /**
+   * @constructor
+   * @param {NavController} navCtrl
+   * @param {NavParams} navParams
+   * @param {Storage} storage
+   * @param {Keyboard} keyboard
+   * @param {Platform} platform
+   * @param {HttpClient} http
+   * @param {ConnectionProvider} connection
+   */
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private storage: Storage,
@@ -35,29 +45,41 @@ export class LibraryPage {
               private connection: ConnectionProvider) {
   }
 
+  /**
+   * @name ngOnInit
+   * @async
+   */
   async ngOnInit() {
     this.connection.checkOnline(true, true);
-    this.config = await this.storage.get("config");
+    this.config = await this.storage.get('config');
   }
 
-  // hides keyboard once the user is scrolling
-  onScrollListener() {
-    if (this.platform.is("cordova") && (this.platform.is("ios") || this.platform.is("android"))) {
+  /**
+   * @name onScrollListener
+   * @description hides keyboard once the user is scrolling
+   */
+  onScrollListener(): void {
+    if (this.platform.is('cordova') && (this.platform.is('ios') || this.platform.is('android'))) {
       this.keyboard.hide();
     }
   }
 
+  /**
+   * @name searchLibrary
+   * @param resetList
+   * @param infiniteScroll
+   */
   searchLibrary(resetList:boolean, infiniteScroll?) {
-    console.log(this.query);
+    //console.log(this.query);
 
     let query = this.query.trim();
 
-    if (query.trim() != "") {
+    if (query.trim() !== '') {
 
       if (resetList) {
         this.bookList = [];
-        this.startRecord = "1";
-        this.numberOfRecords = "0";
+        this.startRecord = '1';
+        this.numberOfRecords = '0';
         this.isLoading = true;
         this.isLoaded = false;
       }
@@ -65,35 +87,35 @@ export class LibraryPage {
       let url = this.config.webservices.endpoint.library;
 
       let headers = new HttpHeaders()
-        .append("Authorization", this.config.webservices.apiToken);
+        .append('Authorization', this.config.webservices.apiToken);
 
       let params = new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
-        .append("operation", "searchRetrieve")
-        .append("query", query.trim())
-        .append("startRecord", this.startRecord)
-        .append("maximumRecords", this.maximumRecords)
-        .append("recordSchema", "mods");
+        .append('operation', 'searchRetrieve')
+        .append('query', query.trim())
+        .append('startRecord', this.startRecord)
+        .append('maximumRecords', this.maximumRecords)
+        .append('recordSchema', 'mods');
 
-      this.http.get(url, {headers:headers, params:params, responseType: "text"}).subscribe(res => {
+      this.http.get(url, {headers:headers, params:params, responseType: 'text'}).subscribe(res => {
         this.parseXMLtoJSON(res).then(data => {
 
-          var tmp, tmpList;
-          if (data["zs:searchRetrieveResponse"]) {
-            tmp = data["zs:searchRetrieveResponse"];
+          let tmp, tmpList;
+          if (data['zs:searchRetrieveResponse']) {
+            tmp = data['zs:searchRetrieveResponse'];
           }
 
-          if (tmp["zs:records"]) {
-            tmpList = tmp["zs:records"]["zs:record"];
+          if (tmp['zs:records']) {
+            tmpList = tmp['zs:records']['zs:record'];
           }
 
           if (tmp["zs:numberOfRecords"]) {
-            this.numberOfRecords = tmp["zs:numberOfRecords"];
+            this.numberOfRecords = tmp['zs:numberOfRecords'];
           }
 
-          var i;
+          let i;
           if (Array.isArray(tmpList)) {
             for (i = 0; i < tmpList.length; i++) {
-              this.bookList.push(tmpList[i]["zs:recordData"]["mods"]);
+              this.bookList.push(tmpList[i]['zs:recordData']['mods']);
             }
           }
 
@@ -113,25 +135,37 @@ export class LibraryPage {
     } else { this.isLoaded = true; }
   }
 
+  /**
+   * @name parseXMLtoJSON
+   * @param data
+   */
   parseXMLtoJSON(data) {
-    var parser = new xml2js.Parser({ trim:true, explicitArray:false });
+    const parser = new xml2js.Parser({ trim:true, explicitArray:false });
 
     return new Promise(resolve => {
       parser.parseString(data, function(err, result) {
         resolve(result);
       });
-    })
+    });
   }
 
-  resultIndex() {
+  /**
+   * @name resultIndex
+   * @returns {string}
+   */
+  resultIndex(): string {
     if (Number(this.numberOfRecords) < (Number(this.startRecord) + 14)) {
       return this.numberOfRecords;
     } else {
-      let s = "1 - " + (Number(this.startRecord) + 14)
+      let s = '1 - ' + (Number(this.startRecord) + 14)
       return s;
     }
   }
 
+  /**
+   * @name loadMore
+   * @description implements infiniteScrolling
+   */
   loadMore(infiniteScroll) {
     this.startRecord = String(Number(this.startRecord) + 15);
     // console.log(this.startRecord);
@@ -141,13 +175,23 @@ export class LibraryPage {
     } else { infiniteScroll.complete(); }
   }
 
-  isEnd() {
+  /**
+   * @name isEnd
+   * @description returns true if end of search is reached
+   * @returns {boolean}
+   */
+  isEnd(): boolean {
     if (Number(this.startRecord) <= Number(this.numberOfRecords)) {
       return false;
     } else { return true; }
   }
 
-  bookDetailView(book) {
+  /**
+   * @name bookDetailView
+   * @description triggers view for the detail view of a book
+   * @param book
+   */
+  bookDetailView(book): void {
     this.navCtrl.push(BookDetailViewPage, { book: book });
   }
 
