@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HintBoxComponent } from '../hint-box/hint-box.component';
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../app.module';
 import { HttpClient } from '@angular/common/http';
-import { CampusTabComponent } from '../campus-tab/campus-tab.component';
+import { HintBoxComponent } from './hint-box/hint-box.component';
+import { CampusTabComponent } from './campus-tab/campus-tab.component';
 
 @NgModule({
   declarations: [

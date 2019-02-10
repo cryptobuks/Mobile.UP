@@ -4,14 +4,14 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IConfig, IModule, IOIDCRefreshResponseObject, ISession, IOIDCUserInformationResponse } from './interfaces';
 import { Storage } from '@ionic/storage';
-import { UserSessionService } from './user-session.service';
 import * as moment from 'moment';
-import { LoginService } from './login.service';
 import { TranslateService } from '@ngx-translate/core';
-import { SettingsService } from './settings.service';
-import { ConnectionService } from './connection.service';
 import { CacheService } from 'ionic-cache';
 import { HttpClient } from '@angular/common/http';
+import { ConnectionService } from './services/connection/connection.service';
+import { UserSessionService } from './services/user-session/user-session.service';
+import { SettingsService } from './services/settings/settings.service';
+import { LoginService } from './services/login/login.service';
 
 @Component({
   selector: 'app-root',

@@ -2,7 +2,7 @@ import { Injectable, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LaunchNavigatorOptions, AppSelectionOptions, RememberChoiceOptions, PromptsOptions } from '@ionic-native/launch-navigator';
 import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
-import { WebIntentService } from './web-intent.service';
+import { WebIntentService } from '../web-intent/web-intent.service';
 
 @Injectable({
   providedIn: 'root'
@@ -64,7 +64,7 @@ export class NavigatorService implements OnInit {
       console.log('Launched navigator');
     }, error => {
       console.log('Error launching navigator: ', error);
-      this.webIntent.permissionPromptWebsite('https://maps.google.com/?q=' + String(latLong[0]) +','+ String(latLong[1]));
+      this.webIntent.permissionPromptWebsite('https://maps.google.com/?q=' + String(latLong[0]) + ',' + String(latLong[1]));
     });
   }
 }

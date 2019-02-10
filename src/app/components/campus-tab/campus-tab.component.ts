@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { SettingsService } from '../settings.service';
 import { Events } from '@ionic/angular';
+import { SettingsService } from 'src/app/services/settings/settings.service';
 
 @Component({
   selector: 'app-campus-tab',

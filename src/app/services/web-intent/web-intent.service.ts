@@ -1,12 +1,12 @@
 import { Injectable, OnInit } from '@angular/core';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
-import { IConfig, IModule, ISession } from './interfaces';
+import { IConfig, IModule, ISession } from '../../interfaces';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import { Platform, AlertController } from '@ionic/angular';
 import { AppAvailability } from '@ionic-native/app-availability/ngx';
 import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
-import { UserSessionService } from './user-session.service';
+import { UserSessionService } from '../user-session/user-session.service';
 
 @Injectable({
   providedIn: 'root'

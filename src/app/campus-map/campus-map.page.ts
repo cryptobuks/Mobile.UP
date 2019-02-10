@@ -2,10 +2,10 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { IConfig, IMapsResponseObject, ICampus, IMapsResponse } from '../interfaces';
 import * as leaflet from 'leaflet';
 import { Storage } from '@ionic/storage';
-import { SettingsService } from '../settings.service';
-import { ConnectionService } from '../connection.service';
-import { MapsService } from '../maps.service';
 import { TranslateService } from '@ngx-translate/core';
+import { SettingsService } from '../services/settings/settings.service';
+import { ConnectionService } from '../services/connection/connection.service';
+import { MapsService } from '../services/maps/maps.service';
 
 @Component({
   selector: 'app-campus-map',

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { ISetting, ESettingType } from './interfaces';
+import { ISetting, ESettingType } from '../../interfaces';
 import * as Constants from './settings_config';
 
 @Injectable({

@@ -6,7 +6,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MomentPipe } from './moment.pipe';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -18,6 +17,7 @@ import { AppAvailability } from '@ionic-native/app-availability/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { Device } from '@ionic-native/device/ngx';
 import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
+import { MomentPipe } from './pipes/moment.pipe';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigatorService } from '../navigator.service';
 import { Platform } from '@ionic/angular';
 import { IConfig } from '../interfaces';
 import { Storage } from '@ionic/storage';
 import { Device } from '@ionic-native/device/ngx';
+import { NavigatorService } from '../services/navigator/navigator.service';
 
 @Component({
   selector: 'app-app-info',

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ILoginConfigOIDC, IOIDCRefreshResponseObject, IOIDCUserInformationResponse, IOIDCLoginResponse, ICredentials } from './interfaces';
-import { ELoginErrors, ISession } from './interfaces';
+import { ILoginConfigOIDC, IOIDCRefreshResponseObject } from '../../interfaces';
+import { ELoginErrors, ISession, IOIDCUserInformationResponse, IOIDCLoginResponse, ICredentials } from '../../interfaces';
 import { Observable, ReplaySubject } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams, HttpParameterCodec } from '@angular/common/http';
 
@@ -25,6 +25,7 @@ export class LoginService {
       .append('Authorization',    loginConfig.accessToken)
       .append('Content-Type',     loginConfig.contentType);
 
+    // tslint:disable-next-line: no-use-before-declare
     const params: HttpParams = new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
       .append('grant_type',       loginConfig.grantType_password)
       .append('username',         credentials.username)

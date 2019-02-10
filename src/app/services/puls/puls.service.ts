@@ -2,11 +2,11 @@ import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AlertController, NavController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
-import { UserSessionService } from './user-session.service';
-import { AlertService } from './alert.service';
-import { ISession, IPulsApiRequestGetStudentCourses, IConfig, IPulsAPIResponseGetStudentCourses } from './interfaces';
+import { ISession, IPulsApiRequestGetStudentCourses, IConfig, IPulsAPIResponseGetStudentCourses } from '../../interfaces';
 import { Observable, ReplaySubject } from 'rxjs';
 import { Storage } from '@ionic/storage';
+import { UserSessionService } from '../user-session/user-session.service';
+import { AlertService } from '../alert/alert.service';
 
 @Injectable({
   providedIn: 'root'

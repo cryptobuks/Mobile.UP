@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { TranslateService } from '@ngx-translate/core';
 import { ISetting, ESettingType, ISettingOption } from '../interfaces';
-import * as Constants from '../settings_config';
+import * as Constants from '../services/settings/settings_config';
 import { AlertController } from '@ionic/angular';
 import * as moment from 'moment';
 

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { UserSessionService } from '../user-session.service';
 import { ICredentials, ELoginErrors, IConfig, ISession, IOIDCUserInformationResponse } from '../interfaces';
-import { ConnectionService } from '../connection.service';
 import { AlertController, Events, NavController, LoadingController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { Observable } from 'rxjs';
-import { LoginService } from '../login.service';
 import { TranslateService } from '@ngx-translate/core';
+import { UserSessionService } from '../services/user-session/user-session.service';
+import { ConnectionService } from '../services/connection/connection.service';
+import { LoginService } from '../services/login/login.service';
 
 @Component({
   selector: 'app-login',

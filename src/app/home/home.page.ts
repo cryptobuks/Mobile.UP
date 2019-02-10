@@ -3,7 +3,7 @@ import { IModule } from '../interfaces';
 import { NavController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
-import { WebIntentService } from '../web-intent.service';
+import { WebIntentService } from '../services/web-intent/web-intent.service';
 
 @Component({
   selector: 'app-home',
