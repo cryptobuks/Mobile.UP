@@ -533,3 +533,5 @@ export interface IMapsResponseObject {
 }
 
 export type IMapsResponse = IMapsResponseObject[];
+
+export interface Book {}

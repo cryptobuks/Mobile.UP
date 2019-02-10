@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
-import { IConfig } from '../../library/interfaces';
+import { IonicPage, NavController, NavParams, Platform, ItemSliding, ToastController, Slide } from 'ionic-angular';
+import { IConfig, Book } from '../../library/interfaces';
 import { Storage } from '@ionic/storage';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import * as xml2js from 'xml2js';
@@ -8,6 +8,8 @@ import { BookDetailViewPage } from '../book-detail-view/book-detail-view';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { ConnectionProvider } from '../../providers/connection/connection';
 import { WebHttpUrlEncodingCodec } from '../../library/util';
+import { TranslateService } from '@ngx-translate/core';
+import { utils } from '../../library/util';
 
 @IonicPage()
 @Component({
@@ -23,6 +25,8 @@ export class LibraryPage {
 
   isLoading = false;
   isLoaded = false;
+  displayedFavorites: Book[] = [];
+  allFavorites: Book[] = [];
   bookList = [];
   numberOfRecords = '0';
 
@@ -39,8 +43,10 @@ export class LibraryPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private storage: Storage,
+              private translate: TranslateService,
               private keyboard: Keyboard,
               private platform: Platform,
+              private toastCtrl: ToastController,
               private http: HttpClient,
               private connection: ConnectionProvider) {
   }
@@ -193,6 +199,110 @@ export class LibraryPage {
    */
   bookDetailView(book): void {
     this.navCtrl.push(BookDetailViewPage, { book: book });
+  }
+
+
+  /**
+   * @name presentToast
+   * @param message
+   */
+  presentToast(message) {
+    const toast = this.toastCtrl.create({
+      message: message,
+      duration: 2000,
+      position: "top",
+      cssClass: "toastPosition"
+    });
+    toast.present();
+  }
+
+  /**
+   * @name makeFavorite
+   * @description set favorite and save to storage
+   * @param {ADS} ads
+   * @param {ItemSliding} slidingItem
+   */
+  makeFavorite(book: Book, slidingItem:ItemSliding) {
+    console.log(book, slidingItem);
+
+    if (!utils.isInArray(this.displayedFavorites, book)) {
+      this.displayedFavorites.push(book);
+
+      if (!utils.isInArray(this.allFavorites, book)) {
+        this.allFavorites.push(book);
+      }
+      this.presentToast(this.translate.instant("page.library.favAdded"));
+    } else {
+      this.presentToast(this.translate.instant("page.library.favExists"));
+    }
+
+    this.storage.set("favoriteBooks", this.allFavorites);
+
+    slidingItem.close();
+  }
+
+  /**
+   * @name removeFavorite
+   * @description removes favorites
+   * @param {ADS} ads
+   */
+  removeFavorite(ads:Book) {
+    let i;
+    let tmp: Book[] = [];
+    for (i = 0; i < this.allFavorites.length; i++) {
+      if (this.allFavorites[i] != ads) {
+        tmp.push(this.allFavorites[i]);
+      }
+    }
+
+    let tmp2: Book[] = [];
+    for (i = 0; i < this.displayedFavorites.length; i++) {
+      if (this.displayedFavorites[i] != ads) {
+        tmp2.push(this.displayedFavorites[i]);
+      }
+    }
+    this.allFavorites = [];
+    this.allFavorites = tmp;
+    this.displayedFavorites = [];
+    this.displayedFavorites = tmp2;
+    this.presentToast(this.translate.instant("page.practice.favRemoved"));
+    this.storage.set("favoriteBooks", this.allFavorites);
+  }
+
+  /**
+   * @name checkFavorites
+   * @async
+   * @description checks if favorites are still valid
+   */
+  async checkFavorites() {
+    var tmp:Book[] = await this.storage.get("favoriteBooks");
+    /**
+     * TODO: check all favorites through SRU of existance and update each record
+     */
+    /*
+    this.allFavorites = [];
+    this.displayedFavorites = [];
+    if (tmp) {
+      var i, j;
+      for (i = 0; i < tmp.length; i++) {
+        for (j = 0; j < this.defaultList.length; j++) {
+          if (tmp[i].uid == this.defaultList[j].uid) {
+            if (!utils.isInArray(this.allFavorites, tmp[i])) {
+              this.allFavorites.push(tmp[i]);
+            }
+            break;
+          }
+        }
+      }
+
+      if (tmp.length > this.allFavorites.length) {
+        this.presentToast(this.translate.instant("page.practice.favNotAvailable"));
+      }
+    }
+
+    this.displayedFavorites = this.allFavorites;
+    this.storage.set("favoriteJobs", this.allFavorites);
+    */
   }
 
 }
