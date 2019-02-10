@@ -6,7 +6,7 @@ import { Platform } from 'ionic-angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { ConnectionProvider } from "../../providers/connection/connection";
 import { PulsProvider } from "../../providers/puls/puls";
-import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
 
 @IonicPage()
@@ -42,7 +42,7 @@ export class LectureSchedulePage {
       this.isLoaded = false;
     }
 
-    this.cache.loadFromObservable("lectureScheduleAll", Observable.of(this.puls.getLectureScheduleAll().subscribe(
+    this.cache.loadFromObservable("lectureScheduleAll", of(this.puls.getLectureScheduleAll().subscribe(
       (response:IPulsAPIResponse_getLectureScheduleAll) => {
       if (refresher) {
         refresher.complete();
