@@ -101,7 +101,7 @@ interface ICampusMapConfig {
     campi: ICampus[];
 }
 
-interface ICampus {
+export interface ICampus {
     id: number;
     name: string;
     pretty_name: string;
@@ -271,3 +271,12 @@ export interface ICredentials {
     username: string;
     password: string;
 }
+
+import * as geojson from 'geojson';
+export interface IMapsResponseObject {
+  campus: string;
+  category: string;
+  geo: geojson.FeatureCollection;
+}
+
+export type IMapsResponse = IMapsResponseObject[];

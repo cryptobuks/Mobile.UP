@@ -5,10 +5,12 @@ import { IonicModule } from '@ionic/angular';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../app.module';
 import { HttpClient } from '@angular/common/http';
+import { CampusTabComponent } from '../campus-tab/campus-tab.component';
 
 @NgModule({
   declarations: [
-    HintBoxComponent
+    HintBoxComponent,
+    CampusTabComponent
   ],
   imports: [
     IonicModule,
@@ -22,7 +24,8 @@ import { HttpClient } from '@angular/common/http';
     }),
   ],
   exports: [
-    HintBoxComponent
+    HintBoxComponent,
+    CampusTabComponent
   ]
 })
 export class ComponentsModule { }
