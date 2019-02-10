@@ -308,3 +308,19 @@ export interface EmergencyCall {
   address?:   Address;
   expanded: boolean;
 }
+
+export interface IGradeResponse {
+  personalStudyAreas: {
+    Abschluss: IGradeDegree;
+  };
+  message?: string;
+}
+
+export interface IGradeDegree {
+  AbLtxt: string;
+  Abschl: string;
+  MtkNr: string;
+  Semester: string;
+  StgNr: string;
+  Studiengaenge: any;
+}

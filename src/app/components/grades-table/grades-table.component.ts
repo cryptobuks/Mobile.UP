@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { utils } from 'src/app/utils';
 
 @Component({
   selector: 'app-grades-table',
@@ -7,9 +8,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GradesTableComponent implements OnInit {
 
+  currentProfession = '0';
+  gradeArray = [];
+
+  @Input() studentGrades;
+  @Input() studentDetails;
+  @Input() isDualDegree;
+  @Input() i;
+
   constructor() { }
 
   ngOnInit() {
+    this.currentProfession = '0';
+    if (this.studentGrades.academicAchievements
+      && this.studentGrades.academicAchievements.achievement
+      && this.studentGrades.academicAchievements.achievement.field) {
+      this.gradeArray = utils.convertToArray(this.studentGrades.academicAchievements.achievement.field);
+    }
+  }
+
+  changeProfession(event) {
+    this.currentProfession = event.detail.value;
+  }
+
+  isArray(toCheck) {
+    if (Array.isArray(toCheck)) {
+      return true;
+    } else { return false; }
+  }
+
+  /**
+   * has to be declared for html pages to use the imported function
+   * couldn't find a better solution
+   * @param array
+   */
+  convertToArray(array) {
+    return utils.convertToArray(array);
+  }
+
+  unescapeHTML(s: string) { // replaces &colon; in strings, unescape / decodeURI didnt work (?)
+    return s.replace(/&colon;/g, ':');
   }
 
 }
