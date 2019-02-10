@@ -223,7 +223,6 @@ export class LibraryPage {
    * @param {ItemSliding} slidingItem
    */
   makeFavorite(book: Book, slidingItem:ItemSliding) {
-    console.log(book, slidingItem);
 
     if (!utils.isInArray(this.displayedFavorites, book)) {
       this.displayedFavorites.push(book);
