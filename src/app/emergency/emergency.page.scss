@@ -1,0 +1,22 @@
+ion-icon {
+    color: var(--ion-color-primary);
+    margin-right: 10px;
+}
+
+ion-col {
+    font-size: 0.9rem;
+}
+
+.link {
+    color: var(--ion-color-primary);
+    text-decoration: underline;
+}
+
+.notUnderlined {
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.whiteFont {
+    color: var(--ion-color-secondary);
+}

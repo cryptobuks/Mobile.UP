@@ -18,6 +18,9 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Device } from '@ionic-native/device/ngx';
 import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
 import { MomentPipe } from './pipes/moment.pipe';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
+import { Contacts } from '@ionic-native/contacts/ngx';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -55,6 +58,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     Device,
     SafariViewController,
     InAppBrowser,
+    Keyboard,
+    // tslint:disable-next-line: deprecation
+    Contacts,
+    CallNumber,
     LaunchNavigator,
     AppAvailability,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

@@ -4,8 +4,96 @@
     <ion-menu-button slot="end"></ion-menu-button>
     <ion-title>{{ "page.emergency.title" | translate }}</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar
+    [placeholder]="'page.emergency.placeholder.search' | translate"
+    (ionChange)="filterItems($event)"
+    debounce="500">
+  </ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content (ionScroll)="onScrollListener()">
 
+  <ion-refresher (ionRefresh)="loadEmergencyCalls($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div align="center" *ngIf="!isLoaded" padding>
+    <ion-spinner></ion-spinner>
+  </div>
+  <!-- list of emergencyCalls -->
+  <ion-list>
+
+    <div *ngIf="isLoaded && displayedList.length == 0">
+      <app-hint-box hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.noResults-hint"></app-hint-box>
+    </div>
+
+    <div *ngFor="let emergencyCall of displayedList">
+
+      <ion-item-sliding>
+        <!-- template for emergencyCalls -->
+        <ion-item tappable (click)="expand(emergencyCall)">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label no-margin>
+            <h2 text-wrap>{{emergencyCall.name}}</h2>
+            <p text-wrap *ngIf="emergencyCall.description">{{emergencyCall.description}}</p>
+          </ion-label>
+          <ion-icon name="arrow-dropdown" *ngIf="(emergencyCall.address || emergencyCall.contact) && !emergencyCall.expanded" slot="end"></ion-icon>
+          <ion-icon name="arrow-dropup" *ngIf="(emergencyCall.address || emergencyCall.contact) && emergencyCall.expanded" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-item-option color="primary" *ngIf="emergencyCall.contact.mail">
+            <ion-icon color="secondary" name="mail"></ion-icon>
+            <a class="notUnderlined whiteFont" href="mailto:{{emergencyCall.contact.mail}}">Mail</a>
+          </ion-item-option>
+          <ion-item-option color="secondary" *ngIf="cordova && emergencyCall.contact.telephone" (click)="callContact(emergencyCall.contact.telephone)">
+            <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>
+            <a class="notUnderlined">Call</a>
+          </ion-item-option>
+          <ion-item-option color="secondary" *ngIf="!cordova && emergencyCall.contact.telephone">
+            <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>
+            <a class="notUnderlined" href="tel:{{emergencyCall.contact.telephone}}">Call</a>
+          </ion-item-option>
+          <ion-item-option color="secondary" *ngIf="cordova" (click)="exportContact(emergencyCall)">
+            <ion-icon name="person-add"></ion-icon>
+            <a class="notUnderlined">Add</a>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item *ngIf="emergencyCall.expanded">
+        <ion-icon slot="start"></ion-icon>
+        <ion-label no-margin>
+          <ion-grid>
+            <ion-row *ngIf="emergencyCall.contact.mail">
+              <ion-col>
+                <ion-icon name="mail"></ion-icon>
+                <a href="mailto:{{emergencyCall.contact.mail}}">{{emergencyCall.contact.mail}}</a>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="emergencyCall.contact.telephone">
+              <ion-col>
+                <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>
+                <a href="tel:{{emergencyCall.contact.telephone}}" *ngIf="!cordova">{{emergencyCall.contact.telephone}}</a>
+                <a (click)="callContact(emergencyCall.contact.telephone)" *ngIf="cordova" style="text-decoration: underline">{{emergencyCall.contact.telephone}}</a>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="emergencyCall.address && (emergencyCall.address.street || emergencyCall.address.postal)">
+              <ion-col>
+                <ion-icon name="home"></ion-icon>
+                <a (click)="callMap(emergencyCall)" class="link" text-wrap>
+                  <span *ngIf="emergencyCall.address.street">{{emergencyCall.address.street}}</span>
+                  <span *ngIf="emergencyCall.address.postal && emergencyCall.address.street">, </span>
+                  <span *ngIf="emergencyCall.address.postal">{{emergencyCall.address.postal}}</span>
+                </a>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-label>
+      </ion-item>
+
+    </div>
+  </ion-list>
 </ion-content>

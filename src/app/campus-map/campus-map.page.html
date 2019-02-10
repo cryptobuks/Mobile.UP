@@ -7,9 +7,8 @@
   <ion-toolbar>
     <app-campus-tab (campusChanged)="changeCampus($event)"></app-campus-tab>
     <ion-searchbar
-      [(ngModel)]="query"
       [placeholder]="'page.campus-map.placeholder.search' | translate"
-      (ionInput)="search(query)"
+      (ionChange)="search($event)"
       debounce="750">
     </ion-searchbar>
   </ion-toolbar>
