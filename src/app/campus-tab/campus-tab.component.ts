@@ -40,30 +40,28 @@ export class CampusTabComponent implements OnInit {
   }
 
   async initCampus() {
-    // if (this.passedLocation) {
-    //   switch (this.passedLocation) {
-    //     case '1': {
-    //       this.currentCampus = 'NeuesPalais';
-    //       break;
-    //     }
-    //     case '2': {
-    //       this.currentCampus = 'Golm';
-    //       break;
-    //     }
-    //     case '3': {
-    //       this.currentCampus = 'Griebnitzsee';
-    //       break;
-    //     }
-    //     default: {
-    //       this.currentCampus = 'Griebnitzsee';
-    //     }
-    //   }
-    // } else {
-    //   this.currentCampus = await this.settings.getSettingValue('campus');
-    //   this.currentCampus = this.currentCampus.replace(' ', '');
-    // }
-    this.currentCampus = await this.settings.getSettingValue('campus');
-    this.currentCampus = this.currentCampus.replace(' ', '');
+    if (this.passedLocation) {
+      switch (this.passedLocation) {
+        case '1': {
+          this.currentCampus = 'NeuesPalais';
+          break;
+        }
+        case '2': {
+          this.currentCampus = 'Golm';
+          break;
+        }
+        case '3': {
+          this.currentCampus = 'Griebnitzsee';
+          break;
+        }
+        default: {
+          this.currentCampus = 'Griebnitzsee';
+        }
+      }
+    } else {
+      this.currentCampus = await this.settings.getSettingValue('campus');
+      this.currentCampus = this.currentCampus.replace(' ', '');
+    }
     this.changeCampus();
   }
 
