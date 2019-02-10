@@ -6,11 +6,27 @@ import { HttpLoaderFactory } from '../app.module';
 import { HttpClient } from '@angular/common/http';
 import { HintBoxComponent } from './hint-box/hint-box.component';
 import { CampusTabComponent } from './campus-tab/campus-tab.component';
+import { BookListComponent } from './book-list/book-list.component';
+import { FooterDisclaimerComponent } from './footer-disclaimer/footer-disclaimer.component';
+import { GradesTableComponent } from './grades-table/grades-table.component';
+import { LectureListComponent } from './lecture-list/lecture-list.component';
+import { MensaMealComponent } from './mensa-meal/mensa-meal.component';
+import { NewsArticleComponent } from './news-article/news-article.component';
+import { EventViewComponent } from './event-view/event-view.component';
+import { ContentDrawerComponent } from './content-drawer/content-drawer.component';
 
 @NgModule({
   declarations: [
     HintBoxComponent,
-    CampusTabComponent
+    CampusTabComponent,
+    BookListComponent,
+    FooterDisclaimerComponent,
+    GradesTableComponent,
+    LectureListComponent,
+    MensaMealComponent,
+    NewsArticleComponent,
+    EventViewComponent,
+    ContentDrawerComponent
   ],
   imports: [
     IonicModule,
@@ -25,7 +41,15 @@ import { CampusTabComponent } from './campus-tab/campus-tab.component';
   ],
   exports: [
     HintBoxComponent,
-    CampusTabComponent
+    CampusTabComponent,
+    BookListComponent,
+    FooterDisclaimerComponent,
+    GradesTableComponent,
+    LectureListComponent,
+    MensaMealComponent,
+    NewsArticleComponent,
+    EventViewComponent,
+    ContentDrawerComponent
   ]
 })
 export class ComponentsModule { }
