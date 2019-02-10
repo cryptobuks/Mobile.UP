@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
 import { CacheService } from 'ionic-cache';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IPulsAPIResponse_getLectureScheduleAll} from "../../library/interfaces_PULS";
-import { IConfig } from '../../library/interfaces';
 import { Platform } from 'ionic-angular';
-import { Keyboard } from '@ionic-native/keyboard';
-import { SessionProvider } from '../../providers/session/session';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { ConnectionProvider } from "../../providers/connection/connection";
 import { PulsProvider } from "../../providers/puls/puls";
 import { Observable } from 'rxjs';
@@ -26,12 +22,9 @@ export class LectureSchedulePage {
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    private storage: Storage,
     private cache: CacheService,
     private platform: Platform,
     private keyboard: Keyboard,
-    private http: HttpClient,
-    private sessionProvider: SessionProvider,
     private connection: ConnectionProvider,
     private puls:PulsProvider) {
   }
@@ -42,8 +35,6 @@ export class LectureSchedulePage {
   }
 
   async loadLectureSchedule(refresher?) {
-
-    let session = JSON.parse(await this.sessionProvider.getSession());
 
     if (refresher) {
       this.cache.removeItem("lectureScheduleAll");
