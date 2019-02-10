@@ -5,6 +5,14 @@
     </button>
     <ion-title>{{ "page.library.title" | translate}}</ion-title>
   </ion-navbar>
+  <ion-segment [(ngModel)]="library">
+    <ion-segment-button value="search">
+      {{ "page.library.search" | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="reminder">
+      {{ "page.library.reminder" | translate }}
+    </ion-segment-button>
+  </ion-segment>
 
   <ion-searchbar
     [(ngModel)]="query"
@@ -19,50 +27,55 @@
     <ion-spinner></ion-spinner>
   </div>
 
-  <ion-item-divider color="light" class="favoriteDivider" *ngIf="displayedFavorites.length > 0 && isLoaded">{{ "page.home.favorites" | translate }}</ion-item-divider>
-  <ion-list class="favList" *ngIf="isLoaded">
-    <div *ngFor="let book of displayedFavorites; let i = index">
-      <ion-item-sliding #slidingItem>
-        <ion-item>
-          <book-list-view tappable (click)="bookDetailView(book)" [book]="book" [i]="i+1"></book-list-view>
+  <div [ngSwitch]="library">
+    <div *ngSwitchCase="'search'">
+      <div *ngIf="isLoaded" class="library-results">
+        <ion-item padding-left>
+          <p>{{ "page.library.allResults" | translate}}:</p>
+          <b>{{ resultIndex() }}</b> {{ "words.of" | translate}} <b>{{ numberOfRecords }}</b> {{ "words.results" | translate}}
         </ion-item>
-         <ion-item-options side="right">
-          <button ion-button color="secondary" class="removeFavButton" (click)="removeFavorite(book)">
-            <ion-icon name="star-outline"></ion-icon>
-            <span style="text-transform: capitalize">{{ "button.remove" | translate }}</span>
-          </button>
-        </ion-item-options>
-      </ion-item-sliding>
-    </div>
-  </ion-list>
+        <ion-list *ngIf="bookList && bookList.length > 0">
+          <span *ngFor="let book of bookList; let i = index">
+            <ion-item-sliding #slidingItem>
+              <ion-item>
+                <book-list-view tappable (click)="bookDetailView(book)" [book]="book" [i]="i+1"></book-list-view>
+              </ion-item>
+              <ion-item-options side="right">
+                <button ion-button color="primary" (click)="makeFavorite(book, slidingItem)">
+                  <ion-icon name="star"></ion-icon>
+                  <span style="text-transform: capitalize">{{ "page.library.fav" | translate }}</span>
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+          </span>
+        </ion-list>
+        <div *ngIf="!bookList || bookList.length == 0">
+          <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.noResults-hint"></hint>
+        </div>
 
-  <ion-item-divider color="light" class="favoriteDivider" *ngIf="displayedFavorites.length > 0 && isLoaded">{{ "words.all" | translate }}</ion-item-divider>
-  <div *ngIf="isLoaded" class="library-results">
-    <ion-item padding-left>
-      <p>{{ "page.library.allResults" | translate}}:</p>
-      <b>{{ resultIndex() }}</b> {{ "words.of" | translate}} <b>{{ numberOfRecords }}</b> {{ "words.results" | translate}}
-    </ion-item>
-    <ion-list *ngIf="bookList && bookList.length > 0">
-      <span *ngFor="let book of bookList; let i = index">
-        <ion-item-sliding #slidingItem>
-          <ion-item>
-            <book-list-view tappable (click)="bookDetailView(book)" [book]="book" [i]="i+1"></book-list-view>
-          </ion-item>
-          <ion-item-options side="right">
-            <button ion-button color="primary" (click)="makeFavorite(book, slidingItem)">
-              <ion-icon name="star"></ion-icon>
-              <span style="text-transform: capitalize">{{ "page.library.fav" | translate }}</span>
-            </button>
-          </ion-item-options>
-        </ion-item-sliding>
-      </span>
-    </ion-list>
-    <div *ngIf="!bookList || bookList.length == 0">
-      <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.noResults-hint"></hint>
+        <ion-infinite-scroll *ngIf="!isEnd()" (ionInfinite)="loadMore($event)">
+          <ion-infinite-scroll-content></ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+      </div>
     </div>
 
-    <ion-infinite-scroll *ngIf="!isEnd()" (ionInfinite)="loadMore($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+    <div *ngSwitchCase="'reminder'">
+      <ion-item-divider color="light" class="favoriteDivider" *ngIf="displayedFavorites.length > 0 && isLoaded">{{ "page.home.favorites" | translate }}</ion-item-divider>
+      <ion-list class="favList" *ngIf="isLoaded">
+        <div *ngFor="let book of displayedFavorites; let i = index">
+          <ion-item-sliding #slidingItem>
+            <ion-item>
+              <book-list-view tappable (click)="bookDetailView(book)" [book]="book" [i]="i+1"></book-list-view>
+            </ion-item>
+            <ion-item-options side="right">
+              <button ion-button color="secondary" class="removeFavButton" (click)="removeFavorite(book)">
+                <ion-icon name="star-outline"></ion-icon>
+                <span style="text-transform: capitalize">{{ "button.remove" | translate }}</span>
+              </button>
+            </ion-item-options>
+          </ion-item-sliding>
+        </div>
+      </ion-list>
+    </div>
   </div>
 </ion-content>
