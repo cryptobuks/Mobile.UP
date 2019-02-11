@@ -10,7 +10,7 @@
 <ion-content>
 
   <h2><ion-icon name=star></ion-icon>{{ "page.home.favorites" | translate }}</h2>
-  <ion-list class="row shortcutlist" lines="none">
+  <ion-list *ngIf="sortedModules.length > 0" class="row shortcutlist" lines="none">
     <!-- list of shortcuts -->
 
     <ion-item *ngFor="let module of sortedModules | orderBy: 'translation'"
@@ -27,7 +27,7 @@
   </ion-list>
 
   <!-- menu with all available modules -->
-  <ion-card scrollY="true" id="drawer" style="width:100%">
+  <ion-card *ngIf="sortedModules.length > 0" scrollY="true" id="drawer" style="width:100%">
     <ion-list lines="none">
       <ion-item *ngFor="let module of sortedModules | orderBy: 'translation'" (click)="openPage(module)">
 

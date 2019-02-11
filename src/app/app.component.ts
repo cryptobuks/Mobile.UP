@@ -45,13 +45,6 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      if (this.platform.is('cordova')) {
-        if (this.platform.is('ios') || this.platform.is('android')) {
-          this.statusBar.styleDefault();
-        }
-
-        this.splashScreen.hide();
-      }
       this.prepareStorageOnAppUpdate();
       this.initTranslate();
       this.connection.initializeNetworkEvents();
@@ -62,6 +55,14 @@ export class AppComponent {
       this.events.subscribe('userLogin', () => {
         this.updateLoginStatus();
       });
+
+      if (this.platform.is('cordova')) {
+        if (this.platform.is('ios') || this.platform.is('android')) {
+          this.statusBar.styleDefault();
+        }
+
+        this.splashScreen.hide();
+      }
     });
   }
 
@@ -81,7 +82,6 @@ export class AppComponent {
           console.log('[Mobile.UP]: cleared storage');
           this.storage.set('appVersion', config.appVersion);
           this.storage.set('config', config);
-          this.buildDefaultModulesList(config);
           this.checkSessionValidity(config);
         }, error => {
           console.log('[ERROR]: clearing storage failed');
@@ -90,34 +90,11 @@ export class AppComponent {
       } else {
         this.storage.set('appVersion', config.appVersion);
         this.storage.set('config', config);
-        this.buildDefaultModulesList(config);
         this.checkSessionValidity(config);
       }
     }, error => {
       console.log(error); // error message as string
     });
-  }
-
-  /**
-   * @name buildDefaultModulesList
-   * @description builds list of default_modules that should be displayed on HomePage
-   */
-  buildDefaultModulesList(config: IConfig) {
-    const moduleList: {[modulesName: string]: IModule} = {};
-    const modules = config.modules;
-
-    for (const moduleName in modules) {
-      if (modules.hasOwnProperty(moduleName)) {
-        const moduleToAdd: IModule = modules[moduleName];
-        if (!moduleToAdd.hide) {
-          moduleToAdd.i18nKey = `page.${moduleToAdd.componentName}.title`;
-          moduleList[moduleName] = moduleToAdd;
-        }
-      }
-    }
-
-    this.storage.set('default_modules', moduleList);
-    console.log('[Mobile.UP]: created default moduleList from config');
   }
 
   /**

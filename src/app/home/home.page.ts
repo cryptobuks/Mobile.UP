@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IModule } from '../interfaces';
+import { IModule, IConfig } from '../interfaces';
 import { NavController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
@@ -28,15 +28,16 @@ export class HomePage implements OnInit {
     this.storage.get('modules').then(modules => {
       if (modules) {
         this.modules = modules;
-        this.sortedModules = this.JsonToArray(this.modules);
+        this.sortedModules = this.jsonToArray(this.modules);
       } else {
         this.storage.get('default_modules').then(default_modules => {
           if (default_modules) {
             this.modules = default_modules;
-            this.sortedModules = this.JsonToArray(this.modules);
+            this.sortedModules = this.jsonToArray(this.modules);
           } else {
             // something clearly went wrong here
             console.log('[HomePage]: Neither user defined modules nor default_modules in storage!');
+            this.buildDefaultModulesList();
           }
         });
       }
@@ -49,7 +50,7 @@ export class HomePage implements OnInit {
    * @param modules
    * @returns {Array} array
    */
-  JsonToArray(modules) {
+  jsonToArray(modules) {
     const array = [];
     for (const key in modules) {
       if (modules.hasOwnProperty(key)) {
@@ -97,5 +98,31 @@ export class HomePage implements OnInit {
     } else {
       this.navCtrl.navigateForward('/' + modules.componentName);
     }
+  }
+
+  /**
+   * @name buildDefaultModulesList
+   * @description builds list of default_modules that should be displayed on HomePage
+   */
+  async buildDefaultModulesList() {
+    const config = await this.storage.get('config');
+    const moduleList: {[modulesName: string]: IModule} = {};
+    const modules = config.modules;
+
+    for (const moduleName in modules) {
+      if (modules.hasOwnProperty(moduleName)) {
+        const moduleToAdd: IModule = modules[moduleName];
+        if (!moduleToAdd.hide) {
+          moduleToAdd.i18nKey = `page.${moduleToAdd.componentName}.title`;
+          moduleList[moduleName] = moduleToAdd;
+        }
+      }
+    }
+
+    this.modules = moduleList;
+    this.sortedModules = this.jsonToArray(this.modules);
+
+    this.storage.set('default_modules', moduleList);
+    console.log('[Mobile.UP]: created default moduleList from config');
   }
 }
