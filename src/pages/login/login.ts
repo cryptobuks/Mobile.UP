@@ -9,6 +9,7 @@ import { HomePage } from '../home/home';
 import { ConnectionProvider } from "../../providers/connection/connection";
 import { ConfigProvider } from "../../providers/config/config";
 import { SessionProvider } from '../../providers/session/session';
+import {AbstractPage} from "../../library/AbstractPage";
 
 /**
  * LoginPage
@@ -21,7 +22,7 @@ import { SessionProvider } from '../../providers/session/session';
   selector: 'page-login',
   templateUrl: 'login.html',
 })
-export class LoginPage {
+export class LoginPage extends AbstractPage {
 
   loading: Loading;
   alreadyLoggedIn: boolean;
@@ -38,25 +39,22 @@ export class LoginPage {
       private alertCtrl:   AlertController,
       private upLogin:     UPLoginProvider,
       private events:      Events,
-      private connection:  ConnectionProvider,
       private sessionProvider: SessionProvider,
       private translate:   TranslateService) {
+    super({requireSession:true, requireNetwork:true})
   }
 
   async ngOnInit() {
-    let tmp = await this.sessionProvider.getSession();
-    var session = undefined;
+    let tmp:ISession = await this.sessionProvider.getSession();
+    let session:ISession = undefined;
     if (tmp) {
       if (typeof tmp !== 'object') {
         session = JSON.parse(tmp);
-      } else { session = tmp; }
+      } else {
+        session = tmp;
+      }
     }
-
-    if (session) {
-      this.alreadyLoggedIn = true;
-    } else { this.alreadyLoggedIn = false; }
-
-    this.connection.checkOnline(true, true);
+    this.alreadyLoggedIn = (session != undefined);
   }
 
   /**
