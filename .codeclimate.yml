@@ -1,13 +1,6 @@
 languages:
    JavaScript: true
-engines:
-  tslint:
-    enabled: true
-    config: tslint-codeclimate.json
-  fixme:
-    enabled: true
-  stylelint:
-      enabled: true
+plugins:
   csslint:
     enabled: true
     checks:
@@ -17,7 +10,19 @@ engines:
         enabled: false
   duplication:
     enabled: true
-
+  fixme:
+    enabled: true
+    config:
+      strings:
+      - FIXME
+      - TODO
+  scss-lint:
+    enabled: true
+  stylelint:
+      enabled: true
+  tslint:
+    enabled: true
+    config: tslint-codeclimate.json
 checks:
   argument-count:
     enabled: true
@@ -42,7 +47,7 @@ checks:
 #ratings:
 #   paths:
 #   - "www/**"
-exclude_paths:
+exclude_patterns:
 - "node_modules/*"
 - "scripts/*"
 - "www/*"
