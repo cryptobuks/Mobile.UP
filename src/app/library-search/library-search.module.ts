@@ -9,6 +9,8 @@ import { LibrarySearchPage } from './library-search.page';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../app.module';
 import { HttpClient } from '@angular/common/http';
+import { ComponentsModule } from '../components/components.module';
+import { BookDetailModalPage } from '../components/book-list/book-detail.modal';
 
 const routes: Routes = [
   {
@@ -22,6 +24,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -31,6 +34,12 @@ const routes: Routes = [
     }),
     RouterModule.forChild(routes)
   ],
-  declarations: [LibrarySearchPage]
+  declarations: [
+    LibrarySearchPage,
+    BookDetailModalPage
+  ],
+  entryComponents: [
+    BookDetailModalPage
+  ]
 })
 export class LibrarySearchPageModule {}
