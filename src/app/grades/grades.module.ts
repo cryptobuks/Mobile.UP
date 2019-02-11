@@ -10,6 +10,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../app.module';
 import { HttpClient } from '@angular/common/http';
 import { ComponentsModule } from '../components/components.module';
+import { LoginPage } from '../login/login.page';
 
 const routes: Routes = [
   {
@@ -33,6 +34,12 @@ const routes: Routes = [
     }),
     RouterModule.forChild(routes)
   ],
-  declarations: [GradesPage]
+  declarations: [
+    GradesPage,
+    LoginPage
+  ],
+  entryComponents: [
+    LoginPage
+  ]
 })
 export class GradesPageModule {}

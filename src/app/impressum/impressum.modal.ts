@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'modal-page',
@@ -9,7 +10,11 @@ export class ImpressumModalPage {
   @Input() text;
   @Input() header;
 
-  constructor() {
+  constructor(private modalCtrl: ModalController) {
+  }
+
+  closeModal() {
+    this.modalCtrl.dismiss();
   }
 
 }

@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
 import { IonicModule } from '@ionic/angular';
 import { ImpressumPage } from './impressum.page';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../app.module';
 import { HttpClient } from '@angular/common/http';
+import { ImpressumModalPage } from './impressum.modal';
 
 const routes: Routes = [
   {
@@ -30,6 +30,12 @@ const routes: Routes = [
     }),
     RouterModule.forChild(routes)
   ],
-  declarations: [ImpressumPage]
+  declarations: [
+    ImpressumPage,
+    ImpressumModalPage
+  ],
+  entryComponents: [
+    ImpressumModalPage
+  ]
 })
 export class ImpressumPageModule {}

@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IConfig, IGradeResponse } from '../interfaces';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CacheService } from 'ionic-cache';
 import { Storage } from '@ionic/storage';
 import { ConnectionService } from '../services/connection/connection.service';
 import { UserSessionService } from '../services/user-session/user-session.service';
+import { LoginPage } from '../login/login.page';
 
 @Component({
   selector: 'app-grades',
   templateUrl: './grades.page.html',
   styleUrls: ['./grades.page.scss'],
 })
-export class GradesPage implements OnInit {
+export class GradesPage {
 
   token;
   credentials;
@@ -31,20 +32,14 @@ export class GradesPage implements OnInit {
   isDualDegree: boolean[] = [];     // f.e. dual bachelor with BWL and German
 
   constructor(
-    private navCtrl: NavController,
     private http: HttpClient,
     private cache: CacheService,
     private storage: Storage,
+    private navCtrl: NavController,
+    private modalCtrl: ModalController,
     private connection: ConnectionService,
     private sessionProvider: UserSessionService
   ) { }
-
-  ngOnInit() {
-  }
-
-  goToLogin() {
-    this.navCtrl.navigateForward('/login');
-  }
 
   async ionViewWillEnter() {
     this.connection.checkOnline(true, true);
@@ -64,6 +59,20 @@ export class GradesPage implements OnInit {
     } else {
       this.goToLogin();
     }
+  }
+
+  async goToLogin() {
+    const modal = await this.modalCtrl.create({
+      component: LoginPage,
+    });
+    modal.present();
+    modal.onWillDismiss().then(response => {
+      if (response.data.success) {
+        this.ionViewWillEnter();
+      } else {
+        this.navCtrl.navigateRoot('/home');
+      }
+    });
   }
 
   showGrades(i) {

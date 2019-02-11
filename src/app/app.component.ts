@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform, Events, MenuController, NavController, AlertController } from '@ionic/angular';
+import { Platform, Events, MenuController, NavController, AlertController, ModalController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IConfig, IModule, IOIDCRefreshResponseObject, ISession, IOIDCUserInformationResponse } from './interfaces';
@@ -12,6 +12,7 @@ import { ConnectionService } from './services/connection/connection.service';
 import { UserSessionService } from './services/user-session/user-session.service';
 import { SettingsService } from './services/settings/settings.service';
 import { LoginService } from './services/login/login.service';
+import { LoginPage } from './login/login.page';
 
 @Component({
   selector: 'app-root',
@@ -37,6 +38,7 @@ export class AppComponent {
     private setting: SettingsService,
     private connection: ConnectionService,
     private events: Events,
+    private modalCtrl: ModalController,
     private login: LoginService,
     private storage: Storage
   ) {
@@ -210,9 +212,15 @@ export class AppComponent {
     alert.present();
   }
 
-  toLogin() {
+  async toLogin() {
     this.close();
-    this.navCtrl.navigateForward('/login');
+    const modal = await this.modalCtrl.create({
+      component: LoginPage,
+    });
+    modal.present();
+    modal.onWillDismiss().then(() => {
+      this.navCtrl.navigateRoot('/home');
+    });
   }
 
   toSettings() {

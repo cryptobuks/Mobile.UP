@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICredentials, ELoginErrors, IConfig, ISession, IOIDCUserInformationResponse } from '../interfaces';
-import { AlertController, Events, NavController, LoadingController } from '@ionic/angular';
+import { AlertController, Events, LoadingController, ModalController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { Observable } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
     private connection: ConnectionService,
     private upLogin: LoginService,
     private events: Events,
-    private navCtrl: NavController
+    private modalCtrl: ModalController
   ) { }
 
   async ngOnInit() {
@@ -87,7 +87,7 @@ export class LoginPage implements OnInit {
 
           setTimeout(() => {
             this.events.publish('userLogin');
-            this.navCtrl.navigateBack('/home');
+            this.modalCtrl.dismiss({ 'success': true });
           }, 1000);
         }, error => {
           console.log(error);
@@ -150,7 +150,7 @@ export class LoginPage implements OnInit {
   }
 
   public abort() {
-    this.navCtrl.navigateRoot('/home');
+    this.modalCtrl.dismiss({ 'success': false });
   }
 
 }

@@ -1,12 +1,13 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, NavController, ModalController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { ISession, IPulsApiRequestGetStudentCourses, IConfig, IPulsAPIResponseGetStudentCourses } from '../../interfaces';
 import { Observable, ReplaySubject } from 'rxjs';
 import { Storage } from '@ionic/storage';
 import { UserSessionService } from '../user-session/user-session.service';
 import { AlertService } from '../alert/alert.service';
+import { LoginPage } from 'src/app/login/login.page';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,8 @@ export class PulsService implements OnInit {
     private userSession: UserSessionService,
     private storage: Storage,
     private navCtrl: NavController,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private modalCtrl: ModalController
   ) { }
 
   async ngOnInit() {
@@ -88,6 +90,12 @@ export class PulsService implements OnInit {
       message: this.translate.instant('alert.token_valid_credentials_invalid')
     });
     alert.present();
-    this.navCtrl.navigateForward('/login');
+    const modal = await this.modalCtrl.create({
+      component: LoginPage,
+    });
+    modal.present();
+    modal.onWillDismiss().then(() => {
+      this.navCtrl.navigateRoot('/home');
+    });
   }
 }
