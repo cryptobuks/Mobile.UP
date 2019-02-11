@@ -25,7 +25,6 @@ import {AbstractPage} from "../../library/AbstractPage";
 export class LoginPage extends AbstractPage {
 
   loading: Loading;
-  alreadyLoggedIn: boolean;
 
   // This object will hold the data the user enters in the login form
   loginCredentials:ICredentials = {
@@ -41,10 +40,6 @@ export class LoginPage extends AbstractPage {
       private events:      Events,
       private translate:   TranslateService) {
     super({requireSession:false, requireNetwork:true})
-  }
-
-  async ngOnInit() {
-
   }
 
   /**

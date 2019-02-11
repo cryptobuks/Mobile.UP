@@ -21,7 +21,7 @@
     </ion-row>
   </ion-grid>
 
-  <div *ngIf="!alreadyLoggedIn">
+  <div *ngIf="!session">
     <form (ngSubmit)="login()" #registerForm="ngForm">
       <ion-grid>
         <ion-row>
@@ -72,7 +72,7 @@
 
   <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.login-hint"></hint>
 
-  <div align="center" *ngIf="alreadyLoggedIn" padding>
+  <div align="center" *ngIf="session" padding>
     {{ "page.login.alreadyLoggedIn" | translate }}
   </div>
 </ion-content>
