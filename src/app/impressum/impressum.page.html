@@ -6,6 +6,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col  class="placeholder-img">
+       <img src="assets/imgs/testbild.png"/>
+       <em>Foto: Carla Frize</em>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item><b>{{ "page.impressum.listHeader" | translate }}</b></ion-item>
+    <ion-item detail-push (click)="openPage('page.legalNotice.title')">{{ "page.legalNotice.title" | translate }}</ion-item>
+    <ion-item detail-push (click)="openPage('page.privacyPolicy.title')">{{ "page.privacyPolicy.title" | translate }}</ion-item>
+    <!-- <ion-item detail-push (click)="openPage('page.termsOfUse.title')">{{ "page.termsOfUse.title" | translate }}</ion-item> -->
 
+  </ion-list>
 </ion-content>

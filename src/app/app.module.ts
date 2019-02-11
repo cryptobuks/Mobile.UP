@@ -21,6 +21,7 @@ import { MomentPipe } from './pipes/moment.pipe';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { Contacts } from '@ionic-native/contacts/ngx';
 import { CallNumber } from '@ionic-native/call-number/ngx';
+import { ImpressumModalPage } from './impressum/impressum.modal';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,9 +30,12 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    MomentPipe
+    MomentPipe,
+    ImpressumModalPage
   ],
-  entryComponents: [],
+  entryComponents: [
+    ImpressumModalPage
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot({

@@ -1,0 +1,10 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button slot="start"></ion-back-button>
+        <ion-title *ngIf="header">{{ header }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="text" [innerHTML]="text" padding></div>
+</ion-content>
