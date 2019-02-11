@@ -3,7 +3,10 @@ import {Injector, Type} from "@angular/core";
 import {StaticInjectorService} from "./StaticInjector";
 import {SessionProvider} from "../providers/session/session";
 import {ISession} from "../providers/login-provider/interfaces";
-import {type} from "os";
+
+import {LoginPage} from "../pages/login/login";
+import {ReplaySubject} from "rxjs";
+import {App} from "ionic-angular";
 
 export interface IPageOptions {
   requireSession?:boolean;
@@ -18,17 +21,25 @@ export interface IPageOptions {
  *
  * https://robferguson.org/blog/2018/09/28/ionic-3-component-inheritance/
  */
-export abstract class AbstractPage {
+export abstract class AbstractPage  {
 
-  private connection:ConnectionProvider;
-  private session:SessionProvider;
+  protected session:ISession;
+  protected sessionObservable:ReplaySubject<ISession>;
+  protected connection:ConnectionProvider;
+  protected sessionProvider:SessionProvider;
+  protected app:App;
 
-  constructor(pageOptions?:IPageOptions){
+  protected constructor(pageOptions?:IPageOptions){
 
     const injector: Injector = StaticInjectorService.getInjector();
     this.connection = injector.get<ConnectionProvider>(ConnectionProvider as Type<ConnectionProvider>);
-    this.session = injector.get<SessionProvider>(SessionProvider as Type<SessionProvider>);
+    this.sessionProvider = injector.get<SessionProvider>(SessionProvider as Type<SessionProvider>);
+    this.app = injector.get<App>(App as Type<App>);
 
+    this.processOptions(pageOptions);
+  }
+
+  private processOptions(pageOptions:IPageOptions){
     if(pageOptions.requireSession) { this.requireSession() }
     if(pageOptions.requireNetwork) { this.requireNetwork()}
   }
@@ -39,18 +50,41 @@ export abstract class AbstractPage {
    * if there is none;
    */
   requireNetwork(){
-    console.log("Require network");
+    console.log("[AbstractPage]: Requires network");
     this.connection.checkOnline(true, true);
   }
 
   /**
    * @name requireSession
-   * @desc tests for existing session and sends user to LoginPage in case none is
+   * @desc tests for existing sessionProvider and sends user to LoginPage in case none is
    * found
    */
   requireSession() {
-    console.log("Requires session");
-    // TODO
+    console.log("[AbstractPage]: Requires session");
+
+    // TODO: not working yet. SessionProvider is setting the session too slowly.
+    // so this function will always find that there is no session, even though
+    // some milliseconds later there would be one.
+
+    // this.sessionObservable = new ReplaySubject<ISession>();
+    //
+    // this.sessionProvider.getSession().then(
+    //   (sessionObj:ISession) => {
+    //     if (sessionObj) {
+    //       if (typeof sessionObj !== 'object') {
+    //         this.session = JSON.parse(sessionObj);
+    //       } else {
+    //         this.session = sessionObj;
+    //       }
+    //       this.sessionObservable.next(this.session);
+    //     } else {
+    //       this.sessionObservable.error("no session");
+    //
+    //       console.log("Pushing LoginPage");
+    //       this.app.getActiveNavs()[0].push(LoginPage);
+    //     }
+    //   }
+    // );
   }
 
 }
