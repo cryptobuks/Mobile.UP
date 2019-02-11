@@ -39,22 +39,12 @@ export class LoginPage extends AbstractPage {
       private alertCtrl:   AlertController,
       private upLogin:     UPLoginProvider,
       private events:      Events,
-      private sessionProvider: SessionProvider,
       private translate:   TranslateService) {
-    super({requireSession:true, requireNetwork:true})
+    super({requireSession:false, requireNetwork:true})
   }
 
   async ngOnInit() {
-    let tmp:ISession = await this.sessionProvider.getSession();
-    let session:ISession = undefined;
-    if (tmp) {
-      if (typeof tmp !== 'object') {
-        session = JSON.parse(tmp);
-      } else {
-        session = tmp;
-      }
-    }
-    this.alreadyLoggedIn = (session != undefined);
+
   }
 
   /**
