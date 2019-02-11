@@ -49,11 +49,11 @@
             <a class="notUnderlined whiteFont" href="mailto:{{emergencyCall.contact.mail}}">Mail</a>
           </ion-item-option>
           <ion-item-option color="secondary" *ngIf="cordova && emergencyCall.contact.telephone" (click)="callContact(emergencyCall.contact.telephone)">
-            <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>
+            <ion-icon name="call"></ion-icon>
             <a class="notUnderlined">Call</a>
           </ion-item-option>
           <ion-item-option color="secondary" *ngIf="!cordova && emergencyCall.contact.telephone">
-            <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>
+            <ion-icon name="call"></ion-icon>
             <a class="notUnderlined" href="tel:{{emergencyCall.contact.telephone}}">Call</a>
           </ion-item-option>
           <ion-item-option color="secondary" *ngIf="cordova" (click)="exportContact(emergencyCall)">
@@ -64,7 +64,7 @@
       </ion-item-sliding>
 
       <ion-item *ngIf="emergencyCall.expanded">
-        <ion-icon slot="start"></ion-icon>
+        <ion-icon name="" slot="start"></ion-icon>
         <ion-label no-margin>
           <ion-grid>
             <ion-row *ngIf="emergencyCall.contact.mail">

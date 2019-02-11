@@ -307,6 +307,7 @@ export interface EmergencyCall {
   contact:    Contact;
   address?:   Address;
   expanded: boolean;
+  description?: string;
 }
 
 export interface IGradeResponse {

@@ -135,7 +135,11 @@ export class EmergencyPage implements OnInit {
     for (let i = 0; i < this.displayedList.length; i++) {
       const currentCall = this.displayedList[i];
       if (currentCall.name === emergencyCall.name) {
-        currentCall.expanded = !currentCall.expanded;
+        if (emergencyCall.description && emergencyCall.description === currentCall.description) {
+          currentCall.expanded = !currentCall.expanded;
+        } else if (!emergencyCall.description) {
+          currentCall.expanded = !currentCall.expanded;
+        }
       }
     }
   }
