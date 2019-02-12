@@ -1,12 +1,13 @@
 /* ~~~ EmergencyPage ~~~ */
 
-import { InAppBrowserObject } from "@ionic-native/in-app-browser/ngx";
+import { InAppBrowserObject } from '@ionic-native/in-app-browser/ngx';
 import {
   ILoginConfig_Credentials,
   ILoginConfig_SSO,
   ILoginConfig_OIDC
-} from "../providers/login-provider/interfaces";
+} from '../providers/login-provider/interfaces';
 import * as geojson from 'geojson';
+import { IDeviceInfo } from '../providers/device/device';
 
 /**
  * Interface for a contact with telephone number and email address
@@ -200,6 +201,7 @@ export interface IEndpoints {
   openingHours:string;
   emergencyCalls:string;
   logging:string;
+  feedback:string;
   transport:string;
 }
 
@@ -533,3 +535,10 @@ export interface IMapsResponseObject {
 }
 
 export type IMapsResponse = IMapsResponseObject[];
+
+export interface IFeedback extends IDeviceInfo {
+  rating?:string;
+  description?:string;
+  recommend?:string;
+  uid?:string;
+}

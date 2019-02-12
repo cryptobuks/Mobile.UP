@@ -2,19 +2,19 @@ import { Injectable } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { Device } from '@ionic-native/device/ngx';
 import { IConfig } from '../../library/interfaces';
-
+import { Storage } from '@ionic/storage';
 
 /**
  * @type {IDeviceInfo}
  */
 export interface IDeviceInfo {
-  cordovaVersion: string;
-  appVersion: string;
-  osPlatform: string;
-  osVersion: string;
-  uuid: string;
-  deviceManufacturer: string;
-  deviceModel: string;
+  cordovaVersion?: string;
+  appVersion?: string;
+  osPlatform?: string;
+  osVersion?: string;
+  uuid?: string;
+  deviceManufacturer?: string;
+  deviceModel?: string;
 }
 
 /**

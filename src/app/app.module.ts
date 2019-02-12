@@ -67,13 +67,14 @@ import { AppInfoPage } from "../pages/app-info/app-info";
 import { SessionProvider } from '../providers/session/session';
 import { MapsProvider } from '../providers/maps/maps';
 import { AlertProvider } from '../providers/alert/alert';
-import { MobileUPErrorHandler } from "../library/errorHandler";
+import { MobileUPErrorHandler } from '../library/errorHandler';
 import { ErrorLoggingProvider } from '../providers/error-logging/error-logging';
 
 import { MomentPipe } from '../pipes/moment/moment';
 import { WebServiceProvider } from '../providers/web-service/web-service';
-import { CampusMapPage } from "../pages/campus-map/campus-map";
-import { FeedbackPage } from "../pages/feedback/feedback";
+import { CampusMapPage } from '../pages/campus-map/campus-map';
+import { FeedbackPage } from '../pages/feedback/feedback';
+import { DeviceProvider } from '../providers/device/device';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -239,7 +240,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     ErrorLoggingProvider,
     WebServiceProvider,
     Contacts,
-    CallNumber
+    CallNumber,
+    DeviceProvider
   ]
 })
 export class AppModule {

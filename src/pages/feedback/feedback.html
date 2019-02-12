@@ -7,12 +7,11 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-  <form [formGroup]="form" (ngSubmit)="logForm()" id="smileys">
-      <ion-item-divider>
+  <form [formGroup]="form" (ngSubmit)="submitForm()" id="smileys">
+      <ion-item-divider color="upgrey">
         <ion-label text-wrap>
-            What do you think of our App?
+          {{ "page.feedback.rating" | translate}}
         </ion-label>
       </ion-item-divider>
       <ion-list>
@@ -27,18 +26,18 @@
         </ion-grid>
       </ion-list>
 
-      <ion-item-divider>
+      <ion-item-divider color="upgrey">
         <ion-label text-wrap>
-            What would you like to share with us?
+          {{ "page.feedback.feedback" | translate}}
         </ion-label>
       </ion-item-divider>
       <ion-item>
-        <ion-textarea formControlName="description" rows="6" cols="20" placeholder="Your thoughts..."></ion-textarea>
+        <ion-textarea formControlName="description" rows="6" cols="20" [placeholder]="'page.feedback.thoughts' | translate"></ion-textarea>
       </ion-item>
 
-      <ion-item-divider>
+      <ion-item-divider color="upgrey">
         <ion-label text-wrap>
-            How likely would you recommend Mobile.UP to your friends and colleagues?
+          {{ "page.feedback.recommendation" | translate}}
         </ion-label>
       </ion-item-divider>
 
@@ -49,8 +48,13 @@
       </ion-range>
     </ion-item>
 
+    <ion-item *ngIf="loggedIn">
+      <ion-label>{{ "page.feedback.anonymous" | translate}}</ion-label>
+      <ion-toggle checked="false" formControlName="anonymous"></ion-toggle>
+    </ion-item>
+
     <div text-center>
-      <button ion-button type="submit" [disabled]="!form.valid">Submit</button>
+      <button ion-button type="submit" [disabled]="!form.valid">{{ "button.submit" | translate}}</button>
     </div>
   </form>
 </ion-content>
