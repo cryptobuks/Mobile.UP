@@ -81,7 +81,7 @@ export class LoginPage {
     } else { this.alreadyLoggedIn = false; }
   }
 
-   /**
+  /**
    * @async
    * @name login
    * @description Uses AuthServiceProvider to execute login. If login is successful the user
