@@ -1,14 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
+import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
 import { Storage } from '@ionic/storage';
 import { IModule, IConfig } from '../../library/interfaces';
 import { Platform, AlertController } from 'ionic-angular';
-import { AppAvailability } from '@ionic-native/app-availability';
-import { SafariViewController } from '@ionic-native/safari-view-controller';
+import { AppAvailability } from '@ionic-native/app-availability/ngx';
+import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
 import { TranslateService } from "@ngx-translate/core";
 import { SessionProvider } from '../session/session';
-import { ISession } from '../login-provider/interfaces';
 
 /**
  * @class WebIntentProvider
@@ -188,7 +187,14 @@ export class WebIntentProvider {
    * @description opens mail in browser and injects credentials
    */
   async mailLogin(url: string) {
-    let session:ISession = JSON.parse(await this.sessionProvider.getSession());
+    let tmp = await this.sessionProvider.getSession();
+    var session = undefined;
+    if (tmp) {
+      if (typeof tmp !== 'object') {
+        session = JSON.parse(tmp);
+      } else { session = tmp; }
+    }
+    
     let browser = this.theInAppBrowser.create(url, "_blank", this.options);
 
     if (session && session.credentials && session.credentials.username && session.credentials.password) {

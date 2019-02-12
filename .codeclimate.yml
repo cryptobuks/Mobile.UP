@@ -1,23 +1,57 @@
 languages:
    JavaScript: true
-engines:
-#  csslint:
-#    enabled: true
-#  eslint:
-#    enabled: true
+plugins:
+  csslint:
+    enabled: true
+    checks:
+      bulletproof-font-face:
+        enabled: false
+      universal-selector:
+        enabled: false
+  duplication:
+    enabled: true
   fixme:
     enabled: true
-plugins:
+    config:
+      strings:
+      - FIXME
+      - TODO
+  scss-lint:
+    enabled: true
+  stylelint:
+      enabled: true
   tslint:
     enabled: true
-    config: tslint.json
+    config: tslint-codeclimate.json
+checks:
+  argument-count:
+    enabled: true
+  complex-logic:
+    enabled: true
+  file-lines:
+    enabled: true
+  method-complexity:
+    enabled: true
+  method-count:
+    enabled: true
+  method-lines:
+    enabled: true
+  nested-control-flow:
+    enabled: true
+  return-statements:
+    enabled: true
+  similar-code:
+    enabled: true
+  identical-code:
+    enabled: true
 #ratings:
 #   paths:
 #   - "www/**"
-exclude_paths:
+exclude_patterns:
 - "node_modules/*"
 - "scripts/*"
 - "www/*"
 - "documentation/*"
 - "plugins/*"
 - "platforms/*"
+- "resources/*"

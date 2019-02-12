@@ -16,9 +16,11 @@ import {
   IPerson
 } from "../../library/interfaces";
 import { Platform } from 'ionic-angular';
-import { Keyboard } from '@ionic-native/keyboard';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { ConnectionProvider } from "../../providers/connection/connection";
 import { SessionProvider } from '../../providers/session/session';
+import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 /**
  * @class PersonPage
@@ -39,6 +41,7 @@ export class PersonsPage {
   query = "";
   noResults = false;
   triedRefreshingSession = false;
+  cordova = false;
 
   /**
    * @constructor
@@ -51,6 +54,8 @@ export class PersonsPage {
    * @param {ConnectionProvider} connection
    * @param {Storage} storage
    * @param {sessionProvider} sessionProvider
+   * @param {Contacts} contacts
+   * @param {CallNumber} callNumber
    */
   constructor(
     private navCtrl: NavController,
@@ -59,7 +64,12 @@ export class PersonsPage {
     private keyboard: Keyboard,
     private connection: ConnectionProvider,
     private storage: Storage,
-    private sessionProvider: SessionProvider) {
+    private sessionProvider: SessionProvider,
+    private contacts: Contacts,
+    private callNumber: CallNumber) {
+      if (this.platform.is("cordova")) {
+        this.cordova = true
+      }
   }
 
   /**
@@ -71,7 +81,14 @@ export class PersonsPage {
    */
   async ionViewWillEnter() {
     this.connection.checkOnline(true, true);
-    this.session = JSON.parse(await this.sessionProvider.getSession());
+    let tmp = await this.sessionProvider.getSession();
+    this.session = undefined;
+    if (tmp) {
+      if (typeof tmp !== 'object') {
+        this.session = JSON.parse(tmp);
+      } else { this.session = tmp; }
+    }
+
     if (!this.session) {
       this.navCtrl.push(LoginPage).then(
         () => console.log("[PersonsPage]: Pushed LoginPage")
@@ -140,7 +157,13 @@ export class PersonsPage {
           if (!this.triedRefreshingSession) {
             if (error.status == 401) {
               this.connection.checkOnline(true, true);
-              this.session = JSON.parse(await this.sessionProvider.getSession());
+              let tmp = await this.sessionProvider.getSession();
+              this.session = undefined;
+              if (tmp) {
+                if (typeof tmp !== 'object') {
+                  this.session = JSON.parse(tmp);
+                } else { this.session = tmp; }
+              }
               if (!this.session) {
                 this.navCtrl.push(LoginPage).then(
                   () => console.log("[PersonsPage]: Pushed LoginPage")
@@ -187,4 +210,36 @@ export class PersonsPage {
     }
   }
 
+  /**
+   * @name exportContact
+   * @description exports a contact to the local phone book
+   * @param {IPerson} person
+   */
+  exportContact(person: IPerson) {
+    if (this.platform.is("cordova")) {
+      let contact: Contact = this.contacts.create();
+
+      contact.name = new ContactName(null, person.Nachname, person.Vorname);
+
+      if (person.Telefon) { contact.phoneNumbers = [new ContactField('work', person.Telefon)]; }
+      if (person.Email)   { contact.emails = [new ContactField('work', person.Email)]; }
+
+      contact.save().then(
+        () => console.log('Contact saved!', contact),
+        (error: any) => console.error('Error saving contact.', error)
+      );
+    }
+  }
+
+  /**
+   * @name callContact
+   * @description using native call for calling numbers
+   * @param {string} number
+   * https://www.javascripttuts.com/making-phone-calls-to-contacts-with-ionic-in-one-go/
+   */
+  callContact(number: string) {
+    this.callNumber.callNumber(number, true)
+      .then(() => console.log('Dialer Launched!'))
+      .catch(() => console.log('Error launching dialer'));
+  }
 }
