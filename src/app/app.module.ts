@@ -30,7 +30,6 @@ registerLocaleData(localeDe);
 registerLocaleData(localeEn);
 import { SecureStorage } from '@ionic-native/secure-storage';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 /* Pages */
 import { HomePage } from '../pages/home/home';
@@ -236,8 +235,7 @@ export const deepLinkConfig: DeepLinkConfig = {
     MapsProvider,
     AlertProvider,
     ErrorLoggingProvider,
-    WebServiceProvider,
-    EmailComposer
+    WebServiceProvider
   ]
 })
 export class AppModule {
