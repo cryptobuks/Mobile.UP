@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
-import { Device } from "@ionic-native/device/ngx";
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MapsProvider } from '../../providers/maps/maps';
-import { IConfig } from '../../library/interfaces';
-import { Storage } from '@ionic/storage';
+import { DeviceProvider, IDeviceInfo } from '../../providers/device/device';
 
 @IonicPage()
 @Component({
@@ -17,47 +15,35 @@ export class AppInfoPage {
   showLibraryInfo = false;
   showContactPerson = false;
 
-  deviceInfo = {
-    "cordovaVersion": undefined,
-    "appVersion": undefined,
-    "osPlatform": undefined,
-    "osVersion": undefined,
-    "uuid": undefined,
-    "deviceManufacturer": undefined,
-    "deviceModel": undefined
-  }
+  deviceInfo: IDeviceInfo;
 
+  /**
+   * @constructor
+   * @param {NavController} navCtrl
+   * @param {NavParams} navParams
+   * @param {MapsProvider} mapsProvider
+   * @param {DeviceProvider} deviceProvider
+   */
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private device: Device,
-              private storage: Storage,
               private mapsProvider: MapsProvider,
-              private platform: Platform) {
+              private deviceProvider: DeviceProvider) {
   }
 
+  /**
+   * @name ngOnInit
+   * @description trigger deviceProvider to get information of device
+   */
   ngOnInit() {
-    if (this.platform.is("cordova")) {
-      this.getDeviceInfo();
-    }
+    this.deviceInfo = this.deviceProvider.getDeviceInfo();
   }
 
-  getDeviceInfo() {
-    this.deviceInfo = {
-      "cordovaVersion": this.device.cordova,
-      "appVersion": undefined,
-      "osPlatform": this.device.platform,
-      "osVersion": this.device.version,
-      "uuid": this.device.uuid,
-      "deviceManufacturer": this.device.manufacturer,
-      "deviceModel": this.device.model
-    }
-
-    this.storage.get("config").then((config:IConfig) => {
-      this.deviceInfo.appVersion = config.appVersion;
-    })
-  }
-
-  callMap(location:string) {
+  /**
+   * @name callMap
+   * @description mapped function to mapsProvider
+   * @param {string} location
+   */
+  callMap(location: string) {
     this.mapsProvider.navigateToAdress(location);
   }
 }
