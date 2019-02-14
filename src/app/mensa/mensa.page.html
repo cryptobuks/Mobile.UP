@@ -21,10 +21,10 @@
   <div align="center" *ngIf="isLoaded">
     <ion-row>
       <ion-col>
-        <ion-button ion-button small [ngClass]="showBasicCalendar ? 'activeCalendarButton' : 'calendarButton'"
+        <ion-button ion-button size="small" [ngClass]="showBasicCalendar ? 'activeCalendarButton' : 'calendarButton'"
         (click)="showBasicCalendar = !showBasicCalendar;">{{ "page.mensa.date" | translate }}  <ion-icon slot="end" name="arrow-dropdown"></ion-icon></ion-button>
-        <ion-button small [ngClass]="onlyVeganFood ? 'activeCalendarButton' : 'calendarButton'" (click)="veganOnly()">{{ "page.mensa.vegan" | translate }}</ion-button>
-        <ion-button small [ngClass]="onlyVeggieFood ? 'activeCalendarButton' : 'calendarButton'" (click)="vegetarianOnly()">{{ "page.mensa.vegetarian" | translate }}</ion-button>
+        <ion-button size="small" [ngClass]="onlyVeganFood ? 'activeCalendarButton' : 'calendarButton'" (click)="veganOnly()">{{ "page.mensa.vegan" | translate }}</ion-button>
+        <ion-button size="small" [ngClass]="onlyVeggieFood ? 'activeCalendarButton' : 'calendarButton'" (click)="vegetarianOnly()">{{ "page.mensa.vegetarian" | translate }}</ion-button>
       </ion-col>
     </ion-row>
   </div>
@@ -73,9 +73,9 @@
   </div>
 
 </ion-content>
-<!-- 
+
 <ion-footer>
   <ion-toolbar>
-    <footer-disclaimer disclaimerReference="page.mensa.disclaimer"></footer-disclaimer>
+    <app-footer-disclaimer disclaimerReference="page.mensa.disclaimer"></app-footer-disclaimer>
   </ion-toolbar>
-</ion-footer> -->
+</ion-footer>
