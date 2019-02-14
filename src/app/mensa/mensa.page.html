@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content no-padding (ionSwipe)="swipeCampus($event)">
+<ion-content no-padding (swipe)="swipeCampus($event)">
   <ion-refresher (ionRefresh)="loadCampusMenu($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>

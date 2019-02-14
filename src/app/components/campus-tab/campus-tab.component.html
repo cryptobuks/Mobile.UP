@@ -1,4 +1,4 @@
-<ion-segment color="primary" (ionChange)="changeCampus($event)" [value]="currentCampus">
+<ion-segment color="primary" (ionChange)="changeCampus($event)" [(ngModel)]="currentCampus">
   <ion-segment-button value="Griebnitzsee">
     {{"page.mensa.campus1" | translate}}
   </ion-segment-button>

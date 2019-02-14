@@ -22,6 +22,7 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { Contacts } from '@ionic-native/contacts/ngx';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { CalendarModule } from 'ion2-calendar';
+import 'hammerjs';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

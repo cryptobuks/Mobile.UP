@@ -14,6 +14,7 @@ import { MensaMealComponent } from './mensa-meal/mensa-meal.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
 import { EventViewComponent } from './event-view/event-view.component';
 import { ContentDrawerComponent } from './content-drawer/content-drawer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContentDrawerComponent } from './content-drawer/content-drawer.componen
   imports: [
     IonicModule,
     CommonModule,
+    FormsModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
