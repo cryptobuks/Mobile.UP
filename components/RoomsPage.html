@@ -1,0 +1,1652 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>RoomsPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/rooms/rooms.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-rooms</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>rooms.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#current_location">current_location</a>
+                            </li>
+                            <li>
+                                <a href="#current_timeslot">current_timeslot</a>
+                            </li>
+                            <li>
+                                <a href="#error">error</a>
+                            </li>
+                            <li>
+                                <a href="#housesFound">housesFound</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#http">http</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                <a href="#no_timeslot">no_timeslot</a>
+                            </li>
+                            <li>
+                                <a href="#refresher">refresher</a>
+                            </li>
+                            <li>
+                                <a href="#select_timeslot">select_timeslot</a>
+                            </li>
+                            <li>
+                                <a href="#time_slots">time_slots</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translate">translate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeTimeSlot">changeTimeSlot</a>
+                            </li>
+                            <li>
+                                <a href="#expand">expand</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#getCurrentTimeslot">getCurrentTimeslot</a>
+                            </li>
+                            <li>
+                                <a href="#getLocationByNum">getLocationByNum</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRoomInfo">getRoomInfo</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewDidLoad">ionViewDidLoad</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#refreshRoom">refreshRoom</a>
+                            </li>
+                            <li>
+                                <a href="#swipeCampus">swipeCampus</a>
+                            </li>
+                            <li>
+                                <a href="#switchLocation">switchLocation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(storage: Storage, navCtrl: NavController, translate: TranslateService, swipeEvent: Events, cache: CacheService, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, connection: <a href="../injectables/ConnectionProvider.html">ConnectionProvider</a>, alertProvider: <a href="../injectables/AlertProvider.html">AlertProvider</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/pages/rooms/rooms.ts:46</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>swipeEvent</td>
+                                                  
+                                                        <td>
+                                                                    <code>Events</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cache</td>
+                                                  
+                                                        <td>
+                                                                    <code>CacheService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>connection</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ConnectionProvider.html" target="_self" >ConnectionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertProvider</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/AlertProvider.html" target="_self" >AlertProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeTimeSlot"></a>
+                        <span class="name">
+                            <b>
+                            changeTimeSlot
+                            </b>
+                            <a href="#changeTimeSlot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>changeTimeSlot()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">src/pages/rooms/rooms.ts:135</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Changes timeslot of day that should be displayed
+Info comes from DOM select element &quot;select_timeslot&quot;</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expand"></a>
+                        <span class="name">
+                            <b>
+                            expand
+                            </b>
+                            <a href="#expand"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>expand(house)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/pages/rooms/rooms.ts:145</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Expands house to show rooms</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>house</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>house lbl</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getCurrentTimeslot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            getCurrentTimeslot
+                            </b>
+                            <a href="#getCurrentTimeslot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getCurrentTimeslot()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/pages/rooms/rooms.ts:75</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>gets the slot start and end time for the current time</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>{ &quot;start&quot;: number; &quot;end&quot;: number; &quot;error&quot;: boolean; }</code>
+
+                            </div>
+                                <div class="io-description">
+                                    <ul>
+<li>start/end hour, error = true when out of bounds (8-22)</li>
+</ul>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getLocationByNum"></a>
+                        <span class="name">
+                            <b>
+                            getLocationByNum
+                            </b>
+                            <a href="#getLocationByNum"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getLocationByNum(num)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="270" class="link-to-prism">src/pages/rooms/rooms.ts:270</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Convert campus number to short string (for localization)</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>num</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>Campus number (1-3)</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>&quot;NeuesPalais&quot; | &quot;Golm&quot; | &quot;Griebnitzsee&quot;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    <ul>
+<li>campus short string (gs,np,go), defaults to gs</li>
+</ul>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getRoomInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            getRoomInfo
+                            </b>
+                            <a href="#getRoomInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getRoomInfo()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/pages/rooms/rooms.ts:160</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Main function to query api and build array that is later parsed to DOM
+Gets all its parameters from pages global vars (location, timeslot)</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewDidLoad"></a>
+                        <span class="name">
+                            <b>
+                            ionViewDidLoad
+                            </b>
+                            <a href="#ionViewDidLoad"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ionViewDidLoad()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/pages/rooms/rooms.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refreshRoom"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            refreshRoom
+                            </b>
+                            <a href="#refreshRoom"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>refreshRoom(refresher)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/pages/rooms/rooms.ts:110</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Called when free room entry is clicked to open page with complete plan for selected room</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>refresher</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="swipeCampus"></a>
+                        <span class="name">
+                            <b>
+                            swipeCampus
+                            </b>
+                            <a href="#swipeCampus"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>swipeCampus(event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="253" class="link-to-prism">src/pages/rooms/rooms.ts:253</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="switchLocation"></a>
+                        <span class="name">
+                            <b>
+                            switchLocation
+                            </b>
+                            <a href="#switchLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>switchLocation($event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/pages/rooms/rooms.ts:119</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Switch campus location and reload info for new campus</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>$event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="current_location"></a>
+                        <span class="name">
+                            <b>
+                            current_location</b>
+                            <a href="#current_location"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/pages/rooms/rooms.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="current_timeslot"></a>
+                        <span class="name">
+                            <b>
+                            current_timeslot</b>
+                            <a href="#current_timeslot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/pages/rooms/rooms.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error"></a>
+                        <span class="name">
+                            <b>
+                            error</b>
+                            <a href="#error"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank" >HttpErrorResponse</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/pages/rooms/rooms.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="housesFound"></a>
+                        <span class="name">
+                            <b>
+                            housesFound</b>
+                            <a href="#housesFound"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IHouse.html" target="_self" >IHouse[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/pages/rooms/rooms.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="http"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            http</b>
+                            <a href="#http"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/pages/rooms/rooms.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/pages/rooms/rooms.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="no_timeslot"></a>
+                        <span class="name">
+                            <b>
+                            no_timeslot</b>
+                            <a href="#no_timeslot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/pages/rooms/rooms.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refresher"></a>
+                        <span class="name">
+                            <b>
+                            refresher</b>
+                            <a href="#refresher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/pages/rooms/rooms.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="select_timeslot"></a>
+                        <span class="name">
+                            <b>
+                            select_timeslot</b>
+                            <a href="#select_timeslot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/pages/rooms/rooms.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="time_slots"></a>
+                        <span class="name">
+                            <b>
+                            time_slots</b>
+                            <a href="#time_slots"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/pages/rooms/rooms.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="translate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            translate</b>
+                            <a href="#translate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TranslateService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/pages/rooms/rooms.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import {
+  IonicPage,
+  NavController,
+  Events
+} from &#x27;ionic-angular&#x27;;
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+  HttpParams
+} from &quot;@angular/common/http&quot;;
+import { WebHttpUrlEncodingCodec } from &quot;../../providers/login-provider/lib&quot;;
+import {
+  IConfig,
+  IHouse,
+  IRoom,
+  IRoomApiRequest,
+  IRoomRequestResponse
+} from &quot;../../library/interfaces&quot;;
+import { Storage } from &quot;@ionic/storage&quot;;
+import { TranslateService } from &quot;@ngx-translate/core&quot;;
+import { RoomplanPage } from &quot;../roomplan/roomplan&quot;;
+import { CacheService } from &#x27;ionic-cache&#x27;;
+import {ConnectionProvider} from &quot;../../providers/connection/connection&quot;;
+import {AlertProvider} from &quot;../../providers/alert/alert&quot;;
+
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-rooms&#x27;,
+  templateUrl: &#x27;rooms.html&#x27;,
+})
+export class RoomsPage {
+
+  //bindings
+  select_timeslot: string;
+  refresher: any;
+
+  //vars
+  housesFound:IHouse[] &#x3D; [];
+  time_slots: any;
+  current_timeslot: any;
+  current_location: string;
+  error: HttpErrorResponse;
+  no_timeslot:boolean &#x3D; false;
+
+  constructor(
+    private storage: Storage,
+    public navCtrl: NavController,
+    public translate : TranslateService,
+    private swipeEvent: Events,
+    private cache: CacheService,
+    public http: HttpClient,
+    private connection: ConnectionProvider,
+    private alertProvider: AlertProvider) {
+  }
+
+  ionViewDidLoad() {
+    this.connection.checkOnline(true, true);
+    this.current_timeslot &#x3D; RoomsPage.getCurrentTimeslot();
+
+    this.time_slots &#x3D; [];
+    for (let i &#x3D; 8; i &lt; 22; i &#x3D; i + 2) {
+      let slot &#x3D; {&quot;lbl&quot;: i + &quot; - &quot; + (i + 2), &quot;value&quot;: i};
+      this.time_slots.push(slot)
+    }
+    this.select_timeslot &#x3D; this.current_timeslot.start;
+  }
+
+  /**
+   * gets the slot start and end time for the current time
+   * @returns {{start: number; end: number; error: boolean}} - start/end hour, error &#x3D; true when out of bounds (8-22)
+   */
+  static getCurrentTimeslot() {
+    let now &#x3D; new Date();
+
+    for (let i &#x3D; 8; i &lt; 22; i &#x3D; i + 2) {
+      let start &#x3D; new Date();
+      start.setHours(i);
+      let end &#x3D; new Date();
+      end.setHours((i + 2));
+
+      if (start &lt;&#x3D; now &amp;&amp; end &gt; now) {
+        return {&quot;start&quot;: i, &quot;end&quot;: (i + 2), &quot;error&quot;: false}
+      }
+    }
+
+    return {&quot;start&quot;: 0, &quot;end&quot;: 0, &quot;error&quot;: true}
+  }
+
+  /**
+   * Called when free room entry is clicked to open page with complete plan for selected room
+   * @param {IHouse} house - current house
+   * @param {IRoom} room - selected room in current house
+   */
+  // openRoomPlan(house:IHouse, room:IRoom){
+  //   this.navCtrl.push(RoomplanPage, {
+  //     house: house,
+  //     room: room,
+  //     campus: this.current_location
+  //   })
+  // }
+
+  /**
+   * Called by refresher element to refresh info
+   * @param refresher - DOM refresher element, passed for later closing
+   * @returns {Promise&lt;void&gt;}
+   */
+  async refreshRoom(refresher) {
+    this.getRoomInfo();
+    this.refresher &#x3D; refresher
+  }
+
+  /**
+   * Switch campus location and reload info for new campus
+   * @param location - number as string representing campus
+   */
+  switchLocation($event) {
+    this.housesFound &#x3D; [];
+    var location; 
+    if ($event &#x3D;&#x3D; &quot;Griebnitzsee&quot;) {
+      location &#x3D; &quot;3&quot;;
+    } else if ($event &#x3D;&#x3D; &quot;NeuesPalais&quot;) {
+      location &#x3D; &quot;1&quot;;
+    } else { location &#x3D; &quot;2&quot;; }
+    this.current_location &#x3D; location;
+    this.getRoomInfo()
+  }
+
+  /**
+   * Changes timeslot of day that should be displayed
+   * Info comes from DOM select element &quot;select_timeslot&quot;
+   */
+  changeTimeSlot(){
+    this.housesFound &#x3D; [];
+    this.current_timeslot &#x3D;  {&quot;start&quot;:this.select_timeslot, &quot;end&quot;: (this.select_timeslot + 2),&quot;error&quot;:false};
+    this.getRoomInfo();
+  }
+
+  /**
+   * Expands house to show rooms
+   * @param house - house lbl
+   */
+  expand(house){
+    for (let i &#x3D; 0; i &lt; this.housesFound.length; i++) {
+      if(this.housesFound[i].lbl &#x3D;&#x3D; house){
+        this.housesFound[i].expanded &#x3D; !this.housesFound[i].expanded;
+      }else{
+        this.housesFound[i].expanded &#x3D; false;
+      }
+    }
+  }
+
+  /**
+   * Main function to query api and build array that is later parsed to DOM
+   * Gets all its parameters from pages global vars (location, timeslot)
+   * @returns {Promise&lt;void&gt;}
+   */
+  async getRoomInfo() {
+    if (this.current_timeslot.error){
+      this.no_timeslot &#x3D; true;
+      this.housesFound &#x3D; [];
+      return;
+    }
+
+    this.no_timeslot &#x3D; false;
+    let location &#x3D; this.current_location;
+    let config: IConfig &#x3D; await this.storage.get(&quot;config&quot;);
+
+    let roomRequest: IRoomApiRequest &#x3D; {
+      authToken: config.authorization.credentials.accessToken,
+    };
+
+    let headers: HttpHeaders &#x3D; new HttpHeaders()
+      .append(&quot;Authorization&quot;, roomRequest.authToken);
+
+    let start &#x3D; new Date();
+    let end &#x3D; new Date();
+    start.setHours(this.current_timeslot.start);
+    end.setHours(this.current_timeslot.end);
+
+    let params: HttpParams &#x3D; new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
+      .append(&quot;format&quot;, &quot;json&quot;)
+      .append(&quot;startTime&quot;, start.toISOString())
+      .append(&quot;endTime&quot;, end.toISOString())
+      .append(&quot;campus&quot;, location);
+
+    if (this.refresher !&#x3D; null) {
+      this.cache.removeItem(&quot;roomInfo&quot;+location+start.toString()+end.toString());
+    }
+
+    let request &#x3D; this.http.get(config.webservices.endpoint.roomsSearch, {headers: headers, params: params});
+    this.cache.loadFromObservable(&quot;roomInfo&quot;+location+start.toString()+end.toString(), request).subscribe(
+      (response: IRoomRequestResponse) &#x3D;&gt; {
+        this.housesFound &#x3D; [];
+        this.error &#x3D; null;
+        for (let response_room of response.rooms4TimeResponse.return) {
+
+          let split &#x3D; response_room.split(&quot;.&quot;);
+
+          let room:IRoom &#x3D; {
+            lbl: split.splice(2,5).join(&#x27;.&#x27;)
+          };
+
+          let house:IHouse &#x3D; null;
+          for (let i &#x3D; 0; i &lt; this.housesFound.length; i++) {
+            if(this.housesFound[i].lbl &#x3D;&#x3D; split[1]){
+              house &#x3D; this.housesFound[i];
+              house.rooms.push(room);
+              this.housesFound[i] &#x3D; house;
+            }
+          }
+
+          if(house &#x3D;&#x3D; null){
+            house &#x3D; {
+              lbl:split[1],
+              rooms: [room],
+              expanded: false
+            };
+            this.housesFound.push(house);
+          }
+
+        }
+
+        //sort elements for nicer display
+        this.housesFound.sort(RoomplanPage.compareHouses);
+        this.housesFound.forEach(function (house) {
+          house.rooms.sort(RoomplanPage.compareRooms);
+        });
+
+        if (this.refresher !&#x3D; null) {
+          this.refresher.complete()
+        }
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        console.log(error);
+        this.error &#x3D; error;
+        this.housesFound &#x3D; [];
+        this.no_timeslot &#x3D; true;
+        if (this.refresher !&#x3D; null) {
+          this.refresher.complete()
+        }
+
+        this.alertProvider.showAlert({
+          alertTitleI18nKey: &quot;alert.title.error&quot;,
+          messageI18nKey: &#x60;alert.httpErrorStatus.${error.status}&#x60;
+        })
+      }
+    );
+  }
+
+  swipeCampus(event) {
+    if (Math.abs(event.deltaY) &lt; 50) {
+      if (event.deltaX &gt; 0) {
+        // user swiped from left to right
+        this.swipeEvent.publish(&#x27;campus-swipe-to-right&#x27;, this.getLocationByNum(this.current_location));
+      } else if (event.deltaX &lt; 0) {
+        // user swiped from right to left
+        this.swipeEvent.publish(&#x27;campus-swipe-to-left&#x27;, this.getLocationByNum(this.current_location));
+      }
+    }
+  }
+
+    /**
+   * Convert campus number to short string (for localization)
+   * @param num - Campus number (1-3)
+   * @returns {string} - campus short string (gs,np,go), defaults to gs
+   */
+  getLocationByNum(num) { // one could use numbers everywhere, but this is better for readability
+    switch (num) {
+      case &quot;1&quot;: {
+        return &quot;NeuesPalais&quot;
+      }
+      case &quot;2&quot;: {
+        return &quot;Golm&quot;
+      }
+      case &quot;3&quot;: {
+        return &quot;Griebnitzsee&quot;
+      }
+      default: {
+        return &quot;Griebnitzsee&quot;
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+      &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{&quot;page.rooms.title&quot;|translate}}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+
+  &lt;campus-tab (campusChanged)&#x3D;&quot;switchLocation($event)&quot;&gt;&lt;/campus-tab&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content padding (swipe)&#x3D;&quot;swipeCampus($event)&quot;&gt;
+  &lt;ion-refresher (ionRefresh)&#x3D;&quot;refreshRoom($event)&quot;&gt;
+    &lt;ion-refresher-content&gt;&lt;/ion-refresher-content&gt;
+  &lt;/ion-refresher&gt;
+
+  &lt;ion-item&gt;
+    &lt;ion-label&gt;{{ &quot;page.rooms.time&quot; | translate }}&lt;/ion-label&gt;
+    &lt;ion-select [(ngModel)]&#x3D;&quot;select_timeslot&quot; (ionChange)&#x3D;&quot;changeTimeSlot()&quot; okText&#x3D;&quot;{{ &#x27;button.ok&#x27; | translate }}&quot; cancelText&#x3D;&quot;{{ &#x27;button.cancel&#x27;  | translate }}&quot;&gt;
+      &lt;ion-option *ngFor&#x3D;&quot;let slot of time_slots&quot; [value]&#x3D;&quot;slot.value&quot;&gt;{{slot.lbl}} {{ &quot;words.clock&quot; | translate }}
+      &lt;/ion-option&gt;
+    &lt;/ion-select&gt;
+  &lt;/ion-item&gt;
+
+  &lt;ng-template #housesFoundTemplate&gt;
+    &lt;ion-list&gt;
+      &lt;div *ngFor&#x3D;&quot;let house of housesFound&quot;&gt;
+        &lt;ion-item (click)&#x3D;&quot;expand(house.lbl)&quot;&gt;
+          &lt;ion-label no-margin&gt;
+            &lt;h2 text-wrap&gt;
+              &lt;b&gt;{{ &quot;words.house&quot; | translate }} {{house.lbl}}&lt;/b&gt;
+              &lt;ion-badge color&#x3D;&quot;primary&quot;&gt;
+                {{house.rooms.length}}
+                &lt;span *ngIf&#x3D;&quot;house.rooms.length &#x3D;&#x3D; 1&quot;&gt;{{ &quot;words.room&quot; | translate }}&lt;/span&gt;
+                &lt;span *ngIf&#x3D;&quot;house.rooms.length &gt; 1&quot;&gt;{{ &quot;words.rooms&quot; | translate }}&lt;/span&gt;
+              &lt;/ion-badge&gt;
+            &lt;/h2&gt;
+          &lt;/ion-label&gt;
+          &lt;ion-icon name&#x3D;&quot;arrow-dropdown&quot; *ngIf&#x3D;&quot;!house.expanded&quot; item-end&gt;&lt;/ion-icon&gt;
+          &lt;ion-icon name&#x3D;&quot;arrow-dropup&quot; *ngIf&#x3D;&quot;house.expanded&quot; item-end&gt;&lt;/ion-icon&gt;
+        &lt;/ion-item&gt;
+        &lt;div *ngIf&#x3D;&quot;house.expanded&quot;&gt;
+          &lt;ion-item margin-left *ngFor&#x3D;&quot;let room of house.rooms&quot;&gt;
+              {{room.lbl}}
+          &lt;/ion-item&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ion-list&gt;
+  &lt;/ng-template&gt;
+
+  &lt;p *ngIf&#x3D;&quot;housesFound.length &#x3D;&#x3D; 0 &amp;&amp; !no_timeslot&quot; style&#x3D;&quot;text-align: center&quot;&gt;
+    &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+  &lt;/p&gt;
+
+  &lt;ng-template #noHousesFoundTemplate&gt;
+    &lt;hint hintTextI18nKey&#x3D;&quot;page.rooms.no_rooms_hintText&quot;
+          hintTypeI18nKey&#x3D;&quot;&quot;&gt;&lt;/hint&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-container *ngIf&#x3D;&quot;no_timeslot;
+                then noHousesFoundTemplate; else housesFoundTemplate&quot;&gt;&lt;/ng-container&gt;
+&lt;/ion-content&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>      <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{"page.rooms.title"|translate}}</ion-title>  </ion-navbar>  <campus-tab (campusChanged)="switchLocation($event)"></campus-tab></ion-header><ion-content padding (swipe)="swipeCampus($event)">  <ion-refresher (ionRefresh)="refreshRoom($event)">    <ion-refresher-content></ion-refresher-content>  </ion-refresher>  <ion-item>    <ion-label>{{ "page.rooms.time" | translate }}</ion-label>    <ion-select [(ngModel)]="select_timeslot" (ionChange)="changeTimeSlot()" okText="{{ \'button.ok\' | translate }}" cancelText="{{ \'button.cancel\'  | translate }}">      <ion-option *ngFor="let slot of time_slots" [value]="slot.value">{{slot.lbl}} {{ "words.clock" | translate }}      </ion-option>    </ion-select>  </ion-item>  <ng-template #housesFoundTemplate>    <ion-list>      <div *ngFor="let house of housesFound">        <ion-item (click)="expand(house.lbl)">          <ion-label no-margin>            <h2 text-wrap>              <b>{{ "words.house" | translate }} {{house.lbl}}</b>              <ion-badge color="primary">                {{house.rooms.length}}                <span *ngIf="house.rooms.length == 1">{{ "words.room" | translate }}</span>                <span *ngIf="house.rooms.length > 1">{{ "words.rooms" | translate }}</span>              </ion-badge>            </h2>          </ion-label>          <ion-icon name="arrow-dropdown" *ngIf="!house.expanded" item-end></ion-icon>          <ion-icon name="arrow-dropup" *ngIf="house.expanded" item-end></ion-icon>        </ion-item>        <div *ngIf="house.expanded">          <ion-item margin-left *ngFor="let room of house.rooms">              {{room.lbl}}          </ion-item>        </div>      </div>    </ion-list>  </ng-template>  <p *ngIf="housesFound.length == 0 && !no_timeslot" style="text-align: center">    <ion-spinner></ion-spinner>  </p>  <ng-template #noHousesFoundTemplate>    <hint hintTextI18nKey="page.rooms.no_rooms_hintText"          hintTypeI18nKey=""></hint>  </ng-template>  <ng-container *ngIf="no_timeslot;                then noHousesFoundTemplate; else housesFoundTemplate"></ng-container></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'RoomsPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RoomsPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,2532 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>RoomplanPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/roomplan/roomplan.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-roomplan</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>roomplan.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#current_location">current_location</a>
+                            </li>
+                            <li>
+                                <a href="#day_offset">day_offset</a>
+                            </li>
+                            <li>
+                                <a href="#days">days</a>
+                            </li>
+                            <li>
+                                <a href="#default_house">default_house</a>
+                            </li>
+                            <li>
+                                <a href="#default_room">default_room</a>
+                            </li>
+                            <li>
+                                <a href="#error">error</a>
+                            </li>
+                            <li>
+                                <a href="#houseMap">houseMap</a>
+                            </li>
+                            <li>
+                                <a href="#housesFound">housesFound</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#http">http</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#passedLocation">passedLocation</a>
+                            </li>
+                            <li>
+                                <a href="#refresher">refresher</a>
+                            </li>
+                            <li>
+                                <a href="#requestProcessed">requestProcessed</a>
+                            </li>
+                            <li>
+                                <a href="#response">response</a>
+                            </li>
+                            <li>
+                                <a href="#select_day">select_day</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toastCtrl">toastCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translate">translate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addRoomToHouse">addRoomToHouse</a>
+                            </li>
+                            <li>
+                                <a href="#changeDay">changeDay</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#compareEvents">compareEvents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#compareHouses">compareHouses</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#compareRooms">compareRooms</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#expandHouse">expandHouse</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#expandRoom">expandRoom</a>
+                            </li>
+                            <li>
+                                <a href="#getLocationByNum">getLocationByNum</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRoomInfo">getRoomInfo</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewDidLoad">ionViewDidLoad</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#refreshRoom">refreshRoom</a>
+                            </li>
+                            <li>
+                                <a href="#swipeCampus">swipeCampus</a>
+                            </li>
+                            <li>
+                                <a href="#switchLocation">switchLocation</a>
+                            </li>
+                            <li>
+                                <a href="#uniqueFilter">uniqueFilter</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(storage: Storage, toastCtrl: ToastController, navParams: NavParams, translate: TranslateService, cache: CacheService, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, swipeEvent: Events, connection: <a href="../injectables/ConnectionProvider.html">ConnectionProvider</a>, alertProvider: <a href="../injectables/AlertProvider.html">AlertProvider</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/pages/roomplan/roomplan.ts:55</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cache</td>
+                                                  
+                                                        <td>
+                                                                    <code>CacheService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>swipeEvent</td>
+                                                  
+                                                        <td>
+                                                                    <code>Events</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>connection</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ConnectionProvider.html" target="_self" >ConnectionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertProvider</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/AlertProvider.html" target="_self" >AlertProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addRoomToHouse"></a>
+                        <span class="name">
+                            <b>
+                            addRoomToHouse
+                            </b>
+                            <a href="#addRoomToHouse"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>addRoomToHouse(houseLbl, room: <a href="../interfaces/IRoom.html">IRoom</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">src/pages/roomplan/roomplan.ts:191</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Adds a room to a house (specified by its lbl)
+If the house does not exist one is created
+Room is only added if house does not already have that room (identified by lbl)</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>houseLbl</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>lbl of house to add room for</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>room</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IRoom.html" target="_self" >IRoom</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>room to add to house</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeDay"></a>
+                        <span class="name">
+                            <b>
+                            changeDay
+                            </b>
+                            <a href="#changeDay"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>changeDay()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/pages/roomplan/roomplan.ts:112</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Changes the day for which to load data
+Day comes from DOM select element &quot;select_day&quot;</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="compareEvents"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            compareEvents
+                            </b>
+                            <a href="#compareEvents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>compareEvents(a: <a href="../interfaces/IRoomEvent.html">IRoomEvent</a>, b: <a href="../interfaces/IRoomEvent.html">IRoomEvent</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="379" class="link-to-prism">src/pages/roomplan/roomplan.ts:379</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Comparator for event sorting</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>a</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IRoomEvent.html" target="_self" >IRoomEvent</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>b</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IRoomEvent.html" target="_self" >IRoomEvent</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>0 | 1 | -1</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="compareHouses"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            compareHouses
+                            </b>
+                            <a href="#compareHouses"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>compareHouses(a: <a href="../interfaces/IHouse.html">IHouse</a>, b: <a href="../interfaces/IHouse.html">IHouse</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="407" class="link-to-prism">src/pages/roomplan/roomplan.ts:407</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Comparator for house</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>a</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IHouse.html" target="_self" >IHouse</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>b</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IHouse.html" target="_self" >IHouse</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>0 | 1 | -1</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="compareRooms"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            compareRooms
+                            </b>
+                            <a href="#compareRooms"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>compareRooms(a: <a href="../interfaces/IRoom.html">IRoom</a>, b: <a href="../interfaces/IRoom.html">IRoom</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="393" class="link-to-prism">src/pages/roomplan/roomplan.ts:393</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Comparator for room sorting</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>a</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IRoom.html" target="_self" >IRoom</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>b</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IRoom.html" target="_self" >IRoom</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>0 | 1 | -1</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expandHouse"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            expandHouse
+                            </b>
+                            <a href="#expandHouse"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>expandHouse(house)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="154" class="link-to-prism">src/pages/roomplan/roomplan.ts:154</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Expand house expandable to show rooms
+Closes rooms when house is closed</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>house</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>lbl of house to close</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expandRoom"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            expandRoom
+                            </b>
+                            <a href="#expandRoom"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>expandRoom(house, room)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">src/pages/roomplan/roomplan.ts:172</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Expand room expandable to show events</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>house</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>lbl of house to close</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>room</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>lbl of room to close</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getLocationByNum"></a>
+                        <span class="name">
+                            <b>
+                            getLocationByNum
+                            </b>
+                            <a href="#getLocationByNum"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getLocationByNum(num)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/pages/roomplan/roomplan.ts:91</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Convert campus number to short string (for localization)</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>num</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>Campus number (1-3)</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>&quot;NeuesPalais&quot; | &quot;Golm&quot; | &quot;Griebnitzsee&quot;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    <ul>
+<li>campus short string (gs,np,go), defaults to gs</li>
+</ul>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getRoomInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            getRoomInfo
+                            </b>
+                            <a href="#getRoomInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getRoomInfo()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="214" class="link-to-prism">src/pages/roomplan/roomplan.ts:214</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Main function to query api and build array that is later parsed to DOM
+Gets all its parameters from pages global vars (location, day, default house/room)</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewDidLoad"></a>
+                        <span class="name">
+                            <b>
+                            ionViewDidLoad
+                            </b>
+                            <a href="#ionViewDidLoad"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ionViewDidLoad()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/pages/roomplan/roomplan.ts:72</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refreshRoom"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            refreshRoom
+                            </b>
+                            <a href="#refreshRoom"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>refreshRoom(refresher)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">src/pages/roomplan/roomplan.ts:127</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Called by refresher element to refresh info</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>refresher</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>DOM refresher element, passed for later closing</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="swipeCampus"></a>
+                        <span class="name">
+                            <b>
+                            swipeCampus
+                            </b>
+                            <a href="#swipeCampus"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>swipeCampus(event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="426" class="link-to-prism">src/pages/roomplan/roomplan.ts:426</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="switchLocation"></a>
+                        <span class="name">
+                            <b>
+                            switchLocation
+                            </b>
+                            <a href="#switchLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>switchLocation($event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">src/pages/roomplan/roomplan.ts:136</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Switch campus location and reload info for new campus</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>$event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uniqueFilter"></a>
+                        <span class="name">
+                            <b>
+                            uniqueFilter
+                            </b>
+                            <a href="#uniqueFilter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>uniqueFilter(value, index, self)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="422" class="link-to-prism">src/pages/roomplan/roomplan.ts:422</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Filter for person array uniqueness</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>value</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>index</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>self</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="current_location"></a>
+                        <span class="name">
+                            <b>
+                            current_location</b>
+                            <a href="#current_location"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/pages/roomplan/roomplan.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="day_offset"></a>
+                        <span class="name">
+                            <b>
+                            day_offset</b>
+                            <a href="#day_offset"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/pages/roomplan/roomplan.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="days"></a>
+                        <span class="name">
+                            <b>
+                            days</b>
+                            <a href="#days"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/pages/roomplan/roomplan.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="default_house"></a>
+                        <span class="name">
+                            <b>
+                            default_house</b>
+                            <a href="#default_house"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IHouse.html" target="_self" >IHouse</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/pages/roomplan/roomplan.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="default_room"></a>
+                        <span class="name">
+                            <b>
+                            default_room</b>
+                            <a href="#default_room"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IRoom.html" target="_self" >IRoom</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/pages/roomplan/roomplan.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error"></a>
+                        <span class="name">
+                            <b>
+                            error</b>
+                            <a href="#error"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank" >HttpErrorResponse</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/pages/roomplan/roomplan.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="houseMap"></a>
+                        <span class="name">
+                            <b>
+                            houseMap</b>
+                            <a href="#houseMap"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IHousePlan.html" target="_self" >Map&lt;string | IHousePlan&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Map&lt;string, IHousePlan&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/pages/roomplan/roomplan.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="housesFound"></a>
+                        <span class="name">
+                            <b>
+                            housesFound</b>
+                            <a href="#housesFound"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IHouse.html" target="_self" >Array&lt;IHouse&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/pages/roomplan/roomplan.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="http"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            http</b>
+                            <a href="#http"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/pages/roomplan/roomplan.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams</b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/pages/roomplan/roomplan.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="passedLocation"></a>
+                        <span class="name">
+                            <b>
+                            passedLocation</b>
+                            <a href="#passedLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/pages/roomplan/roomplan.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refresher"></a>
+                        <span class="name">
+                            <b>
+                            refresher</b>
+                            <a href="#refresher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/pages/roomplan/roomplan.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="requestProcessed"></a>
+                        <span class="name">
+                            <b>
+                            requestProcessed</b>
+                            <a href="#requestProcessed"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/pages/roomplan/roomplan.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="response"></a>
+                        <span class="name">
+                            <b>
+                            response</b>
+                            <a href="#response"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/pages/roomplan/roomplan.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="select_day"></a>
+                        <span class="name">
+                            <b>
+                            select_day</b>
+                            <a href="#select_day"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/pages/roomplan/roomplan.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toastCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toastCtrl</b>
+                            <a href="#toastCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ToastController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/pages/roomplan/roomplan.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="translate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            translate</b>
+                            <a href="#translate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TranslateService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/pages/roomplan/roomplan.ts:61</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import {
+  IonicPage,
+  NavParams,
+  ToastController,
+  Events
+} from &#x27;ionic-angular&#x27;;
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+  HttpParams
+} from &quot;@angular/common/http&quot;;
+import {
+  WebHttpUrlEncodingCodec
+} from &quot;../../providers/login-provider/lib&quot;;
+import {
+  IConfig,
+  IHouse, IHousePlan,
+  IReservationRequestResponse,
+  IRoom,
+  IRoomApiRequest, IRoomEvent
+} from &quot;../../library/interfaces&quot;;
+import { Storage } from &quot;@ionic/storage&quot;;
+import { TranslateService } from &quot;@ngx-translate/core&quot;;
+import { CacheService } from &#x27;ionic-cache&#x27;;
+import {ConnectionProvider} from &quot;../../providers/connection/connection&quot;;
+import {AlertProvider} from &quot;../../providers/alert/alert&quot;;
+
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-roomplan&#x27;,
+  templateUrl: &#x27;roomplan.html&#x27;,
+})
+export class RoomplanPage {
+
+  //params
+  default_house:IHouse;
+  default_room:IRoom;
+
+  //bindings
+  select_day:string;
+  refresher: any;
+  days: any;
+
+  //vars
+  houseMap: Map&lt;string, IHousePlan&gt; &#x3D; new Map&lt;string, IHousePlan&gt;();
+  housesFound: Array&lt;IHouse&gt; &#x3D; [];
+  day_offset:string;
+  response: any;
+  current_location: string;
+  passedLocation:string;
+  error: HttpErrorResponse;
+  requestProcessed:boolean &#x3D; false;
+
+  constructor(
+    private storage: Storage,
+    public toastCtrl: ToastController,
+    public navParams: NavParams,
+    public translate: TranslateService,
+    private cache: CacheService,
+    public http: HttpClient,
+    private swipeEvent: Events,
+    private connection: ConnectionProvider,
+    private alertProvider: AlertProvider) {
+    this.default_house &#x3D; navParams.get(&quot;house&quot;);
+    this.default_room &#x3D; navParams.get(&quot;room&quot;);
+    this.passedLocation &#x3D; navParams.get(&quot;campus&quot;);
+  }
+
+  ionViewDidLoad() {
+    this.connection.checkOnline(true, true);
+
+    this.day_offset &#x3D; &quot;0&quot;;
+
+    this.days &#x3D; [];
+    for(let i &#x3D; 0; i &lt; 7; i++){
+      let day:Date &#x3D; new Date();
+      day.setDate(day.getDate() + i);
+      this.days.push({&quot;lbl&quot;: day, &quot;value&quot;: i.toString()})
+    }
+    this.select_day &#x3D; this.day_offset;
+  }
+
+  /**
+   * Convert campus number to short string (for localization)
+   * @param num - Campus number (1-3)
+   * @returns {string} - campus short string (gs,np,go), defaults to gs
+   */
+  getLocationByNum(num) { // one could use numbers everywhere, but this is better for readability
+    switch (num) {
+      case &quot;1&quot;: {
+        return &quot;NeuesPalais&quot;
+      }
+      case &quot;2&quot;: {
+        return &quot;Golm&quot;
+      }
+      case &quot;3&quot;: {
+        return &quot;Griebnitzsee&quot;
+      }
+      default: {
+        return &quot;Griebnitzsee&quot;
+      }
+    }
+  }
+
+  /**
+   * Changes the day for which to load data
+   * Day comes from DOM select element &quot;select_day&quot;
+   */
+  changeDay() {
+    this.housesFound &#x3D; [];
+    this.houseMap &#x3D; new Map&lt;string, IHousePlan&gt;();
+    this.day_offset &#x3D; this.select_day;
+    //reset defaults so they don&#x27;t open on new day
+    this.default_room &#x3D; null;
+    this.default_house &#x3D; null;
+    this.getRoomInfo();
+  }
+
+  /**
+   * Called by refresher element to refresh info
+   * @param refresher - DOM refresher element, passed for later closing
+   * @returns {Promise&lt;void&gt;}
+   */
+  async refreshRoom(refresher) {
+    this.getRoomInfo();
+    this.refresher &#x3D; refresher
+  }
+
+  /**
+   * Switch campus location and reload info for new campus
+   * @param location - number as string representing campus
+   */
+  switchLocation($event) {
+    this.houseMap &#x3D; new Map&lt;string, IHousePlan&gt;();
+    this.housesFound &#x3D; [];
+    var location;
+    if ($event &#x3D;&#x3D; &quot;Griebnitzsee&quot;) {
+      location &#x3D; &quot;3&quot;;
+    } else if ($event &#x3D;&#x3D; &quot;NeuesPalais&quot;) {
+      location &#x3D; &quot;1&quot;;
+    } else { location &#x3D; &quot;2&quot;; }
+    this.current_location &#x3D; location;
+    this.getRoomInfo()
+  }
+
+  /**
+   * Expand house expandable to show rooms
+   * Closes rooms when house is closed
+   * @param house - lbl of house to close
+   */
+  public expandHouse(house) {
+    for (let i &#x3D; 0; i &lt; this.housesFound.length; i++) {
+      if (this.housesFound[i].lbl &#x3D;&#x3D; house) {
+        this.housesFound[i].expanded &#x3D; !this.housesFound[i].expanded;
+      }
+      if(this.housesFound[i].expanded &#x3D;&#x3D; false){
+        this.housesFound[i].rooms.forEach(function (room) {
+          room.expanded &#x3D; false;
+        })
+      }
+    }
+  }
+
+  /**
+   * Expand room expandable to show events
+   * @param house - lbl of house to close
+   * @param room - lbl of room to close
+   */
+  public expandRoom(house, room) {
+    for (let i &#x3D; 0; i &lt; this.housesFound.length; i++) {
+      if (this.housesFound[i].lbl &#x3D;&#x3D; house) {
+        for (let h &#x3D; 0; h &lt; this.housesFound[i].rooms.length; h++) {
+          if (this.housesFound[i].rooms[h].lbl &#x3D;&#x3D; room) {
+            this.housesFound[i].rooms[h].expanded &#x3D; !this.housesFound[i].rooms[h].expanded;
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Adds a room to a house (specified by its lbl)
+   * If the house does not exist one is created
+   * Room is only added if house does not already have that room (identified by lbl)
+   * @param houseLbl - lbl of house to add room for
+   * @param {IRoom} room - room to add to house
+   */
+  addRoomToHouse(houseLbl, room: IRoom) {
+    let house: IHousePlan;
+    if (this.houseMap.has(houseLbl)) {
+      house &#x3D; this.houseMap.get(houseLbl);
+    } else {
+      house &#x3D; {
+        lbl: houseLbl,
+        rooms: new Map&lt;string, IRoom&gt;(),
+        expanded: false
+      };
+    }
+
+    if (house.rooms.has(room.lbl) &#x3D;&#x3D; false) {
+      house.rooms.set(room.lbl, room);
+      this.houseMap.set(houseLbl, house);
+    }
+  }
+
+  /**
+   * Main function to query api and build array that is later parsed to DOM
+   * Gets all its parameters from pages global vars (location, day, default house/room)
+   * @returns {Promise&lt;void&gt;}
+   */
+  async getRoomInfo() {
+    this.requestProcessed &#x3D; false;
+    let location &#x3D; this.current_location;
+    let config: IConfig &#x3D; await this.storage.get(&quot;config&quot;);
+
+    let roomRequest: IRoomApiRequest &#x3D; {
+      authToken: config.authorization.credentials.accessToken,
+    };
+
+    let headers: HttpHeaders &#x3D; new HttpHeaders().append(&quot;Authorization&quot;, roomRequest.authToken);
+
+    let start &#x3D; new Date();
+    let end &#x3D; new Date();
+    start.setHours(8);
+    end.setHours(22);
+    start.setDate(start.getDate() + +this.day_offset); // unary plus for string-&gt;num conversion
+    end.setDate(end.getDate() + +this.day_offset);
+
+    let params: HttpParams &#x3D; new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
+      .append(&quot;format&quot;, &quot;json&quot;)
+      .append(&quot;startTime&quot;, start.toISOString())
+      .append(&quot;endTime&quot;, end.toISOString())
+      .append(&quot;campus&quot;, location);
+
+    if (this.refresher !&#x3D; null) {
+      this.cache.removeItem(&quot;roomplanInfo&quot;+location+start.toString()+end.toString());
+    }
+
+    let request &#x3D; this.http.get(config.webservices.endpoint.roomplanSearch, {headers: headers, params: params});
+    this.cache.loadFromObservable(&quot;roomplanInfo&quot;+location+start.toString()+end.toString(), request).subscribe(
+      (response: IReservationRequestResponse) &#x3D;&gt; {
+
+        this.houseMap &#x3D; new Map&lt;string, IHousePlan&gt;();
+        this.housesFound &#x3D; [];
+        this.error &#x3D; null;
+
+        if(response.reservationsResponse.return.length &#x3D;&#x3D; 0 || !response.reservationsResponse.return){
+          // list will remain empty
+        } else {
+          for (let reservation of response.reservationsResponse.return) {
+            // API often returns basically empty reservations, we want to ignore these
+            if (reservation.veranstaltung !&#x3D; &quot;&quot; &amp;&amp; reservation.veranstaltung !&#x3D; null) {
+
+              if ((reservation.roomList.room instanceof Array) &#x3D;&#x3D; false) {
+                reservation.roomList.room &#x3D; [reservation.roomList.room]
+              }
+
+              let roomList &#x3D; &lt;Array&lt;string&gt;&gt; reservation.roomList.room;
+              for (let i &#x3D; 0; i &lt; roomList.length; i++) {
+                let split &#x3D; roomList[i].split(&quot;.&quot;);
+                let room: IRoom &#x3D; {
+                  lbl: split.splice(2, 5).join(&#x27;.&#x27;),
+                  events: [],
+                  expanded: false
+                };
+
+                this.addRoomToHouse(split[1], room);
+
+                let persons:Array&lt;String&gt; &#x3D; [];
+                let personArray &#x3D; reservation.personList.person;
+                for(let h &#x3D; 0; h &lt; personArray.length; h &#x3D; h + 2){
+                  if(personArray[h] &#x3D;&#x3D; &quot;N.N&quot; ){
+                    persons.push(&quot;N.N &quot;)
+                  }
+                  if(personArray[h] !&#x3D; &quot;&quot; &amp;&amp; personArray[h + 1] !&#x3D; &quot;&quot;){
+                    persons.push(personArray[h + 1].trim() + &quot; &quot; + personArray[h].trim())
+                  }
+                }
+
+                persons &#x3D; persons.filter(this.uniqueFilter);
+
+                let event: IRoomEvent &#x3D; {
+                  lbl: reservation.veranstaltung,
+                  startTime: new Date(reservation.startTime),
+                  endTime: new Date(reservation.endTime),
+                  persons: persons
+                };
+
+                this.houseMap.get(split[1]).rooms.get(room.lbl).events.push(event)
+              }
+            }
+          }
+
+          // load defaults if they are passed to the page by other files
+          let default_error &#x3D; &quot;&quot;;
+          if(this.default_house !&#x3D; null){
+            if(this.houseMap.has(this.default_house.lbl)){
+              this.houseMap.get(this.default_house.lbl).expanded &#x3D; true;
+
+              if(this.default_room !&#x3D; null){
+                if(this.houseMap.get(this.default_house.lbl).rooms.has(this.default_room.lbl)){
+                  this.houseMap.get(this.default_house.lbl).rooms.get(this.default_room.lbl).expanded &#x3D; true;
+                }else{
+                  default_error &#x3D; &quot;page.roomplan.no_room&quot;;
+                }
+              }
+            }else{
+              default_error &#x3D; &quot;page.roomplan.no_house&quot;;
+            }
+          }
+
+          if (default_error !&#x3D; &quot;&quot;){
+            this.translate.get(default_error).subscribe(
+              value &#x3D;&gt; {
+                const toast &#x3D; this.toastCtrl.create({
+                  message: value,
+                  duration: 6000,
+                  position: &#x27;middle&#x27;,
+                });
+                toast.present();
+              }
+            )
+          }
+
+          //sadly templates cannot parse maps,
+          //therefore we will generate a new data structure based on arrays and parse everything into there
+          let tmpHouseList &#x3D; Array.from(this.houseMap.values());
+          for (let i &#x3D; 0; i &lt; tmpHouseList.length; i++) {
+            let tmpRoomArray &#x3D; Array.from(tmpHouseList[i].rooms.values());
+
+            tmpRoomArray.sort(RoomplanPage.compareRooms);
+            for(let h &#x3D; 0; h &lt; tmpRoomArray.length; h++){
+              tmpRoomArray[h].events.sort(RoomplanPage.compareEvents);
+            }
+
+            let tmpHouse: IHouse &#x3D; {
+              lbl: tmpHouseList[i].lbl,
+              rooms: tmpRoomArray,
+              expanded: tmpHouseList[i].expanded
+            };
+            this.housesFound.push(tmpHouse);
+          }
+          this.housesFound.sort(RoomplanPage.compareHouses);
+
+          //if refresher is running complete it
+          if (this.refresher !&#x3D; null) {
+            this.refresher.complete()
+          }
+          this.requestProcessed &#x3D; true;
+        }
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        //if error reset vars and set error variable for display
+        this.requestProcessed &#x3D; true;
+        this.error &#x3D; error;
+        this.houseMap &#x3D; new Map&lt;string, IHousePlan&gt;();
+        this.housesFound &#x3D; [];
+        if (this.refresher !&#x3D; null) {
+          this.refresher.complete()
+        }
+
+        this.alertProvider.showAlert({
+          alertTitleI18nKey: &quot;alert.title.error&quot;,
+          messageI18nKey: &#x60;alert.httpErrorStatus.${error.status}&#x60;
+        })
+      }
+    );
+  }
+
+  /**
+   * Comparator for event sorting
+   * @param {IRoomEvent} a
+   * @param {IRoomEvent} b
+   * @returns {number}
+   */
+  static compareEvents(a:IRoomEvent, b:IRoomEvent) {
+    if (a.startTime &lt; b.startTime)
+      return -1;
+    if (a.startTime &gt; b.startTime)
+      return 1;
+    return 0;
+  }
+
+  /**
+   * Comparator for room sorting
+   * @param {IRoomEvent} a
+   * @param {IRoomEvent} b
+   * @returns {number}
+   */
+  static compareRooms(a:IRoom, b:IRoom) {
+    if (a.lbl &lt; b.lbl)
+      return -1;
+    if (a.lbl &gt; b.lbl)
+      return 1;
+    return 0;
+  }
+
+  /**
+   * Comparator for house
+   * @param {IRoomEvent} a
+   * @param {IRoomEvent} b
+   * @returns {number}
+   */
+  static compareHouses(a:IHouse, b:IHouse) {
+    if (a.lbl &lt; b.lbl)
+      return -1;
+    if (a.lbl &gt; b.lbl)
+      return 1;
+    return 0;
+  }
+
+  /**
+   * Filter for person array uniqueness
+   * @param value
+   * @param index
+   * @param self
+   * @returns {boolean}
+   */
+  uniqueFilter(value, index, self) {
+    return self.indexOf(value) &#x3D;&#x3D;&#x3D; index;
+  }
+
+  swipeCampus(event) {
+    if (Math.abs(event.deltaY) &lt; 50) {
+      if (event.deltaX &gt; 0) {
+        // user swiped from left to right
+        this.swipeEvent.publish(&#x27;campus-swipe-to-right&#x27;, this.getLocationByNum(this.current_location));
+      } else if (event.deltaX &lt; 0) {
+        // user swiped from right to left
+        this.swipeEvent.publish(&#x27;campus-swipe-to-left&#x27;, this.getLocationByNum(this.current_location));
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+      &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{&quot;page.roomplan.title&quot;|translate}}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+  &lt;campus-tab *ngIf&#x3D;&quot;passedLocation&quot; (campusChanged)&#x3D;&quot;switchLocation($event)&quot; [passedLocation]&#x3D;&quot;passedLocation&quot;&gt;&lt;/campus-tab&gt;
+  &lt;campus-tab *ngIf&#x3D;&quot;!passedLocation&quot; (campusChanged)&#x3D;&quot;switchLocation($event)&quot;&gt;&lt;/campus-tab&gt;
+&lt;/ion-header&gt;
+
+
+&lt;ion-content padding (swipe)&#x3D;&quot;swipeCampus($event)&quot;&gt;
+  &lt;ion-refresher (ionRefresh)&#x3D;&quot;refreshRoom($event)&quot;&gt;
+    &lt;ion-refresher-content&gt;&lt;/ion-refresher-content&gt;
+  &lt;/ion-refresher&gt;
+
+  &lt;ion-item&gt;
+      &lt;ion-label&gt;{{ &quot;page.roomplan.date&quot; | translate }}&lt;/ion-label&gt;
+    &lt;ion-select [(ngModel)]&#x3D;&quot;select_day&quot; (ionChange)&#x3D;&quot;changeDay()&quot; okText&#x3D;&quot;{{ &#x27;button.ok&#x27; | translate }}&quot; cancelText&#x3D;&quot;{{ &#x27;button.cancel&#x27;  | translate }}&quot;&gt;
+      &lt;ion-option *ngFor&#x3D;&quot;let day of days&quot; [value]&#x3D;&quot;day.value&quot;&gt;{{day.lbl | date:&#x27;dd.MM.yyyy&#x27;}}&lt;/ion-option&gt;
+    &lt;/ion-select&gt;
+  &lt;/ion-item&gt;
+
+  &lt;ng-template #noRoomsFoundTemplate&gt;
+    &lt;hint hintTextI18nKey&#x3D;&quot;page.roomplan.no_rooms_hintText&quot;
+          hintTypeI18nKey&#x3D;&quot;&quot;&gt;&lt;/hint&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #roomsFoundTemplate&gt;
+    &lt;ion-list&gt;
+      &lt;div *ngFor&#x3D;&quot;let house of housesFound&quot;&gt;
+        &lt;ion-item (click)&#x3D;&quot;expandHouse(house.lbl)&quot;&gt;
+          &lt;ion-label no-margin&gt;
+            &lt;h2&gt;
+              &lt;b&gt;{{ &quot;words.house&quot; | translate }} {{house.lbl}}&lt;/b&gt;
+              &lt;ion-badge color&#x3D;&quot;primary&quot;&gt;
+                  {{house.rooms.length}}
+                  &lt;span *ngIf&#x3D;&quot;house.rooms.length &#x3D;&#x3D; 1&quot;&gt;{{ &quot;words.booking&quot; | translate }}&lt;/span&gt;
+                  &lt;span *ngIf&#x3D;&quot;house.rooms.length &gt; 1&quot;&gt;{{ &quot;words.bookings&quot; | translate }}&lt;/span&gt;
+                &lt;/ion-badge&gt;
+            &lt;/h2&gt;
+          &lt;/ion-label&gt;
+          &lt;ion-icon name&#x3D;&quot;arrow-dropdown&quot; *ngIf&#x3D;&quot;!house.expanded&quot; item-end&gt;&lt;/ion-icon&gt;
+          &lt;ion-icon name&#x3D;&quot;arrow-dropup&quot; *ngIf&#x3D;&quot;house.expanded&quot; item-end&gt;&lt;/ion-icon&gt;
+        &lt;/ion-item&gt;
+        &lt;div *ngIf&#x3D;&quot;house.expanded&quot;&gt;
+          &lt;div *ngFor&#x3D;&quot;let room of house.rooms&quot;&gt;
+            &lt;ion-item (click)&#x3D;&quot;expandRoom(house.lbl,room.lbl)&quot;&gt;
+              &lt;ion-label no-margin&gt;
+                &lt;h2&gt;{{room.lbl}}&lt;ion-badge color&#x3D;&quot;secondary&quot;&gt;{{room.events.length}}&lt;/ion-badge&gt;&lt;/h2&gt;
+              &lt;/ion-label&gt;
+              &lt;ion-icon name&#x3D;&quot;arrow-dropdown&quot; *ngIf&#x3D;&quot;!room.expanded&quot; item-end&gt;&lt;/ion-icon&gt;
+              &lt;ion-icon name&#x3D;&quot;arrow-dropup&quot; *ngIf&#x3D;&quot;room.expanded&quot; item-end&gt;&lt;/ion-icon&gt;
+            &lt;/ion-item&gt;
+            &lt;div *ngIf&#x3D;&quot;room.expanded&quot;&gt;
+              &lt;ion-item margin-left *ngFor&#x3D;&quot;let event of room.events&quot;&gt;
+                &lt;u&gt;
+                  &lt;b&gt;
+                    {{event.startTime | date:&#x27;HH:mm&#x27;}} - {{event.endTime | date:&#x27;HH:mm&#x27;}} {{ &quot;words.clock&quot; | translate }}
+                  &lt;/b&gt;
+                &lt;/u&gt;
+                &lt;br/&gt;
+
+                &lt;i text-wrap&gt;{{event.lbl}}&lt;/i&gt;
+                &lt;br/&gt;
+                &lt;p *ngFor&#x3D;&quot;let person of event.persons&quot;&gt;
+                  &lt;ion-badge color&#x3D;&quot;danger&quot;&gt;{{person}}&lt;/ion-badge&gt;
+                &lt;/p&gt;
+              &lt;/ion-item&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ion-list&gt;
+  &lt;/ng-template&gt;
+
+  &lt;p *ngIf&#x3D;&quot; housesFound.length &#x3D;&#x3D; 0 &amp;&amp; error &#x3D;&#x3D; null &amp;&amp; !requestProcessed&quot; style&#x3D;&quot;text-align: center&quot;&gt;
+    &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+  &lt;/p&gt;
+
+  &lt;ng-container *ngIf&#x3D;&quot;housesFound.length &#x3D;&#x3D; 0 &amp;&amp; requestProcessed;
+                then noRoomsFoundTemplate; else roomsFoundTemplate&quot;&gt;
+  &lt;/ng-container&gt;
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>      <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{"page.roomplan.title"|translate}}</ion-title>  </ion-navbar>  <campus-tab *ngIf="passedLocation" (campusChanged)="switchLocation($event)" [passedLocation]="passedLocation"></campus-tab>  <campus-tab *ngIf="!passedLocation" (campusChanged)="switchLocation($event)"></campus-tab></ion-header><ion-content padding (swipe)="swipeCampus($event)">  <ion-refresher (ionRefresh)="refreshRoom($event)">    <ion-refresher-content></ion-refresher-content>  </ion-refresher>  <ion-item>      <ion-label>{{ "page.roomplan.date" | translate }}</ion-label>    <ion-select [(ngModel)]="select_day" (ionChange)="changeDay()" okText="{{ \'button.ok\' | translate }}" cancelText="{{ \'button.cancel\'  | translate }}">      <ion-option *ngFor="let day of days" [value]="day.value">{{day.lbl | date:\'dd.MM.yyyy\'}}</ion-option>    </ion-select>  </ion-item>  <ng-template #noRoomsFoundTemplate>    <hint hintTextI18nKey="page.roomplan.no_rooms_hintText"          hintTypeI18nKey=""></hint>  </ng-template>  <ng-template #roomsFoundTemplate>    <ion-list>      <div *ngFor="let house of housesFound">        <ion-item (click)="expandHouse(house.lbl)">          <ion-label no-margin>            <h2>              <b>{{ "words.house" | translate }} {{house.lbl}}</b>              <ion-badge color="primary">                  {{house.rooms.length}}                  <span *ngIf="house.rooms.length == 1">{{ "words.booking" | translate }}</span>                  <span *ngIf="house.rooms.length > 1">{{ "words.bookings" | translate }}</span>                </ion-badge>            </h2>          </ion-label>          <ion-icon name="arrow-dropdown" *ngIf="!house.expanded" item-end></ion-icon>          <ion-icon name="arrow-dropup" *ngIf="house.expanded" item-end></ion-icon>        </ion-item>        <div *ngIf="house.expanded">          <div *ngFor="let room of house.rooms">            <ion-item (click)="expandRoom(house.lbl,room.lbl)">              <ion-label no-margin>                <h2>{{room.lbl}}<ion-badge color="secondary">{{room.events.length}}</ion-badge></h2>              </ion-label>              <ion-icon name="arrow-dropdown" *ngIf="!room.expanded" item-end></ion-icon>              <ion-icon name="arrow-dropup" *ngIf="room.expanded" item-end></ion-icon>            </ion-item>            <div *ngIf="room.expanded">              <ion-item margin-left *ngFor="let event of room.events">                <u>                  <b>                    {{event.startTime | date:\'HH:mm\'}} - {{event.endTime | date:\'HH:mm\'}} {{ "words.clock" | translate }}                  </b>                </u>                <br/>                <i text-wrap>{{event.lbl}}</i>                <br/>                <p *ngFor="let person of event.persons">                  <ion-badge color="danger">{{person}}</ion-badge>                </p>              </ion-item>            </div>          </div>        </div>      </div>    </ion-list>  </ng-template>  <p *ngIf=" housesFound.length == 0 && error == null && !requestProcessed" style="text-align: center">    <ion-spinner></ion-spinner>  </p>  <ng-container *ngIf="housesFound.length == 0 && requestProcessed;                then noRoomsFoundTemplate; else roomsFoundTemplate">  </ng-container></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'RoomplanPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RoomplanPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

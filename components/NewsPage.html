@@ -1,0 +1,1366 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>NewsPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/news/news.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-news</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>news.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#categories">categories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#injector">injector</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isLoaded">isLoaded</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#newsList">newsList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#newsSource">newsSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#selectedCategory">selectedCategory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showLeftButton">showLeftButton</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showRightButton">showRightButton</a>
+                            </li>
+                            <li>
+                                <a href="#slides">slides</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sourcesList">sourcesList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#loadNews">loadNews</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setNewsSource">setNewsSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#slideChanged">slideChanged</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#slideNext">slideNext</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#slidePrev">slidePrev</a>
+                            </li>
+                            <li>
+                                <a href="#swipeNewsSource">swipeNewsSource</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, navParams: NavParams, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, injector: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>, storage: Storage, cache: CacheService, connection: <a href="../injectables/ConnectionProvider.html">ConnectionProvider</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/pages/news/news.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>injector</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cache</td>
+                                                  
+                                                        <td>
+                                                                    <code>CacheService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>connection</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ConnectionProvider.html" target="_self" >ConnectionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loadNews"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            loadNews
+                            </b>
+                            <a href="#loadNews"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>loadNews(refresher?)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/pages/news/news.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>refresher</td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/pages/news/news.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setNewsSource"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            setNewsSource
+                            </b>
+                            <a href="#setNewsSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setNewsSource(i: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/pages/news/news.ts:115</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="slideChanged"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            slideChanged
+                            </b>
+                            <a href="#slideChanged"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>slideChanged()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/pages/news/news.ts:97</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="slideNext"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            slideNext
+                            </b>
+                            <a href="#slideNext"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>slideNext()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/pages/news/news.ts:104</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="slidePrev"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            slidePrev
+                            </b>
+                            <a href="#slidePrev"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>slidePrev()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/pages/news/news.ts:110</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="swipeNewsSource"></a>
+                        <span class="name">
+                            <b>
+                            swipeNewsSource
+                            </b>
+                            <a href="#swipeNewsSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>swipeNewsSource(event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/pages/news/news.ts:121</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categories"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            categories</b>
+                            <a href="#categories"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/pages/news/news.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="injector"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            injector</b>
+                            <a href="#injector"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/pages/news/news.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoaded"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            isLoaded</b>
+                            <a href="#isLoaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/news/news.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/pages/news/news.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams</b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/pages/news/news.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newsList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            newsList</b>
+                            <a href="#newsList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/pages/news/news.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newsSource"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            newsSource</b>
+                            <a href="#newsSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/pages/news/news.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedCategory"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            selectedCategory</b>
+                            <a href="#selectedCategory"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/pages/news/news.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showLeftButton"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showLeftButton</b>
+                            <a href="#showLeftButton"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/pages/news/news.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showRightButton"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showRightButton</b>
+                            <a href="#showRightButton"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/pages/news/news.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="slides"></a>
+                        <span class="name">
+                            <b>
+                            slides</b>
+                            <a href="#slides"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Slides</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(Slides)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/pages/news/news.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sourcesList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            sourcesList</b>
+                            <a href="#sourcesList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/pages/news/news.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { INewsApiResponse, IConfig } from &#x27;./../../library/interfaces&#x27;;
+import { HttpClient, HttpHeaders } from &#x27;@angular/common/http&#x27;;
+import { Component, Injector, ViewChild } from &#x27;@angular/core&#x27;;
+import { IonicPage, NavController, NavParams, Slides } from &#x27;ionic-angular&#x27;;
+import { Storage } from &#x27;@ionic/storage&#x27;;
+import { CacheService } from &#x27;ionic-cache&#x27;;
+import { ConnectionProvider } from &quot;../../providers/connection/connection&quot;;
+
+
+/**
+ * @class NewsPage
+ * @classdesc Class for a page that shows News entries
+ */
+@IonicPage()
+@Component({
+  selector: &#x27;page-news&#x27;,
+  templateUrl: &#x27;news.html&#x27;,
+})
+export class NewsPage {
+  @ViewChild(Slides) slides: Slides;
+
+
+  public newsSource:number &#x3D; 0;
+  public newsList;
+  public sourcesList &#x3D; [];
+  public isLoaded &#x3D; false;
+  public showLeftButton: boolean;
+  public showRightButton: boolean;
+  public selectedCategory &#x3D; 0;
+  public categories &#x3D; [];
+
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private http: HttpClient,
+              public injector: Injector,
+              private storage: Storage,
+              private cache: CacheService,
+              private connection: ConnectionProvider) {
+  }
+
+  ngOnInit() {
+    this.connection.checkOnline(true, true);
+    this.loadNews();
+  }
+
+  async loadNews(refresher?) {
+    let config: IConfig &#x3D; await this.storage.get(&quot;config&quot;);
+
+    let headers: HttpHeaders &#x3D; new HttpHeaders()
+      .append(&quot;Authorization&quot;, config.webservices.apiToken);
+
+    var url &#x3D; config.webservices.endpoint.news;
+    let request &#x3D; this.http.get(url, {headers:headers});
+
+    if (refresher) {
+      this.cache.removeItem(&quot;newsResponse&quot;);
+    } else {
+      this.isLoaded &#x3D; false;
+    }
+
+    this.cache.loadFromObservable(&quot;newsResponse&quot;, request).subscribe((response:INewsApiResponse) &#x3D;&gt; {
+
+      if (refresher) {
+        refresher.complete();
+      }
+
+      if (response.errors.exist &#x3D;&#x3D; false) {
+        this.newsList &#x3D; response.vars.news;
+        var tmpArray &#x3D; [];
+        for (var source in response.vars.newsSources) {
+          tmpArray.push(response.vars.newsSources[source]);
+        }
+        var i,j;
+        this.sourcesList &#x3D; [];
+        for (i &#x3D; 0; i &lt; tmpArray.length; i++) {
+          for (j &#x3D; 0; j &lt; this.newsList.length; j++) {
+            if (this.newsList[j].NewsSource.name &#x3D;&#x3D; tmpArray[i]) {
+              this.sourcesList.push(tmpArray[i]);
+              break;
+            }
+          }
+        }
+        this.categories &#x3D; this.sourcesList;
+        this.isLoaded &#x3D; true;
+
+        this.slides.update();
+        this.slideChanged();
+        if (this.selectedCategory &#x3D;&#x3D; 0) {
+          this.showLeftButton &#x3D; false;
+        }
+      }
+    });
+  }
+
+
+  // Method executed when the slides are changed
+  public slideChanged(): void {
+    this.showLeftButton &#x3D; !this.slides.isBeginning();
+    this.showRightButton &#x3D; !this.slides.isEnd();
+  }
+
+
+  // Method that shows the next slide
+  public slideNext(): void {
+    this.slides.slideNext();
+  }
+
+
+  // Method that shows the previous slide
+  public slidePrev(): void {
+    this.slides.slidePrev();
+  }
+
+
+  public setNewsSource(i: number): void {
+    this.newsSource &#x3D; i;
+    this.selectedCategory &#x3D; i;
+  }
+
+
+  swipeNewsSource(event) {
+    if (Math.abs(event.deltaY) &lt; 50) {
+      let maxIndex &#x3D; this.sourcesList.length - 1;
+      let currentIndex &#x3D; this.newsSource;
+      var newIndex;
+      console.log(event);
+      if (event.deltaX &gt; 0) {
+        // user swiped from left to right
+        if (currentIndex &gt; 0) {
+          newIndex &#x3D; currentIndex-1;
+          this.setNewsSource(newIndex);
+          this.slides.slidePrev();
+        }
+      } else if (event.deltaX &lt; 0) {
+        // user swiped from right to left
+        if (currentIndex &lt; maxIndex) {
+          newIndex &#x3D; currentIndex+1;
+          this.setNewsSource(newIndex);
+          this.slides.slideNext();
+        }
+      }
+    }
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+      &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{ &quot;page.news.title&quot; | translate }}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+
+  &lt;ion-toolbar *ngIf&#x3D;&quot;sourcesList&quot;&gt;
+    &lt;ion-row class&#x3D;&quot;filters&quot;&gt;
+        &lt;ion-col class&#x3D;&quot;col-with-arrow&quot; no-padding col-1&gt;
+          &lt;ion-icon *ngIf&#x3D;&quot;showLeftButton&quot; (click)&#x3D;&quot;slidePrev()&quot; name&#x3D;&quot;arrow-back&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/ion-col&gt;
+        &lt;ion-col no-padding col-10&gt;
+          &lt;ion-slides (ionSlideDidChange)&#x3D;&quot;slideChanged()&quot; slidesPerView&#x3D;&quot;auto&quot;&gt;
+            &lt;ion-slide (click)&#x3D;&quot;setNewsSource(i)&quot; *ngFor&#x3D;&quot;let category of categories; let i &#x3D; index&quot;&gt;
+              &lt;p [class.selected]&#x3D;&quot;selectedCategory &#x3D;&#x3D;&#x3D; i&quot;&gt;{{ category }}&lt;/p&gt;
+            &lt;/ion-slide&gt;
+          &lt;/ion-slides&gt;
+        &lt;/ion-col&gt;
+        &lt;ion-col class&#x3D;&quot;col-with-arrow&quot; no-padding col-1&gt;
+          &lt;ion-icon *ngIf&#x3D;&quot;showRightButton&quot; (click)&#x3D;&quot;slideNext()&quot; name&#x3D;&quot;arrow-forward&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/ion-col&gt;
+    &lt;/ion-row&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+
+&lt;ion-content padding-top (swipe)&#x3D;&quot;swipeNewsSource($event)&quot;&gt;
+  &lt;ion-refresher (ionRefresh)&#x3D;&quot;loadNews($event)&quot;&gt;
+    &lt;ion-refresher-content&gt;&lt;/ion-refresher-content&gt;
+  &lt;/ion-refresher&gt;
+
+  &lt;div align&#x3D;&quot;center&quot; *ngIf&#x3D;&quot;!isLoaded&quot; padding&gt;
+    &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+  &lt;/div&gt;
+  &lt;div *ngFor&#x3D;&quot;let article of newsList&quot; class&#x3D;&quot;news-article&quot;&gt;
+    &lt;news-article  *ngIf&#x3D;&quot;article.NewsSource.name &#x3D;&#x3D; sourcesList[newsSource]&quot; [article]&#x3D;&quot;article&quot;&gt;&lt;/news-article&gt;
+  &lt;/div&gt;
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>      <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{ "page.news.title" | translate }}</ion-title>  </ion-navbar>  <ion-toolbar *ngIf="sourcesList">    <ion-row class="filters">        <ion-col class="col-with-arrow" no-padding col-1>          <ion-icon *ngIf="showLeftButton" (click)="slidePrev()" name="arrow-back"></ion-icon>        </ion-col>        <ion-col no-padding col-10>          <ion-slides (ionSlideDidChange)="slideChanged()" slidesPerView="auto">            <ion-slide (click)="setNewsSource(i)" *ngFor="let category of categories; let i = index">              <p [class.selected]="selectedCategory === i">{{ category }}</p>            </ion-slide>          </ion-slides>        </ion-col>        <ion-col class="col-with-arrow" no-padding col-1>          <ion-icon *ngIf="showRightButton" (click)="slideNext()" name="arrow-forward"></ion-icon>        </ion-col>    </ion-row>  </ion-toolbar></ion-header><ion-content padding-top (swipe)="swipeNewsSource($event)">  <ion-refresher (ionRefresh)="loadNews($event)">    <ion-refresher-content></ion-refresher-content>  </ion-refresher>  <div align="center" *ngIf="!isLoaded" padding>    <ion-spinner></ion-spinner>  </div>  <div *ngFor="let article of newsList" class="news-article">    <news-article  *ngIf="article.NewsSource.name == sourcesList[newsSource]" [article]="article"></news-article>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'NewsPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NewsPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

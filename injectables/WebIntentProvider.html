@@ -1,0 +1,1308 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>WebIntentProvider</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/providers/web-intent/web-intent.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+            </div>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#config">config</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#http">http</a>
+                            </li>
+                            <li>
+                                <a href="#options">options</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleWebIntentForModule">handleWebIntentForModule</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#handleWebIntentForWebsite">handleWebIntentForWebsite</a>
+                            </li>
+                            <li>
+                                <a href="#launchExternalApp">launchExternalApp</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#mailLogin">mailLogin</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#openWithInAppBrowser">openWithInAppBrowser</a>
+                            </li>
+                            <li>
+                                <a href="#openWithSafari">openWithSafari</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#permissionPromptWebsite">permissionPromptWebsite</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(theInAppBrowser: InAppBrowser, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, storage: Storage, platform: Platform, appAvailability: AppAvailability, sessionProvider: <a href="../injectables/SessionProvider.html">SessionProvider</a>, safari: SafariViewController, alertCtrl: AlertController, translate: TranslateService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/providers/web-intent/web-intent.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>theInAppBrowser</td>
+                                                  
+                                                        <td>
+                                                                    <code>InAppBrowser</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>appAvailability</td>
+                                                  
+                                                        <td>
+                                                                    <code>AppAvailability</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionProvider</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SessionProvider.html" target="_self" >SessionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>safari</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafariViewController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleWebIntentForModule"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            handleWebIntentForModule
+                            </b>
+                            <a href="#handleWebIntentForModule"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleWebIntentForModule(moduleName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/providers/web-intent/web-intent.ts:103</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>moduleName</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>moduleName which is to be opened</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleWebIntentForWebsite"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            handleWebIntentForWebsite
+                            </b>
+                            <a href="#handleWebIntentForWebsite"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleWebIntentForWebsite(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">src/providers/web-intent/web-intent.ts:156</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="launchExternalApp"></a>
+                        <span class="name">
+                            <b>
+                            launchExternalApp
+                            </b>
+                            <a href="#launchExternalApp"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>launchExternalApp(schemaName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, packageName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, androidUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, iosUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="239" class="link-to-prism">src/providers/web-intent/web-intent.ts:239</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>schemaName</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>packageName</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>androidUrl</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>iosUrl</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mailLogin"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            mailLogin
+                            </b>
+                            <a href="#mailLogin"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>mailLogin(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">src/providers/web-intent/web-intent.ts:189</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/providers/web-intent/web-intent.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openWithInAppBrowser"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            openWithInAppBrowser
+                            </b>
+                            <a href="#openWithInAppBrowser"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>openWithInAppBrowser(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/providers/web-intent/web-intent.ts:177</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openWithSafari"></a>
+                        <span class="name">
+                            <b>
+                            openWithSafari
+                            </b>
+                            <a href="#openWithSafari"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openWithSafari(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/providers/web-intent/web-intent.ts:225</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="permissionPromptWebsite"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            permissionPromptWebsite
+                            </b>
+                            <a href="#permissionPromptWebsite"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>permissionPromptWebsite(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/providers/web-intent/web-intent.ts:76</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <span class="name">
+                            <b>
+                            config</b>
+                            <a href="#config"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IConfig.html" target="_self" >IConfig</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/providers/web-intent/web-intent.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="http"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            http</b>
+                            <a href="#http"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/providers/web-intent/web-intent.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <span class="name">
+                            <b>
+                            options</b>
+                            <a href="#options"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>InAppBrowserOptions</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    location : &#x27;no&#x27;,//Or &#x27;no&#x27;
+    hidden : &#x27;no&#x27;, //Or  &#x27;yes&#x27;
+    clearcache : &#x27;yes&#x27;,
+    clearsessioncache : &#x27;yes&#x27;,
+    zoom : &#x27;no&#x27;,//Android only ,shows browser zoom controls
+    hardwareback : &#x27;no&#x27;,
+    usewkwebview: &#x27;yes&#x27;,
+    hidenavigationbuttons: &#x27;yes&#x27;,
+    mediaPlaybackRequiresUserAction : &#x27;yes&#x27;,
+    shouldPauseOnSuspend : &#x27;no&#x27;, //Android only
+    closebuttoncaption : &#x27;Fertig&#x27;, //iOS only
+    disallowoverscroll : &#x27;no&#x27;, //iOS only
+    toolbar : &#x27;yes&#x27;, //iOS only,
+    toolbarposition: &#x27;bottom&#x27;,
+    enableViewportScale : &#x27;yes&#x27;, //iOS only
+    allowInlineMediaPlayback : &#x27;no&#x27;,//iOS only
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/providers/web-intent/web-intent.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { InAppBrowser, InAppBrowserOptions } from &#x27;@ionic-native/in-app-browser/ngx&#x27;;
+import { Storage } from &#x27;@ionic/storage&#x27;;
+import { IModule, IConfig } from &#x27;../../library/interfaces&#x27;;
+import { Platform, AlertController } from &#x27;ionic-angular&#x27;;
+import { AppAvailability } from &#x27;@ionic-native/app-availability/ngx&#x27;;
+import { SafariViewController } from &#x27;@ionic-native/safari-view-controller/ngx&#x27;;
+import { TranslateService } from &quot;@ngx-translate/core&quot;;
+import { SessionProvider } from &#x27;../session/session&#x27;;
+
+/**
+ * @class WebIntentProvider
+ * @classdesc Provider to handle webIntents
+ */
+@Injectable()
+export class WebIntentProvider {
+
+  options : InAppBrowserOptions &#x3D; {
+    location : &#x27;no&#x27;,//Or &#x27;no&#x27;
+    hidden : &#x27;no&#x27;, //Or  &#x27;yes&#x27;
+    clearcache : &#x27;yes&#x27;,
+    clearsessioncache : &#x27;yes&#x27;,
+    zoom : &#x27;no&#x27;,//Android only ,shows browser zoom controls
+    hardwareback : &#x27;no&#x27;,
+    usewkwebview: &#x27;yes&#x27;,
+    hidenavigationbuttons: &#x27;yes&#x27;,
+    mediaPlaybackRequiresUserAction : &#x27;yes&#x27;,
+    shouldPauseOnSuspend : &#x27;no&#x27;, //Android only
+    closebuttoncaption : &#x27;Fertig&#x27;, //iOS only
+    disallowoverscroll : &#x27;no&#x27;, //iOS only
+    toolbar : &#x27;yes&#x27;, //iOS only,
+    toolbarposition: &#x27;bottom&#x27;,
+    enableViewportScale : &#x27;yes&#x27;, //iOS only
+    allowInlineMediaPlayback : &#x27;no&#x27;,//iOS only
+  };
+
+  config: IConfig;
+
+  /**
+   * @constructor
+   * @param {InAppBrowser} theInAppBrowser
+   * @param {HttpClient} http
+   * @param {Storage} storage
+   * @param {Platform} platform
+   * @param {AppAvailability} appAvailability
+   * @param {SafariViewController} safari
+   * @param {AlertController} alertCtrl
+   * @param {TranslateService} translate
+   */
+  constructor(
+    private theInAppBrowser: InAppBrowser,
+    public http: HttpClient,
+    private storage: Storage,
+    private platform: Platform,
+    private appAvailability: AppAvailability,
+    private sessionProvider: SessionProvider,
+    private safari: SafariViewController,
+    private alertCtrl: AlertController,
+    private translate: TranslateService) {
+  }
+
+  async ngOnInit() {
+    if (this.translate.currentLang &#x3D;&#x3D; &quot;en&quot;) {
+      this.options.closebuttoncaption &#x3D; &quot;Close&quot;;
+    }
+
+    this.config &#x3D; await this.storage.get(&quot;config&quot;);
+  }
+
+  /**
+   * @name permissionPromptWebsite
+   * @description asks for permission for a website to be opened externaly
+   * @param {IModule} moduleConfig - mmoduleConfig
+   */
+  public permissionPromptWebsite(url:string){
+    // ask for permission to open Module externaly
+    let alert &#x3D; this.alertCtrl.create({
+      title: this.translate.instant(&quot;alert.title.redirect&quot;),
+      message: this.translate.instant(&quot;alert.redirect-website&quot;),
+      buttons: [
+        {
+          text: this.translate.instant(&quot;button.cancel&quot;),
+          role: &#x27;cancel&#x27;,
+          handler: () &#x3D;&gt; {}
+        },
+        {
+          text: this.translate.instant(&quot;button.ok&quot;),
+          handler: () &#x3D;&gt; {
+            this.handleWebIntentForWebsite(url);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  /**
+   * @name handleWebIntentForModule
+   * @description handles the webIntent for a page component and opens a webpage or the installed app
+   * @param {string} moduleName - moduleName which is to be opened
+   */
+  public handleWebIntentForModule(moduleName:string) {
+    this.storage.get(&quot;config&quot;).then((config:IConfig) &#x3D;&gt; {
+      var moduleConfig:IModule &#x3D; config.modules[moduleName];
+
+      if (moduleConfig) {
+        // in app context therefore display three buttons
+        if (this.platform.is(&quot;cordova&quot;) &amp;&amp; moduleConfig.urlIOS &amp;&amp; moduleConfig.urlAndroid) {
+
+          if (moduleConfig.appId) {
+            // ask for permission to open Module externaly with three options
+            let alert &#x3D; this.alertCtrl.create({
+              title: this.translate.instant(&quot;alert.title.redirect&quot;),
+              message: this.translate.instant(&quot;alert.redirect-website-app&quot;),
+              buttons: [
+                {
+                  text: this.translate.instant(&quot;button.app&quot;),
+                  handler: () &#x3D;&gt; {
+                      var androidUrl, iosUrl, bundle;
+                      androidUrl &#x3D; moduleConfig.urlAndroid;
+                      iosUrl &#x3D; moduleConfig.urlIOS;
+                      bundle &#x3D; moduleConfig.bundleName;
+                      this.launchExternalApp(moduleConfig.appId, bundle, androidUrl, iosUrl);
+                  }
+                },
+                {
+                  text: this.translate.instant(&quot;button.webpage&quot;),
+                  handler: () &#x3D;&gt; {
+                    this.handleWebIntentForWebsite(moduleConfig.url);
+                  }
+                },
+                {
+                  text: this.translate.instant(&quot;button.cancel&quot;),
+                  role: &#x27;cancel&#x27;,
+                  handler: () &#x3D;&gt; {}
+                }
+              ]
+            });
+            alert.present();
+          } else {
+            this.permissionPromptWebsite(moduleConfig.url);
+          }
+        } else {
+          this.permissionPromptWebsite(moduleConfig.url);
+        }
+      }
+    });
+  }
+
+  /**
+   * @name openWebsite
+   * @description opens a url depending on the platform
+   * @param {string} url
+   */
+  public async handleWebIntentForWebsite(url: string) {
+
+    this.config &#x3D; await this.storage.get(&quot;config&quot;);
+
+    if (this.platform.is(&quot;cordova&quot;) &amp;&amp; url !&#x3D; this.config.modules.mail.url) {
+      this.safari.isAvailable().then((available:boolean) &#x3D;&gt; {
+        if (available) {
+          this.openWithSafari(url);
+        } else {
+          this.openWithInAppBrowser(url); }
+      });
+    } else {
+      this.openWithInAppBrowser(url);
+    }
+  }
+
+  /**
+   * @name openWithInAppBrowser
+   * @description opens a url with the InAppBrowser
+   * @param {string} url
+   */
+  async openWithInAppBrowser(url: string) {
+    this.config &#x3D; await this.storage.get(&quot;config&quot;);
+    if (url !&#x3D; this.config.modules.mail.url) {
+      let target &#x3D; &quot;_blank&quot;;
+      this.theInAppBrowser.create(url,target,this.options);
+    } else { this.mailLogin(url); }
+  }
+
+  /**
+   * @name mailLogin
+   * @description opens mail in browser and injects credentials
+   */
+  async mailLogin(url: string) {
+    let tmp &#x3D; await this.sessionProvider.getSession();
+    var session &#x3D; undefined;
+    if (tmp) {
+      if (typeof tmp !&#x3D;&#x3D; &#x27;object&#x27;) {
+        session &#x3D; JSON.parse(tmp);
+      } else { session &#x3D; tmp; }
+    }
+    
+    let browser &#x3D; this.theInAppBrowser.create(url, &quot;_blank&quot;, this.options);
+
+    if (session &amp;&amp; session.credentials &amp;&amp; session.credentials.username &amp;&amp; session.credentials.password) {
+      console.log(&quot;[Mail] trying to login...&quot;)
+
+      let enterCredentials &#x3D;
+        &#x60;$(&quot;input.uname&quot;).val(\&#x27;${session.credentials.username}\&#x27;);
+        $(&quot;input.pewe&quot;).val(\&#x27;${session.credentials.password}\&#x27;);
+        $(&quot;button.loginbutton&quot;).click();&#x60;;
+
+      browser.on(&quot;loadstop&quot;).subscribe((event) &#x3D;&gt; {
+        browser.executeScript({ code: enterCredentials }).then(() &#x3D;&gt; {
+          console.log(&quot;successfully entered login data...&quot;);
+        }, error &#x3D;&gt; {
+          console.log(&quot;ERROR injecting login data...&quot;);
+          console.log(error);
+        });
+      });
+
+    }
+  }
+
+  /**
+   * @name openWithSafari
+   * @description opens a url with safari
+   * @param {string} url
+   */
+  openWithSafari(url: string) {
+    this.safari.show({
+      url: url
+    }).subscribe(result &#x3D;&gt; {console.log(result);}, error &#x3D;&gt; { console.log(error); })
+  }
+
+  /**
+   * @name launchExternalApp
+   * @description launches an external app with the help the plugin AppAvailability
+   * @param {string} schemaName
+   * @param {string} packageName
+   * @param {string} androidUrl
+   * @param {string} iosUrl
+   */
+  launchExternalApp(schemaName:string, packageName: string, androidUrl: string, iosUrl: string) {
+    var app;
+    if (this.platform.is(&quot;ios&quot;)) {
+      app &#x3D; schemaName;
+    } else { app &#x3D; packageName; }
+
+    this.appAvailability.check(app).then(
+      () &#x3D;&gt; { // app installed
+        this.theInAppBrowser.create(schemaName, &#x27;_system&#x27;);
+      },
+      () &#x3D;&gt; { // app not installed
+        if (this.platform.is(&quot;ios&quot;)) {
+          this.theInAppBrowser.create(iosUrl, &#x27;_system&#x27;);
+        } else { this.theInAppBrowser.create(androidUrl, &#x27;_system&#x27;); }
+      }
+    );
+  }
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'WebIntentProvider.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

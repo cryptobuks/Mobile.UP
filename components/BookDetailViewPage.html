@@ -1,0 +1,2218 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>BookDetailViewPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/book-detail-view/book-detail-view.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-book-detail-view</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>book-detail-view.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activeSegment">activeSegment</a>
+                            </li>
+                            <li>
+                                <a href="#book">book</a>
+                            </li>
+                            <li>
+                                <a href="#bookDetails">bookDetails</a>
+                            </li>
+                            <li>
+                                <a href="#bookLocationList">bookLocationList</a>
+                            </li>
+                            <li>
+                                <a href="#config">config</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#shortAbstract">shortAbstract</a>
+                            </li>
+                            <li>
+                                <a href="#showDetails">showDetails</a>
+                            </li>
+                            <li>
+                                <a href="#showFullTOC">showFullTOC</a>
+                            </li>
+                            <li>
+                                <a href="#showLocation">showLocation</a>
+                            </li>
+                            <li>
+                                <a href="#showShortAbstract">showShortAbstract</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#webIntent">webIntent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getAbstractAndTOC">getAbstractAndTOC</a>
+                            </li>
+                            <li>
+                                <a href="#getBookUrl">getBookUrl</a>
+                            </li>
+                            <li>
+                                <a href="#getDepartment">getDepartment</a>
+                            </li>
+                            <li>
+                                <a href="#getDepartmentURL">getDepartmentURL</a>
+                            </li>
+                            <li>
+                                <a href="#getExtent">getExtent</a>
+                            </li>
+                            <li>
+                                <a href="#getISBN">getISBN</a>
+                            </li>
+                            <li>
+                                <a href="#getItem">getItem</a>
+                            </li>
+                            <li>
+                                <a href="#getKeywords">getKeywords</a>
+                            </li>
+                            <li>
+                                <a href="#getLabel">getLabel</a>
+                            </li>
+                            <li>
+                                <a href="#getNotes">getNotes</a>
+                            </li>
+                            <li>
+                                <a href="#getSeries">getSeries</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#setLocationData">setLocationData</a>
+                            </li>
+                            <li>
+                                <a href="#setMediaType">setMediaType</a>
+                            </li>
+                            <li>
+                                <a href="#updateDetails">updateDetails</a>
+                            </li>
+                            <li>
+                                <a href="#updateLocation">updateLocation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, navParams: NavParams, storage: Storage, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, cache: CacheService, webIntent: <a href="../injectables/WebIntentProvider.html">WebIntentProvider</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cache</td>
+                                                  
+                                                        <td>
+                                                                    <code>CacheService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>webIntent</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/WebIntentProvider.html" target="_self" >WebIntentProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getAbstractAndTOC"></a>
+                        <span class="name">
+                            <b>
+                            getAbstractAndTOC
+                            </b>
+                            <a href="#getAbstractAndTOC"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getAbstractAndTOC()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="421" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:421</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getBookUrl"></a>
+                        <span class="name">
+                            <b>
+                            getBookUrl
+                            </b>
+                            <a href="#getBookUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getBookUrl(item)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:179</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getDepartment"></a>
+                        <span class="name">
+                            <b>
+                            getDepartment
+                            </b>
+                            <a href="#getDepartment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getDepartment(item)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:144</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getDepartmentURL"></a>
+                        <span class="name">
+                            <b>
+                            getDepartmentURL
+                            </b>
+                            <a href="#getDepartmentURL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getDepartmentURL(item)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:159</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getExtent"></a>
+                        <span class="name">
+                            <b>
+                            getExtent
+                            </b>
+                            <a href="#getExtent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getExtent()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="371" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:371</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getISBN"></a>
+                        <span class="name">
+                            <b>
+                            getISBN
+                            </b>
+                            <a href="#getISBN"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getISBN()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="324" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:324</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getItem"></a>
+                        <span class="name">
+                            <b>
+                            getItem
+                            </b>
+                            <a href="#getItem"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getItem(item)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:213</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>{}</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getKeywords"></a>
+                        <span class="name">
+                            <b>
+                            getKeywords
+                            </b>
+                            <a href="#getKeywords"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getKeywords()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="296" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:296</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getLabel"></a>
+                        <span class="name">
+                            <b>
+                            getLabel
+                            </b>
+                            <a href="#getLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getLabel(item)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:169</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getNotes"></a>
+                        <span class="name">
+                            <b>
+                            getNotes
+                            </b>
+                            <a href="#getNotes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getNotes()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="388" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:388</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getSeries"></a>
+                        <span class="name">
+                            <b>
+                            getSeries
+                            </b>
+                            <a href="#getSeries"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getSeries()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="342" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:342</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:64</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setLocationData"></a>
+                        <span class="name">
+                            <b>
+                            setLocationData
+                            </b>
+                            <a href="#setLocationData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setLocationData(data)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:119</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setMediaType"></a>
+                        <span class="name">
+                            <b>
+                            setMediaType
+                            </b>
+                            <a href="#setMediaType"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setMediaType(mediatype)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="452" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:452</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>mediatype</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateDetails"></a>
+                        <span class="name">
+                            <b>
+                            updateDetails
+                            </b>
+                            <a href="#updateDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>updateDetails()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:74</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateLocation"></a>
+                        <span class="name">
+                            <b>
+                            updateLocation
+                            </b>
+                            <a href="#updateLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>updateLocation(refresher?)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:87</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>refresher</td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activeSegment"></a>
+                        <span class="name">
+                            <b>
+                            activeSegment</b>
+                            <a href="#activeSegment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;location&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="book"></a>
+                        <span class="name">
+                            <b>
+                            book</b>
+                            <a href="#book"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bookDetails"></a>
+                        <span class="name">
+                            <b>
+                            bookDetails</b>
+                            <a href="#bookDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    &quot;url&quot;: null,
+    &quot;keywords&quot;: [],
+    &quot;isbn&quot;: [],
+    &quot;series&quot;: [],
+    &quot;extent&quot;: [],
+    &quot;notes&quot;: [],
+    &quot;toc&quot;: [],
+    &quot;abstract&quot;: &quot;&quot;,
+    &quot;shortAbstract&quot;: null,
+    &quot;mediaType&quot;: null,
+    &quot;noDetails&quot;: true
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bookLocationList"></a>
+                        <span class="name">
+                            <b>
+                            bookLocationList</b>
+                            <a href="#bookLocationList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <span class="name">
+                            <b>
+                            config</b>
+                            <a href="#config"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IConfig.html" target="_self" >IConfig</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams</b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shortAbstract"></a>
+                        <span class="name">
+                            <b>
+                            shortAbstract</b>
+                            <a href="#shortAbstract"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showDetails"></a>
+                        <span class="name">
+                            <b>
+                            showDetails</b>
+                            <a href="#showDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showFullTOC"></a>
+                        <span class="name">
+                            <b>
+                            showFullTOC</b>
+                            <a href="#showFullTOC"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showLocation"></a>
+                        <span class="name">
+                            <b>
+                            showLocation</b>
+                            <a href="#showLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showShortAbstract"></a>
+                        <span class="name">
+                            <b>
+                            showShortAbstract</b>
+                            <a href="#showShortAbstract"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="webIntent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            webIntent</b>
+                            <a href="#webIntent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/WebIntentProvider.html" target="_self" >WebIntentProvider</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/pages/book-detail-view/book-detail-view.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { IonicPage, NavController, NavParams } from &#x27;ionic-angular&#x27;;
+import { Storage } from &#x27;@ionic/storage&#x27;;
+import { IConfig } from &#x27;../../library/interfaces&#x27;;
+import { HttpClient, HttpHeaders, HttpParams } from &#x27;@angular/common/http&#x27;;
+import * as moment from &#x27;moment&#x27;;
+import { CacheService } from &#x27;ionic-cache&#x27;;
+import { WebIntentProvider } from &#x27;../../providers/web-intent/web-intent&#x27;;
+import { WebHttpUrlEncodingCodec, utils } from &#x27;../../library/util&#x27;;
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-book-detail-view&#x27;,
+  templateUrl: &#x27;book-detail-view.html&#x27;,
+})
+export class BookDetailViewPage {
+
+  activeSegment &#x3D; &quot;location&quot;;
+  config:IConfig;
+  showLocation &#x3D; true;
+  showDetails &#x3D; false;
+  showShortAbstract &#x3D; true;
+  showFullTOC &#x3D; false;
+
+  book;
+  bookLocationList;
+  shortAbstract &#x3D; false;
+  bookDetails &#x3D; {
+    &quot;url&quot;: null,
+    &quot;keywords&quot;: [],
+    &quot;isbn&quot;: [],
+    &quot;series&quot;: [],
+    &quot;extent&quot;: [],
+    &quot;notes&quot;: [],
+    &quot;toc&quot;: [],
+    &quot;abstract&quot;: &quot;&quot;,
+    &quot;shortAbstract&quot;: null,
+    &quot;mediaType&quot;: null,
+    &quot;noDetails&quot;: true
+  };
+
+  /**
+   * @constructor
+   * @param navCtrl
+   * @param navParams
+   * @param storage
+   * @param http
+   * @param cache
+   * @param webIntent
+   */
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private storage: Storage,
+    private http: HttpClient,
+    private cache: CacheService,
+    public webIntent: WebIntentProvider) {
+
+    this.book &#x3D; this.navParams.data[&quot;book&quot;];
+    //console.log(this.book);
+  }
+
+  async ngOnInit() {
+    this.config &#x3D; await this.storage.get(&quot;config&quot;);
+    this.updateLocation();
+    this.updateDetails();
+  }
+
+  /**
+   * @name updateDetails
+   * @description updates the details of the requested book
+   */
+  updateDetails(): void {
+    this.getKeywords();
+    this.getISBN();
+    this.getSeries();
+    this.getExtent();
+    this.getNotes();
+    this.getAbstractAndTOC();
+  }
+
+  /**
+   * @name updateLocation
+   * @param refresher
+   */
+  updateLocation(refresher?): void {
+    if (refresher) {
+      this.cache.removeItem(&quot;bookLocation&quot;+this.book.recordInfo.recordIdentifier._);
+    }
+
+    let url &#x3D; this.config.webservices.endpoint.libraryDAIA;
+
+    let headers &#x3D; new HttpHeaders()
+        .append(&quot;Authorization&quot;, this.config.webservices.apiToken);
+
+    let params &#x3D; new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
+      .append(&quot;id&quot;, &#x27;ppn:&#x27;+this.book.recordInfo.recordIdentifier._)
+      .append(&quot;format&quot;, &quot;json&quot;);
+
+    let request &#x3D; this.http.get(url, {headers:headers, params:params});
+    this.cache.loadFromObservable(&quot;bookLocation&quot;+this.book.recordInfo.recordIdentifier._, request).subscribe(data &#x3D;&gt; {
+      if (refresher) {
+        refresher.complete();
+      }
+      this.setLocationData(data);
+    }, error &#x3D;&gt; {
+      console.log(error);
+      if (refresher) {
+        refresher.complete();
+      }
+    });
+  }
+
+  /**
+   * @name setLocationData
+   * @param data
+   */
+  setLocationData(data) {
+    //console.log(data);
+    this.bookLocationList &#x3D; [];
+    if (data) {
+      var i, j;
+      for (i &#x3D; 0; i &lt; data.document.length; i++) {
+        for (j &#x3D; 0; j &lt; data.document[i].item.length; j ++) {
+          var locationModel &#x3D; {
+            department:     this.getDepartment(data.document[i].item[j]),
+            departmentURL:  this.getDepartmentURL(data.document[i].item[j]),
+            label:          this.getLabel(data.document[i].item[j]),
+            item:           this.getItem(data.document[i].item[j]),
+            url:            this.getBookUrl(data.document[i].item[j])
+          }
+          this.bookLocationList.push(locationModel);
+        }
+      }
+    }
+    // console.log(this.bookLocationList);
+  }
+
+  /**
+   * @name getDepartment
+   * @param item
+   */
+  getDepartment(item) {
+    let department &#x3D; &#x27;&#x27;;
+    if (item.department &amp;&amp; item.department.content) {
+      department &#x3D; item.department.content;
+    }
+    if (item.storage) {
+      department &#x3D; department + &#x27;, &#x27; + item.storage.content;
+    }
+    return department;
+  }
+
+  /**
+   * @name getDepartmentURL
+   * @param item
+   */
+  getDepartmentURL(item) {
+    if (item.department &amp;&amp; item.department.id) {
+      return item.department.id;
+    } else { return &quot;&quot;; }
+  }
+
+  /**
+   * @name getLabel
+   * @param item
+   */
+  getLabel(item) {
+    if (item.label) {
+      return item.label
+    } else { return &quot;&quot;; }
+  }
+
+  /**
+   * @name getBookUrl
+   * @param item
+   */
+  getBookUrl(item):void {
+    if (this.book.location) {
+      var i;
+      let tmp &#x3D; utils.convertToArray(this.book.location);
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i].url) {
+          var tmpUrl &#x3D; utils.convertToArray(tmp[i].url);
+          var j;
+          for (j &#x3D; 0; j &lt; tmpUrl.length; j++) {
+            if (tmpUrl[j].$ &amp;&amp; (tmpUrl[j].$.usage &#x3D;&#x3D; &#x27;primary display&#x27;)) {
+              if (tmpUrl[j]._) {
+                this.bookDetails.url &#x3D; tmpUrl[j]._;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    if (this.bookDetails.mediaType &#x3D;&#x3D; &quot;mediatype_o&quot;) {
+      var url;
+      if (item.unavailable &amp;&amp; item.unavailable[0].service &#x3D;&#x3D; &quot;openaccess&quot;) {
+        url &#x3D; item.unavailable[0].href;
+      } else { url &#x3D; null; }
+      if (url !&#x3D; null) { this.bookDetails.url &#x3D; url; }
+    }
+
+    return this.bookDetails.url;
+  }
+
+  /**
+   * @name getItem
+   * @param item
+   */
+  getItem(item) {
+    //console.log(item);
+    let status &#x3D; &quot;&quot;, statusInfo &#x3D; &quot;&quot;;
+
+    // check for available / unavailable items and process loan and presentation
+    let loanAvailable, presentationAvailable;
+    if (item.available) {
+      let availableArray &#x3D; utils.convertToArray(item.available);
+      loanAvailable &#x3D; availableArray.find(x &#x3D;&gt; x.service &#x3D;&#x3D; &#x27;loan&#x27;);
+      presentationAvailable &#x3D; availableArray.find(x &#x3D;&gt; x.service &#x3D;&#x3D; &#x27;presentation&#x27;);
+    }
+    //console.log(loanAvailable, presentationAvailable);
+
+    let loanUnavailable, presentationUnavailable;
+    if (item.unavailable) {
+      let unavailableArray &#x3D; utils.convertToArray(item.unavailable);
+      loanUnavailable &#x3D; unavailableArray.find(x &#x3D;&gt; x.service &#x3D;&#x3D; &#x27;loan&#x27;);
+      presentationUnavailable &#x3D; unavailableArray.find(x &#x3D;&gt; x.service &#x3D;&#x3D; &#x27;presentation&#x27;);
+    }
+    //console.log(loanUnavailable, presentationUnavailable);
+
+    if (loanAvailable) {
+      status &#x3D; &#x27;ausleihbar&#x27;;
+
+      if (presentationAvailable){
+        // tag available with service&#x3D;&quot;loan&quot; and href&#x3D;&quot;&quot;?
+        if (presentationAvailable.limitation){
+          statusInfo &#x3D; presentationAvailable.limitation[0].content;
+        }
+        if (loanAvailable.href &#x3D;&#x3D; &#x27;&#x27;) {
+          statusInfo &#x3D; statusInfo + &#x27;Bitte bestellen&#x27;;
+        }
+      }
+
+    } else {
+      // check for loan in unavailable items
+      // indicates LBS and Online-Resources
+      if (loanUnavailable &amp;&amp; loanUnavailable.href) {
+        if (loanUnavailable.href.indexOf(&#x27;loan/RES&#x27;) !&#x3D; -1) {
+          status &#x3D; &#x27;ausleihbar&#x27;;
+        } else { status &#x3D; &#x27;nicht ausleihbar&#x27;; }
+      } else {
+
+        // if there is no url then it will be a presentation
+        if (this.getBookUrl(item) &#x3D;&#x3D; null) {
+          if (item.label &amp;&amp; item.label.indexOf(&#x27;bestellt&#x27;) !&#x3D; -1) {
+            status &#x3D; item.label;
+            statusInfo &#x3D; &#x27;&#x27;;
+          } else {
+            status &#x3D; &#x27;Präsenzbestand&#x27;;
+            if (presentationAvailable.limitation){
+              statusInfo &#x3D; presentationAvailable.limitation[0].content;
+            }
+          }
+        } else {
+          status &#x3D; &#x27;Online-Ressource im Browser öffnen&#x27;;
+        }
+      }
+
+      if (presentationUnavailable) {
+        if (loanUnavailable &amp;&amp; loanUnavailable.href) {
+          if (loanUnavailable.href.indexOf(&#x27;loan/RES&#x27;) !&#x3D; -1) {
+            status &#x3D; &#x27;ausgeliehen&#x27;;
+            if(!loanUnavailable.expected || loanUnavailable.expected &#x3D;&#x3D; &#x27;unknown&#x27;) {
+              statusInfo &#x3D; statusInfo + &#x27;ausgeliehen, Vormerken möglich&#x27;;
+            } else {
+              statusInfo &#x3D; statusInfo + &#x27;ausgeliehen bis &#x27;;
+              statusInfo &#x3D; statusInfo + moment(loanUnavailable.expected, &#x27;YYYY-MM-DD&#x27;).format(&#x27;DD.MM.YYYY&#x27;);
+              statusInfo &#x3D; statusInfo + &#x27;, vormerken möglich&#x27;;
+            }
+          }
+        } else {
+          statusInfo &#x3D; statusInfo + &quot;...&quot;;
+        }
+      }
+    }
+
+    return [status, statusInfo];
+  }
+
+  /**
+   * @name getKeywords
+   */
+  getKeywords():void {
+    if (this.book.subject) {
+      let tmp &#x3D; utils.convertToArray(this.book.subject);
+      var i;
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i] &amp;&amp; tmp[i].topic) {
+          if (!utils.isInArray(this.bookDetails.keywords, tmp[i].topic)) {
+            this.bookDetails.keywords.push(tmp[i].topic);
+            this.bookDetails.noDetails &#x3D; false;
+          }
+        } else if (tmp[i] &amp;&amp; tmp[i].geographic) {
+          if (!utils.isInArray(this.bookDetails.keywords, tmp[i].geographic)) {
+            this.bookDetails.keywords.push(tmp[i].geographic);
+            this.bookDetails.noDetails &#x3D; false;
+          }
+        } else if (tmp[i] &amp;&amp; tmp[i].$ &amp;&amp; tmp[i].$.displayLabel) {
+          if (!utils.isInArray(this.bookDetails.keywords, tmp[i].$.displayLabel)) {
+            this.bookDetails.keywords.push(tmp[i].$.displayLabel);
+            this.bookDetails.noDetails &#x3D; false;
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * @name getISBN
+   */
+  getISBN():void {
+    if (this.book.identifier) {
+      let tmp &#x3D; utils.convertToArray(this.book.identifier);
+      var i;
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i] &amp;&amp; tmp[i].$ &amp;&amp; tmp[i].$.type &#x3D;&#x3D; &quot;isbn&quot; &amp;&amp; tmp[i]._) {
+          if(!utils.isInArray(this.bookDetails.isbn, tmp[i]._)) {
+            this.bookDetails.isbn.push(tmp[i]._);
+            this.bookDetails.noDetails &#x3D; false;
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * @name getSeries
+   */
+  getSeries():void {
+    var i;
+    if (this.book.titleInfo) {
+      let tmp &#x3D; utils.convertToArray(this.book.titleInfo);
+
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i] &amp;&amp; tmp[i].partNumber &amp;&amp; !utils.isInArray(this.bookDetails.series, tmp[i].partNumber)) {
+          this.bookDetails.series.push(tmp[i].partNumber);
+          this.bookDetails.noDetails &#x3D; false;
+        }
+      }
+    }
+    if (this.book.relatedItem) {
+      let tmp &#x3D; utils.convertToArray(this.book.relatedItem);
+
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i] &amp;&amp; tmp[i].$ &amp;&amp; tmp[i].$.type &#x3D;&#x3D; &quot;series&quot;) {
+          if (tmp[i].titleInfo &amp;&amp; tmp[i].titleInfo.title &amp;&amp; !utils.isInArray(this.bookDetails.series, tmp[i].titleInfo.title)) {
+            this.bookDetails.series.push(tmp[i].titleInfo.title);
+            this.bookDetails.noDetails &#x3D; false;
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * @name getExtent
+   */
+  getExtent():void {
+    var i;
+    if (this.book.physicalDescription) {
+      let tmp &#x3D; utils.convertToArray(this.book.physicalDescription);
+
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i] &amp;&amp; tmp[i].extent &amp;&amp; !utils.isInArray(this.bookDetails.extent, tmp[i].extent)) {
+          this.bookDetails.extent.push(tmp[i].extent);
+          this.bookDetails.noDetails &#x3D; false;
+        }
+      }
+    }
+  }
+
+  /**
+   * @name getNotes
+   */
+  getNotes():void {
+    var i;
+    if (this.book.note) {
+      let tmp &#x3D; utils.convertToArray(this.book.note);
+
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i] &amp;&amp; tmp[i]._ &amp;&amp; !utils.isInArray(this.bookDetails.notes, tmp[i]._)) {
+          this.bookDetails.notes.push(tmp[i]._);
+          this.bookDetails.noDetails &#x3D; false;
+        } else if (typeof tmp[i] &#x3D;&#x3D;&#x3D; &quot;string&quot; &amp;&amp; !utils.isInArray(this.bookDetails.notes, tmp[i])) {
+          this.bookDetails.notes.push(tmp[i]);
+          this.bookDetails.noDetails &#x3D; false;
+        }
+      }
+    }
+
+    if (this.book.relatedItem &amp;&amp; this.book.relatedItem.note) {
+      let tmp &#x3D; utils.convertToArray(this.book.relatedItem.note);
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i] &amp;&amp; tmp[i]._ &amp;&amp; !utils.isInArray(this.bookDetails.notes, tmp[i]._)) {
+          this.bookDetails.notes.push(tmp[i]._);
+          this.bookDetails.noDetails &#x3D; false;
+        } else if (typeof tmp[i] &#x3D;&#x3D;&#x3D; &quot;string&quot; &amp;&amp; !utils.isInArray(this.bookDetails.notes, tmp[i])) {
+          this.bookDetails.notes.push(tmp[i]);
+          this.bookDetails.noDetails &#x3D; false;
+        }
+      }
+    }
+  }
+
+  /**
+   * @name getAbstractAndTOC
+   */
+  getAbstractAndTOC():void {
+    var i,j;
+    if (this.book.abstract) {
+      let tmp &#x3D; utils.convertToArray(this.book.abstract);
+
+      for (i &#x3D; 0; i &lt; tmp.length; i++) {
+        if (tmp[i] &amp;&amp; tmp[i].indexOf(&quot;--&quot;) &gt;&#x3D; 0) {
+          let toc &#x3D; tmp[i].split(&quot;--&quot;);
+          for (j &#x3D; 0; j &lt; toc.length; j++) {
+            if (toc[j] !&#x3D; &quot;&quot;) {
+              this.bookDetails.toc.push(toc[j]);
+              this.bookDetails.noDetails &#x3D; false;
+            }
+          }
+        } else {
+          this.bookDetails.abstract +&#x3D; tmp[i];
+          this.bookDetails.noDetails &#x3D; false;
+        }
+      }
+    }
+
+    if (this.bookDetails.abstract.length &gt; 280) {
+      this.bookDetails.shortAbstract &#x3D; this.bookDetails.abstract.substring(0,279) + &quot;...&quot;;
+      this.shortAbstract &#x3D; true;
+    }
+  }
+
+  /**
+   * @name setMediaType
+   * @param mediatype
+   */
+  setMediaType(mediatype):void {
+    this.bookDetails.mediaType &#x3D; mediatype;
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+      &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+      {{ &quot;page.library.titleDetail&quot; | translate }}
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content&gt;
+  &lt;ion-refresher (ionRefresh)&#x3D;&quot;updateLocation($event)&quot;&gt;
+    &lt;ion-refresher-content&gt;&lt;/ion-refresher-content&gt;
+  &lt;/ion-refresher&gt;
+
+  &lt;book-list-view [book]&#x3D;&quot;book&quot; text-wrap (mediaType)&#x3D;&quot;setMediaType($event)&quot;&gt;&lt;/book-list-view&gt;
+  &lt;p *ngIf&#x3D;&quot;bookDetails.mediaType &#x3D;&#x3D; &#x27;mediatype_o&#x27;&quot; class&#x3D;&quot;copyright-info&quot; padding-horizontal&gt;
+    {{ &quot;page.library.copyright&quot; | translate }}
+    &lt;br&gt;&lt;br&gt;
+    {{ &quot;page.library.electronicUsage&quot; | translate }}
+  &lt;/p&gt;
+  &lt;p *ngIf&#x3D;&quot;book.originInfo &amp;&amp; book.originInfo.issuance &amp;&amp; (book.originInfo.issuance.indexOf(&#x27;multipart&#x27;) !&#x3D; -1)&quot; class&#x3D;&quot;copyright-info&quot; padding-horizontal&gt;
+    {{ &quot;page.library.bookSet&quot; | translate }}
+  &lt;/p&gt;
+  &lt;ion-segment [(ngModel)]&#x3D;&quot;activeSegment&quot;&gt;
+    &lt;ion-segment-button value&#x3D;&quot;location&quot; (click)&#x3D;&quot;showLocation &#x3D; true; showDetails &#x3D; false;&quot;&gt;{{ &quot;page.library.location&quot; | translate }}&lt;/ion-segment-button&gt;
+    &lt;ion-segment-button value&#x3D;&quot;details&quot; (click)&#x3D;&quot;showDetails &#x3D; true; showLocation &#x3D; false;&quot;&gt;{{ &quot;page.library.details&quot; | translate }}&lt;/ion-segment-button&gt;
+  &lt;/ion-segment&gt;
+
+  &lt;div *ngIf&#x3D;&quot;showLocation&quot; padding-top&gt;
+    &lt;span *ngFor&#x3D;&quot;let department of bookLocationList&quot;&gt;
+      &lt;ion-list no-lines&gt;
+        &lt;ion-item class&#x3D;&quot;department&quot;&gt;
+          {{ department.department }}
+          &lt;ion-icon item-end name&#x3D;&quot;information-circle&quot; tappable (click)&#x3D;&quot;webIntent.permissionPromptWebsite(department.departmentURL)&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/ion-item&gt;
+        &lt;ion-item *ngIf&#x3D;&quot;department.url; else noUrl&quot; class&#x3D;&quot;itemStatus&quot;&gt;
+          &lt;span tappable (click)&#x3D;&quot;webIntent.permissionPromptWebsite(department.url)&quot; style&#x3D;&quot;text-decoration: underline&quot;&gt;{{ department.item[0] }}&lt;/span&gt;
+        &lt;/ion-item&gt;
+        &lt;ng-template #noUrl&gt;
+          &lt;ion-item class&#x3D;&quot;itemStatus&quot; text-wrap&gt;
+            &lt;ion-icon style&#x3D;&quot;color: darkred&quot; *ngIf&#x3D;&quot;department.item[0] &amp;&amp; (department.item[0].indexOf(&#x27;ausgeliehen&#x27;) !&#x3D; -1) || (department.item[0].indexOf(&#x27;nicht&#x27;) !&#x3D; -1) || (department.item[0].indexOf(&#x27;bestellt&#x27;) !&#x3D; -1)&quot; name&#x3D;&quot;ios-remove-circle&quot;&gt;&lt;/ion-icon&gt;
+            &lt;ion-icon style&#x3D;&quot;color: darkgreen&quot; *ngIf&#x3D;&quot;department.item[0] &amp;&amp; department.department &amp;&amp; (department.item[0].indexOf(&#x27;Präsenzbestand&#x27;) !&#x3D; -1) || (department.department.indexOf(&#x27;Handapparat&#x27;) !&#x3D; -1)&quot; name&#x3D;&quot;ios-contrast&quot;&gt;&lt;/ion-icon&gt;
+            &lt;ion-icon style&#x3D;&quot;color: darkgreen&quot; *ngIf&#x3D;&quot;!(department.item[0] &amp;&amp; ((department.item[0].indexOf(&#x27;ausgeliehen&#x27;) !&#x3D; -1) || (department.item[0].indexOf(&#x27;nicht&#x27;) !&#x3D; -1) || (department.item[0].indexOf(&#x27;bestellt&#x27;) !&#x3D; -1)) || department.item[0] &amp;&amp; department.department &amp;&amp; ((department.item[0].indexOf(&#x27;Präsenzbestand&#x27;) !&#x3D; -1) || (department.department.indexOf(&#x27;Handapparat&#x27;) !&#x3D; -1)))&quot; name&#x3D;&quot;ios-checkmark-circle&quot;&gt;&lt;/ion-icon&gt;
+            {{ department.item[0] }} &lt;span *ngIf&#x3D;&quot;department.item[1]&quot; style&#x3D;&quot;color: black; font-size: small&quot;&gt;({{ department.item[1] }})&lt;/span&gt;
+            &lt;span *ngIf&#x3D;&quot;department.label &amp;&amp; department.item[0] &amp;&amp; department.label !&#x3D; department.item[0]&quot; style&#x3D;&quot;font-size: small&quot; item-end&gt;{{ department.label }}&lt;/span&gt;
+          &lt;/ion-item&gt;
+        &lt;/ng-template&gt;
+      &lt;/ion-list&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngIf&#x3D;&quot;showDetails&quot; padding&gt;
+    &lt;div *ngIf&#x3D;&quot;bookDetails.abstract &amp;&amp; bookDetails.abstract.length !&#x3D; 0&quot;&gt;
+      &lt;h3&gt;Abstract&lt;/h3&gt;
+      &lt;div *ngIf&#x3D;&quot;!shortAbstract || !showShortAbstract&quot; style&#x3D;&quot;text-align: justify&quot;&gt;{{ bookDetails.abstract }}&lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;shortAbstract &amp;&amp; showShortAbstract&quot; style&#x3D;&quot;text-align: justify&quot;&gt;{{ bookDetails.shortAbstract }}&lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;shortAbstract&quot; align&#x3D;&quot;right&quot;&gt;
+        &lt;button ion-button small clear (click)&#x3D;&quot;showShortAbstract &#x3D; !showShortAbstract&quot;&gt;
+          &lt;span *ngIf&#x3D;&quot;showShortAbstract&quot;&gt;{{ &quot;button.showMore&quot; | translate }}&lt;/span&gt;
+          &lt;span *ngIf&#x3D;&quot;!showShortAbstract&quot;&gt;{{ &quot;button.showLess&quot; | translate }}&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;bookDetails.keywords &amp;&amp; bookDetails.keywords.length !&#x3D; 0&quot; padding-top&gt;
+      &lt;h3&gt;{{ &quot;page.library.keywords&quot; | translate }}&lt;/h3&gt;
+      &lt;ul class&#x3D;&quot;list&quot; *ngFor&#x3D;&quot;let keyword of bookDetails.keywords&quot;&gt;
+        &lt;li class&#x3D;&quot;link item&quot; tappable (click)&#x3D;&quot;webIntent.permissionPromptWebsite(&#x27;https://opac.ub.uni-potsdam.de/DB&#x3D;1/SET&#x3D;25/TTL&#x3D;2/CMD?ACT&#x3D;SRCHA&amp;IKT&#x3D;46&amp;SRT&#x3D;YOP&amp;TRM&#x3D;&#x27;+keyword)&quot;&gt;{{ keyword }}&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;bookDetails.toc &amp;&amp; bookDetails.toc.length !&#x3D; 0&quot; padding-top&gt;
+      &lt;h3&gt;{{ &quot;page.library.toc&quot; | translate }}&lt;/h3&gt;
+      &lt;ul class&#x3D;&quot;list&quot; *ngFor&#x3D;&quot;let chapter of bookDetails.toc; let i &#x3D; index&quot;&gt;
+        &lt;li class&#x3D;&quot;item&quot; *ngIf&#x3D;&quot;!showFullTOC &amp;&amp; i &lt; 3&quot;&gt;{{ chapter }}&lt;/li&gt;
+        &lt;li class&#x3D;&quot;item&quot; *ngIf&#x3D;&quot;showFullTOC&quot;&gt;{{ chapter }}&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div *ngIf&#x3D;&quot;bookDetails.toc.length &gt; 3&quot; align&#x3D;&quot;right&quot;&gt;
+        &lt;button ion-button small clear (click)&#x3D;&quot;showFullTOC &#x3D; !showFullTOC&quot;&gt;
+          &lt;span *ngIf&#x3D;&quot;showFullTOC&quot;&gt;{{ &quot;button.showLess&quot; | translate }}&lt;/span&gt;
+          &lt;span *ngIf&#x3D;&quot;!showFullTOC&quot;&gt;{{ &quot;button.showMore&quot; | translate }}&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;bookDetails.notes &amp;&amp; bookDetails.notes.length !&#x3D; 0&quot; padding-top&gt;
+      &lt;h3&gt;{{ &quot;page.library.annotations&quot; | translate }}&lt;/h3&gt;
+      &lt;ul class&#x3D;&quot;list&quot; *ngFor&#x3D;&quot;let note of bookDetails.notes&quot;&gt;
+        &lt;li class&#x3D;&quot;item&quot;&gt;{{ note }}&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;bookDetails.series &amp;&amp; bookDetails.series.length !&#x3D; 0&quot; padding-top&gt;
+      &lt;h3&gt;{{ &quot;page.library.serie&quot; | translate }}&lt;/h3&gt;
+      &lt;ul class&#x3D;&quot;list&quot; *ngFor&#x3D;&quot;let serie of bookDetails.series&quot;&gt;
+        &lt;li class&#x3D;&quot;item&quot;&gt;{{ serie }}&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;bookDetails.isbn &amp;&amp; bookDetails.isbn.length !&#x3D; 0&quot; padding-top&gt;
+      &lt;h3&gt;ISBN&lt;/h3&gt;
+      &lt;ul class&#x3D;&quot;list&quot; *ngFor&#x3D;&quot;let isbn of bookDetails.isbn&quot;&gt;
+        &lt;li class&#x3D;&quot;item&quot;&gt;{{ isbn }}&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;bookDetails.extent &amp;&amp; bookDetails.extent.length !&#x3D; 0&quot; padding-top&gt;
+      &lt;h3&gt;{{ &quot;page.library.extent&quot; | translate }}&lt;/h3&gt;
+      &lt;ul class&#x3D;&quot;list&quot; *ngFor&#x3D;&quot;let extent of bookDetails.extent&quot;&gt;
+        &lt;li class&#x3D;&quot;item&quot;&gt;{{ extent }}&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;bookDetails.noDetails&quot; align&#x3D;&quot;center&quot; padding-top&gt;
+      {{ &quot;page.library.noDetails&quot; | translate }}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ion-content&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>      <ion-icon name="menu"></ion-icon>    </button>    <ion-title>      {{ "page.library.titleDetail" | translate }}    </ion-title>  </ion-navbar></ion-header><ion-content>  <ion-refresher (ionRefresh)="updateLocation($event)">    <ion-refresher-content></ion-refresher-content>  </ion-refresher>  <book-list-view [book]="book" text-wrap (mediaType)="setMediaType($event)"></book-list-view>  <p *ngIf="bookDetails.mediaType == \'mediatype_o\'" class="copyright-info" padding-horizontal>    {{ "page.library.copyright" | translate }}    <br><br>    {{ "page.library.electronicUsage" | translate }}  </p>  <p *ngIf="book.originInfo && book.originInfo.issuance && (book.originInfo.issuance.indexOf(\'multipart\') != -1)" class="copyright-info" padding-horizontal>    {{ "page.library.bookSet" | translate }}  </p>  <ion-segment [(ngModel)]="activeSegment">    <ion-segment-button value="location" (click)="showLocation = true; showDetails = false;">{{ "page.library.location" | translate }}</ion-segment-button>    <ion-segment-button value="details" (click)="showDetails = true; showLocation = false;">{{ "page.library.details" | translate }}</ion-segment-button>  </ion-segment>  <div *ngIf="showLocation" padding-top>    <span *ngFor="let department of bookLocationList">      <ion-list no-lines>        <ion-item class="department">          {{ department.department }}          <ion-icon item-end name="information-circle" tappable (click)="webIntent.permissionPromptWebsite(department.departmentURL)"></ion-icon>        </ion-item>        <ion-item *ngIf="department.url; else noUrl" class="itemStatus">          <span tappable (click)="webIntent.permissionPromptWebsite(department.url)" style="text-decoration: underline">{{ department.item[0] }}</span>        </ion-item>        <ng-template #noUrl>          <ion-item class="itemStatus" text-wrap>            <ion-icon style="color: darkred" *ngIf="department.item[0] && (department.item[0].indexOf(\'ausgeliehen\') != -1) || (department.item[0].indexOf(\'nicht\') != -1) || (department.item[0].indexOf(\'bestellt\') != -1)" name="ios-remove-circle"></ion-icon>            <ion-icon style="color: darkgreen" *ngIf="department.item[0] && department.department && (department.item[0].indexOf(\'Präsenzbestand\') != -1) || (department.department.indexOf(\'Handapparat\') != -1)" name="ios-contrast"></ion-icon>            <ion-icon style="color: darkgreen" *ngIf="!(department.item[0] && ((department.item[0].indexOf(\'ausgeliehen\') != -1) || (department.item[0].indexOf(\'nicht\') != -1) || (department.item[0].indexOf(\'bestellt\') != -1)) || department.item[0] && department.department && ((department.item[0].indexOf(\'Präsenzbestand\') != -1) || (department.department.indexOf(\'Handapparat\') != -1)))" name="ios-checkmark-circle"></ion-icon>            {{ department.item[0] }} <span *ngIf="department.item[1]" style="color: black; font-size: small">({{ department.item[1] }})</span>            <span *ngIf="department.label && department.item[0] && department.label != department.item[0]" style="font-size: small" item-end>{{ department.label }}</span>          </ion-item>        </ng-template>      </ion-list>    </span>  </div>  <div *ngIf="showDetails" padding>    <div *ngIf="bookDetails.abstract && bookDetails.abstract.length != 0">      <h3>Abstract</h3>      <div *ngIf="!shortAbstract || !showShortAbstract" style="text-align: justify">{{ bookDetails.abstract }}</div>      <div *ngIf="shortAbstract && showShortAbstract" style="text-align: justify">{{ bookDetails.shortAbstract }}</div>      <div *ngIf="shortAbstract" align="right">        <button ion-button small clear (click)="showShortAbstract = !showShortAbstract">          <span *ngIf="showShortAbstract">{{ "button.showMore" | translate }}</span>          <span *ngIf="!showShortAbstract">{{ "button.showLess" | translate }}</span>        </button>      </div>    </div>    <div *ngIf="bookDetails.keywords && bookDetails.keywords.length != 0" padding-top>      <h3>{{ "page.library.keywords" | translate }}</h3>      <ul class="list" *ngFor="let keyword of bookDetails.keywords">        <li class="link item" tappable (click)="webIntent.permissionPromptWebsite(\'https://opac.ub.uni-potsdam.de/DB=1/SET=25/TTL=2/CMD?ACT=SRCHA&IKT=46&SRT=YOP&TRM=\'+keyword)">{{ keyword }}</li>      </ul>    </div>    <div *ngIf="bookDetails.toc && bookDetails.toc.length != 0" padding-top>      <h3>{{ "page.library.toc" | translate }}</h3>      <ul class="list" *ngFor="let chapter of bookDetails.toc; let i = index">        <li class="item" *ngIf="!showFullTOC && i < 3">{{ chapter }}</li>        <li class="item" *ngIf="showFullTOC">{{ chapter }}</li>      </ul>      <div *ngIf="bookDetails.toc.length > 3" align="right">        <button ion-button small clear (click)="showFullTOC = !showFullTOC">          <span *ngIf="showFullTOC">{{ "button.showLess" | translate }}</span>          <span *ngIf="!showFullTOC">{{ "button.showMore" | translate }}</span>        </button>      </div>    </div>    <div *ngIf="bookDetails.notes && bookDetails.notes.length != 0" padding-top>      <h3>{{ "page.library.annotations" | translate }}</h3>      <ul class="list" *ngFor="let note of bookDetails.notes">        <li class="item">{{ note }}</li>      </ul>    </div>    <div *ngIf="bookDetails.series && bookDetails.series.length != 0" padding-top>      <h3>{{ "page.library.serie" | translate }}</h3>      <ul class="list" *ngFor="let serie of bookDetails.series">        <li class="item">{{ serie }}</li>      </ul>    </div>    <div *ngIf="bookDetails.isbn && bookDetails.isbn.length != 0" padding-top>      <h3>ISBN</h3>      <ul class="list" *ngFor="let isbn of bookDetails.isbn">        <li class="item">{{ isbn }}</li>      </ul>    </div>    <div *ngIf="bookDetails.extent && bookDetails.extent.length != 0" padding-top>      <h3>{{ "page.library.extent" | translate }}</h3>      <ul class="list" *ngFor="let extent of bookDetails.extent">        <li class="item">{{ extent }}</li>      </ul>    </div>    <div *ngIf="bookDetails.noDetails" align="center" padding-top>      {{ "page.library.noDetails" | translate }}    </div>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'BookDetailViewPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BookDetailViewPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

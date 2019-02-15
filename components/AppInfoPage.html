@@ -1,0 +1,958 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AppInfoPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/app-info/app-info.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-app-info</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>app-info.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deviceInfo">deviceInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#showContactPerson">showContactPerson</a>
+                            </li>
+                            <li>
+                                <a href="#showLibraryInfo">showLibraryInfo</a>
+                            </li>
+                            <li>
+                                <a href="#showParticipationInfo">showParticipationInfo</a>
+                            </li>
+                            <li>
+                                <a href="#showSysInfo">showSysInfo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#callMap">callMap</a>
+                            </li>
+                            <li>
+                                <a href="#getDeviceInfo">getDeviceInfo</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, navParams: NavParams, device: Device, storage: Storage, mapsProvider: <a href="../injectables/MapsProvider.html">MapsProvider</a>, platform: Platform)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/pages/app-info/app-info.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>device</td>
+                                                  
+                                                        <td>
+                                                                    <code>Device</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>mapsProvider</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/MapsProvider.html" target="_self" >MapsProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="callMap"></a>
+                        <span class="name">
+                            <b>
+                            callMap
+                            </b>
+                            <a href="#callMap"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>callMap(location: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/pages/app-info/app-info.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>location</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getDeviceInfo"></a>
+                        <span class="name">
+                            <b>
+                            getDeviceInfo
+                            </b>
+                            <a href="#getDeviceInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getDeviceInfo()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/pages/app-info/app-info.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/pages/app-info/app-info.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deviceInfo"></a>
+                        <span class="name">
+                            <b>
+                            deviceInfo</b>
+                            <a href="#deviceInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    &quot;cordovaVersion&quot;: undefined,
+    &quot;appVersion&quot;: undefined,
+    &quot;osPlatform&quot;: undefined,
+    &quot;osVersion&quot;: undefined,
+    &quot;uuid&quot;: undefined,
+    &quot;deviceManufacturer&quot;: undefined,
+    &quot;deviceModel&quot;: undefined
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/pages/app-info/app-info.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/pages/app-info/app-info.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams</b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/pages/app-info/app-info.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showContactPerson"></a>
+                        <span class="name">
+                            <b>
+                            showContactPerson</b>
+                            <a href="#showContactPerson"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/pages/app-info/app-info.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showLibraryInfo"></a>
+                        <span class="name">
+                            <b>
+                            showLibraryInfo</b>
+                            <a href="#showLibraryInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/pages/app-info/app-info.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showParticipationInfo"></a>
+                        <span class="name">
+                            <b>
+                            showParticipationInfo</b>
+                            <a href="#showParticipationInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/pages/app-info/app-info.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showSysInfo"></a>
+                        <span class="name">
+                            <b>
+                            showSysInfo</b>
+                            <a href="#showSysInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/pages/app-info/app-info.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { IonicPage, NavController, NavParams, Platform } from &#x27;ionic-angular&#x27;;
+import { Device } from &quot;@ionic-native/device/ngx&quot;;
+import { MapsProvider } from &#x27;../../providers/maps/maps&#x27;;
+import { IConfig } from &#x27;../../library/interfaces&#x27;;
+import { Storage } from &#x27;@ionic/storage&#x27;;
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-app-info&#x27;,
+  templateUrl: &#x27;app-info.html&#x27;,
+})
+export class AppInfoPage {
+
+  showSysInfo &#x3D; false;
+  showParticipationInfo &#x3D; false;
+  showLibraryInfo &#x3D; false;
+  showContactPerson &#x3D; false;
+
+  deviceInfo &#x3D; {
+    &quot;cordovaVersion&quot;: undefined,
+    &quot;appVersion&quot;: undefined,
+    &quot;osPlatform&quot;: undefined,
+    &quot;osVersion&quot;: undefined,
+    &quot;uuid&quot;: undefined,
+    &quot;deviceManufacturer&quot;: undefined,
+    &quot;deviceModel&quot;: undefined
+  }
+
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private device: Device,
+              private storage: Storage,
+              private mapsProvider: MapsProvider,
+              private platform: Platform) {
+  }
+
+  ngOnInit() {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      this.getDeviceInfo();
+    }
+  }
+
+  getDeviceInfo() {
+    this.deviceInfo &#x3D; {
+      &quot;cordovaVersion&quot;: this.device.cordova,
+      &quot;appVersion&quot;: undefined,
+      &quot;osPlatform&quot;: this.device.platform,
+      &quot;osVersion&quot;: this.device.version,
+      &quot;uuid&quot;: this.device.uuid,
+      &quot;deviceManufacturer&quot;: this.device.manufacturer,
+      &quot;deviceModel&quot;: this.device.model
+    }
+
+    this.storage.get(&quot;config&quot;).then((config:IConfig) &#x3D;&gt; {
+      this.deviceInfo.appVersion &#x3D; config.appVersion;
+    })
+  }
+
+  callMap(location:string) {
+    this.mapsProvider.navigateToAdress(location);
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+        &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{ &quot;page.appInfo.title&quot; | translate}}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content padding&gt;
+
+  &lt;ion-list class&#x3D;&quot;showSysInfo&quot;&gt;
+
+    &lt;ion-item (click)&#x3D;&quot;showContactPerson &#x3D; !showContactPerson&quot;&gt;
+      &lt;b&gt;{{ &quot;page.appInfo.contact&quot; | translate }}&lt;/b&gt;
+      &lt;ion-icon *ngIf&#x3D;&quot;!showContactPerson&quot; item-end name&#x3D;&quot;arrow-dropdown&quot;&gt;&lt;/ion-icon&gt;
+      &lt;ion-icon *ngIf&#x3D;&quot;showContactPerson&quot; item-end name&#x3D;&quot;arrow-dropup&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/ion-item&gt;
+    &lt;span *ngIf&#x3D;&quot;showContactPerson&quot;&gt;
+      &lt;ion-item text-wrap&gt;
+          &lt;b&gt;Ulrike Lucke&lt;/b&gt;&lt;br&gt;
+          Universität Potsdam&lt;br&gt;
+          &lt;div class&#x3D;&quot;link&quot; (click)&#x3D;&quot;callMap(&#x27;Haus 4 Institut für Informatik, August-Bebel-Str. 89, 14482 Potsdam&#x27;)&quot;&gt;
+            Institut für Informatik&lt;br&gt;
+            August-Bebel-Str. 89&lt;br&gt;
+            14482 Potsdam&lt;br&gt;
+          &lt;/div&gt;
+
+          Haus 4 | 1.17&lt;br&gt;
+          &lt;br&gt;
+          Telefon: &lt;a href&#x3D;&quot;tel:+49-331-977-3023&quot;&gt;+49-331-977-3023&lt;/a&gt;
+      &lt;/ion-item&gt;
+    &lt;/span&gt;
+    &lt;ion-item (click)&#x3D;&quot;showParticipationInfo &#x3D; !showParticipationInfo&quot;&gt;
+      &lt;b&gt;{{ &quot;page.appInfo.participate&quot; | translate }}&lt;/b&gt;
+      &lt;ion-icon *ngIf&#x3D;&quot;!showParticipationInfo&quot; item-end name&#x3D;&quot;arrow-dropdown&quot;&gt;&lt;/ion-icon&gt;
+      &lt;ion-icon *ngIf&#x3D;&quot;showParticipationInfo&quot; item-end name&#x3D;&quot;arrow-dropup&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/ion-item&gt;
+    &lt;span *ngIf&#x3D;&quot;showParticipationInfo&quot;&gt;
+      &lt;ion-item text-wrap&gt;
+          Es gibt die Möglichkeit als studentische Mitarbeiter innerhalb von Lehrprojekten, Aufträgen oder Anstellung an der App-Entwicklung im Rahmen des eLiS-Projekts mitzuwirken.&lt;br&gt;
+          Die App ist als Open Source Projekt veröffentlicht.
+          &lt;br&gt;&lt;br&gt;
+          Wenn Sie sich für eine Mitarbeit an der App interessieren, können Sie gern das Entwicklerteam unter &lt;a href&#x3D;&quot;mailto:mobileup-service@uni-potsdam.de&quot;&gt;mobileup-service@uni-potsdam.de&lt;/a&gt; kontaktieren oder sich über &lt;a href&#x3D;&quot;https://github.com/University-of-Potsdam-MM/Mobile.UP&quot;&gt;GitHub&lt;/a&gt; beteiligen.
+      &lt;/ion-item&gt;
+    &lt;/span&gt;
+    &lt;ion-item (click)&#x3D;&quot;showLibraryInfo &#x3D; !showLibraryInfo&quot;&gt;
+      &lt;b&gt;{{ &quot;page.appInfo.libraries&quot; | translate }}&lt;/b&gt;
+      &lt;ion-icon *ngIf&#x3D;&quot;!showLibraryInfo&quot; item-end name&#x3D;&quot;arrow-dropdown&quot;&gt;&lt;/ion-icon&gt;
+      &lt;ion-icon *ngIf&#x3D;&quot;showLibraryInfo&quot; item-end name&#x3D;&quot;arrow-dropup&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/ion-item&gt;
+    &lt;span *ngIf&#x3D;&quot;showLibraryInfo&quot;&gt;
+      &lt;ion-item text-wrap&gt;
+        &quot;@angular/common&quot;: &quot;5.0.3&quot;&lt;br&gt;
+        &quot;@angular/compiler&quot;: &quot;5.0.3&quot;&lt;br&gt;
+        &quot;@angular/compiler-cli&quot;: &quot;^5.0.3&quot;&lt;br&gt;
+        &quot;@angular/core&quot;: &quot;5.0.3&quot;&lt;br&gt;
+        &quot;@angular/forms&quot;: &quot;5.0.3&quot;&lt;br&gt;
+        &quot;@angular/http&quot;: &quot;5.0.3&quot;&lt;br&gt;
+        &quot;@angular/platform-browser&quot;: &quot;5.0.3&quot;&lt;br&gt;
+        &quot;@angular/platform-browser-dynamic&quot;: &quot;5.0.3&quot;&lt;br&gt;
+        &quot;@ionic-native/app-availability&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/app-version&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/core&quot;: &quot;4.11.0&quot;&lt;br&gt;
+        &quot;@ionic-native/device&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/in-app-browser&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/keyboard&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/launch-navigator&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/network&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/safari-view-controller&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/secure-storage&quot;: &quot;^4.18.0&quot;&lt;br&gt;
+        &quot;@ionic-native/splash-screen&quot;: &quot;^4.1.0&quot;&lt;br&gt;
+        &quot;@ionic-native/status-bar&quot;: &quot;4.4.0&quot;&lt;br&gt;
+        &quot;@ionic/storage&quot;: &quot;^2.2.0&quot;&lt;br&gt;
+        &quot;@ngx-translate/core&quot;: &quot;^9.1.1&quot;&lt;br&gt;
+        &quot;@ngx-translate/http-loader&quot;: &quot;^2.0.1&quot;&lt;br&gt;
+        &quot;@types/jquery&quot;: &quot;^3.3.28&quot;&lt;br&gt;
+        &quot;cordova-android&quot;: &quot;7.1.4&quot;&lt;br&gt;
+        &quot;cordova-browser&quot;: &quot;5.0.4&quot;&lt;br&gt;
+        &quot;cordova-ios&quot;: &quot;4.5.5&quot;&lt;br&gt;
+        &quot;cordova-plugin-actionsheet&quot;: &quot;^2.3.3&quot;&lt;br&gt;
+        &quot;cordova-plugin-app-version&quot;: &quot;^0.1.9&quot;&lt;br&gt;
+        &quot;cordova-plugin-appavailability&quot;: &quot;^0.4.2&quot;&lt;br&gt;
+        &quot;cordova-plugin-device&quot;: &quot;^1.1.7&quot;&lt;br&gt;
+        &quot;cordova-plugin-dialogs&quot;: &quot;^2.0.1&quot;&lt;br&gt;
+        &quot;cordova-plugin-inappbrowser&quot;: &quot;^1.7.2&quot;&lt;br&gt;
+        &quot;cordova-plugin-ionic-keyboard&quot;: &quot;^2.1.3&quot;&lt;br&gt;
+        &quot;cordova-plugin-ionic-webview&quot;: &quot;^1.2.1&quot;&lt;br&gt;
+        &quot;cordova-plugin-network-information&quot;: &quot;^2.0.1&quot;&lt;br&gt;
+        &quot;cordova-plugin-safariviewcontroller&quot;: &quot;^1.5.4&quot;&lt;br&gt;
+        &quot;cordova-plugin-secure-storage&quot;: &quot;^3.0.0&quot;&lt;br&gt;
+        &quot;cordova-plugin-splashscreen&quot;: &quot;^4.1.0&quot;&lt;br&gt;
+        &quot;cordova-plugin-statusbar&quot;: &quot;^2.4.2&quot;&lt;br&gt;
+        &quot;cordova-plugin-whitelist&quot;: &quot;^1.3.3&quot;&lt;br&gt;
+        &quot;country-language&quot;: &quot;^0.1.7&quot;&lt;br&gt;
+        &quot;i18next-client&quot;: &quot;^1.11.5&quot;&lt;br&gt;
+        &quot;intl&quot;: &quot;^1.2.5&quot;&lt;br&gt;
+        &quot;ion2-calendar&quot;: &quot;^2.2.0&quot;&lt;br&gt;
+        &quot;ionic-angular&quot;: &quot;^3.9.2&quot;&lt;br&gt;
+        &quot;ionic-cache&quot;: &quot;^3.1.3&quot;&lt;br&gt;
+        &quot;ionic2-calendar&quot;: &quot;^0.4.6&quot;&lt;br&gt;
+        &quot;ionicons&quot;: &quot;3.0.0&quot;&lt;br&gt;
+        &quot;jquery&quot;: &quot;^3.3.1&quot;&lt;br&gt;
+        &quot;luxon&quot;: &quot;^1.8.3&quot;&lt;br&gt;
+        &quot;moment&quot;: &quot;^2.23.0&quot;&lt;br&gt;
+        &quot;ngx-moment&quot;: &quot;^3.3.0&quot;&lt;br&gt;
+        &quot;ngx-order-pipe&quot;: &quot;^1.2.1&quot;&lt;br&gt;
+        &quot;opening_hours&quot;: &quot;^3.5.0&quot;&lt;br&gt;
+        &quot;rrule&quot;: &quot;^2.5.6&quot;&lt;br&gt;
+        &quot;rxjs&quot;: &quot;5.5.11&quot;&lt;br&gt;
+        &quot;sw-toolbox&quot;: &quot;3.6.0&quot;&lt;br&gt;
+        &quot;zone.js&quot;: &quot;0.8.26&quot;
+      &lt;/ion-item&gt;
+    &lt;/span&gt;
+
+    &lt;ion-item class&#x3D;&quot;sysHeader&quot; (click)&#x3D;&quot;showSysInfo &#x3D; !showSysInfo&quot; *ngIf&#x3D;&quot;deviceInfo.cordovaVersion || deviceInfo.appVersion || deviceInfo.osPlatform || deviceInfo.osVersion || deviceInfo.uuid || deviceInfo.deviceManufacturer || deviceInfo.deviceModel&quot;&gt;
+      &lt;b&gt;{{ &quot;page.appInfo.app&quot; | translate }}&lt;/b&gt;
+      &lt;ion-icon *ngIf&#x3D;&quot;!showSysInfo&quot; item-end name&#x3D;&quot;arrow-dropdown&quot;&gt;&lt;/ion-icon&gt;
+      &lt;ion-icon *ngIf&#x3D;&quot;showSysInfo&quot; item-end name&#x3D;&quot;arrow-dropup&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/ion-item&gt;
+    &lt;span *ngIf&#x3D;&quot;showSysInfo&quot;&gt;
+      &lt;ion-item *ngIf&#x3D;&quot;deviceInfo.cordovaVersion&quot;&gt;
+        &lt;ion-label item-start&gt;Cordova Version:&lt;/ion-label&gt;&lt;div item-content&gt;{{ deviceInfo.cordovaVersion }}&lt;/div&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-item *ngIf&#x3D;&quot;deviceInfo.appVersion&quot;&gt;
+        &lt;ion-label item-start&gt;{{ &quot;page.appInfo.version&quot; | translate }}:&lt;/ion-label&gt;&lt;div item-content&gt;{{ deviceInfo.appVersion }}&lt;/div&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-item *ngIf&#x3D;&quot;deviceInfo.osPlatform&quot;&gt;
+        &lt;ion-label item-start&gt;{{ &quot;page.appInfo.platform&quot; | translate }}:&lt;/ion-label&gt;&lt;div item-content&gt;{{ deviceInfo.osPlatform }}&lt;/div&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-item *ngIf&#x3D;&quot;deviceInfo.osVersion&quot;&gt;
+        &lt;ion-label item-start&gt;Platform Version:&lt;/ion-label&gt;&lt;div item-content&gt;{{ deviceInfo.osVersion }}&lt;/div&gt;
+      &lt;/ion-item&gt;
+      &lt;!-- &lt;ion-item *ngIf&#x3D;&quot;deviceInfo.uuid&quot;&gt;
+        &lt;ion-label item-start&gt;{{ &quot;page.appInfo.uuid&quot; | translate }}:&lt;/ion-label&gt;&lt;div item-content&gt;{{ deviceInfo.uuid }}&lt;/div&gt;
+      &lt;/ion-item&gt; --&gt;
+      &lt;ion-item *ngIf&#x3D;&quot;deviceInfo.deviceManufacturer&quot;&gt;
+        &lt;ion-label item-start&gt;{{ &quot;page.appInfo.manufacturer&quot; | translate }}:&lt;/ion-label&gt;&lt;div item-content&gt;{{ deviceInfo.deviceManufacturer }}&lt;/div&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-item *ngIf&#x3D;&quot;deviceInfo.deviceModel&quot;&gt;
+        &lt;ion-label item-start&gt;{{ &quot;page.appInfo.model&quot; | translate }}:&lt;/ion-label&gt;&lt;div item-content&gt;{{ deviceInfo.deviceModel }}&lt;/div&gt;
+      &lt;/ion-item&gt;
+    &lt;/span&gt;
+  &lt;/ion-list&gt;
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>        <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{ "page.appInfo.title" | translate}}</ion-title>  </ion-navbar></ion-header><ion-content padding>  <ion-list class="showSysInfo">    <ion-item (click)="showContactPerson = !showContactPerson">      <b>{{ "page.appInfo.contact" | translate }}</b>      <ion-icon *ngIf="!showContactPerson" item-end name="arrow-dropdown"></ion-icon>      <ion-icon *ngIf="showContactPerson" item-end name="arrow-dropup"></ion-icon>    </ion-item>    <span *ngIf="showContactPerson">      <ion-item text-wrap>          <b>Ulrike Lucke</b><br>          Universität Potsdam<br>          <div class="link" (click)="callMap(\'Haus 4 Institut für Informatik, August-Bebel-Str. 89, 14482 Potsdam\')">            Institut für Informatik<br>            August-Bebel-Str. 89<br>            14482 Potsdam<br>          </div>          Haus 4 | 1.17<br>          <br>          Telefon: <a href="tel:+49-331-977-3023">+49-331-977-3023</a>      </ion-item>    </span>    <ion-item (click)="showParticipationInfo = !showParticipationInfo">      <b>{{ "page.appInfo.participate" | translate }}</b>      <ion-icon *ngIf="!showParticipationInfo" item-end name="arrow-dropdown"></ion-icon>      <ion-icon *ngIf="showParticipationInfo" item-end name="arrow-dropup"></ion-icon>    </ion-item>    <span *ngIf="showParticipationInfo">      <ion-item text-wrap>          Es gibt die Möglichkeit als studentische Mitarbeiter innerhalb von Lehrprojekten, Aufträgen oder Anstellung an der App-Entwicklung im Rahmen des eLiS-Projekts mitzuwirken.<br>          Die App ist als Open Source Projekt veröffentlicht.          <br><br>          Wenn Sie sich für eine Mitarbeit an der App interessieren, können Sie gern das Entwicklerteam unter <a href="mailto:mobileup-service@uni-potsdam.de">mobileup-service@uni-potsdam.de</a> kontaktieren oder sich über <a href="https://github.com/University-of-Potsdam-MM/Mobile.UP">GitHub</a> beteiligen.      </ion-item>    </span>    <ion-item (click)="showLibraryInfo = !showLibraryInfo">      <b>{{ "page.appInfo.libraries" | translate }}</b>      <ion-icon *ngIf="!showLibraryInfo" item-end name="arrow-dropdown"></ion-icon>      <ion-icon *ngIf="showLibraryInfo" item-end name="arrow-dropup"></ion-icon>    </ion-item>    <span *ngIf="showLibraryInfo">      <ion-item text-wrap>        "@angular/common": "5.0.3"<br>        "@angular/compiler": "5.0.3"<br>        "@angular/compiler-cli": "^5.0.3"<br>        "@angular/core": "5.0.3"<br>        "@angular/forms": "5.0.3"<br>        "@angular/http": "5.0.3"<br>        "@angular/platform-browser": "5.0.3"<br>        "@angular/platform-browser-dynamic": "5.0.3"<br>        "@ionic-native/app-availability": "^4.18.0"<br>        "@ionic-native/app-version": "^4.18.0"<br>        "@ionic-native/core": "4.11.0"<br>        "@ionic-native/device": "^4.18.0"<br>        "@ionic-native/in-app-browser": "^4.18.0"<br>        "@ionic-native/keyboard": "^4.18.0"<br>        "@ionic-native/launch-navigator": "^4.18.0"<br>        "@ionic-native/network": "^4.18.0"<br>        "@ionic-native/safari-view-controller": "^4.18.0"<br>        "@ionic-native/secure-storage": "^4.18.0"<br>        "@ionic-native/splash-screen": "^4.1.0"<br>        "@ionic-native/status-bar": "4.4.0"<br>        "@ionic/storage": "^2.2.0"<br>        "@ngx-translate/core": "^9.1.1"<br>        "@ngx-translate/http-loader": "^2.0.1"<br>        "@types/jquery": "^3.3.28"<br>        "cordova-android": "7.1.4"<br>        "cordova-browser": "5.0.4"<br>        "cordova-ios": "4.5.5"<br>        "cordova-plugin-actionsheet": "^2.3.3"<br>        "cordova-plugin-app-version": "^0.1.9"<br>        "cordova-plugin-appavailability": "^0.4.2"<br>        "cordova-plugin-device": "^1.1.7"<br>        "cordova-plugin-dialogs": "^2.0.1"<br>        "cordova-plugin-inappbrowser": "^1.7.2"<br>        "cordova-plugin-ionic-keyboard": "^2.1.3"<br>        "cordova-plugin-ionic-webview": "^1.2.1"<br>        "cordova-plugin-network-information": "^2.0.1"<br>        "cordova-plugin-safariviewcontroller": "^1.5.4"<br>        "cordova-plugin-secure-storage": "^3.0.0"<br>        "cordova-plugin-splashscreen": "^4.1.0"<br>        "cordova-plugin-statusbar": "^2.4.2"<br>        "cordova-plugin-whitelist": "^1.3.3"<br>        "country-language": "^0.1.7"<br>        "i18next-client": "^1.11.5"<br>        "intl": "^1.2.5"<br>        "ion2-calendar": "^2.2.0"<br>        "ionic-angular": "^3.9.2"<br>        "ionic-cache": "^3.1.3"<br>        "ionic2-calendar": "^0.4.6"<br>        "ionicons": "3.0.0"<br>        "jquery": "^3.3.1"<br>        "luxon": "^1.8.3"<br>        "moment": "^2.23.0"<br>        "ngx-moment": "^3.3.0"<br>        "ngx-order-pipe": "^1.2.1"<br>        "opening_hours": "^3.5.0"<br>        "rrule": "^2.5.6"<br>        "rxjs": "5.5.11"<br>        "sw-toolbox": "3.6.0"<br>        "zone.js": "0.8.26"      </ion-item>    </span>    <ion-item class="sysHeader" (click)="showSysInfo = !showSysInfo" *ngIf="deviceInfo.cordovaVersion || deviceInfo.appVersion || deviceInfo.osPlatform || deviceInfo.osVersion || deviceInfo.uuid || deviceInfo.deviceManufacturer || deviceInfo.deviceModel">      <b>{{ "page.appInfo.app" | translate }}</b>      <ion-icon *ngIf="!showSysInfo" item-end name="arrow-dropdown"></ion-icon>      <ion-icon *ngIf="showSysInfo" item-end name="arrow-dropup"></ion-icon>    </ion-item>    <span *ngIf="showSysInfo">      <ion-item *ngIf="deviceInfo.cordovaVersion">        <ion-label item-start>Cordova Version:</ion-label><div item-content>{{ deviceInfo.cordovaVersion }}</div>      </ion-item>      <ion-item *ngIf="deviceInfo.appVersion">        <ion-label item-start>{{ "page.appInfo.version" | translate }}:</ion-label><div item-content>{{ deviceInfo.appVersion }}</div>      </ion-item>      <ion-item *ngIf="deviceInfo.osPlatform">        <ion-label item-start>{{ "page.appInfo.platform" | translate }}:</ion-label><div item-content>{{ deviceInfo.osPlatform }}</div>      </ion-item>      <ion-item *ngIf="deviceInfo.osVersion">        <ion-label item-start>Platform Version:</ion-label><div item-content>{{ deviceInfo.osVersion }}</div>      </ion-item>      <!-- <ion-item *ngIf="deviceInfo.uuid">        <ion-label item-start>{{ "page.appInfo.uuid" | translate }}:</ion-label><div item-content>{{ deviceInfo.uuid }}</div>      </ion-item> -->      <ion-item *ngIf="deviceInfo.deviceManufacturer">        <ion-label item-start>{{ "page.appInfo.manufacturer" | translate }}:</ion-label><div item-content>{{ deviceInfo.deviceManufacturer }}</div>      </ion-item>      <ion-item *ngIf="deviceInfo.deviceModel">        <ion-label item-start>{{ "page.appInfo.model" | translate }}:</ion-label><div item-content>{{ deviceInfo.deviceModel }}</div>      </ion-item>    </span>  </ion-list></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'AppInfoPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppInfoPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

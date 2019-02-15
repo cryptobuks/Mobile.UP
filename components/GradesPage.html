@@ -1,0 +1,1377 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>GradesPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/grades/grades.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-grades</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>grades.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#config">config</a>
+                            </li>
+                            <li>
+                                <a href="#credentials">credentials</a>
+                            </li>
+                            <li>
+                                <a href="#gradesLoaded">gradesLoaded</a>
+                            </li>
+                            <li>
+                                <a href="#i">i</a>
+                            </li>
+                            <li>
+                                <a href="#isDualDegree">isDualDegree</a>
+                            </li>
+                            <li>
+                                <a href="#loadingGrades">loadingGrades</a>
+                            </li>
+                            <li>
+                                <a href="#multipleDegrees">multipleDegrees</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#noUserRights">noUserRights</a>
+                            </li>
+                            <li>
+                                <a href="#refresher">refresher</a>
+                            </li>
+                            <li>
+                                <a href="#session">session</a>
+                            </li>
+                            <li>
+                                <a href="#studentDetails">studentDetails</a>
+                            </li>
+                            <li>
+                                <a href="#studentGrades">studentGrades</a>
+                            </li>
+                            <li>
+                                <a href="#studentLoaded">studentLoaded</a>
+                            </li>
+                            <li>
+                                <a href="#token">token</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getGrades">getGrades</a>
+                            </li>
+                            <li>
+                                <a href="#getStudentDetails">getStudentDetails</a>
+                            </li>
+                            <li>
+                                <a href="#goToLogin">goToLogin</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ionViewWillEnter">ionViewWillEnter</a>
+                            </li>
+                            <li>
+                                <a href="#refreshGrades">refreshGrades</a>
+                            </li>
+                            <li>
+                                <a href="#showGrades">showGrades</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, cache: CacheService, navParams: NavParams, storage: Storage, connection: <a href="../injectables/ConnectionProvider.html">ConnectionProvider</a>, sessionProvider: <a href="../injectables/SessionProvider.html">SessionProvider</a>, puls: <a href="../injectables/PulsProvider.html">PulsProvider</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/pages/grades/grades.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cache</td>
+                                                  
+                                                        <td>
+                                                                    <code>CacheService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>connection</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ConnectionProvider.html" target="_self" >ConnectionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionProvider</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SessionProvider.html" target="_self" >SessionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>puls</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/PulsProvider.html" target="_self" >PulsProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getGrades"></a>
+                        <span class="name">
+                            <b>
+                            getGrades
+                            </b>
+                            <a href="#getGrades"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getGrades()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/pages/grades/grades.ts:98</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getStudentDetails"></a>
+                        <span class="name">
+                            <b>
+                            getStudentDetails
+                            </b>
+                            <a href="#getStudentDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getStudentDetails()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">src/pages/grades/grades.ts:149</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="goToLogin"></a>
+                        <span class="name">
+                            <b>
+                            goToLogin
+                            </b>
+                            <a href="#goToLogin"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>goToLogin()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/pages/grades/grades.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewWillEnter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            ionViewWillEnter
+                            </b>
+                            <a href="#ionViewWillEnter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ionViewWillEnter()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/pages/grades/grades.ts:61</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refreshGrades"></a>
+                        <span class="name">
+                            <b>
+                            refreshGrades
+                            </b>
+                            <a href="#refreshGrades"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>refreshGrades(refresher)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">src/pages/grades/grades.ts:137</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>refresher</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showGrades"></a>
+                        <span class="name">
+                            <b>
+                            showGrades
+                            </b>
+                            <a href="#showGrades"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showGrades(i)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/pages/grades/grades.ts:85</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <span class="name">
+                            <b>
+                            config</b>
+                            <a href="#config"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IConfig.html" target="_self" >IConfig</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/pages/grades/grades.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="credentials"></a>
+                        <span class="name">
+                            <b>
+                            credentials</b>
+                            <a href="#credentials"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/pages/grades/grades.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gradesLoaded"></a>
+                        <span class="name">
+                            <b>
+                            gradesLoaded</b>
+                            <a href="#gradesLoaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/pages/grades/grades.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="i"></a>
+                        <span class="name">
+                            <b>
+                            i</b>
+                            <a href="#i"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/pages/grades/grades.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDualDegree"></a>
+                        <span class="name">
+                            <b>
+                            isDualDegree</b>
+                            <a href="#isDualDegree"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>boolean[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/pages/grades/grades.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loadingGrades"></a>
+                        <span class="name">
+                            <b>
+                            loadingGrades</b>
+                            <a href="#loadingGrades"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/pages/grades/grades.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="multipleDegrees"></a>
+                        <span class="name">
+                            <b>
+                            multipleDegrees</b>
+                            <a href="#multipleDegrees"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/pages/grades/grades.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/pages/grades/grades.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams</b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/pages/grades/grades.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="noUserRights"></a>
+                        <span class="name">
+                            <b>
+                            noUserRights</b>
+                            <a href="#noUserRights"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/pages/grades/grades.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refresher"></a>
+                        <span class="name">
+                            <b>
+                            refresher</b>
+                            <a href="#refresher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/pages/grades/grades.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="session"></a>
+                        <span class="name">
+                            <b>
+                            session</b>
+                            <a href="#session"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/pages/grades/grades.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="studentDetails"></a>
+                        <span class="name">
+                            <b>
+                            studentDetails</b>
+                            <a href="#studentDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/pages/grades/grades.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="studentGrades"></a>
+                        <span class="name">
+                            <b>
+                            studentGrades</b>
+                            <a href="#studentGrades"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/pages/grades/grades.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="studentLoaded"></a>
+                        <span class="name">
+                            <b>
+                            studentLoaded</b>
+                            <a href="#studentLoaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/pages/grades/grades.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="token"></a>
+                        <span class="name">
+                            <b>
+                            token</b>
+                            <a href="#token"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/pages/grades/grades.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { IonicPage, NavController, NavParams } from &#x27;ionic-angular&#x27;;
+import { IPulsAPIResponse_getPersonalStudyAreas,
+         IPulsAPIResponse_getAcademicAchievements
+        } from &#x27;../../library/interfaces_PULS&#x27;;
+import { Storage } from &#x27;@ionic/storage&#x27;;
+import { LoginPage } from &quot;../login/login&quot;;
+import { IConfig } from &#x27;../../library/interfaces&#x27;;
+import { CacheService } from &#x27;ionic-cache&#x27;;
+import { ConnectionProvider } from &#x27;../../providers/connection/connection&#x27;;
+import { SessionProvider } from &#x27;../../providers/session/session&#x27;;
+import { PulsProvider } from &#x27;../../providers/puls/puls&#x27;;
+import { of } from &#x27;rxjs&#x27;;
+
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-grades&#x27;,
+  templateUrl: &#x27;grades.html&#x27;,
+})
+export class GradesPage {
+
+  token;
+  credentials;
+  config: IConfig;
+
+  refresher;
+  studentDetails;
+  studentGrades;
+  i;
+  noUserRights;
+
+  loadingGrades &#x3D; false;
+  gradesLoaded &#x3D; false;
+  studentLoaded &#x3D; false;
+  multipleDegrees &#x3D; false;          // f.e. bachelor and master
+  isDualDegree: boolean[] &#x3D; [];     // f.e. dual bachelor with BWL and German
+  session;
+
+  constructor(
+      public navCtrl: NavController,
+      private cache: CacheService,
+      public navParams: NavParams,
+      private storage: Storage,
+      private connection: ConnectionProvider,
+      private sessionProvider: SessionProvider,
+      private puls:PulsProvider) {
+  }
+
+  /**
+   * @name goToLogin
+   */
+  goToLogin(): void {
+    this.navCtrl.push(LoginPage);
+  }
+
+  /**
+   * @async
+   * @name ionViewWillEnter
+   */
+  async ionViewWillEnter() {
+    this.connection.checkOnline(true, true);
+    this.config &#x3D; await this.storage.get(&quot;config&quot;);
+
+    let tmp &#x3D; await this.sessionProvider.getSession();
+    let session &#x3D; undefined;
+    if (tmp) {
+      if (typeof tmp !&#x3D;&#x3D; &#x27;object&#x27;) {
+        session &#x3D; JSON.parse(tmp);
+      } else { session &#x3D; tmp; }
+    }
+
+    if (session) {
+      this.session &#x3D; session;
+      this.getStudentDetails();
+    } else {
+      this.goToLogin();
+    }
+  }
+
+  /**
+   * @name showGrades
+   * @param i
+   */
+  showGrades(i): void {
+    if (this.i &#x3D;&#x3D;&#x3D; i) {
+      this.gradesLoaded &#x3D; !this.gradesLoaded;
+    } else {
+      this.i &#x3D; i;
+      this.gradesLoaded &#x3D; false;
+      this.getGrades();
+    }
+  }
+
+  /**
+   * @name getGrades
+   */
+  getGrades(): void {
+    if (this.refresher !&#x3D; null) {
+      this.cache.removeItem(&#x27;getAcademicAchievements&#x27;+this.i);
+    } else { this.loadingGrades &#x3D; true; }
+
+    let semester, mtknr, stgnr;
+
+    if (this.multipleDegrees) {
+      semester &#x3D; this.studentDetails[this.i].Semester;
+      mtknr &#x3D; this.studentDetails[this.i].MtkNr;
+      stgnr &#x3D; this.studentDetails[this.i].StgNr;
+    } else {
+      semester &#x3D; this.studentDetails.Semester;
+      mtknr &#x3D; this.studentDetails.MtkNr;
+      stgnr &#x3D; this.studentDetails.StgNr;
+    }
+
+    this.cache.loadFromObservable(&#x27;getAcademicAchievements&#x27;+this.i, of(this.puls.getAcademicAchievements(this.session, semester, mtknr, stgnr).subscribe(
+      (resGrades:IPulsAPIResponse_getAcademicAchievements) &#x3D;&gt; {
+        if (resGrades) {
+          this.studentGrades &#x3D; resGrades;
+          this.gradesLoaded &#x3D; true;
+        } else { this.studentGrades &#x3D; undefined; }
+
+        this.loadingGrades &#x3D; false;
+      }, error &#x3D;&gt; {
+        console.log(&#x27;ERROR while getting grades&#x27;);
+        console.log(error);
+      })));
+
+    if (this.refresher !&#x3D; null) {
+      this.refresher.complete();
+    }
+  }
+
+  /**
+   * @name refreshGrades
+   * @param refresher
+   */
+  refreshGrades(refresher): void {
+    this.refresher &#x3D; refresher;
+    if (this.i !&#x3D; undefined) {
+      this.getGrades();
+    } else {
+      this.getStudentDetails();
+    }
+  }
+
+  /**
+   * @name getStudentDetails
+   */
+  getStudentDetails(): void {
+
+    if (this.refresher !&#x3D; null) {
+      this.cache.removeItem(&quot;getPersonalStudyAreas&quot;);
+    } else {
+      this.studentLoaded &#x3D; false;
+    }
+
+    this.cache.loadFromObservable(&#x27;getPersonalStudyAreas&#x27;, of(this.puls.getPersonalStudyAreas(this.session).subscribe(
+      (resStudentDetail:IPulsAPIResponse_getPersonalStudyAreas) &#x3D;&gt; {
+        if (resStudentDetail) {
+          if (resStudentDetail.personalStudyAreas &amp;&amp; resStudentDetail.personalStudyAreas.Abschluss) {
+            this.studentDetails &#x3D; resStudentDetail.personalStudyAreas.Abschluss;
+            if (Array.isArray(this.studentDetails)) {
+              this.multipleDegrees &#x3D; true;
+              let i;
+              for (i &#x3D; 0; i &lt; this.studentDetails.length; i++) {
+                if (this.studentDetails[i].Studiengaenge &amp;&amp; Array.isArray(this.studentDetails[i].Studiengaenge)) {
+                  this.isDualDegree[i] &#x3D; true;
+                } else { this.isDualDegree[i] &#x3D; false; }
+              }
+            } else {
+              this.multipleDegrees &#x3D; false;
+              if (this.studentDetails.Studiengaenge &amp;&amp; Array.isArray(this.studentDetails.Studiengaenge)) {
+                this.isDualDegree[0] &#x3D; true;
+              }
+            }
+            this.studentLoaded &#x3D; true;
+          } else if (resStudentDetail.message) {
+            this.noUserRights &#x3D; true;
+          }
+        }
+      }, (error) &#x3D;&gt; {
+        console.log(&#x27;ERROR while getting student details&#x27;);
+        console.log(error);
+      })));
+
+    if (this.refresher !&#x3D; null) {
+      this.refresher.complete();
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+      &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{ &quot;page.grades.title&quot; | translate }}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content&gt;
+  &lt;ion-refresher (ionRefresh)&#x3D;&quot;refreshGrades($event)&quot;&gt;
+    &lt;ion-refresher-content&gt;&lt;/ion-refresher-content&gt;
+  &lt;/ion-refresher&gt;
+
+  &lt;div *ngIf&#x3D;&quot;studentLoaded &amp;&amp; !noUserRights&quot;&gt;
+    &lt;hint hintTypeI18nKey&#x3D;&quot;hints.type.hint&quot; hintTextI18nKey&#x3D;&quot;hints.text.grades-selectDegree-hint&quot;&gt;&lt;/hint&gt;
+  &lt;/div&gt;
+
+  &lt;div align&#x3D;&quot;center&quot; *ngIf&#x3D;&quot;!studentLoaded &amp;&amp; !noUserRights&quot; padding&gt;
+    &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngIf&#x3D;&quot;noUserRights&quot;&gt;
+    &lt;hint hintTypeI18nKey&#x3D;&quot;hints.type.hint&quot; hintTextI18nKey&#x3D;&quot;hints.text.grades-notSupported-hint&quot;&gt;&lt;/hint&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngIf&#x3D;&quot;studentLoaded &amp;&amp; !multipleDegrees &amp;&amp; studentDetails&quot;&gt;
+    &lt;ion-list&gt;
+      &lt;ion-item class&#x3D;&quot;studiengang&quot; no-lines tappable (click)&#x3D;&quot;showGrades(0)&quot;&gt;
+        &lt;div text-wrap *ngIf&#x3D;&quot;studentDetails.Studiengaenge &amp;&amp; studentDetails.Studiengaenge.dtxt &amp;&amp; studentDetails.Abschl&quot;&gt;
+          {{ studentDetails.Abschl }} ({{ studentDetails.Studiengaenge.dtxt }})
+        &lt;/div&gt;
+      &lt;/ion-item&gt;
+    &lt;/ion-list&gt;
+    &lt;div align&#x3D;&quot;center&quot; *ngIf&#x3D;&quot;loadingGrades&quot; padding&gt;
+      &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngIf&#x3D;&quot;studentLoaded &amp;&amp; multipleDegrees &amp;&amp; studentDetails&quot;&gt;
+    &lt;ion-list&gt;
+      &lt;ion-item *ngFor&#x3D;&quot;let degree of studentDetails; let i &#x3D; index&quot; class&#x3D;&quot;studiengang&quot; no-lines tappable (click)&#x3D;&quot;showGrades(i)&quot;&gt;
+        &lt;div text-wrap *ngIf&#x3D;&quot;degree.Studiengaenge &amp;&amp; degree.Studiengaenge.dtxt &amp;&amp; degree.Abschl&quot;&gt;
+          {{ degree.Abschl }} ({{ degree.Studiengaenge.dtxt }})
+        &lt;/div&gt;
+      &lt;/ion-item&gt;
+    &lt;/ion-list&gt;
+    &lt;div align&#x3D;&quot;center&quot; *ngIf&#x3D;&quot;loadingGrades&quot; padding&gt;
+      &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;gradesTable&quot; *ngIf&#x3D;&quot;gradesLoaded &amp;&amp; studentGrades&quot; align&#x3D;&quot;center&quot;&gt;
+    &lt;grades-table
+    [studentGrades]&#x3D;&quot;studentGrades&quot;
+    [studentDetails]&#x3D;&quot;studentDetails&quot;
+    [isDualDegree]&#x3D;&quot;isDualDegree&quot;
+    [i]&#x3D;&quot;i&quot;&gt;&lt;/grades-table&gt;
+  &lt;/div&gt;
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>      <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{ "page.grades.title" | translate }}</ion-title>  </ion-navbar></ion-header><ion-content>  <ion-refresher (ionRefresh)="refreshGrades($event)">    <ion-refresher-content></ion-refresher-content>  </ion-refresher>  <div *ngIf="studentLoaded && !noUserRights">    <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.grades-selectDegree-hint"></hint>  </div>  <div align="center" *ngIf="!studentLoaded && !noUserRights" padding>    <ion-spinner></ion-spinner>  </div>  <div *ngIf="noUserRights">    <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.grades-notSupported-hint"></hint>  </div>  <div *ngIf="studentLoaded && !multipleDegrees && studentDetails">    <ion-list>      <ion-item class="studiengang" no-lines tappable (click)="showGrades(0)">        <div text-wrap *ngIf="studentDetails.Studiengaenge && studentDetails.Studiengaenge.dtxt && studentDetails.Abschl">          {{ studentDetails.Abschl }} ({{ studentDetails.Studiengaenge.dtxt }})        </div>      </ion-item>    </ion-list>    <div align="center" *ngIf="loadingGrades" padding>      <ion-spinner></ion-spinner>    </div>  </div>  <div *ngIf="studentLoaded && multipleDegrees && studentDetails">    <ion-list>      <ion-item *ngFor="let degree of studentDetails; let i = index" class="studiengang" no-lines tappable (click)="showGrades(i)">        <div text-wrap *ngIf="degree.Studiengaenge && degree.Studiengaenge.dtxt && degree.Abschl">          {{ degree.Abschl }} ({{ degree.Studiengaenge.dtxt }})        </div>      </ion-item>    </ion-list>    <div align="center" *ngIf="loadingGrades" padding>      <ion-spinner></ion-spinner>    </div>  </div>  <div class="gradesTable" *ngIf="gradesLoaded && studentGrades" align="center">    <grades-table    [studentGrades]="studentGrades"    [studentDetails]="studentDetails"    [isDualDegree]="isDualDegree"    [i]="i"></grades-table>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'GradesPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'GradesPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

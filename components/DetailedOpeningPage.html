@@ -1,0 +1,1193 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DetailedOpeningPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/detailed-opening/detailed-opening.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-detailed-opening</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>detailed-opening.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#every_week_is_same">every_week_is_same</a>
+                            </li>
+                            <li>
+                                <a href="#intervals">intervals</a>
+                            </li>
+                            <li>
+                                <a href="#item">item</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#parsedOpening">parsedOpening</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addZero">addZero</a>
+                            </li>
+                            <li>
+                                <a href="#closedUntil">closedUntil</a>
+                            </li>
+                            <li>
+                                <a href="#getOpenTimes">getOpenTimes</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewDidLoad">ionViewDidLoad</a>
+                            </li>
+                            <li>
+                                <a href="#isToday">isToday</a>
+                            </li>
+                            <li>
+                                <a href="#openUntil">openUntil</a>
+                            </li>
+                            <li>
+                                <a href="#parseDate">parseDate</a>
+                            </li>
+                            <li>
+                                <a href="#shortenLink">shortenLink</a>
+                            </li>
+                            <li>
+                                <a href="#weekday">weekday</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, navParams: NavParams, translate: TranslateService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:15</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addZero"></a>
+                        <span class="name">
+                            <b>
+                            addZero
+                            </b>
+                            <a href="#addZero"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>addZero(i)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:83</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="closedUntil"></a>
+                        <span class="name">
+                            <b>
+                            closedUntil
+                            </b>
+                            <a href="#closedUntil"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>closedUntil()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getOpenTimes"></a>
+                        <span class="name">
+                            <b>
+                            getOpenTimes
+                            </b>
+                            <a href="#getOpenTimes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getOpenTimes()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:112</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewDidLoad"></a>
+                        <span class="name">
+                            <b>
+                            ionViewDidLoad
+                            </b>
+                            <a href="#ionViewDidLoad"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ionViewDidLoad()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isToday"></a>
+                        <span class="name">
+                            <b>
+                            isToday
+                            </b>
+                            <a href="#isToday"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>isToday(td)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:78</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>td</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openUntil"></a>
+                        <span class="name">
+                            <b>
+                            openUntil
+                            </b>
+                            <a href="#openUntil"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openUntil()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="parseDate"></a>
+                        <span class="name">
+                            <b>
+                            parseDate
+                            </b>
+                            <a href="#parseDate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>parseDate(from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>, to: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:124</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>from</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>to</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shortenLink"></a>
+                        <span class="name">
+                            <b>
+                            shortenLink
+                            </b>
+                            <a href="#shortenLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>shortenLink(link: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>link</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="weekday"></a>
+                        <span class="name">
+                            <b>
+                            weekday
+                            </b>
+                            <a href="#weekday"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>weekday(i)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:90</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="every_week_is_same"></a>
+                        <span class="name">
+                            <b>
+                            every_week_is_same</b>
+                            <a href="#every_week_is_same"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="intervals"></a>
+                        <span class="name">
+                            <b>
+                            intervals</b>
+                            <a href="#intervals"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="item"></a>
+                        <span class="name">
+                            <b>
+                            item</b>
+                            <a href="#item"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams</b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="parsedOpening"></a>
+                        <span class="name">
+                            <b>
+                            parsedOpening</b>
+                            <a href="#parsedOpening"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/pages/detailed-opening/detailed-opening.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { IonicPage, NavController, NavParams } from &#x27;ionic-angular&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-detailed-opening&#x27;,
+  templateUrl: &#x27;detailed-opening.html&#x27;,
+})
+export class DetailedOpeningPage {
+
+  item;
+  parsedOpening;
+  intervals &#x3D; [];
+  every_week_is_same;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private translate: TranslateService) {
+    this.item &#x3D; this.navParams.data.item;
+    this.parsedOpening &#x3D; this.navParams.data.parsed;
+  }
+
+  ionViewDidLoad() {
+    this.getOpenTimes();
+  }
+
+  shortenLink(link:string) {
+    if (link.length &gt; 30) {
+      return link.substr(0, 30) + &quot;...&quot;
+    } else { return link }
+  }
+
+  openUntil() {
+    var from &#x3D; new Date();
+    var to &#x3D; new Date();
+    to.setDate(to.getDate() + 6);
+    to.setHours(23,59,59,999);
+    let willClose: Date &#x3D; this.parsedOpening.getNextChange(from, to);
+
+    if (willClose) {
+      if (this.isToday(willClose)) {
+        return this.translate.instant(&quot;page.openingHours.closes&quot;) + this.addZero(willClose.getHours()) + &quot;:&quot; + this.addZero(willClose.getMinutes()) + this.translate.instant(&quot;page.openingHours.time&quot;);
+      } else {
+        return this.translate.instant(&quot;page.openingHours.closes&quot;) + this.weekday(willClose.getDay()) + &quot; &quot; + this.addZero(willClose.getHours()) + &quot;:&quot; + this.addZero(willClose.getMinutes()) + this.translate.instant(&quot;page.openingHours.time&quot;);
+      }
+    } else {
+      return &quot;&quot;;
+    }
+  }
+
+  closedUntil() {
+    var from &#x3D; new Date();
+    var to &#x3D; new Date();
+    to.setDate(to.getDate() + 6);
+    to.setHours(23,59,59,999);
+    let willChange: Date &#x3D; this.parsedOpening.getNextChange(from, to);
+
+    if (willChange) {
+      if (this.isToday(willChange)) {
+        return this.translate.instant(&quot;page.openingHours.opens&quot;) + this.addZero(willChange.getHours()) + &quot;:&quot; + this.addZero(willChange.getMinutes()) + this.translate.instant(&quot;page.openingHours.time&quot;);
+      } else {
+        return this.translate.instant(&quot;page.openingHours.opens&quot;) + this.weekday(willChange.getDay()) + &quot; &quot; + this.addZero(willChange.getHours()) + &quot;:&quot; + this.addZero(willChange.getMinutes()) + this.translate.instant(&quot;page.openingHours.time&quot;);
+      }
+    } else {
+      if (this.parsedOpening.getComment() !&#x3D; null) {
+        if (this.translate.currentLang &#x3D;&#x3D; &quot;en&quot; &amp;&amp; this.parsedOpening.getComment() &#x3D;&#x3D; &quot;nach Vereinbarung&quot;) {
+          return &quot;by appointment only&quot;;
+        } else if (this.parsedOpening.getComment() &#x3D;&#x3D; &quot;nach Vereinbarung&quot;) {
+          return this.parsedOpening.getComment();
+        } else {
+          return &quot;&quot;;
+        }
+      } else {
+        return &quot;&quot;;
+      }
+    }
+  }
+
+   isToday(td) {
+    var d &#x3D; new Date();
+    return td.getDate() &#x3D;&#x3D; d.getDate() &amp;&amp; td.getMonth() &#x3D;&#x3D; d.getMonth() &amp;&amp; td.getFullYear() &#x3D;&#x3D; d.getFullYear();
+  }
+
+  addZero(i) {
+    if (i &lt; 10) {
+      i &#x3D; &quot;0&quot;+i;
+    }
+    return i;
+  }
+
+  weekday(i) {
+    let weekday &#x3D; [];
+    if (this.translate.currentLang &#x3D;&#x3D; &quot;de&quot;) {
+      weekday[0] &#x3D; &quot;So.&quot;;
+      weekday[1] &#x3D; &quot;Mo.&quot;;
+      weekday[2] &#x3D; &quot;Di.&quot;;
+      weekday[3] &#x3D; &quot;Mi.&quot;;
+      weekday[4] &#x3D; &quot;Do.&quot;;
+      weekday[5] &#x3D; &quot;Fr.&quot;;
+      weekday[6] &#x3D; &quot;Sa.&quot;;
+    } else {
+      weekday[0] &#x3D; &quot;Su.&quot;;
+      weekday[1] &#x3D; &quot;Mo.&quot;;
+      weekday[2] &#x3D; &quot;Tu.&quot;;
+      weekday[3] &#x3D; &quot;We.&quot;;
+      weekday[4] &#x3D; &quot;Th.&quot;;
+      weekday[5] &#x3D; &quot;Fr.&quot;;
+      weekday[6] &#x3D; &quot;Sa.&quot;;
+    }
+    return weekday[i];
+  }
+
+  getOpenTimes() {
+    var from &#x3D; new Date();
+    var to &#x3D; new Date();
+    from.setHours(0,0,0,0);
+    to.setDate(to.getDate() + 6);
+    to.setHours(23,59,59,999);
+
+    this.intervals &#x3D; this.parsedOpening.getOpenIntervals(from, to);
+    
+    this.every_week_is_same &#x3D; this.parsedOpening.isWeekStable();
+  }
+  
+  parseDate(from:Date, to:Date) {
+    return this.addZero(from.getHours()) + &quot;:&quot; + this.addZero(from.getMinutes()) + this.translate.instant(&quot;page.openingHours.time&quot;) + &quot; - &quot; + this.addZero(to.getHours()) + &quot;:&quot; + this.addZero(to.getMinutes()) + this.translate.instant(&quot;page.openingHours.time&quot;)
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+      &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{ &quot;page.openingHours.title&quot; | translate }}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content padding&gt;
+  &lt;h5 padding-left padding-top&gt;{{ item.name }}&lt;/h5&gt;
+  &lt;ion-list class&#x3D;&quot;openingDetails&quot;&gt;
+    &lt;ion-item&gt;
+      Status
+      &lt;span item-end *ngIf&#x3D;&quot;parsedOpening.getState()&quot; style&#x3D;&quot;color: green&quot;&gt;{{ &quot;page.openingHours.open&quot; | translate }}&lt;span *ngIf&#x3D;&quot;openUntil(i) !&#x3D; &#x27;&#x27;&quot;&gt;,&lt;/span&gt; {{ openUntil() }}&lt;/span&gt;
+      &lt;span item-end *ngIf&#x3D;&quot;!parsedOpening.getState()&quot; style&#x3D;&quot;color: red&quot;&gt;{{ &quot;page.openingHours.closed&quot; | translate }}&lt;span *ngIf&#x3D;&quot;closedUntil(i) !&#x3D; &#x27;&#x27;&quot;&gt;,&lt;/span&gt; {{ closedUntil() }}&lt;/span&gt;
+    &lt;/ion-item&gt;
+    &lt;ion-item *ngIf&#x3D;&quot;item.link&quot;&gt;Website &lt;a item-end href&#x3D;&quot;{{ item.link }}&quot; target&#x3D;&quot;_blank&quot;&gt;{{ shortenLink(item.link) }}&lt;/a&gt;&lt;/ion-item&gt;
+    &lt;ion-item *ngIf&#x3D;&quot;item.mail&quot;&gt;Mail &lt;a item-end href &#x3D;&quot;mailto:{{ item.mail }}&quot;&gt;{{ item.mail }}&lt;/a&gt;&lt;/ion-item&gt;
+    &lt;ion-item *ngIf&#x3D;&quot;item.telephone&quot;&gt;Tel. &lt;a item-end href &#x3D;&quot;tel:{{ item.telephone }}&quot;&gt;{{ item.telephone }}&lt;/a&gt;&lt;/ion-item&gt;
+    &lt;ion-item *ngIf&#x3D;&quot;parsedOpening.getComment() &amp;&amp; parsedOpening.getComment() !&#x3D; &#x27;nach Vereinbarung&#x27;&quot;&gt;{{ &quot;page.openingHours.comment&quot; | translate }} &lt;span item-end&gt;{{ parsedOpening.getComment() }}&lt;/span&gt;&lt;/ion-item&gt;
+  &lt;/ion-list&gt;
+  &lt;h5 *ngIf&#x3D;&quot;intervals.length &gt; 0&quot; padding-left&gt;{{ &quot;page.openingHours.title&quot; | translate }}&lt;/h5&gt;
+  &lt;ion-list class&#x3D;&quot;openingDetails&quot; *ngIf&#x3D;&quot;intervals.length &gt; 0&quot;&gt;
+    &lt;ion-item *ngFor&#x3D;&quot;let timespot of intervals&quot;&gt;
+      &lt;b&gt;{{ weekday(timespot[0].getDay()) }}, {{ timespot[0].toLocaleDateString(translate.currentLang) }}&lt;/b&gt;&lt;span item-end&gt;{{ parseDate(timespot[0], timespot[1]) }}&lt;/span&gt;
+    &lt;/ion-item&gt;
+  &lt;/ion-list&gt;
+  &lt;div *ngIf&#x3D;&quot;intervals.length &gt; 0 &amp;&amp; !every_week_is_same&quot;&gt;
+    &lt;hint hintTypeI18nKey&#x3D;&quot;hints.type.hint&quot; hintTextI18nKey&#x3D;&quot;hints.text.openings-planCanChange-hint&quot;&gt;&lt;/hint&gt;
+  &lt;/div&gt;
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>      <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{ "page.openingHours.title" | translate }}</ion-title>  </ion-navbar></ion-header><ion-content padding>  <h5 padding-left padding-top>{{ item.name }}</h5>  <ion-list class="openingDetails">    <ion-item>      Status      <span item-end *ngIf="parsedOpening.getState()" style="color: green">{{ "page.openingHours.open" | translate }}<span *ngIf="openUntil(i) != \'\'">,</span> {{ openUntil() }}</span>      <span item-end *ngIf="!parsedOpening.getState()" style="color: red">{{ "page.openingHours.closed" | translate }}<span *ngIf="closedUntil(i) != \'\'">,</span> {{ closedUntil() }}</span>    </ion-item>    <ion-item *ngIf="item.link">Website <a item-end href="{{ item.link }}" target="_blank">{{ shortenLink(item.link) }}</a></ion-item>    <ion-item *ngIf="item.mail">Mail <a item-end href ="mailto:{{ item.mail }}">{{ item.mail }}</a></ion-item>    <ion-item *ngIf="item.telephone">Tel. <a item-end href ="tel:{{ item.telephone }}">{{ item.telephone }}</a></ion-item>    <ion-item *ngIf="parsedOpening.getComment() && parsedOpening.getComment() != \'nach Vereinbarung\'">{{ "page.openingHours.comment" | translate }} <span item-end>{{ parsedOpening.getComment() }}</span></ion-item>  </ion-list>  <h5 *ngIf="intervals.length > 0" padding-left>{{ "page.openingHours.title" | translate }}</h5>  <ion-list class="openingDetails" *ngIf="intervals.length > 0">    <ion-item *ngFor="let timespot of intervals">      <b>{{ weekday(timespot[0].getDay()) }}, {{ timespot[0].toLocaleDateString(translate.currentLang) }}</b><span item-end>{{ parseDate(timespot[0], timespot[1]) }}</span>    </ion-item>  </ion-list>  <div *ngIf="intervals.length > 0 && !every_week_is_same">    <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.openings-planCanChange-hint"></hint>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'DetailedOpeningPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DetailedOpeningPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

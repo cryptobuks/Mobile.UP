@@ -1,0 +1,1707 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TimetablePage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/timetable/timetable.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-timetable</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>timetable.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calendarOptions">calendarOptions</a>
+                            </li>
+                            <li>
+                                <a href="#courseToHex">courseToHex</a>
+                            </li>
+                            <li>
+                                <a href="#currentTitle">currentTitle</a>
+                            </li>
+                            <li>
+                                <a href="#eventSource">eventSource</a>
+                            </li>
+                            <li>
+                                <a href="#hexIndex">hexIndex</a>
+                            </li>
+                            <li>
+                                <a href="#hexValues">hexValues</a>
+                            </li>
+                            <li>
+                                <a href="#isLoading">isLoading</a>
+                            </li>
+                            <li>
+                                <a href="#isMobile">isMobile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                <a href="#noUserRights">noUserRights</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeCalendarMode">changeCalendarMode</a>
+                            </li>
+                            <li>
+                                <a href="#courseIdToHexColor">courseIdToHexColor</a>
+                            </li>
+                            <li>
+                                <a href="#eventSelected">eventSelected</a>
+                            </li>
+                            <li>
+                                <a href="#getColor">getColor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ionViewWillEnter">ionViewWillEnter</a>
+                            </li>
+                            <li>
+                                <a href="#setupCalendarOptions">setupCalendarOptions</a>
+                            </li>
+                            <li>
+                                <a href="#swipeNext">swipeNext</a>
+                            </li>
+                            <li>
+                                <a href="#swipePrevious">swipePrevious</a>
+                            </li>
+                            <li>
+                                <a href="#timeSelected">timeSelected</a>
+                            </li>
+                            <li>
+                                <a href="#titleChanged">titleChanged</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, modalCtrl: ModalController, sanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>, translate: TranslateService, platform: Platform, sessionProvider: <a href="../injectables/SessionProvider.html">SessionProvider</a>, connection: <a href="../injectables/ConnectionProvider.html">ConnectionProvider</a>, puls: <a href="../injectables/PulsProvider.html">PulsProvider</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/pages/timetable/timetable.ts:51</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sanitizer</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionProvider</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SessionProvider.html" target="_self" >SessionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>connection</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ConnectionProvider.html" target="_self" >ConnectionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>puls</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/PulsProvider.html" target="_self" >PulsProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeCalendarMode"></a>
+                        <span class="name">
+                            <b>
+                            changeCalendarMode
+                            </b>
+                            <a href="#changeCalendarMode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>changeCalendarMode(mode)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="154" class="link-to-prism">src/pages/timetable/timetable.ts:154</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>simply changes the calendarMode</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>mode</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="courseIdToHexColor"></a>
+                        <span class="name">
+                            <b>
+                            courseIdToHexColor
+                            </b>
+                            <a href="#courseIdToHexColor"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>courseIdToHexColor(d)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="223" class="link-to-prism">src/pages/timetable/timetable.ts:223</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>d</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <p>decimal number</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>3 byte hex color string</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eventSelected"></a>
+                        <span class="name">
+                            <b>
+                            eventSelected
+                            </b>
+                            <a href="#eventSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>eventSelected(event: <a href="../interfaces/IEventObject.html">IEventObject</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">src/pages/timetable/timetable.ts:166</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>triggered when event is selected in any other view than monthView. Then
+a modal with information about the event is shown.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IEventObject.html" target="_self" >IEventObject</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getColor"></a>
+                        <span class="name">
+                            <b>
+                            getColor
+                            </b>
+                            <a href="#getColor"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getColor(event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="212" class="link-to-prism">src/pages/timetable/timetable.ts:212</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewWillEnter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            ionViewWillEnter
+                            </b>
+                            <a href="#ionViewWillEnter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ionViewWillEnter()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/pages/timetable/timetable.ts:64</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setupCalendarOptions"></a>
+                        <span class="name">
+                            <b>
+                            setupCalendarOptions
+                            </b>
+                            <a href="#setupCalendarOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setupCalendarOptions()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/pages/timetable/timetable.ts:107</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="swipeNext"></a>
+                        <span class="name">
+                            <b>
+                            swipeNext
+                            </b>
+                            <a href="#swipeNext"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>swipeNext()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="207" class="link-to-prism">src/pages/timetable/timetable.ts:207</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="swipePrevious"></a>
+                        <span class="name">
+                            <b>
+                            swipePrevious
+                            </b>
+                            <a href="#swipePrevious"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>swipePrevious()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="202" class="link-to-prism">src/pages/timetable/timetable.ts:202</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="timeSelected"></a>
+                        <span class="name">
+                            <b>
+                            timeSelected
+                            </b>
+                            <a href="#timeSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>timeSelected(time: ITimeSelected)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="181" class="link-to-prism">src/pages/timetable/timetable.ts:181</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>triggred when a time is clicked. Here a modal is shown when a time is
+clicked in monthView and there are events at this timeslot.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>time</td>
+                                                        <td>
+                                                                    <code>ITimeSelected</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="titleChanged"></a>
+                        <span class="name">
+                            <b>
+                            titleChanged
+                            </b>
+                            <a href="#titleChanged"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>titleChanged(title)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="198" class="link-to-prism">src/pages/timetable/timetable.ts:198</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>simply changes the current views title when month/week/day is changed</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>title</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="calendarOptions"></a>
+                        <span class="name">
+                            <b>
+                            calendarOptions</b>
+                            <a href="#calendarOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    calendarMode: &quot;day&quot;,
+    currentDate: new Date(),
+    locale: &quot;de&quot;,
+    startingDayWeek: 1,
+    startingDayMonth: 1,
+    startHour: &quot;8&quot;,
+    endHour: &quot;20&quot;,
+    step: &quot;40&quot;,
+    timeInterval: &quot;120&quot;,
+    showEventDetail: false,
+    autoSelect: false,
+    dateFormatter: undefined
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/pages/timetable/timetable.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="courseToHex"></a>
+                        <span class="name">
+                            <b>
+                            courseToHex</b>
+                            <a href="#courseToHex"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[][]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/pages/timetable/timetable.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentTitle"></a>
+                        <span class="name">
+                            <b>
+                            currentTitle</b>
+                            <a href="#currentTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/pages/timetable/timetable.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eventSource"></a>
+                        <span class="name">
+                            <b>
+                            eventSource</b>
+                            <a href="#eventSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IEventObject.html" target="_self" >IEventObject[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/pages/timetable/timetable.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hexIndex"></a>
+                        <span class="name">
+                            <b>
+                            hexIndex</b>
+                            <a href="#hexIndex"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/timetable/timetable.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hexValues"></a>
+                        <span class="name">
+                            <b>
+                            hexValues</b>
+                            <a href="#hexValues"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;#FFCC80&#x27;, &#x27;#9FA8DA&#x27;, &#x27;#A5D6A7&#x27;, &#x27;#B0BEC5&#x27;, &#x27;#ef9a9a&#x27;, &#x27;#90CAF9&#x27;, &#x27;#81D4FA&#x27;, &#x27;#80DEEA&#x27;, &#x27;#80CBC4&#x27;, &#x27;#C5E1A5&#x27;, &#x27;#B39DDB&#x27;, &#x27;#E6EE9C&#x27;, &#x27;#FFE082&#x27;, &#x27;#FFAB91&#x27;, &#x27;#BCAAA4&#x27;, &#x27;#EEEEEE&#x27;, &#x27;#F48FB1&#x27;, &#x27;#CE93D8&#x27;, &#x27;#FFF59D&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/pages/timetable/timetable.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoading"></a>
+                        <span class="name">
+                            <b>
+                            isLoading</b>
+                            <a href="#isLoading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/pages/timetable/timetable.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isMobile"></a>
+                        <span class="name">
+                            <b>
+                            isMobile</b>
+                            <a href="#isMobile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/pages/timetable/timetable.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/pages/timetable/timetable.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="noUserRights"></a>
+                        <span class="name">
+                            <b>
+                            noUserRights</b>
+                            <a href="#noUserRights"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/pages/timetable/timetable.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import {
+  IonicPage, ModalController,
+  NavController, NavParams, ViewController, Platform
+} from &#x27;ionic-angular&#x27;;
+import { IPulsAPIResponse_getStudentCourses} from &quot;../../library/interfaces_PULS&quot;;
+import { LoginPage } from &quot;../login/login&quot;;
+import { createEventSource, IEventObject } from &quot;./createEvents&quot;;
+import { ITimeSelected } from &quot;ionic2-calendar/calendar&quot;;
+import * as moment from &#x27;moment&#x27;;
+import { ConnectionProvider } from &quot;../../providers/connection/connection&quot;;
+import { PulsProvider } from &quot;../../providers/puls/puls&quot;;
+import { SessionProvider } from &#x27;../../providers/session/session&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { DomSanitizer } from &#x27;@angular/platform-browser&#x27;;
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-timetable&#x27;,
+  templateUrl: &#x27;timetable.html&#x27;,
+})
+export class TimetablePage {
+
+  hexValues &#x3D; [&#x27;#FFCC80&#x27;, &#x27;#9FA8DA&#x27;, &#x27;#A5D6A7&#x27;, &#x27;#B0BEC5&#x27;, &#x27;#ef9a9a&#x27;, &#x27;#90CAF9&#x27;, &#x27;#81D4FA&#x27;, &#x27;#80DEEA&#x27;, &#x27;#80CBC4&#x27;, &#x27;#C5E1A5&#x27;, &#x27;#B39DDB&#x27;, &#x27;#E6EE9C&#x27;, &#x27;#FFE082&#x27;, &#x27;#FFAB91&#x27;, &#x27;#BCAAA4&#x27;, &#x27;#EEEEEE&#x27;, &#x27;#F48FB1&#x27;, &#x27;#CE93D8&#x27;, &#x27;#FFF59D&#x27;];
+  courseToHex: string[][] &#x3D; [];
+  hexIndex &#x3D; 0;
+
+  eventSource:IEventObject[] &#x3D; [];
+  noUserRights &#x3D; false;
+  isLoading &#x3D; true;
+
+  isMobile &#x3D; true;
+
+  // title string that should be displayed for every mode, eg. &quot;24.12.2018&quot;
+  currentTitle &#x3D; &quot;&quot;;
+
+  // options for ionic2-calendar component
+  calendarOptions &#x3D; {
+    calendarMode: &quot;day&quot;,
+    currentDate: new Date(),
+    locale: &quot;de&quot;,
+    startingDayWeek: 1,
+    startingDayMonth: 1,
+    startHour: &quot;8&quot;,
+    endHour: &quot;20&quot;,
+    step: &quot;40&quot;,
+    timeInterval: &quot;120&quot;,
+    showEventDetail: false,
+    autoSelect: false,
+    dateFormatter: undefined
+  };
+
+  constructor(
+      public navCtrl: NavController,
+      private modalCtrl:ModalController,
+      private sanitizer: DomSanitizer,
+      private translate: TranslateService,
+      private platform: Platform,
+      private sessionProvider: SessionProvider,
+      private connection: ConnectionProvider,
+      private puls:PulsProvider) {
+  }
+
+  async ionViewWillEnter() {
+
+    if (this.platform.is(&quot;tablet&quot;) || this.platform.is(&quot;core&quot;)) {
+      this.isMobile &#x3D; false;
+    }
+
+    this.connection.checkOnline(true, true);
+    this.setupCalendarOptions();
+
+    let tmp &#x3D; await this.sessionProvider.getSession();
+    var session &#x3D; undefined;
+    if (tmp) {
+      if (typeof tmp !&#x3D;&#x3D; &#x27;object&#x27;) {
+        session &#x3D; JSON.parse(tmp);
+      } else { session &#x3D; tmp; }
+    }
+
+    if (session) {
+      this.isLoading &#x3D; true;
+      // there is a session
+      this.puls.getStudentCourses(session).subscribe(
+        (response:IPulsAPIResponse_getStudentCourses) &#x3D;&gt; {
+          if (response.message &amp;&amp; response.message &#x3D;&#x3D; &quot;no user rights&quot;) {
+            this.noUserRights &#x3D; true;
+            this.isLoading &#x3D; false;
+          } else {
+            this.noUserRights &#x3D; false;
+            this.isLoading &#x3D; false;
+            this.eventSource &#x3D; createEventSource(
+              response.studentCourses.student.actualCourses.course
+            );
+          }
+        }
+      );
+    } else {
+      // in case there is no session send the user to LoginPage
+      this.navCtrl.push(LoginPage).then(() &#x3D;&gt; console.log(&quot;pushed LoginPage&quot;));
+      this.isLoading &#x3D; false;
+    }
+  }
+
+  /* ~~~ ionic2-calendar specific methods ~~~ */
+
+  setupCalendarOptions() {
+    if (this.translate.currentLang &#x3D;&#x3D; &quot;de&quot;) {
+      this.calendarOptions.locale &#x3D; &quot;de&quot;;
+      let weekString &#x3D; this.translate.instant(&quot;page.timetable.week&quot;);
+      this.calendarOptions.dateFormatter &#x3D; {
+        formatWeekViewDayHeader: function(date:Date) {
+          return moment(date).format(&quot;dd. Do&quot;);
+        },
+        formatDayViewHourColumn: function(date:Date) {
+          return moment(date).format(&quot;HH:mm&quot;);
+        },
+        formatWeekViewHourColumn: function(date:Date) {
+          return moment(date).format(&quot;HH:mm&quot;);
+        },
+        formatWeekViewTitle: function(date:Date) {
+          return moment(date).format(&quot;MMMM YYYY&quot;) + &quot;, &quot; + weekString + &quot; &quot; + moment(date).format(&quot;w&quot;);
+      },
+        formatMonthViewTitle: function(date:Date) {
+          return moment(date).format(&quot;MMMM YYYY&quot;);
+        },
+        formatDayViewTitle: function(date:Date) {
+          return moment(date).format(&quot;ddd, Do MMMM YYYY&quot;);
+        }
+      }
+    } else {
+      this.calendarOptions.locale &#x3D; &quot;en&quot;;
+      this.calendarOptions.dateFormatter &#x3D; {
+        formatWeekViewDayHeader: function(date:Date) {
+          return moment(date).format(&quot;dd. Do&quot;);
+        },
+        formatDayViewHourColumn: function(date:Date) {
+          return moment(date).format(&quot;hh A&quot;);
+        },
+        formatWeekViewHourColumn: function(date:Date) {
+          return moment(date).format(&quot;hh A&quot;);
+        },
+        formatDayViewTitle: function(date:Date) {
+          return moment(date).format(&quot;ddd, MMMM Do YYYY&quot;);
+        }
+      }
+    }
+  }
+
+  /**
+   * simply changes the calendarMode
+   * @param mode
+   */
+  changeCalendarMode(mode) {
+    this.calendarOptions.calendarMode &#x3D; mode;
+    if (this.translate.currentLang &#x3D;&#x3D; &quot;de&quot;) {
+      this.calendarOptions.locale &#x3D; &quot;de&quot;;
+    } else { this.calendarOptions.locale &#x3D; &quot;en&quot;; }
+  }
+
+  /**
+   * triggered when event is selected in any other view than monthView. Then
+   * a modal with information about the event is shown.
+   * @param event
+   */
+  eventSelected(event:IEventObject) {
+    if(this.calendarOptions.calendarMode !&#x3D; &quot;month&quot;) {
+      let eventModal &#x3D; this.modalCtrl.create(
+        EventModal,
+        {events: [event], date: event.startTime}
+      );
+      eventModal.present();
+    }
+  }
+
+  /**
+   * triggred when a time is clicked. Here a modal is shown when a time is
+   * clicked in monthView and there are events at this timeslot.
+   * @param time
+   */
+  timeSelected(time:ITimeSelected) {
+    // if(this.calendarOptions.calendarMode &#x3D;&#x3D; &quot;month&quot; &amp;&amp; time.events.length &gt; 0) {
+    //   let eventModal &#x3D; this.modalCtrl.create(
+    //     EventModal, {events: time.events, date: time.selectedTime}
+    //   );
+    //   eventModal.present();
+    // }
+
+    if (this.calendarOptions.calendarMode &#x3D;&#x3D; &quot;month&quot; &amp;&amp; time.events.length &gt; 0) {
+      this.calendarOptions.calendarMode &#x3D; &quot;day&quot;;
+    }
+  }
+
+  /**
+   * simply changes the current views title when month/week/day is changed
+   * @param title
+   */
+  titleChanged(title){
+    this.currentTitle&#x3D; title;
+  }
+
+  swipePrevious() {
+    var mySwiper &#x3D; document.querySelector(&#x27;.swiper-container&#x27;)[&#x27;swiper&#x27;];
+    mySwiper.slidePrev();
+  }
+
+  swipeNext() {
+    var mySwiper &#x3D; document.querySelector(&#x27;.swiper-container&#x27;)[&#x27;swiper&#x27;];
+    mySwiper.slideNext();
+  }
+
+  getColor(event) {
+    let eventColor &#x3D; this.courseIdToHexColor(event.event.courseDetails.courseId);
+    return this.sanitizer.bypassSecurityTrustStyle(&quot;background-color: &quot; + eventColor + &quot;!important;&quot;);
+  }
+
+  /**
+   * @name courseIdToHexColor
+   * @description converts course id to hex string
+   * @param d {number} decimal number
+   * @returns {string} 3 byte hex color string
+   */
+  courseIdToHexColor(d) {
+    let padding &#x3D; 6;
+    let hex &#x3D; Number(d).toString(16);
+    while (hex.length &lt; padding) {
+      hex &#x3D; &quot;0&quot; + hex;
+    }
+
+    if (this.hexIndex &lt; this.hexValues.length) {
+      var i;
+      var found &#x3D; false;
+      for (i &#x3D; 0; i &lt; this.courseToHex.length; i++) {
+        if (this.courseToHex[i] &amp;&amp; this.courseToHex[i][0] &#x3D;&#x3D; hex) {
+          found &#x3D; true;
+          return this.courseToHex[i][1];
+        }
+      }
+
+      if (!found) {
+        this.courseToHex[this.hexIndex] &#x3D; [];
+        this.courseToHex[this.hexIndex][0] &#x3D; hex;
+        this.courseToHex[this.hexIndex][1] &#x3D; this.hexValues[this.hexIndex];
+        this.hexIndex &#x3D; this.hexIndex + 1;
+        return this.courseToHex[this.hexIndex-1][1];
+      }
+
+    } else {
+      return &#x60;#${hex}&#x60;;
+    }
+  }
+
+}
+
+
+/**
+ * Component for the modal to be shown when an event is selected
+ */
+@Component({
+  selector: &#x27;event&#x27;,
+  templateUrl: &#x27;eventModal.html&#x27;,
+})
+export class EventModal {
+
+  isArray &#x3D; Array.isArray;
+  moment &#x3D; moment;
+
+  events:IEventObject[] &#x3D; null;
+  date &#x3D; null;
+
+  constructor(private params: NavParams,
+              private view:ViewController) {
+    this.events &#x3D; this.params.get(&#x27;events&#x27;);
+    this.date &#x3D; this.params.get(&#x27;date&#x27;);
+  }
+
+  closeModal(){
+    this.view.dismiss();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+      &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{&quot;page.timetable.title&quot; | translate}}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content padding&gt;
+
+  &lt;div align&#x3D;&quot;center&quot; *ngIf&#x3D;&quot;isLoading &amp;&amp; !noUserRights&quot; padding&gt;
+    &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngIf&#x3D;&quot;noUserRights&quot;&gt;
+    &lt;hint hintTypeI18nKey&#x3D;&quot;hints.type.hint&quot; hintTextI18nKey&#x3D;&quot;hints.text.grades-notSupported-hint&quot;&gt;&lt;/hint&gt;
+  &lt;/div&gt;
+
+  &lt;span *ngIf&#x3D;&quot;!noUserRights &amp;&amp; !isLoading&quot;&gt;
+      &lt;div align&#x3D;&quot;center&quot;&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col&gt;
+            &lt;button [ngClass]&#x3D;&quot;calendarOptions.calendarMode &#x3D;&#x3D; &#x27;month&#x27; ? &#x27;activeCalendarButton&#x27; : &#x27;calendarButton&#x27;&quot; ion-button small (click)&#x3D;&quot;changeCalendarMode(&#x27;month&#x27;)&quot;&gt;
+              {{ &quot;page.timetable.month&quot; | translate }}
+            &lt;/button&gt;
+          &lt;button [ngClass]&#x3D;&quot;calendarOptions.calendarMode &#x3D;&#x3D; &#x27;week&#x27; ? &#x27;activeCalendarButton&#x27; : &#x27;calendarButton&#x27;&quot; ion-button small (click)&#x3D;&quot;changeCalendarMode(&#x27;week&#x27;)&quot;&gt;
+            {{ &quot;page.timetable.week&quot; | translate }}
+          &lt;/button&gt;
+            &lt;button [ngClass]&#x3D;&quot;calendarOptions.calendarMode &#x3D;&#x3D; &#x27;day&#x27; ? &#x27;activeCalendarButton&#x27; : &#x27;calendarButton&#x27;&quot; ion-button small (click)&#x3D;&quot;changeCalendarMode(&#x27;day&#x27;)&quot;&gt;
+              {{ &quot;page.timetable.day&quot; | translate }}
+            &lt;/button&gt;
+          &lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+      &lt;/div&gt;
+
+      &lt;div align&#x3D;&quot;center&quot;&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col&gt;
+            &lt;button ion-button clear icon-only (click)&#x3D;&quot;swipePrevious()&quot;&gt;&lt;ion-icon name&#x3D;&quot;arrow-dropleft&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+          &lt;/ion-col&gt;
+          &lt;ion-col col-8&gt;
+            &lt;h6 id&#x3D;&quot;title&quot;&gt;{{ currentTitle }}&lt;/h6&gt;
+          &lt;/ion-col&gt;
+          &lt;ion-col&gt;
+            &lt;button ion-button clear icon-only (click)&#x3D;&quot;swipeNext()&quot;&gt;&lt;ion-icon name&#x3D;&quot;arrow-dropright&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+          &lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+      &lt;/div&gt;
+
+      &lt;!-- custom template for event in weekview --&gt;
+      &lt;ng-template #templateWeekViewEvent let-displayEvent&#x3D;&quot;displayEvent&quot;&gt;
+        &lt;div class&#x3D;&quot;calendar-event-inner&quot; [style]&#x3D;&quot;getColor(displayEvent)&quot;&gt;
+          &lt;span *ngIf&#x3D;&quot;!isMobile&quot; class&#x3D;&quot;eventTitle&quot;&gt;{{ displayEvent.event.title }}&lt;/span&gt;
+          &lt;span *ngIf&#x3D;&quot;isMobile&quot; class&#x3D;&quot;eventTitle&quot;&gt;{{ displayEvent.event.title.charAt(0) }}&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+
+      &lt;!-- custom template for event in dayview --&gt;
+      &lt;ng-template #templateDayViewEvent let-displayEvent&#x3D;&quot;displayEvent&quot;&gt;
+        &lt;div class&#x3D;&quot;calendar-event-inner&quot; [style]&#x3D;&quot;getColor(displayEvent)&quot;&gt;
+          &lt;span class&#x3D;&quot;eventTitle&quot;&gt;{{displayEvent.event.title}}&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+
+      &lt;calendar class&#x3D;&quot;calendar&quot; [eventSource]&#x3D;&quot;eventSource&quot;
+        [calendarMode]&#x3D;&quot;calendarOptions.calendarMode&quot;
+        [currentDate]&#x3D;&quot;calendarOptions.currentDate&quot;
+        [locale]&#x3D;&quot;calendarOptions.locale&quot;
+        [startingDayWeek]&#x3D;&quot;calendarOptions.startingDayWeek&quot;
+        [startingDayMonth]&#x3D;&quot;calendarOptions.startingDayMonth&quot;
+        [startHour]&#x3D;&quot;calendarOptions.startHour&quot;
+        [endHour]&#x3D;&quot;calendarOptions.endHour&quot;
+        [step]&#x3D;&quot;calendarOptions.step&quot;
+        [timeInterval]&#x3D;&quot;calendarOptions.timeInterval&quot;
+        [lockSwipeToPrev]&#x3D;&quot;calendarOptions.lockSwipeToPrev&quot;
+        [dateFormatter]&#x3D;&quot;calendarOptions.dateFormatter&quot;
+        [showEventDetail]&#x3D;&quot;calendarOptions.showEventDetail&quot;
+        [autoSelect]&#x3D;&quot;calendarOptions.autoSelect&quot;
+        (onTimeSelected)&#x3D;&quot;timeSelected($event)&quot;
+        (onEventSelected)&#x3D;&quot;eventSelected($event)&quot;
+        (onTitleChanged)&#x3D;&quot;titleChanged($event)&quot;
+        [dayviewNormalEventTemplate]&#x3D;&quot;templateDayViewEvent&quot;
+        [weekviewNormalEventTemplate]&#x3D;&quot;templateWeekViewEvent&quot;&gt;
+      &lt;/calendar&gt;
+  &lt;/span&gt;
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>      <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{"page.timetable.title" | translate}}</ion-title>  </ion-navbar></ion-header><ion-content padding>  <div align="center" *ngIf="isLoading && !noUserRights" padding>    <ion-spinner></ion-spinner>  </div>  <div *ngIf="noUserRights">    <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.grades-notSupported-hint"></hint>  </div>  <span *ngIf="!noUserRights && !isLoading">      <div align="center">        <ion-row>          <ion-col>            <button [ngClass]="calendarOptions.calendarMode == \'month\' ? \'activeCalendarButton\' : \'calendarButton\'" ion-button small (click)="changeCalendarMode(\'month\')">              {{ "page.timetable.month" | translate }}            </button>          <button [ngClass]="calendarOptions.calendarMode == \'week\' ? \'activeCalendarButton\' : \'calendarButton\'" ion-button small (click)="changeCalendarMode(\'week\')">            {{ "page.timetable.week" | translate }}          </button>            <button [ngClass]="calendarOptions.calendarMode == \'day\' ? \'activeCalendarButton\' : \'calendarButton\'" ion-button small (click)="changeCalendarMode(\'day\')">              {{ "page.timetable.day" | translate }}            </button>          </ion-col>        </ion-row>      </div>      <div align="center">        <ion-row>          <ion-col>            <button ion-button clear icon-only (click)="swipePrevious()"><ion-icon name="arrow-dropleft"></ion-icon></button>          </ion-col>          <ion-col col-8>            <h6 id="title">{{ currentTitle }}</h6>          </ion-col>          <ion-col>            <button ion-button clear icon-only (click)="swipeNext()"><ion-icon name="arrow-dropright"></ion-icon></button>          </ion-col>        </ion-row>      </div>      <!-- custom template for event in weekview -->      <ng-template #templateWeekViewEvent let-displayEvent="displayEvent">        <div class="calendar-event-inner" [style]="getColor(displayEvent)">          <span *ngIf="!isMobile" class="eventTitle">{{ displayEvent.event.title }}</span>          <span *ngIf="isMobile" class="eventTitle">{{ displayEvent.event.title.charAt(0) }}</span>        </div>      </ng-template>      <!-- custom template for event in dayview -->      <ng-template #templateDayViewEvent let-displayEvent="displayEvent">        <div class="calendar-event-inner" [style]="getColor(displayEvent)">          <span class="eventTitle">{{displayEvent.event.title}}</span>        </div>      </ng-template>      <calendar class="calendar" [eventSource]="eventSource"        [calendarMode]="calendarOptions.calendarMode"        [currentDate]="calendarOptions.currentDate"        [locale]="calendarOptions.locale"        [startingDayWeek]="calendarOptions.startingDayWeek"        [startingDayMonth]="calendarOptions.startingDayMonth"        [startHour]="calendarOptions.startHour"        [endHour]="calendarOptions.endHour"        [step]="calendarOptions.step"        [timeInterval]="calendarOptions.timeInterval"        [lockSwipeToPrev]="calendarOptions.lockSwipeToPrev"        [dateFormatter]="calendarOptions.dateFormatter"        [showEventDetail]="calendarOptions.showEventDetail"        [autoSelect]="calendarOptions.autoSelect"        (onTimeSelected)="timeSelected($event)"        (onEventSelected)="eventSelected($event)"        (onTitleChanged)="titleChanged($event)"        [dayviewNormalEventTemplate]="templateDayViewEvent"        [weekviewNormalEventTemplate]="templateWeekViewEvent">      </calendar>  </span></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'TimetablePage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TimetablePage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

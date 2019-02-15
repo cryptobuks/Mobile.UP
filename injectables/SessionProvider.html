@@ -1,0 +1,769 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>SessionProvider</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/providers/session/session.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#http">http</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getSession">getSession</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getUserInfo">getUserInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeSession">removeSession</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeUserInfo">removeUserInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setSession">setSession</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setUserInfo">setUserInfo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, secureStorage: SecureStorage, storage: Storage, platform: Platform)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/providers/session/session.ts:9</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>secureStorage</td>
+                                                  
+                                                        <td>
+                                                                    <code>SecureStorage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getSession"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            getSession
+                            </b>
+                            <a href="#getSession"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getSession()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/providers/session/session.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getUserInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            getUserInfo
+                            </b>
+                            <a href="#getUserInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getUserInfo()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/providers/session/session.ts:84</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeSession"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            removeSession
+                            </b>
+                            <a href="#removeSession"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeSession()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/providers/session/session.ts:57</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeUserInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            removeUserInfo
+                            </b>
+                            <a href="#removeUserInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeUserInfo()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/providers/session/session.ts:123</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setSession"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            setSession
+                            </b>
+                            <a href="#setSession"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setSession(session)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/providers/session/session.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>session</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setUserInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            setUserInfo
+                            </b>
+                            <a href="#setUserInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setUserInfo(userInfo)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/providers/session/session.ts:103</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userInfo</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="http"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            http</b>
+                            <a href="#http"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/providers/session/session.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { SecureStorage, SecureStorageObject } from &#x27;@ionic-native/secure-storage/ngx&#x27;;
+import { Storage } from &#x27;@ionic/storage&#x27;;
+import { Platform } from &#x27;ionic-angular&#x27;;
+import { utils } from &#x27;../../library/util&#x27;;
+
+@Injectable()
+export class SessionProvider {
+
+  constructor(public http: HttpClient, private secureStorage: SecureStorage, private storage: Storage, private platform: Platform) {
+  }
+
+  public async getSession():Promise&lt;any&gt; {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      return this.secureStorage.create(&quot;secureSession&quot;).then(async (storage:SecureStorageObject) &#x3D;&gt; {
+        let keys &#x3D; await storage.keys();
+        if (utils.isInArray(keys, &quot;session&quot;)) {
+          return await storage.get(&quot;session&quot;);
+        } else {
+          return await this.storage.get(&quot;session&quot;);
+        }
+      }, async error &#x3D;&gt; {
+        console.log(&quot;Error accessing secure storage: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        console.log(&quot;Using normal storage...&quot;);
+        return await this.storage.get(&quot;session&quot;);
+      });
+    } else {
+      return await this.storage.get(&quot;session&quot;);
+    }
+  }
+
+  public setSession(session) {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      this.secureStorage.create(&quot;secureSession&quot;).then((storage:SecureStorageObject) &#x3D;&gt; {
+        storage.set(&quot;session&quot;, JSON.stringify(session)).then(() &#x3D;&gt; console.log(&quot;session successfully set&quot;), (error) &#x3D;&gt; {
+          console.log(&quot;Error setting session: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        });
+      }, error &#x3D;&gt; {
+        console.log(&quot;Error accessing secure storage: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        console.log(&quot;Using normal storage...&quot;);
+        this.storage.set(&quot;session&quot;, JSON.stringify(session)).then(() &#x3D;&gt; {
+          console.log(&quot;session successfully set&quot;);
+        }, error &#x3D;&gt; {
+          console.log(&quot;Error setting session: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        });
+      });
+    } else {
+      this.storage.set(&quot;session&quot;, JSON.stringify(session)).then(() &#x3D;&gt; {
+        console.log(&quot;session successfully set&quot;);
+      }, error &#x3D;&gt; {
+        console.log(&quot;Error setting session: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+      });
+    }
+  }
+
+  public removeSession() {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      this.secureStorage.create(&quot;secureSession&quot;).then(async (storage:SecureStorageObject) &#x3D;&gt; {
+        let keys &#x3D; await storage.keys();
+        if (utils.isInArray(keys, &quot;session&quot;)) {
+          storage.remove(&quot;session&quot;).then(() &#x3D;&gt; console.log(&quot;session removed&quot;), error &#x3D;&gt; {
+            console.log(&quot;Error removing session: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+          });
+        } else {
+          this.storage.remove(&quot;session&quot;).then(() &#x3D;&gt; console.log(&quot;session removed&quot;), error &#x3D;&gt; {
+            console.log(&quot;Error removing session: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+          });
+        }
+      }, error &#x3D;&gt; {
+        console.log(&quot;Error accessing secure storage: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        console.log(&quot;Using normal storage...&quot;);
+        this.storage.remove(&quot;session&quot;).then(() &#x3D;&gt; console.log(&quot;session removed&quot;), error &#x3D;&gt; {
+          console.log(&quot;Error removing session: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        });
+      });
+    } else {
+      this.storage.remove(&quot;session&quot;).then(() &#x3D;&gt; console.log(&quot;session removed&quot;), error &#x3D;&gt; {
+        console.log(&quot;Error removing session: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+      });
+    }
+  }
+
+  public async getUserInfo():Promise&lt;any&gt; {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      return this.secureStorage.create(&quot;secureSession&quot;).then(async (storage:SecureStorageObject) &#x3D;&gt; {
+        let keys &#x3D; await storage.keys();
+        if (utils.isInArray(keys, &quot;session&quot;)) {
+          return await storage.get(&quot;userInformation&quot;);
+        } else {
+          return await this.storage.get(&quot;userInformation&quot;);
+        }
+      }, async error &#x3D;&gt; {
+        console.log(&quot;Error accessing secure storage: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        console.log(&quot;Using normal storage...&quot;);
+        return await this.storage.get(&quot;userInformation&quot;);
+      });
+    } else {
+      return await this.storage.get(&quot;userInformation&quot;);
+    }
+  }
+
+  public setUserInfo(userInfo) {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      this.secureStorage.create(&quot;secureSession&quot;).then((storage:SecureStorageObject) &#x3D;&gt; {
+        storage.set(&quot;userInformation&quot;, JSON.stringify(userInfo)).then(() &#x3D;&gt; console.log(&quot;user info successfully set&quot;), error &#x3D;&gt; {
+          console.log(&quot;Error setting user info: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        });
+      }, error &#x3D;&gt; {
+        console.log(&quot;Error accessing secure storage: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        console.log(&quot;Using normal storage...&quot;);
+        this.storage.set(&quot;userInformation&quot;, JSON.stringify(userInfo)).then(() &#x3D;&gt; console.log(&quot;user info successfully set&quot;), error &#x3D;&gt; {
+          console.log(&quot;Error setting user info: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        });
+      });
+    } else {
+      this.storage.set(&quot;userInformation&quot;, JSON.stringify(userInfo)).then(() &#x3D;&gt; console.log(&quot;user info successfully set&quot;), error &#x3D;&gt; {
+        console.log(&quot;Error setting user info: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+      });
+    }
+  }
+
+  public removeUserInfo() {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      this.secureStorage.create(&quot;secureSession&quot;).then(async (storage:SecureStorageObject) &#x3D;&gt; {
+        let keys &#x3D; await storage.keys();
+        if (utils.isInArray(keys, &quot;session&quot;)) {
+          storage.remove(&quot;userInformation&quot;).then(() &#x3D;&gt; console.log(&quot;user info removed&quot;), error &#x3D;&gt; {
+            console.log(&quot;Error removing user info: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+          });
+        } else {
+          this.storage.remove(&quot;userInformation&quot;).then(() &#x3D;&gt; console.log(&quot;user info removed&quot;), error &#x3D;&gt; {
+            console.log(&quot;Error removing user info: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+          });
+        }
+      }, error &#x3D;&gt; {
+        console.log(&quot;Error accessing secure storage: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        console.log(&quot;Using normal storage...&quot;);
+        this.storage.remove(&quot;userInformation&quot;).then(() &#x3D;&gt; console.log(&quot;user info removed&quot;), error &#x3D;&gt; {
+          console.log(&quot;Error removing user info: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        });
+      });
+    } else {
+      this.storage.remove(&quot;userInformation&quot;).then(() &#x3D;&gt; console.log(&quot;user info removed&quot;), error &#x3D;&gt; {
+        console.log(&quot;Error removing user info: &quot; + JSON.stringify(error, Object.getOwnPropertyNames(error)));
+      });
+    }
+  }
+
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SessionProvider.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1655 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>EmergencyPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/emergency/emergency.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-emergency</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>emergency.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cordova">cordova</a>
+                            </li>
+                            <li>
+                                <a href="#defaultList">defaultList</a>
+                            </li>
+                            <li>
+                                <a href="#displayedList">displayedList</a>
+                            </li>
+                            <li>
+                                <a href="#isLoaded">isLoaded</a>
+                            </li>
+                            <li>
+                                <a href="#jsonPath">jsonPath</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#callContact">callContact</a>
+                            </li>
+                            <li>
+                                <a href="#callMap">callMap</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#contains">contains</a>
+                            </li>
+                            <li>
+                                <a href="#expand">expand</a>
+                            </li>
+                            <li>
+                                <a href="#exportContact">exportContact</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filterItems">filterItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#initializeList">initializeList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#loadEmergencyCalls">loadEmergencyCalls</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onScrollListener">onScrollListener</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, navParams: NavParams, keyboard: Keyboard, chRef: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, platform: Platform, storage: Storage, cache: CacheService, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, mapProvider: <a href="../injectables/MapsProvider.html">MapsProvider</a>, connection: <a href="../injectables/ConnectionProvider.html">ConnectionProvider</a>, contacts: <a href="../interfaces/Contact.html">Contacts</a>, callNumber: CallNumber)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/pages/emergency/emergency.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>keyboard</td>
+                                                  
+                                                        <td>
+                                                                    <code>Keyboard</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>chRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cache</td>
+                                                  
+                                                        <td>
+                                                                    <code>CacheService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>mapProvider</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/MapsProvider.html" target="_self" >MapsProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>connection</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ConnectionProvider.html" target="_self" >ConnectionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>contacts</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../interfaces/Contact.html" target="_self" >Contacts</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>callNumber</td>
+                                                  
+                                                        <td>
+                                                                    <code>CallNumber</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="callContact"></a>
+                        <span class="name">
+                            <b>
+                            callContact
+                            </b>
+                            <a href="#callContact"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>callContact(number: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="211" class="link-to-prism">src/pages/emergency/emergency.ts:211</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>number</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <p><a href="https://www.javascripttuts.com/making-phone-calls-to-contacts-with-ionic-in-one-go/">https://www.javascripttuts.com/making-phone-calls-to-contacts-with-ionic-in-one-go/</a></p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="callMap"></a>
+                        <span class="name">
+                            <b>
+                            callMap
+                            </b>
+                            <a href="#callMap"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>callMap(emergencyCall: <a href="../interfaces/EmergencyCall.html">EmergencyCall</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">src/pages/emergency/emergency.ts:174</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>emergencyCall</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/EmergencyCall.html" target="_self" >EmergencyCall</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contains"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            contains
+                            </b>
+                            <a href="#contains"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>contains(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, y: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/pages/emergency/emergency.ts:130</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>x</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>String that does or does not contain string y</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>y</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>String that is or is not contained in string y</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <ul>
+<li>Whether string x contains string y</li>
+</ul>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expand"></a>
+                        <span class="name">
+                            <b>
+                            expand
+                            </b>
+                            <a href="#expand"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>expand(emergencyCall: <a href="../interfaces/EmergencyCall.html">EmergencyCall</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/pages/emergency/emergency.ts:160</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>emergencyCall</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/EmergencyCall.html" target="_self" >EmergencyCall</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="exportContact"></a>
+                        <span class="name">
+                            <b>
+                            exportContact
+                            </b>
+                            <a href="#exportContact"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>exportContact(emergencyCall: <a href="../interfaces/EmergencyCall.html">EmergencyCall</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">src/pages/emergency/emergency.ts:189</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>emergencyCall</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/EmergencyCall.html" target="_self" >EmergencyCall</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filterItems"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            filterItems
+                            </b>
+                            <a href="#filterItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>filterItems(query: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/pages/emergency/emergency.ts:141</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>query</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <ul>
+<li>a query string the items will be filtered with</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initializeList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            initializeList
+                            </b>
+                            <a href="#initializeList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>initializeList()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/pages/emergency/emergency.ts:77</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loadEmergencyCalls"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            loadEmergencyCalls
+                            </b>
+                            <a href="#loadEmergencyCalls"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>loadEmergencyCalls(refresher?)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/pages/emergency/emergency.ts:85</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>refresher</td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/pages/emergency/emergency.ts:68</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onScrollListener"></a>
+                        <span class="name">
+                            <b>
+                            onScrollListener
+                            </b>
+                            <a href="#onScrollListener"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onScrollListener()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/pages/emergency/emergency.ts:117</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cordova"></a>
+                        <span class="name">
+                            <b>
+                            cordova</b>
+                            <a href="#cordova"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/pages/emergency/emergency.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultList"></a>
+                        <span class="name">
+                            <b>
+                            defaultList</b>
+                            <a href="#defaultList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/EmergencyCall.html" target="_self" >Array&lt;EmergencyCall&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/pages/emergency/emergency.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedList"></a>
+                        <span class="name">
+                            <b>
+                            displayedList</b>
+                            <a href="#displayedList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/EmergencyCall.html" target="_self" >Array&lt;EmergencyCall&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/pages/emergency/emergency.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoaded"></a>
+                        <span class="name">
+                            <b>
+                            isLoaded</b>
+                            <a href="#isLoaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/pages/emergency/emergency.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="jsonPath"></a>
+                        <span class="name">
+                            <b>
+                            jsonPath</b>
+                            <a href="#jsonPath"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;../../assets/json/emergency&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/pages/emergency/emergency.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/pages/emergency/emergency.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams</b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/pages/emergency/emergency.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ChangeDetectorRef } from &quot;@angular/core&quot;;
+import { IonicPage, NavController, NavParams, Platform } from &#x27;ionic-angular&#x27;;
+import { Storage } from &#x27;@ionic/storage&#x27;;
+import { CacheService } from &#x27;ionic-cache&#x27;;
+import { HttpClient, HttpHeaders } from &#x27;@angular/common/http&#x27;;
+import { EmergencyCall } from &quot;../../library/interfaces&quot;;
+import * as jquery from &quot;jquery&quot;;
+import { Keyboard } from &quot;@ionic-native/keyboard/ngx&quot;;
+import { ConnectionProvider } from &quot;../../providers/connection/connection&quot;;
+import { IConfig } from &#x27;../../library/interfaces&#x27;;
+import { MapsProvider } from &quot;../../providers/maps/maps&quot;;
+import { Contacts, Contact, ContactField, ContactName } from &#x27;@ionic-native/contacts&#x27;;
+import { CallNumber } from &#x27;@ionic-native/call-number/ngx&#x27;;
+
+/**
+ * @class EmergencyPage
+ * @classdesc class for a page that shows EmergencyCall entries. The list of items can
+ * be filtered by using a searchbox.
+ */
+@IonicPage()
+@Component({
+  selector: &#x27;page-emergency&#x27;,
+  templateUrl: &#x27;emergency.html&#x27;
+})
+export class EmergencyPage {
+
+  jsonPath: string &#x3D; &quot;../../assets/json/emergency&quot;;
+  displayedList: Array &lt; EmergencyCall &gt; ;
+  defaultList: Array &lt; EmergencyCall &gt; ;
+  isLoaded;
+  cordova &#x3D; false;
+
+  /**
+   * @constructor
+   * @description Constructor of EmergencyPage
+   * @param {NavController} navCtrl
+   * @param {NavParams} navParams
+   * @param {Keyboard} keyboard
+   * @param {ChangeDetectorRef} chRef
+   * @param {Platform} platform
+   * @param {Storage} storage
+   * @param {CacheService} cache
+   * @param {HttpClient} http
+   * @param {WebIntentProvider} webIntent
+   * @param {LaunchNavigator} launchNavigator
+   * @param {ConnectionProvider} connection
+   * @param {Contacts} contacts
+   * @param {CallNumber} callNumber
+   */
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private keyboard: Keyboard,
+    private chRef: ChangeDetectorRef,
+    private platform: Platform,
+    private storage: Storage,
+    private cache: CacheService,
+    private http: HttpClient,
+    private mapProvider: MapsProvider,
+    private connection: ConnectionProvider,
+    private contacts: Contacts,
+    private callNumber: CallNumber) {
+      if (this.platform.is(&quot;cordova&quot;)) {
+        this.cordova &#x3D; true
+      }
+  };
+
+  ngOnInit() {
+    this.connection.checkOnline(true, true);
+    this.loadEmergencyCalls();
+  }
+
+  /**
+   * @name  initializeList
+   * @description initializes the list that is to be displayed with default values
+   */
+  public initializeList(): void {
+    this.displayedList &#x3D; this.defaultList;
+  }
+
+  /**
+   * @name loadEmergencyCalls
+   * @description loads default items from json file
+   */
+  async loadEmergencyCalls(refresher?) {
+
+    let config:IConfig &#x3D; await this.storage.get(&quot;config&quot;);
+
+    let headers: HttpHeaders &#x3D; new HttpHeaders()
+      .append(&quot;Authorization&quot;, config.webservices.apiToken);
+
+    var url &#x3D; config.webservices.endpoint.emergencyCalls;
+    let request &#x3D; this.http.get(url, {headers:headers});
+
+    if (refresher) {
+      this.cache.removeItem(&quot;emergencyCalls&quot;);
+    } else {
+      this.isLoaded &#x3D; false;
+    }
+
+    this.cache.loadFromObservable(&quot;emergencyCalls&quot;, request).subscribe((response) &#x3D;&gt; {
+
+      if (refresher) {
+        refresher.complete();
+      }
+
+      this.defaultList &#x3D; response;
+      this.isLoaded &#x3D; true;
+      this.initializeList();
+    });
+    // on error //this.defaultList &#x3D; require(&quot;../../assets/json/emergency&quot;);
+
+  }
+
+
+  // hides keyboard once the user is scrolling
+  onScrollListener() {
+    if (this.platform.is(&quot;cordova&quot;) &amp;&amp; (this.platform.is(&quot;ios&quot;) || this.platform.is(&quot;android&quot;))) {
+      this.keyboard.hide();
+    }
+  }
+
+  /**
+   * @name contains
+   * @description checks, whether y is a substring of x
+   * @param {string} x - String that does or does not contain string y
+   * @param {string} y - String that is or is not contained in string y
+   * @returns {Boolean} - Whether string x contains string y
+   */
+  private contains(x: string, y: string): boolean {
+    return x.toLowerCase().includes(y.toLowerCase());
+  }
+
+  /**
+   * @name filterItems
+   * @description when a query is typed into the searchbar this method is called. It
+   * filters the complete list of items with the query and modifies the
+   * displayed list accordingly.
+   * @param {string} query - a query string the items will be filtered with
+   */
+  public filterItems(query: string): void {
+    this.initializeList();
+
+    if (query) {
+      this.displayedList &#x3D; jquery.grep(
+        this.defaultList,
+        (emergencyCall, index) &#x3D;&gt; {
+          return this.contains(emergencyCall.name, query);
+        }
+      );
+      this.chRef.detectChanges();
+    }
+  }
+
+  /**
+   * @name expand
+   * @description toggles the expand value of one item to be expanded in the view
+   * @param {EmergencyCall} emergencyCall
+   */
+  expand(emergencyCall: EmergencyCall) {
+    for (let i &#x3D; 0; i &lt; this.displayedList.length; i++) {
+      let currentCall &#x3D; this.displayedList[i];
+      if (currentCall.name &#x3D;&#x3D; emergencyCall.name) {
+        currentCall.expanded &#x3D; !currentCall.expanded;
+      }
+    }
+  }
+
+  /**
+   * @name callMap
+   * @description opens the map
+   * @param {EmergencyCall} emergencyCall
+   */
+  callMap(emergencyCall: EmergencyCall) {
+    let location &#x3D; emergencyCall.address.street;
+    if (emergencyCall.address.postal){
+      location +&#x3D; &#x27; &#x27; + emergencyCall.address.postal;
+    }
+
+    this.mapProvider.navigateToAdress(location);
+  }
+
+
+    /**
+   * @name exportContact
+   * @description exports a contact to the local phone book
+   * @param {EmergencyCall} emergencyCall
+   */
+  exportContact(emergencyCall: EmergencyCall) {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      let contact: Contact &#x3D; this.contacts.create();
+
+      contact.name &#x3D; new ContactName(null, emergencyCall.name);
+
+      if (emergencyCall.contact.telephone) { contact.phoneNumbers &#x3D; [new ContactField(&#x27;work&#x27;, emergencyCall.contact.telephone)]; }
+      if (emergencyCall.contact.mail)   { contact.emails &#x3D; [new ContactField(&#x27;work&#x27;, emergencyCall.contact.mail)]; }
+
+      contact.save().then(
+        () &#x3D;&gt; console.log(&#x27;Contact saved!&#x27;, contact),
+        (error: any) &#x3D;&gt; console.error(&#x27;Error saving contact.&#x27;, error)
+      );
+    }
+  }
+
+  /**
+   * @name callContact
+   * @description using native call for calling numbers
+   * @param {string} number
+   * https://www.javascripttuts.com/making-phone-calls-to-contacts-with-ionic-in-one-go/
+   */
+  callContact(number: string) {
+    this.callNumber.callNumber(number, true)
+      .then(() &#x3D;&gt; console.log(&#x27;Dialer Launched!&#x27;))
+      .catch(() &#x3D;&gt; console.log(&#x27;Error launching dialer&#x27;));
+  }
+
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+        &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{ &quot;page.emergency.title&quot; | translate}}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+
+  &lt;ion-searchbar
+    [(ngModel)]&#x3D;&quot;query&quot;
+    [placeholder]&#x3D;&quot;&#x27;page.emergency.placeholder.search&#x27; | translate&quot;
+    (input)&#x3D;&quot;filterItems(query)&quot;
+    debounce&#x3D;&quot;750&quot;&gt;
+  &lt;/ion-searchbar&gt;
+
+&lt;/ion-header&gt;
+
+&lt;ion-content (ionScroll)&#x3D;&quot;onScrollListener()&quot;&gt;
+
+  &lt;ion-refresher (ionRefresh)&#x3D;&quot;loadEmergencyCalls($event)&quot;&gt;
+    &lt;ion-refresher-content&gt;&lt;/ion-refresher-content&gt;
+  &lt;/ion-refresher&gt;
+
+  &lt;div align&#x3D;&quot;center&quot; *ngIf&#x3D;&quot;!isLoaded&quot; padding&gt;
+    &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+  &lt;/div&gt;
+  &lt;!-- list of emergencyCalls --&gt;
+  &lt;ion-list&gt;
+
+    &lt;div *ngIf&#x3D;&quot;isLoaded &amp;&amp; displayedList.length &#x3D;&#x3D; 0&quot;&gt;
+      &lt;hint hintTypeI18nKey&#x3D;&quot;hints.type.hint&quot; hintTextI18nKey&#x3D;&quot;hints.text.noResults-hint&quot;&gt;&lt;/hint&gt;
+    &lt;/div&gt;
+
+    &lt;div *ngFor&#x3D;&quot;let emergencyCall of displayedList&quot;&gt;
+
+      &lt;ion-item-sliding&gt;
+        &lt;!-- template for emergencyCalls --&gt;
+        &lt;ion-item tappable (click)&#x3D;&quot;expand(emergencyCall)&quot;&gt;
+          &lt;ion-thumbnail item-start&gt;
+            &lt;ion-icon name&#x3D;&quot;person&quot;&gt;&lt;/ion-icon&gt;
+          &lt;/ion-thumbnail&gt;
+          &lt;ion-label no-margin&gt;
+            &lt;h2 text-wrap&gt;{{emergencyCall.name}}&lt;/h2&gt;
+            &lt;p text-wrap *ngIf&#x3D;&quot;emergencyCall.description&quot;&gt;{{emergencyCall.description}}&lt;/p&gt;
+          &lt;/ion-label&gt;
+          &lt;ion-icon name&#x3D;&quot;arrow-dropdown&quot; *ngIf&#x3D;&quot;(emergencyCall.address || emergencyCall.contact) &amp;&amp; !emergencyCall.expanded&quot; item-end&gt;&lt;/ion-icon&gt;
+          &lt;ion-icon name&#x3D;&quot;arrow-dropup&quot; *ngIf&#x3D;&quot;(emergencyCall.address || emergencyCall.contact) &amp;&amp; emergencyCall.expanded&quot; item-end&gt;&lt;/ion-icon&gt;
+        &lt;/ion-item&gt;
+
+        &lt;ion-item-options side&#x3D;&quot;right&quot;&gt;
+          &lt;button ion-button color&#x3D;&quot;primary&quot; *ngIf&#x3D;&quot;emergencyCall.contact.mail&quot;&gt;
+            &lt;ion-icon name&#x3D;&quot;mail&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class&#x3D;&quot;notUnderlined whiteFont&quot; href&#x3D;&quot;mailto:{{emergencyCall.contact.mail}}&quot;&gt;Mail&lt;/a&gt;
+          &lt;/button&gt;
+          &lt;button ion-button color&#x3D;&quot;secondary&quot; *ngIf&#x3D;&quot;cordova &amp;&amp; emergencyCall.contact.telephone&quot; (click)&#x3D;&quot;callContact(emergencyCall.contact.telephone)&quot;&gt;
+            &lt;ion-icon name&#x3D;&quot;call&quot; ios&#x3D;&quot;ios-call&quot; md&#x3D;&quot;md-call&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class&#x3D;&quot;notUnderlined&quot;&gt;Call&lt;/a&gt;
+          &lt;/button&gt;
+          &lt;button ion-button color&#x3D;&quot;secondary&quot; *ngIf&#x3D;&quot;!cordova &amp;&amp; emergencyCall.contact.telephone&quot;&gt;
+            &lt;ion-icon name&#x3D;&quot;call&quot; ios&#x3D;&quot;ios-call&quot; md&#x3D;&quot;md-call&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class&#x3D;&quot;notUnderlined&quot; href&#x3D;&quot;tel:{{emergencyCall.contact.telephone}}&quot;&gt;Call&lt;/a&gt;
+          &lt;/button&gt;
+          &lt;button ion-button color&#x3D;&quot;secondary&quot; *ngIf&#x3D;&quot;cordova&quot; (click)&#x3D;&quot;exportContact(emergencyCall)&quot;&gt;
+            &lt;ion-icon name&#x3D;&quot;person-add&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class&#x3D;&quot;notUnderlined&quot;&gt;Add&lt;/a&gt;
+          &lt;/button&gt;
+        &lt;/ion-item-options&gt;
+      &lt;/ion-item-sliding&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;emergencyCall.expanded&quot;&gt;
+        &lt;ion-thumbnail item-start&gt;
+        &lt;/ion-thumbnail&gt;
+        &lt;ion-label no-margin&gt;
+          &lt;ion-grid&gt;
+            &lt;ion-row *ngIf&#x3D;&quot;emergencyCall.contact.mail&quot;&gt;
+              &lt;ion-col col-auto&gt;&lt;ion-icon name&#x3D;&quot;mail&quot; margin-right&gt;&lt;/ion-icon&gt;&lt;/ion-col&gt;&lt;ion-col&gt;&lt;a href&#x3D;&quot;mailto:{{emergencyCall.contact.mail}}&quot;&gt;{{emergencyCall.contact.mail}}&lt;/a&gt;&lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+            &lt;ion-row *ngIf&#x3D;&quot;emergencyCall.contact.telephone&quot;&gt;
+              &lt;ion-col col-auto&gt;&lt;ion-icon name&#x3D;&quot;call&quot; ios&#x3D;&quot;ios-call&quot; md&#x3D;&quot;md-call&quot; margin-right&gt;&lt;/ion-icon&gt;&lt;/ion-col&gt;
+              &lt;ion-col&gt;
+                &lt;a href&#x3D;&quot;tel:{{emergencyCall.contact.telephone}}&quot; *ngIf&#x3D;&quot;!cordova&quot;&gt;{{emergencyCall.contact.telephone}}&lt;/a&gt;
+                &lt;a (click)&#x3D;&quot;callContact(emergencyCall.contact.telephone)&quot; *ngIf&#x3D;&quot;cordova&quot; style&#x3D;&quot;text-decoration: underline&quot;&gt;{{emergencyCall.contact.telephone}}&lt;/a&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+            &lt;ion-row *ngIf&#x3D;&quot;emergencyCall.address &amp;&amp; (emergencyCall.address.street || emergencyCall.address.postal)&quot;&gt;
+              &lt;ion-col col-auto&gt;&lt;ion-icon name&#x3D;&quot;home&quot; margin-right&gt;&lt;/ion-icon&gt;&lt;/ion-col&gt;
+              &lt;ion-col text-wrap&gt;
+                &lt;a (click)&#x3D;&quot;callMap(emergencyCall)&quot; class&#x3D;&quot;link&quot;&gt;
+                  &lt;span *ngIf&#x3D;&quot;emergencyCall.address.street&quot;&gt;{{emergencyCall.address.street}}&lt;/span&gt;
+                  &lt;span *ngIf&#x3D;&quot;emergencyCall.address.postal &amp;&amp; emergencyCall.address.street&quot;&gt;, &lt;/span&gt;
+                  &lt;span *ngIf&#x3D;&quot;emergencyCall.address.postal&quot;&gt;{{emergencyCall.address.postal}}&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+          &lt;/ion-grid&gt;
+        &lt;/ion-label&gt;
+      &lt;/ion-item&gt;
+
+    &lt;/div&gt;
+  &lt;/ion-list&gt;
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>        <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{ "page.emergency.title" | translate}}</ion-title>  </ion-navbar>  <ion-searchbar    [(ngModel)]="query"    [placeholder]="\'page.emergency.placeholder.search\' | translate"    (input)="filterItems(query)"    debounce="750">  </ion-searchbar></ion-header><ion-content (ionScroll)="onScrollListener()">  <ion-refresher (ionRefresh)="loadEmergencyCalls($event)">    <ion-refresher-content></ion-refresher-content>  </ion-refresher>  <div align="center" *ngIf="!isLoaded" padding>    <ion-spinner></ion-spinner>  </div>  <!-- list of emergencyCalls -->  <ion-list>    <div *ngIf="isLoaded && displayedList.length == 0">      <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.noResults-hint"></hint>    </div>    <div *ngFor="let emergencyCall of displayedList">      <ion-item-sliding>        <!-- template for emergencyCalls -->        <ion-item tappable (click)="expand(emergencyCall)">          <ion-thumbnail item-start>            <ion-icon name="person"></ion-icon>          </ion-thumbnail>          <ion-label no-margin>            <h2 text-wrap>{{emergencyCall.name}}</h2>            <p text-wrap *ngIf="emergencyCall.description">{{emergencyCall.description}}</p>          </ion-label>          <ion-icon name="arrow-dropdown" *ngIf="(emergencyCall.address || emergencyCall.contact) && !emergencyCall.expanded" item-end></ion-icon>          <ion-icon name="arrow-dropup" *ngIf="(emergencyCall.address || emergencyCall.contact) && emergencyCall.expanded" item-end></ion-icon>        </ion-item>        <ion-item-options side="right">          <button ion-button color="primary" *ngIf="emergencyCall.contact.mail">            <ion-icon name="mail"></ion-icon>            <a class="notUnderlined whiteFont" href="mailto:{{emergencyCall.contact.mail}}">Mail</a>          </button>          <button ion-button color="secondary" *ngIf="cordova && emergencyCall.contact.telephone" (click)="callContact(emergencyCall.contact.telephone)">            <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>            <a class="notUnderlined">Call</a>          </button>          <button ion-button color="secondary" *ngIf="!cordova && emergencyCall.contact.telephone">            <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>            <a class="notUnderlined" href="tel:{{emergencyCall.contact.telephone}}">Call</a>          </button>          <button ion-button color="secondary" *ngIf="cordova" (click)="exportContact(emergencyCall)">            <ion-icon name="person-add"></ion-icon>            <a class="notUnderlined">Add</a>          </button>        </ion-item-options>      </ion-item-sliding>      <ion-item *ngIf="emergencyCall.expanded">        <ion-thumbnail item-start>        </ion-thumbnail>        <ion-label no-margin>          <ion-grid>            <ion-row *ngIf="emergencyCall.contact.mail">              <ion-col col-auto><ion-icon name="mail" margin-right></ion-icon></ion-col><ion-col><a href="mailto:{{emergencyCall.contact.mail}}">{{emergencyCall.contact.mail}}</a></ion-col>            </ion-row>            <ion-row *ngIf="emergencyCall.contact.telephone">              <ion-col col-auto><ion-icon name="call" ios="ios-call" md="md-call" margin-right></ion-icon></ion-col>              <ion-col>                <a href="tel:{{emergencyCall.contact.telephone}}" *ngIf="!cordova">{{emergencyCall.contact.telephone}}</a>                <a (click)="callContact(emergencyCall.contact.telephone)" *ngIf="cordova" style="text-decoration: underline">{{emergencyCall.contact.telephone}}</a>              </ion-col>            </ion-row>            <ion-row *ngIf="emergencyCall.address && (emergencyCall.address.street || emergencyCall.address.postal)">              <ion-col col-auto><ion-icon name="home" margin-right></ion-icon></ion-col>              <ion-col text-wrap>                <a (click)="callMap(emergencyCall)" class="link">                  <span *ngIf="emergencyCall.address.street">{{emergencyCall.address.street}}</span>                  <span *ngIf="emergencyCall.address.postal && emergencyCall.address.street">, </span>                  <span *ngIf="emergencyCall.address.postal">{{emergencyCall.address.postal}}</span>                </a>              </ion-col>            </ion-row>          </ion-grid>        </ion-label>      </ion-item>    </div>  </ion-list></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'EmergencyPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'EmergencyPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

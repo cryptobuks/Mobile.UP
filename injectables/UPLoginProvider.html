@@ -1,0 +1,1549 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>UPLoginProvider</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/providers/login-provider/login.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>LoginProvider</p>
+<p>only the login(credentials, authConfig) method can be called from the outside.
+The &#39;authConfig&#39; parameter should contain a member named &#39;method&#39; having one
+of the following values</p>
+<ul>
+<li>&quot;sso&quot; (for executing Single Sign On)</li>
+<li>&quot;oidc&quot; (for executing OpenID connect)</li>
+<li>&quot;credentials&quot; (for executing normal username/password login)</li>
+</ul>
+<p>the LoginProvider will execute the right method internally and return the
+created session (or an error).</p>
+
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#http">http</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#inAppBrowser">inAppBrowser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ssoActions">ssoActions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ssoBrowserEvents">ssoBrowserEvents</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addSSOaction">addSSOaction</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#credentialsLogin">credentialsLogin</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#handleSsoEvent">handleSsoEvent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#oidcGetUSerInformation">oidcGetUSerInformation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#oidcLogin">oidcLogin</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#oidcRefreshToken">oidcRefreshToken</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ssoLogin">ssoLogin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, inAppBrowser: InAppBrowser)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/providers/login-provider/login.ts:159</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>inAppBrowser</td>
+                                                  
+                                                        <td>
+                                                                    <code>InAppBrowser</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addSSOaction"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addSSOaction
+                            </b>
+                            <a href="#addSSOaction"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addSSOaction(ssoAction: <a href="../interfaces/IAction.html">IAction</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="426" class="link-to-prism">src/providers/login-provider/login.ts:426</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Allows adding custom sso actions from outside</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>ssoAction</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IAction.html" target="_self" >IAction</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="credentialsLogin"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            credentialsLogin
+                            </b>
+                            <a href="#credentialsLogin"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>credentialsLogin(credentials: <a href="../interfaces/ICredentials.html">ICredentials</a>, loginConfig: <a href="../interfaces/ILoginConfig_Credentials.html">ILoginConfig_Credentials</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="260" class="link-to-prism">src/providers/login-provider/login.ts:260</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Performs login with provided loginRequest. Returns created session or error
+with provided observer object.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>credentials</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ICredentials.html" target="_self" >ICredentials</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>loginConfig</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ILoginConfig_Credentials.html" target="_self" >ILoginConfig_Credentials</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/ISession.html" target="_self" >Observable&lt;ISession&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleSsoEvent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            handleSsoEvent
+                            </b>
+                            <a href="#handleSsoEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleSsoEvent(event: InAppBrowserEvent, loginRequest: <a href="../interfaces/ILoginRequest.html">ILoginRequest</a>, observer: <a href="../interfaces/ISession.html">Observer<ISession></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">src/providers/login-provider/login.ts:174</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Handles ssoBrowserEvents by executing defined actions if event type matches
+and condition function of action returns true</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>InAppBrowserEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>loginRequest</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ILoginRequest.html" target="_self" >ILoginRequest</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>observer</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ISession.html" target="_self" >Observer&lt;ISession&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="oidcGetUSerInformation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            oidcGetUSerInformation
+                            </b>
+                            <a href="#oidcGetUSerInformation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>oidcGetUSerInformation(session: <a href="../interfaces/ISession.html">ISession</a>, loginConfig: <a href="../interfaces/ILoginConfig_OIDC.html">ILoginConfig_OIDC</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="394" class="link-to-prism">src/providers/login-provider/login.ts:394</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>returns information about user via OIDC</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>session</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ISession.html" target="_self" >ISession</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>loginConfig</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ILoginConfig_OIDC.html" target="_self" >ILoginConfig_OIDC</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/IOIDCUserInformationResponse.html" target="_self" >Observable&lt;IOIDCUserInformationResponse&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="oidcLogin"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            oidcLogin
+                            </b>
+                            <a href="#oidcLogin"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>oidcLogin(credentials: <a href="../interfaces/ICredentials.html">ICredentials</a>, loginConfig: <a href="../interfaces/ILoginConfig_OIDC.html">ILoginConfig_OIDC</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="303" class="link-to-prism">src/providers/login-provider/login.ts:303</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>executes OIDC login</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>credentials</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ICredentials.html" target="_self" >ICredentials</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>loginConfig</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ILoginConfig_OIDC.html" target="_self" >ILoginConfig_OIDC</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/ISession.html" target="_self" >Observable&lt;ISession&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="oidcRefreshToken"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            oidcRefreshToken
+                            </b>
+                            <a href="#oidcRefreshToken"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>oidcRefreshToken(refreshToken: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, loginConfig: <a href="../interfaces/ILoginConfig_OIDC.html">ILoginConfig_OIDC</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="351" class="link-to-prism">src/providers/login-provider/login.ts:351</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>refreshes OIDC token with refreshToken and the loginConfig. Returns an object
+containing new OIDC-Response-Object and a timestamp.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>refreshToken</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>loginConfig</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ILoginConfig_OIDC.html" target="_self" >ILoginConfig_OIDC</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/IOIDCRefreshResponseObject.html" target="_self" >Observable&lt;IOIDCRefreshResponseObject&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ssoLogin"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ssoLogin
+                            </b>
+                            <a href="#ssoLogin"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ssoLogin(credentials: <a href="../interfaces/ICredentials.html">ICredentials</a>, loginConfig: <a href="../interfaces/ILoginConfig_SSO.html">ILoginConfig_SSO</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/providers/login-provider/login.ts:195</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Performs a SSO login by creating an InAppBrowser object and attaching
+listeners to it. When SSO login has been performed the given observer is
+used to return the created ISession (happens in ssoAction)</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>credentials</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ICredentials.html" target="_self" >ICredentials</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>loginConfig</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ILoginConfig_SSO.html" target="_self" >ILoginConfig_SSO</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/ISession.html" target="_self" >Observable&lt;ISession&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="http"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            http</b>
+                            <a href="#http"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">src/providers/login-provider/login.ts:162</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inAppBrowser"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            inAppBrowser</b>
+                            <a href="#inAppBrowser"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>InAppBrowser</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/providers/login-provider/login.ts:163</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ssoActions"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            ssoActions</b>
+                            <a href="#ssoActions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IAction.html" target="_self" >IAction[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      // obtains token from URL
+      event: this.ssoBrowserEvents.loadStart,
+      condition: (event, loginRequest) &#x3D;&gt; {
+        return isSubset(event.url, loginRequest.ssoConfig.ssoUrls.tokenUrl) ||
+          isSubset(event.url, (&quot;http://&quot; + loginRequest.ssoConfig.ssoUrls.tokenUrl))
+      },
+      action: (event, loginRequest, observer) &#x3D;&gt; {
+        if(isSubset(event.url, loginRequest.ssoConfig.ssoUrls.tokenUrl) ||
+          isSubset(event.url, (&quot;http://&quot; + loginRequest.ssoConfig.ssoUrls.tokenUrl))) {
+
+          let token &#x3D; event.url;
+          token &#x3D; token.replace(&quot;http://&quot;, &quot;&quot;);
+          token &#x3D; token.replace(loginRequest.ssoConfig.ssoUrls.tokenUrl, &quot;&quot;);
+          debug(&#x60;[ssoLogin] token ${token}&#x60;);
+          try {
+            token &#x3D; atob(token);
+
+            // Skip the passport validation, just trust the token
+            token &#x3D; token.split(&quot;:::&quot;)[1];
+            debug(&#x60;[ssoLogin] Moodle token found: ${token}&#x60;);
+
+            let session:ISession &#x3D; {
+              credentials:  loginRequest.credentials,
+              token:        token,
+              timestamp:    new Date()
+            };
+
+            debug(&quot;[ssoLogin] Session created&quot;);
+
+            observer.next(session);
+            observer.complete();
+          } catch (error) {
+            // TODO: check what caused the error
+            observer.error({reason: ELoginErrors.TECHNICAL, error: error});
+          }
+        }
+      }
+    },
+    {
+      // checks whether a login form is present and then injects code for login
+      event: this.ssoBrowserEvents.loadStop,
+      condition: (event, loginRequest) &#x3D;&gt; {
+        return isSubset(event.url, loginRequest.ssoConfig.ssoUrls.idpBaseUrl) &amp;&amp;
+          !loginRequest.loginAttemptStarted
+      },
+      action: async (event, loginRequest, subject) &#x3D;&gt; {
+        debug(&quot;[ssoLogin] Testing for login form&quot;);
+
+        // Test for a login form
+        let testForLoginForm &#x3D; &#x27;$(&quot;form#login&quot;).length;&#x27;;
+        let length &#x3D; await loginRequest.ssoConfig.browser.executeScript({ code: testForLoginForm });
+
+        if(length[0] &gt;&#x3D; 1) {
+          debug(&quot;[ssoLogin] Login form present&quot;);
+
+          // Create code for executing login in browser
+          let enterCredentials &#x3D;
+            &#x60;$(&quot;form#login #username&quot;).val(\&#x27;${loginRequest.credentials.username}\&#x27;);
+             $(&quot;form#login #password&quot;).val(\&#x27;${loginRequest.credentials.password}\&#x27;);
+             $(&quot;form#login .loginbutton&quot;).click();&#x60;;
+
+          loginRequest.loginAttemptStarted &#x3D; true;
+
+          debug(&quot;[ssoLogin] Injecting login code now&quot;);
+          loginRequest.ssoConfig.browser.executeScript({code: enterCredentials});
+        }
+      }
+    },
+    {
+      //
+      event: this.ssoBrowserEvents.loadError,
+      condition: (event, loginRequest) &#x3D;&gt; { return true },
+      action: (event, loginRequest, observer) &#x3D;&gt; {
+        // TODO: something should be done here, I guess
+      }
+    },
+    {
+      // happens when user closes browser
+      event: this.ssoBrowserEvents.exit,
+      condition: () &#x3D;&gt; { return true },
+      action: (event, loginRequest, observer) &#x3D;&gt; {
+        observer.error({
+          reason: ELoginErrors.TECHNICAL,
+          description: &quot;User closed browser&quot;
+        });
+      }
+    }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/providers/login-provider/login.ts:70</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ssoBrowserEvents"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            ssoBrowserEvents</b>
+                            <a href="#ssoBrowserEvents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    loadStart:  &quot;loadstart&quot;,
+    loadStop:   &quot;loadstop&quot;,
+    loadError:  &quot;loaderror&quot;,
+    exit:       &quot;exit&quot;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/providers/login-provider/login.ts:62</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { InAppBrowser, InAppBrowserEvent } from &quot;@ionic-native/in-app-browser/ngx&quot;;
+import { HttpClient, HttpHeaders, HttpParams, HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { Observable } from &quot;rxjs/Observable&quot;;
+import { Observer } from &quot;rxjs/Observer&quot;;
+import { ReplaySubject } from &quot;rxjs/ReplaySubject&quot;;
+
+/* Imports from this module (in same directory) */
+import {
+  ILoginProvider,
+  ICredentialsLoginResponse,
+  ISession,
+  ICredentials,
+  IOIDCLoginResponse,
+  IAction,
+  ELoginErrors,
+  ILoginRequest,
+  ILoginConfig_SSO,
+  ILoginConfig_OIDC,
+  ILoginConfig_Credentials,
+  IOIDCRefreshResponseObject, IOIDCUserInformationResponse
+} from &#x27;./interfaces&#x27;;
+import {
+  WebHttpUrlEncodingCodec,
+  isSubset,
+  constructPluginUrl
+} from &quot;./lib&quot;;
+
+// set to true to see output
+var debugMode:boolean &#x3D; true;
+
+/**
+ * Prints text only if global debug variable has been set
+ * @param text
+ */
+export function debug(text) {
+  if(debugMode) {
+    console.log(&#x60;[LoginProvider]:${text}&#x60;);
+  }
+}
+
+
+/**
+ * LoginProvider
+ *
+ * only the login(credentials, authConfig) method can be called from the outside.
+ * The &#x27;authConfig&#x27; parameter should contain a member named &#x27;method&#x27; having one
+ * of the following values
+ *
+ *  - &quot;sso&quot; (for executing Single Sign On)
+ *  - &quot;oidc&quot; (for executing OpenID connect)
+ *  - &quot;credentials&quot; (for executing normal username/password login)
+ *
+ * the LoginProvider will execute the right method internally and return the
+ * created session (or an error).
+ */
+@Injectable()
+export class UPLoginProvider implements ILoginProvider {
+
+  // events that can occur in InAppBrowser during SSO login
+  private ssoBrowserEvents &#x3D; {
+    loadStart:  &quot;loadstart&quot;,
+    loadStop:   &quot;loadstop&quot;,
+    loadError:  &quot;loaderror&quot;,
+    exit:       &quot;exit&quot;
+  };
+
+  // predefined actions that will be used
+  private ssoActions:IAction[] &#x3D; [
+    {
+      // obtains token from URL
+      event: this.ssoBrowserEvents.loadStart,
+      condition: (event, loginRequest) &#x3D;&gt; {
+        return isSubset(event.url, loginRequest.ssoConfig.ssoUrls.tokenUrl) ||
+          isSubset(event.url, (&quot;http://&quot; + loginRequest.ssoConfig.ssoUrls.tokenUrl))
+      },
+      action: (event, loginRequest, observer) &#x3D;&gt; {
+        if(isSubset(event.url, loginRequest.ssoConfig.ssoUrls.tokenUrl) ||
+          isSubset(event.url, (&quot;http://&quot; + loginRequest.ssoConfig.ssoUrls.tokenUrl))) {
+
+          let token &#x3D; event.url;
+          token &#x3D; token.replace(&quot;http://&quot;, &quot;&quot;);
+          token &#x3D; token.replace(loginRequest.ssoConfig.ssoUrls.tokenUrl, &quot;&quot;);
+          debug(&#x60;[ssoLogin] token ${token}&#x60;);
+          try {
+            token &#x3D; atob(token);
+
+            // Skip the passport validation, just trust the token
+            token &#x3D; token.split(&quot;:::&quot;)[1];
+            debug(&#x60;[ssoLogin] Moodle token found: ${token}&#x60;);
+
+            let session:ISession &#x3D; {
+              credentials:  loginRequest.credentials,
+              token:        token,
+              timestamp:    new Date()
+            };
+
+            debug(&quot;[ssoLogin] Session created&quot;);
+
+            observer.next(session);
+            observer.complete();
+          } catch (error) {
+            // TODO: check what caused the error
+            observer.error({reason: ELoginErrors.TECHNICAL, error: error});
+          }
+        }
+      }
+    },
+    {
+      // checks whether a login form is present and then injects code for login
+      event: this.ssoBrowserEvents.loadStop,
+      condition: (event, loginRequest) &#x3D;&gt; {
+        return isSubset(event.url, loginRequest.ssoConfig.ssoUrls.idpBaseUrl) &amp;&amp;
+          !loginRequest.loginAttemptStarted
+      },
+      action: async (event, loginRequest, subject) &#x3D;&gt; {
+        debug(&quot;[ssoLogin] Testing for login form&quot;);
+
+        // Test for a login form
+        let testForLoginForm &#x3D; &#x27;$(&quot;form#login&quot;).length;&#x27;;
+        let length &#x3D; await loginRequest.ssoConfig.browser.executeScript({ code: testForLoginForm });
+
+        if(length[0] &gt;&#x3D; 1) {
+          debug(&quot;[ssoLogin] Login form present&quot;);
+
+          // Create code for executing login in browser
+          let enterCredentials &#x3D;
+            &#x60;$(&quot;form#login #username&quot;).val(\&#x27;${loginRequest.credentials.username}\&#x27;);
+             $(&quot;form#login #password&quot;).val(\&#x27;${loginRequest.credentials.password}\&#x27;);
+             $(&quot;form#login .loginbutton&quot;).click();&#x60;;
+
+          loginRequest.loginAttemptStarted &#x3D; true;
+
+          debug(&quot;[ssoLogin] Injecting login code now&quot;);
+          loginRequest.ssoConfig.browser.executeScript({code: enterCredentials});
+        }
+      }
+    },
+    {
+      //
+      event: this.ssoBrowserEvents.loadError,
+      condition: (event, loginRequest) &#x3D;&gt; { return true },
+      action: (event, loginRequest, observer) &#x3D;&gt; {
+        // TODO: something should be done here, I guess
+      }
+    },
+    {
+      // happens when user closes browser
+      event: this.ssoBrowserEvents.exit,
+      condition: () &#x3D;&gt; { return true },
+      action: (event, loginRequest, observer) &#x3D;&gt; {
+        observer.error({
+          reason: ELoginErrors.TECHNICAL,
+          description: &quot;User closed browser&quot;
+        });
+      }
+    }
+  ];
+
+  constructor(
+      public http: HttpClient,
+      public inAppBrowser: InAppBrowser) {
+  };
+
+  /**
+   * Handles ssoBrowserEvents by executing defined actions if event type matches
+   * and condition function of action returns true
+   *
+   * @param {InAppBrowserEvent} event
+   * @param {ILoginRequest} loginRequest
+   * @param {Observer&lt;ISession&gt;} observer
+   */
+  private handleSsoEvent(event:InAppBrowserEvent,
+                         loginRequest:ILoginRequest,
+                         observer:Observer&lt;ISession&gt;) {
+
+    // test all defined ssoActions
+    for(let ssoAction of this.ssoActions) {
+      // execute action if event type matches and condition functions returns true
+      if (ssoAction.event &#x3D;&#x3D; event.type &amp;&amp; ssoAction.condition(event, loginRequest)) {
+        ssoAction.action(event, loginRequest, observer);
+      }
+    }
+  }
+
+  /**
+   * Performs a SSO login by creating an InAppBrowser object and attaching
+   * listeners to it. When SSO login has been performed the given observer is
+   * used to return the created ISession (happens in ssoAction)
+   *
+   * @param {ILoginRequest} loginRequest
+   * @param {Observer&lt;ISession&gt;} observer
+   */
+  public ssoLogin(credentials:ICredentials, loginConfig:ILoginConfig_SSO):Observable&lt;ISession&gt; {
+    debug(&quot;[ssoLogin] Doing ssoLogin&quot;);
+
+    let loginRequest:ILoginRequest &#x3D; {
+      credentials:credentials,
+      ssoConfig:loginConfig,
+      loginAttemptStarted: false
+    };
+
+    if(!loginRequest.ssoConfig.browser) {
+      debug(&quot;[ssoLogin] Browser is undefined, will create one&quot;);
+      // If no browser is given create browser object by loading URL
+      loginRequest.ssoConfig.browser &#x3D; this.inAppBrowser.create(
+        constructPluginUrl(
+          loginRequest.ssoConfig.ssoUrls.pluginUrl,
+          loginRequest.ssoConfig.ssoUrls.pluginUrlParams
+        ),
+        &quot;_blank&quot;,
+        {clearcache: &quot;yes&quot;, clearsessioncache: &quot;yes&quot;}
+      );
+    }
+
+    let rs &#x3D; new ReplaySubject&lt;ISession&gt;();
+
+    Observable.create(
+      observer &#x3D;&gt; {
+        for(let event in this.ssoBrowserEvents) {
+          loginRequest.ssoConfig.browser.on(this.ssoBrowserEvents[event]).subscribe(
+            (event: InAppBrowserEvent) &#x3D;&gt; {
+              this.handleSsoEvent(event, loginRequest, observer);
+            }
+          );
+        }
+      }
+    ).subscribe(
+      session &#x3D;&gt; {
+        debug(&quot;[ssoLogin] Success, closing browser now&quot;);
+        loginRequest.ssoConfig.browser.close();
+        setTimeout(
+          ()&#x3D;&gt; {
+            rs.next(session);
+          }, 2000
+        );
+      },
+      error &#x3D;&gt; {
+        debug(&quot;[ssoLogin] Failed, closing browser now&quot;);
+        loginRequest.ssoConfig.browser.close();
+        setTimeout(
+          ()&#x3D;&gt; {
+            rs.error(error);
+          }, 2000
+        );
+      }
+    );
+
+    return rs;
+  }
+
+  /**
+   * Performs login with provided loginRequest. Returns created session or error
+   * with provided observer object.
+   *
+   * @param {ILoginRequest} loginRequest
+   * @param {Observer&lt;ISession&gt;} observer
+   */
+  public credentialsLogin(credentials:ICredentials, loginConfig:ILoginConfig_Credentials): Observable&lt;ISession&gt;{
+    debug(&quot;[credentialsLogin] Doing credentialsLogin&quot;);
+
+    let url:string &#x3D; loginConfig.moodleLoginEndpoint;
+
+    let headers:HttpHeaders &#x3D; new HttpHeaders()
+      .append(&quot;Authorization&quot;,       loginConfig.accessToken);
+
+    let params:HttpParams &#x3D; new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
+      .append(&quot;username&quot;,           credentials.username)
+      .append(&quot;password&quot;,           credentials.password)
+      .append(&quot;service&quot;,            loginConfig.service)
+      .append(&quot;moodlewsrestformat&quot;, loginConfig.moodlewsrestformat);
+
+    let rs &#x3D; new ReplaySubject&lt;ISession&gt;();
+
+    this.http.get(url, {headers: headers, params: params}).subscribe(
+      (response:ICredentialsLoginResponse) &#x3D;&gt; {
+        if(response.token) {
+          rs.next({
+            credentials:  credentials,
+            token:        response.token,
+            timestamp:    new Date()
+          });
+          rs.complete();
+        } else {
+          rs.error({reason: ELoginErrors.AUTHENTICATION});
+        }
+      },
+      (error:HttpErrorResponse) &#x3D;&gt; {
+        // some other error
+        rs.error({reason: ELoginErrors.UNKNOWN_ERROR, error: error});
+      }
+    );
+
+    return rs;
+  }
+
+  /**
+   * executes OIDC login
+   * @param {ILoginRequest} loginRequest
+   * @param {Observer&lt;ISession&gt;} observer
+   */
+  public oidcLogin(credentials:ICredentials, loginConfig:ILoginConfig_OIDC):Observable&lt;ISession&gt;{
+    debug(&quot;[oidcLogin] Doing oidcLogin&quot;);
+
+    let tokenUrl:string &#x3D; loginConfig.tokenUrl;
+
+    let headers:HttpHeaders &#x3D; new HttpHeaders()
+      .append(&quot;Authorization&quot;,    loginConfig.accessToken)
+      .append(&quot;Content-Type&quot;,     loginConfig.contentType);
+
+    let params:HttpParams &#x3D; new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
+      .append(&quot;grant_type&quot;,       loginConfig.grantType_password)
+      .append(&quot;username&quot;,         credentials.username)
+      .append(&quot;password&quot;,         credentials.password)
+      .append(&quot;scope&quot;,            loginConfig.scope);
+
+
+    let rs &#x3D; new ReplaySubject&lt;ISession&gt;();
+
+    this.http.post(tokenUrl, params, {headers: headers}).subscribe(
+      (response:IOIDCLoginResponse) &#x3D;&gt; {
+        // create session object with access_token as token, but also attach
+        // the whole response in case it&#x27;s needed
+        rs.next({
+          credentials:      credentials,
+          token:            response.access_token,
+          oidcTokenObject:  response,
+          timestamp:        new Date()
+        });
+        rs.complete();
+      },
+      (error) &#x3D;&gt; {
+        // Authentication error
+        // TODO: Add typing for errors?
+        if(error.status &#x3D; 401) {
+          rs.error({reason: ELoginErrors.AUTHENTICATION});
+        }
+      }
+    );
+
+    return rs;
+  }
+
+  /**
+   * refreshes OIDC token with refreshToken and the loginConfig. Returns an object
+   * containing new OIDC-Response-Object and a timestamp.
+   * @param refreshToken
+   * @param loginConfig
+   */
+  public oidcRefreshToken(refreshToken:string,
+                          loginConfig:ILoginConfig_OIDC):Observable&lt;IOIDCRefreshResponseObject&gt;{
+    debug(&quot;[oidcLogin] Doing oidc token refresh&quot;);
+
+    let tokenUrl:string &#x3D; loginConfig.tokenUrl;
+
+    let headers:HttpHeaders &#x3D; new HttpHeaders()
+      .append(&quot;Authorization&quot;,    loginConfig.accessToken)
+      .append(&quot;Content-Type&quot;,     loginConfig.contentType);
+
+    let params:HttpParams &#x3D; new HttpParams({encoder: new WebHttpUrlEncodingCodec()})
+      .append(&quot;grant_type&quot;,       loginConfig.grantType_refresh)
+      .append(&quot;refresh_token&quot;,    refreshToken);
+
+    let rs &#x3D; new ReplaySubject&lt;IOIDCRefreshResponseObject&gt;();
+
+    this.http.post(tokenUrl, params, {headers: headers}).subscribe(
+      (response:IOIDCLoginResponse) &#x3D;&gt; {
+        // create session object with access_token as token, but also attach
+        // the whole response in case it&#x27;s needed
+        rs.next({
+          oidcTokenObject:  response,
+          timestamp:        new Date()
+        });
+        rs.complete();
+      },
+      (error) &#x3D;&gt; {
+        console.log(error)
+        // Authentication error
+        if(error.status &#x3D; 401) {
+          rs.error({reason: ELoginErrors.AUTHENTICATION});
+        }
+      }
+    );
+
+    return rs;
+  }
+
+  /**
+   * returns information about user via OIDC
+   * @param userToken
+   * @param loginConfig
+   */
+  public oidcGetUSerInformation(session:ISession,
+                                loginConfig:ILoginConfig_OIDC):Observable&lt;IOIDCUserInformationResponse&gt;{
+    debug(&quot;[oidcLogin] Retrieving OIDC user information&quot;);
+
+    let userInfoUrl:string &#x3D; loginConfig.userInformationUrl;
+
+    let headers:HttpHeaders &#x3D; new HttpHeaders()
+      .append(&quot;Authorization&quot;,    &#x60;${session.oidcTokenObject.token_type} ${session.oidcTokenObject.access_token}&#x60;);
+
+    let rs &#x3D; new ReplaySubject&lt;IOIDCUserInformationResponse&gt;();
+
+    this.http.get(userInfoUrl, {headers: headers, params:{schema:loginConfig.userInfoParams.schema}}).subscribe(
+      (response:IOIDCUserInformationResponse) &#x3D;&gt; {
+        rs.next(response);
+        rs.complete();
+      },
+      error &#x3D;&gt; {
+        console.log(error);
+        // Authentication error
+        if(error.status &#x3D; 401) {
+          rs.error({reason: ELoginErrors.AUTHENTICATION});
+        }
+      }
+    );
+
+    return rs;
+  }
+
+  /**
+   * Allows adding custom sso actions from outside
+   * @param {IAction} ssoAction
+   */
+  public addSSOaction(ssoAction:IAction){
+    this.ssoActions.push(ssoAction);
+  }
+
+
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'UPLoginProvider.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

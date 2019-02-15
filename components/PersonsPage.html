@@ -1,0 +1,1346 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mobile.UP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Mobile.UP</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>PersonsPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/persons/persons.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-persons</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>persons.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cordova">cordova</a>
+                            </li>
+                            <li>
+                                <a href="#error">error</a>
+                            </li>
+                            <li>
+                                <a href="#noResults">noResults</a>
+                            </li>
+                            <li>
+                                <a href="#personsFound">personsFound</a>
+                            </li>
+                            <li>
+                                <a href="#query">query</a>
+                            </li>
+                            <li>
+                                <a href="#response_received">response_received</a>
+                            </li>
+                            <li>
+                                <a href="#session">session</a>
+                            </li>
+                            <li>
+                                <a href="#triedRefreshingSession">triedRefreshingSession</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#callContact">callContact</a>
+                            </li>
+                            <li>
+                                <a href="#expandPerson">expandPerson</a>
+                            </li>
+                            <li>
+                                <a href="#exportContact">exportContact</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ionViewWillEnter">ionViewWillEnter</a>
+                            </li>
+                            <li>
+                                <a href="#onScrollListener">onScrollListener</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#search">search</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, platform: Platform, keyboard: Keyboard, connection: <a href="../injectables/ConnectionProvider.html">ConnectionProvider</a>, storage: Storage, sessionProvider: <a href="../injectables/SessionProvider.html">SessionProvider</a>, contacts: <a href="../interfaces/Contact.html">Contacts</a>, callNumber: CallNumber)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/pages/persons/persons.ts:44</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>keyboard</td>
+                                                  
+                                                        <td>
+                                                                    <code>Keyboard</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>connection</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ConnectionProvider.html" target="_self" >ConnectionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storage</td>
+                                                  
+                                                        <td>
+                                                                    <code>Storage</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionProvider</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SessionProvider.html" target="_self" >SessionProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>contacts</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../interfaces/Contact.html" target="_self" >Contacts</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>callNumber</td>
+                                                  
+                                                        <td>
+                                                                    <code>CallNumber</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="callContact"></a>
+                        <span class="name">
+                            <b>
+                            callContact
+                            </b>
+                            <a href="#callContact"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>callContact(number: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="240" class="link-to-prism">src/pages/persons/persons.ts:240</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>number</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <p><a href="https://www.javascripttuts.com/making-phone-calls-to-contacts-with-ionic-in-one-go/">https://www.javascripttuts.com/making-phone-calls-to-contacts-with-ionic-in-one-go/</a></p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expandPerson"></a>
+                        <span class="name">
+                            <b>
+                            expandPerson
+                            </b>
+                            <a href="#expandPerson"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>expandPerson(person)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">src/pages/persons/persons.ts:204</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>person</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="exportContact"></a>
+                        <span class="name">
+                            <b>
+                            exportContact
+                            </b>
+                            <a href="#exportContact"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>exportContact(person: <a href="../interfaces/IPerson.html">IPerson</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="218" class="link-to-prism">src/pages/persons/persons.ts:218</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>person</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IPerson.html" target="_self" >IPerson</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewWillEnter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            ionViewWillEnter
+                            </b>
+                            <a href="#ionViewWillEnter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ionViewWillEnter()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/pages/persons/persons.ts:82</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onScrollListener"></a>
+                        <span class="name">
+                            <b>
+                            onScrollListener
+                            </b>
+                            <a href="#onScrollListener"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onScrollListener()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/pages/persons/persons.ts:100</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="search"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            search
+                            </b>
+                            <a href="#search"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>search()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/pages/persons/persons.ts:113</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cordova"></a>
+                        <span class="name">
+                            <b>
+                            cordova</b>
+                            <a href="#cordova"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/pages/persons/persons.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error"></a>
+                        <span class="name">
+                            <b>
+                            error</b>
+                            <a href="#error"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank" >HttpErrorResponse</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/pages/persons/persons.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="noResults"></a>
+                        <span class="name">
+                            <b>
+                            noResults</b>
+                            <a href="#noResults"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/pages/persons/persons.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="personsFound"></a>
+                        <span class="name">
+                            <b>
+                            personsFound</b>
+                            <a href="#personsFound"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IPerson.html" target="_self" >IPerson[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/pages/persons/persons.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="query"></a>
+                        <span class="name">
+                            <b>
+                            query</b>
+                            <a href="#query"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/pages/persons/persons.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="response_received"></a>
+                        <span class="name">
+                            <b>
+                            response_received</b>
+                            <a href="#response_received"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/pages/persons/persons.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="session"></a>
+                        <span class="name">
+                            <b>
+                            session</b>
+                            <a href="#session"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/ISession.html" target="_self" >ISession</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/pages/persons/persons.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="triedRefreshingSession"></a>
+                        <span class="name">
+                            <b>
+                            triedRefreshingSession</b>
+                            <a href="#triedRefreshingSession"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/pages/persons/persons.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import {
+  IonicPage,
+  NavController
+} from &#x27;ionic-angular&#x27;;
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders
+} from &#x27;@angular/common/http&#x27;;
+import { Storage } from &quot;@ionic/storage&quot;;
+import { ISession } from &quot;../../providers/login-provider/interfaces&quot;;
+import { LoginPage } from &quot;../login/login&quot;;
+import {
+  IConfig,
+  IPerson
+} from &quot;../../library/interfaces&quot;;
+import { Platform } from &#x27;ionic-angular&#x27;;
+import { Keyboard } from &#x27;@ionic-native/keyboard/ngx&#x27;;
+import { ConnectionProvider } from &quot;../../providers/connection/connection&quot;;
+import { SessionProvider } from &#x27;../../providers/session/session&#x27;;
+import { Contacts, Contact, ContactField, ContactName } from &#x27;@ionic-native/contacts&#x27;;
+import { CallNumber } from &#x27;@ionic-native/call-number/ngx&#x27;;
+
+/**
+ * @class PersonPage
+ * @classdesc class for a page that shows the entries of the electronic phone book. The list of items can
+ * be filtered by using a searchbox and items contain a slide and click option to get details
+ */
+@IonicPage()
+@Component({
+  selector: &#x27;page-persons&#x27;,
+  templateUrl: &#x27;persons.html&#x27;,
+})
+export class PersonsPage {
+
+  personsFound: IPerson[] &#x3D; [];
+  response_received: boolean;
+  error: HttpErrorResponse;
+  session:ISession;
+  query &#x3D; &quot;&quot;;
+  noResults &#x3D; false;
+  triedRefreshingSession &#x3D; false;
+  cordova &#x3D; false;
+
+  /**
+   * @constructor
+   * @description Constructor of EmergencyPage
+   *
+   * @param {NavController} navCtrl
+   * @param {HttpClient} http
+   * @param {Platform} platform
+   * @param {Keyboard} keyboard
+   * @param {ConnectionProvider} connection
+   * @param {Storage} storage
+   * @param {sessionProvider} sessionProvider
+   * @param {Contacts} contacts
+   * @param {CallNumber} callNumber
+   */
+  constructor(
+    private navCtrl: NavController,
+    private http: HttpClient,
+    private platform: Platform,
+    private keyboard: Keyboard,
+    private connection: ConnectionProvider,
+    private storage: Storage,
+    private sessionProvider: SessionProvider,
+    private contacts: Contacts,
+    private callNumber: CallNumber) {
+      if (this.platform.is(&quot;cordova&quot;)) {
+        this.cordova &#x3D; true
+      }
+  }
+
+  /**
+   * @name ionViewWillEnter
+   * @async
+   * @description take user to login if there is no session.
+   * We are using ionViewDidEnter here because it is run every time the view is
+   * entered, other than ionViewDidLoad which will run only once
+   */
+  async ionViewWillEnter() {
+    this.connection.checkOnline(true, true);
+    let tmp &#x3D; await this.sessionProvider.getSession();
+    this.session &#x3D; undefined;
+    if (tmp) {
+      if (typeof tmp !&#x3D;&#x3D; &#x27;object&#x27;) {
+        this.session &#x3D; JSON.parse(tmp);
+      } else { this.session &#x3D; tmp; }
+    }
+
+    if (!this.session) {
+      this.navCtrl.push(LoginPage).then(
+        () &#x3D;&gt; console.log(&quot;[PersonsPage]: Pushed LoginPage&quot;)
+      );
+    }
+  }
+
+  // hides keyboard once the user is scrolling
+  onScrollListener() {
+    if (this.platform.is(&quot;cordova&quot;) &amp;&amp; (this.platform.is(&quot;ios&quot;) || this.platform.is(&quot;android&quot;))) {
+      this.keyboard.hide();
+    }
+  }
+
+  /**
+   * @name search
+   * @async
+   * @description checks whether a session is stored in memory. If not the user is taken to
+   * the LoginPage. If yes a query is sent to the API and the results are placed
+   * in this.personsFound so the view can render them
+   */
+  public async search() {
+    // reset array so new persons are displayed
+    this.personsFound &#x3D; [];
+    this.noResults &#x3D; false;
+
+    let query &#x3D; encodeURI(this.query.trim())
+      .replace(/\+/g, &quot;&quot;)
+      .replace(/\,/g, &quot;&quot;)
+      .replace(/\//g, &quot;&quot;)
+      .replace(/\:/g, &quot;&quot;)
+      .replace(/\;/g, &quot;&quot;)
+      .replace(/\@/g, &quot;&quot;)
+      .replace(/\&#x3D;/g, &quot;&quot;)
+      .replace(/\$/g, &quot;&quot;)
+      .replace(/\&amp;/g, &quot;&quot;);
+
+    if (query &amp;&amp; query.trim() !&#x3D; &quot;&quot; &amp;&amp; query.trim().length &gt; 1) {
+
+      this.response_received &#x3D; false;
+
+      console.log(&#x60;[PersonsPage]: Searching for \&quot;${query}\&quot;&#x60;);
+
+      let config: IConfig &#x3D; await this.storage.get(&quot;config&quot;);
+      let headers: HttpHeaders &#x3D; new HttpHeaders()
+        .append(&quot;Authorization&quot;, &#x60;${this.session.oidcTokenObject.token_type} ${this.session.token}&#x60;);
+
+      var url &#x3D; config.webservices.endpoint.personSearch + query;
+
+      this.http.get(url,{headers: headers}).subscribe(
+        (personsList:IPerson[]) &#x3D;&gt; {
+          //console.log(personsList);
+
+          for (let person of personsList) {
+            let newPerson &#x3D; person;
+            newPerson.expanded &#x3D; false;
+            newPerson.Raum &#x3D; person.Raum.replace(/_/g, &quot; &quot;);
+            this.personsFound.push(newPerson);
+          }
+
+          this.error &#x3D; null;
+          this.response_received &#x3D; true;
+          this.triedRefreshingSession &#x3D; false;
+        },
+        async error &#x3D;&gt; {
+          if (!this.triedRefreshingSession) {
+            if (error.status &#x3D;&#x3D; 401) {
+              this.connection.checkOnline(true, true);
+              let tmp &#x3D; await this.sessionProvider.getSession();
+              this.session &#x3D; undefined;
+              if (tmp) {
+                if (typeof tmp !&#x3D;&#x3D; &#x27;object&#x27;) {
+                  this.session &#x3D; JSON.parse(tmp);
+                } else { this.session &#x3D; tmp; }
+              }
+              if (!this.session) {
+                this.navCtrl.push(LoginPage).then(
+                  () &#x3D;&gt; console.log(&quot;[PersonsPage]: Pushed LoginPage&quot;)
+                );
+              } else {
+                this.triedRefreshingSession &#x3D; true;
+                this.search();
+              }
+            } else {
+              this.error &#x3D; error;
+              console.log(error);
+              this.response_received &#x3D; true;
+            }
+          } else {
+            this.error &#x3D; error;
+            console.log(error);
+            this.response_received &#x3D; true;
+          }
+        }
+      );
+
+      if (this.personsFound.length &gt; 0) {
+        this.noResults &#x3D; false;
+      } else { this.noResults &#x3D; true; }
+
+    } else {
+      console.log(&quot;[PersonsPage]: Empty query&quot;);
+      this.response_received &#x3D; true;
+      this.noResults &#x3D; true;
+    }
+  }
+
+  /**
+   * @name expandPerson
+   * @description toogles person item in list view to show details
+   * @param person
+   */
+  expandPerson(person) {
+    for (let i &#x3D; 0; i &lt; this.personsFound.length; i++) {
+      let currentPerson &#x3D; this.personsFound[i];
+      if (currentPerson.Id &#x3D;&#x3D; person.Id) {
+        currentPerson.expanded &#x3D; !currentPerson.expanded;
+      }
+    }
+  }
+
+  /**
+   * @name exportContact
+   * @description exports a contact to the local phone book
+   * @param {IPerson} person
+   */
+  exportContact(person: IPerson) {
+    if (this.platform.is(&quot;cordova&quot;)) {
+      let contact: Contact &#x3D; this.contacts.create();
+
+      contact.name &#x3D; new ContactName(null, person.Nachname, person.Vorname);
+
+      if (person.Telefon) { contact.phoneNumbers &#x3D; [new ContactField(&#x27;work&#x27;, person.Telefon)]; }
+      if (person.Email)   { contact.emails &#x3D; [new ContactField(&#x27;work&#x27;, person.Email)]; }
+
+      contact.save().then(
+        () &#x3D;&gt; console.log(&#x27;Contact saved!&#x27;, contact),
+        (error: any) &#x3D;&gt; console.error(&#x27;Error saving contact.&#x27;, error)
+      );
+    }
+  }
+
+  /**
+   * @name callContact
+   * @description using native call for calling numbers
+   * @param {string} number
+   * https://www.javascripttuts.com/making-phone-calls-to-contacts-with-ionic-in-one-go/
+   */
+  callContact(number: string) {
+    this.callNumber.callNumber(number, true)
+      .then(() &#x3D;&gt; console.log(&#x27;Dialer Launched!&#x27;))
+      .catch(() &#x3D;&gt; console.log(&#x27;Error launching dialer&#x27;));
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button menuToggle right&gt;
+      &lt;ion-icon name&#x3D;&quot;menu&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;{{ &quot;page.persons.title&quot; | translate }}&lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+  &lt;ion-searchbar
+    [(ngModel)]&#x3D;&quot;query&quot;
+    [placeholder]&#x3D;&quot;&#x27;page.persons.placeholder.search&#x27; | translate&quot;
+    (ionInput)&#x3D;&quot;search()&quot;
+    debounce&#x3D;&quot;750&quot;&gt;
+  &lt;/ion-searchbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content padding (ionScroll)&#x3D;&quot;onScrollListener()&quot;&gt;
+
+  &lt;p *ngIf&#x3D;&quot;!response_received &amp;&amp; query.length &gt; 0&quot; style&#x3D;&quot;text-align: center&quot;&gt;
+    &lt;ion-spinner&gt;&lt;/ion-spinner&gt;
+  &lt;/p&gt;
+
+  &lt;div *ngIf&#x3D;&quot;noResults &amp;&amp; query.length &gt; 0 &amp;&amp; (response_received &amp;&amp; personsFound.length &#x3D;&#x3D; 0 &amp;&amp; error &#x3D;&#x3D; null)&quot;&gt;
+    &lt;hint hintTypeI18nKey&#x3D;&quot;hints.type.hint&quot; hintTextI18nKey&#x3D;&quot;hints.text.noResults-hint&quot;&gt;&lt;/hint&gt;
+  &lt;/div&gt;
+
+  &lt;p *ngIf&#x3D;&quot;error !&#x3D; null&quot; style&#x3D;&quot;text-align: center&quot; text-wrap&gt;
+    {{ &quot;alert.network&quot; | translate }} &lt;br/&gt;&lt;br/&gt;
+    &lt;!-- {{error.name}}&lt;br/&gt;
+    {{error.message}}&lt;br/&gt;
+    {{error.error}}&lt;br/&gt; --&gt;
+  &lt;/p&gt;
+
+  &lt;ion-list&gt;
+    &lt;div *ngFor&#x3D;&quot;let person of personsFound&quot;&gt;
+      &lt;ion-item-sliding&gt;
+        &lt;ion-item tappable (click)&#x3D;&quot;expandPerson(person)&quot;&gt;
+          &lt;ion-thumbnail item-start&gt;
+            &lt;ion-icon name&#x3D;&quot;person&quot;&gt;&lt;/ion-icon&gt;
+          &lt;/ion-thumbnail&gt;
+          &lt;ion-label&gt;
+            &lt;h2&gt;{{person.Titel}} {{person.Vorname}} {{person.Nachname}}&lt;/h2&gt;
+            &lt;p text-wrap *ngIf&#x3D;&quot;person.Abteilung !&#x3D; &#x27;&#x27;&quot;&gt;{{person.Abteilung}}&lt;/p&gt;
+          &lt;/ion-label&gt;
+          &lt;ion-icon *ngIf&#x3D;&quot;(person.Raum || person.Telefon || person.Email) &amp;&amp; !person.expanded&quot; name&#x3D;&quot;arrow-dropdown&quot; item-end&gt;&lt;/ion-icon&gt;
+          &lt;ion-icon *ngIf&#x3D;&quot;(person.Raum || person.Telefon || person.Email) &amp;&amp; person.expanded&quot; name&#x3D;&quot;arrow-dropup&quot; item-end&gt;&lt;/ion-icon&gt;
+        &lt;/ion-item&gt;
+
+        &lt;ion-item-options side&#x3D;&quot;right&quot;&gt;
+          &lt;button ion-button color&#x3D;&quot;primary&quot; *ngIf&#x3D;&quot;person.Email !&#x3D; &#x27;&#x27;&quot;&gt;
+              &lt;ion-icon name&#x3D;&quot;mail&quot;&gt;&lt;/ion-icon&gt;
+              &lt;a class&#x3D;&quot;notUnderlined whiteFont&quot; href&#x3D;&quot;mailto:{{person.Email}}&quot;&gt;Mail&lt;/a&gt;
+          &lt;/button&gt;
+          &lt;button ion-button color&#x3D;&quot;secondary&quot; *ngIf&#x3D;&quot;cordova &amp;&amp; person.Telefon !&#x3D; &#x27;&#x27;&quot; (click)&#x3D;&quot;callContact(person.Telefon)&quot;&gt;
+            &lt;ion-icon name&#x3D;&quot;call&quot; ios&#x3D;&quot;ios-call&quot; md&#x3D;&quot;md-call&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class&#x3D;&quot;notUnderlined&quot;&gt;Call&lt;/a&gt;
+          &lt;/button&gt;
+          &lt;button ion-button color&#x3D;&quot;secondary&quot; *ngIf&#x3D;&quot;!cordova &amp;&amp; person.Telefon !&#x3D; &#x27;&#x27;&quot;&gt;
+            &lt;ion-icon name&#x3D;&quot;call&quot; ios&#x3D;&quot;ios-call&quot; md&#x3D;&quot;md-call&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class&#x3D;&quot;notUnderlined&quot; href&#x3D;&quot;tel:{{person.Telefon}}&quot;&gt;Call&lt;/a&gt;
+          &lt;/button&gt;
+          &lt;button ion-button color&#x3D;&quot;secondary&quot; *ngIf&#x3D;&quot;cordova&quot; (click)&#x3D;&quot;exportContact(person)&quot;&gt;
+            &lt;ion-icon name&#x3D;&quot;person-add&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class&#x3D;&quot;notUnderlined&quot;&gt;Add&lt;/a&gt;
+        &lt;/button&gt;
+        &lt;/ion-item-options&gt;
+      &lt;/ion-item-sliding&gt;
+
+      &lt;ion-item *ngIf&#x3D;&quot;person.expanded &amp;&amp; ((person.Email !&#x3D; &#x27;&#x27;) || (person.Telefon !&#x3D; &#x27;&#x27;) || (person.Raum !&#x3D; &#x27;&#x27;))&quot;&gt;
+        &lt;ion-thumbnail item-start&gt;
+        &lt;/ion-thumbnail&gt;
+        &lt;ion-label no-margin&gt;
+          &lt;ion-grid&gt;
+            &lt;ion-row *ngIf&#x3D;&quot;person.Email !&#x3D; &#x27;&#x27;&quot;&gt;
+              &lt;ion-col col-auto&gt;&lt;ion-icon name&#x3D;&quot;mail&quot; margin-right&gt;&lt;/ion-icon&gt;&lt;/ion-col&gt;&lt;ion-col&gt;&lt;a href&#x3D;&quot;mailto:{{person.Email}}&quot;&gt;{{person.Email}}&lt;/a&gt;&lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+            &lt;ion-row *ngIf&#x3D;&quot;person.Telefon !&#x3D; &#x27;&#x27;&quot;&gt;
+              &lt;ion-col col-auto&gt;&lt;ion-icon name&#x3D;&quot;call&quot; ios&#x3D;&quot;ios-call&quot; md&#x3D;&quot;md-call&quot; margin-right&gt;&lt;/ion-icon&gt;&lt;/ion-col&gt;
+              &lt;ion-col&gt;
+                  &lt;a href&#x3D;&quot;tel:{{person.Telefon}}&quot; *ngIf&#x3D;&quot;!cordova&quot;&gt;0331 977 {{person.Telefon}}&lt;/a&gt;
+                  &lt;a (click)&#x3D;&quot;callContact(person.Telefon)&quot; *ngIf&#x3D;&quot;cordova&quot; style&#x3D;&quot;text-decoration: underline&quot;&gt;0331 977 {{person.Telefon}}&lt;/a&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+            &lt;ion-row *ngIf&#x3D;&quot;person.Raum !&#x3D; &#x27;&#x27;&quot;&gt;
+              &lt;ion-col col-auto&gt;&lt;ion-icon name&#x3D;&quot;home&quot; margin-right&gt;&lt;/ion-icon&gt;&lt;/ion-col&gt;&lt;ion-col&gt;{{person.Raum}}&lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+          &lt;/ion-grid&gt;
+        &lt;/ion-label&gt;
+      &lt;/ion-item&gt;
+    &lt;/div&gt;
+  &lt;/ion-list&gt;
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>    <button ion-button menuToggle right>      <ion-icon name="menu"></ion-icon>    </button>    <ion-title>{{ "page.persons.title" | translate }}</ion-title>  </ion-navbar>  <ion-searchbar    [(ngModel)]="query"    [placeholder]="\'page.persons.placeholder.search\' | translate"    (ionInput)="search()"    debounce="750">  </ion-searchbar></ion-header><ion-content padding (ionScroll)="onScrollListener()">  <p *ngIf="!response_received && query.length > 0" style="text-align: center">    <ion-spinner></ion-spinner>  </p>  <div *ngIf="noResults && query.length > 0 && (response_received && personsFound.length == 0 && error == null)">    <hint hintTypeI18nKey="hints.type.hint" hintTextI18nKey="hints.text.noResults-hint"></hint>  </div>  <p *ngIf="error != null" style="text-align: center" text-wrap>    {{ "alert.network" | translate }} <br/><br/>    <!-- {{error.name}}<br/>    {{error.message}}<br/>    {{error.error}}<br/> -->  </p>  <ion-list>    <div *ngFor="let person of personsFound">      <ion-item-sliding>        <ion-item tappable (click)="expandPerson(person)">          <ion-thumbnail item-start>            <ion-icon name="person"></ion-icon>          </ion-thumbnail>          <ion-label>            <h2>{{person.Titel}} {{person.Vorname}} {{person.Nachname}}</h2>            <p text-wrap *ngIf="person.Abteilung != \'\'">{{person.Abteilung}}</p>          </ion-label>          <ion-icon *ngIf="(person.Raum || person.Telefon || person.Email) && !person.expanded" name="arrow-dropdown" item-end></ion-icon>          <ion-icon *ngIf="(person.Raum || person.Telefon || person.Email) && person.expanded" name="arrow-dropup" item-end></ion-icon>        </ion-item>        <ion-item-options side="right">          <button ion-button color="primary" *ngIf="person.Email != \'\'">              <ion-icon name="mail"></ion-icon>              <a class="notUnderlined whiteFont" href="mailto:{{person.Email}}">Mail</a>          </button>          <button ion-button color="secondary" *ngIf="cordova && person.Telefon != \'\'" (click)="callContact(person.Telefon)">            <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>            <a class="notUnderlined">Call</a>          </button>          <button ion-button color="secondary" *ngIf="!cordova && person.Telefon != \'\'">            <ion-icon name="call" ios="ios-call" md="md-call"></ion-icon>            <a class="notUnderlined" href="tel:{{person.Telefon}}">Call</a>          </button>          <button ion-button color="secondary" *ngIf="cordova" (click)="exportContact(person)">            <ion-icon name="person-add"></ion-icon>            <a class="notUnderlined">Add</a>        </button>        </ion-item-options>      </ion-item-sliding>      <ion-item *ngIf="person.expanded && ((person.Email != \'\') || (person.Telefon != \'\') || (person.Raum != \'\'))">        <ion-thumbnail item-start>        </ion-thumbnail>        <ion-label no-margin>          <ion-grid>            <ion-row *ngIf="person.Email != \'\'">              <ion-col col-auto><ion-icon name="mail" margin-right></ion-icon></ion-col><ion-col><a href="mailto:{{person.Email}}">{{person.Email}}</a></ion-col>            </ion-row>            <ion-row *ngIf="person.Telefon != \'\'">              <ion-col col-auto><ion-icon name="call" ios="ios-call" md="md-call" margin-right></ion-icon></ion-col>              <ion-col>                  <a href="tel:{{person.Telefon}}" *ngIf="!cordova">0331 977 {{person.Telefon}}</a>                  <a (click)="callContact(person.Telefon)" *ngIf="cordova" style="text-decoration: underline">0331 977 {{person.Telefon}}</a>              </ion-col>            </ion-row>            <ion-row *ngIf="person.Raum != \'\'">              <ion-col col-auto><ion-icon name="home" margin-right></ion-icon></ion-col><ion-col>{{person.Raum}}</ion-col>            </ion-row>          </ion-grid>        </ion-label>      </ion-item>    </div>  </ion-list></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppInfoPage', 'selector': 'page-app-info'},{'name': 'BookDetailViewPage', 'selector': 'page-book-detail-view'},{'name': 'BookListViewComponent', 'selector': 'book-list-view'},{'name': 'CampusMapPage', 'selector': 'page-campus-map'},{'name': 'CampusTabComponent', 'selector': 'campus-tab'},{'name': 'ContentDrawerComponent', 'selector': 'content-drawer'},{'name': 'DetailedOpeningPage', 'selector': 'page-detailed-opening'},{'name': 'DetailedPracticePage', 'selector': 'page-detailed-practice'},{'name': 'EmergencyPage', 'selector': 'page-emergency'},{'name': 'EventModal', 'selector': 'event'},{'name': 'EventsPage', 'selector': 'page-events'},{'name': 'EventViewComponent', 'selector': 'event-view'},{'name': 'ExpandableComponent', 'selector': 'expandable'},{'name': 'FooterDisclaimerComponent', 'selector': 'footer-disclaimer'},{'name': 'GradesPage', 'selector': 'page-grades'},{'name': 'GradesTableComponent', 'selector': 'grades-table'},{'name': 'HintComponent', 'selector': 'hint'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'ImpressumPage', 'selector': 'page-impressum'},{'name': 'LectureListComponent', 'selector': 'lecture-list'},{'name': 'LecturesPage', 'selector': 'page-lectures'},{'name': 'LegalNoticePage', 'selector': 'page-legal-notice'},{'name': 'LibraryPage', 'selector': 'page-library'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'LogoutPage', 'selector': 'page-logout'},{'name': 'MensaMealComponent', 'selector': 'mensa-meal'},{'name': 'MensaPage', 'selector': 'page-mensa'},{'name': 'MobileUPApp', 'selector': ''},{'name': 'NewsArticleComponent', 'selector': 'news-article'},{'name': 'NewsPage', 'selector': 'page-news'},{'name': 'OpeningHoursPage', 'selector': 'page-opening-hours'},{'name': 'PersonsPage', 'selector': 'page-persons'},{'name': 'PopoverComponent', 'selector': 'popover'},{'name': 'PracticePage', 'selector': 'page-practice'},{'name': 'PrivacyPolicyPage', 'selector': 'page-privacy-policy'},{'name': 'RoomplanPage', 'selector': 'page-roomplan'},{'name': 'RoomsPage', 'selector': 'page-rooms'},{'name': 'SettingsPage', 'selector': 'page-settings'},{'name': 'TabBarComponent', 'selector': 'tab-bar'},{'name': 'TermsOfUsePage', 'selector': 'page-terms-of-use'},{'name': 'TimetablePage', 'selector': 'page-timetable'},{'name': 'TransportPage', 'selector': 'page-transport'}];
+    var DIRECTIVES = [{'name': 'PopoverButton', 'selector': '[popoverButton]'}];
+    var ACTUAL_COMPONENT = {'name': 'PersonsPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PersonsPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
